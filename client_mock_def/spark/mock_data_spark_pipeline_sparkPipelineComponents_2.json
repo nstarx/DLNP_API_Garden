@@ -1,0 +1,725 @@
+{
+  "sparkPipelineComponents": {
+    "job-001": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "Main driver program",
+          "icon": "pi pi-microchip",
+          "status": "running",
+          "resources": {
+            "cpu": "4 cores",
+            "memory": "16Gi"
+          }
+        },
+        {
+          "name": "Executor Pool",
+          "description": "8 executor instances",
+          "icon": "pi pi-server",
+          "status": "running",
+          "resources": {
+            "cpu": "32 cores",
+            "memory": "128Gi"
+          }
+        },
+        {
+          "name": "Job Scheduler",
+          "description": "FIFO scheduler",
+          "icon": "pi pi-calendar",
+          "status": "running"
+        },
+        {
+          "name": "Task Manager",
+          "description": "Distributed task execution",
+          "icon": "pi pi-sitemap",
+          "status": "running"
+        }
+      ],
+      "storage": [
+        {
+          "name": "HDFS",
+          "description": "100TB capacity",
+          "icon": "pi pi-database",
+          "status": "running",
+          "metrics": {
+            "used": "45TB",
+            "available": "55TB"
+          }
+        },
+        {
+          "name": "S3 Connector",
+          "description": "AWS S3 integration",
+          "icon": "pi pi-cloud",
+          "status": "running"
+        },
+        {
+          "name": "Parquet Reader",
+          "description": "Optimized parquet I/O",
+          "icon": "pi pi-file",
+          "status": "running"
+        },
+        {
+          "name": "Delta Lake",
+          "description": "ACID transactions",
+          "icon": "pi pi-shield",
+          "status": "running"
+        }
+      ],
+      "networking": [
+        {
+          "name": "Shuffle Service",
+          "description": "External shuffle service",
+          "icon": "pi pi-share-alt",
+          "status": "running",
+          "throughput": "10Gbps"
+        },
+        {
+          "name": "RPC Framework",
+          "description": "Netty-based RPC",
+          "icon": "pi pi-wifi",
+          "status": "running"
+        },
+        {
+          "name": "Block Transfer",
+          "description": "P2P block transfer",
+          "icon": "pi pi-arrows-h",
+          "status": "running"
+        },
+        {
+          "name": "Load Balancer",
+          "description": "Task distribution",
+          "icon": "pi pi-compass",
+          "status": "running"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "Spark UI",
+          "description": "Web UI on port 4040",
+          "icon": "pi pi-chart-line",
+          "status": "running",
+          "url": "http://localhost:4040"
+        },
+        {
+          "name": "Metrics System",
+          "description": "JMX & Prometheus",
+          "icon": "pi pi-chart-bar",
+          "status": "running"
+        },
+        {
+          "name": "Event Logger",
+          "description": "Application events",
+          "icon": "pi pi-book",
+          "status": "running"
+        },
+        {
+          "name": "Ganglia Sink",
+          "description": "Cluster monitoring",
+          "icon": "pi pi-eye",
+          "status": "running"
+        }
+      ]
+    },
+    "job-002": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "Streaming driver",
+          "icon": "pi pi-microchip",
+          "status": "running",
+          "resources": {
+            "cpu": "2 cores",
+            "memory": "8Gi"
+          }
+        },
+        {
+          "name": "Executor Pool",
+          "description": "4 executor instances",
+          "icon": "pi pi-server",
+          "status": "running",
+          "resources": {
+            "cpu": "16 cores",
+            "memory": "64Gi"
+          }
+        },
+        {
+          "name": "Stream Processor",
+          "description": "Micro-batch processing",
+          "icon": "pi pi-sync",
+          "status": "running"
+        },
+        {
+          "name": "Checkpoint Manager",
+          "description": "State checkpointing",
+          "icon": "pi pi-save",
+          "status": "running"
+        }
+      ],
+      "storage": [
+        {
+          "name": "Kafka Connect",
+          "description": "Kafka integration",
+          "icon": "pi pi-link",
+          "status": "running",
+          "topics": 12
+        },
+        {
+          "name": "State Store",
+          "description": "RocksDB backend",
+          "icon": "pi pi-database",
+          "status": "running"
+        },
+        {
+          "name": "Checkpoint Store",
+          "description": "HDFS checkpoints",
+          "icon": "pi pi-folder",
+          "status": "running"
+        },
+        {
+          "name": "Archive Storage",
+          "description": "Long-term storage",
+          "icon": "pi pi-box",
+          "status": "running"
+        }
+      ],
+      "networking": [
+        {
+          "name": "Kafka Consumer",
+          "description": "Multi-partition consumer",
+          "icon": "pi pi-download",
+          "status": "running",
+          "partitions": 32
+        },
+        {
+          "name": "HTTP Source",
+          "description": "REST API endpoint",
+          "icon": "pi pi-globe",
+          "status": "running"
+        },
+        {
+          "name": "WebSocket Server",
+          "description": "Real-time updates",
+          "icon": "pi pi-wifi",
+          "status": "running"
+        },
+        {
+          "name": "gRPC Service",
+          "description": "High-performance RPC",
+          "icon": "pi pi-bolt",
+          "status": "running"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "Streaming UI",
+          "description": "Streaming statistics",
+          "icon": "pi pi-chart-line",
+          "status": "running",
+          "url": "http://localhost:4040/streaming"
+        },
+        {
+          "name": "Lag Monitor",
+          "description": "Consumer lag tracking",
+          "icon": "pi pi-clock",
+          "status": "running"
+        },
+        {
+          "name": "Alert Manager",
+          "description": "Threshold alerts",
+          "icon": "pi pi-bell",
+          "status": "running"
+        },
+        {
+          "name": "Grafana Dashboard",
+          "description": "Visual monitoring",
+          "icon": "pi pi-desktop",
+          "status": "running"
+        }
+      ]
+    },
+    "spark-job-1": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "ETL driver program",
+          "icon": "pi pi-microchip",
+          "status": "running",
+          "resources": {
+            "cpu": "2 cores",
+            "memory": "8Gi"
+          }
+        },
+        {
+          "name": "Executor Pool",
+          "description": "3 executor instances",
+          "icon": "pi pi-server",
+          "status": "running",
+          "resources": {
+            "cpu": "12 cores",
+            "memory": "48Gi"
+          }
+        },
+        {
+          "name": "DAG Scheduler",
+          "description": "Job orchestration",
+          "icon": "pi pi-sitemap",
+          "status": "running"
+        },
+        {
+          "name": "Stage Manager",
+          "description": "Stage execution",
+          "icon": "pi pi-layers",
+          "status": "running"
+        }
+      ],
+      "storage": [
+        {
+          "name": "S3 Bucket",
+          "description": "Raw data storage",
+          "icon": "pi pi-cloud",
+          "status": "running",
+          "bucket": "data-lake-raw"
+        },
+        {
+          "name": "Processed Data",
+          "description": "S3 output bucket",
+          "icon": "pi pi-cloud-upload",
+          "status": "running",
+          "bucket": "data-lake-processed"
+        },
+        {
+          "name": "Temp Storage",
+          "description": "Shuffle data",
+          "icon": "pi pi-hdd",
+          "status": "running"
+        },
+        {
+          "name": "Metadata Store",
+          "description": "Hive metastore",
+          "icon": "pi pi-table",
+          "status": "running"
+        }
+      ],
+      "networking": [
+        {
+          "name": "Data Transfer",
+          "description": "S3 transfer service",
+          "icon": "pi pi-arrows-v",
+          "status": "running",
+          "bandwidth": "1Gbps"
+        },
+        {
+          "name": "Executor Comm",
+          "description": "Inter-executor RPC",
+          "icon": "pi pi-share-alt",
+          "status": "running"
+        },
+        {
+          "name": "Service Mesh",
+          "description": "Istio sidecar",
+          "icon": "pi pi-shield",
+          "status": "running"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "Job Metrics",
+          "description": "Spark metrics",
+          "icon": "pi pi-chart-line",
+          "status": "running"
+        },
+        {
+          "name": "CloudWatch",
+          "description": "AWS monitoring",
+          "icon": "pi pi-eye",
+          "status": "running"
+        },
+        {
+          "name": "Data Quality",
+          "description": "Quality checks",
+          "icon": "pi pi-check-circle",
+          "status": "running"
+        }
+      ]
+    },
+    "spark-job-2": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "ML training driver",
+          "icon": "pi pi-microchip",
+          "status": "running",
+          "resources": {
+            "cpu": "4 cores",
+            "memory": "16Gi"
+          }
+        },
+        {
+          "name": "GPU Executors",
+          "description": "2 GPU instances",
+          "icon": "pi pi-bolt",
+          "status": "running",
+          "resources": {
+            "cpu": "8 cores",
+            "memory": "32Gi",
+            "gpu": "2 x A100"
+          }
+        },
+        {
+          "name": "ML Pipeline",
+          "description": "MLlib pipeline",
+          "icon": "pi pi-chart-pie",
+          "status": "running"
+        },
+        {
+          "name": "Model Registry",
+          "description": "MLflow tracking",
+          "icon": "pi pi-bookmark",
+          "status": "running"
+        }
+      ],
+      "storage": [
+        {
+          "name": "Training Data",
+          "description": "Feature store",
+          "icon": "pi pi-database",
+          "status": "running",
+          "size": "500GB"
+        },
+        {
+          "name": "Model Storage",
+          "description": "Model artifacts",
+          "icon": "pi pi-save",
+          "status": "running"
+        },
+        {
+          "name": "Checkpoint Dir",
+          "description": "Training checkpoints",
+          "icon": "pi pi-history",
+          "status": "running"
+        },
+        {
+          "name": "TensorBoard",
+          "description": "Training logs",
+          "icon": "pi pi-chart-bar",
+          "status": "running"
+        }
+      ],
+      "networking": [
+        {
+          "name": "GPU Direct",
+          "description": "RDMA networking",
+          "icon": "pi pi-zap",
+          "status": "running",
+          "throughput": "100Gbps"
+        },
+        {
+          "name": "Parameter Server",
+          "description": "Distributed training",
+          "icon": "pi pi-server",
+          "status": "running"
+        },
+        {
+          "name": "gRPC Service",
+          "description": "Model serving",
+          "icon": "pi pi-link",
+          "status": "running"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "GPU Monitor",
+          "description": "NVIDIA SMI",
+          "icon": "pi pi-desktop",
+          "status": "running"
+        },
+        {
+          "name": "Training Metrics",
+          "description": "Loss & accuracy",
+          "icon": "pi pi-chart-line",
+          "status": "running"
+        },
+        {
+          "name": "MLflow UI",
+          "description": "Experiment tracking",
+          "icon": "pi pi-book",
+          "status": "running",
+          "url": "http://mlflow.example.com"
+        }
+      ]
+    },
+    "spark-job-3": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "Log processor",
+          "icon": "pi pi-microchip",
+          "status": "failed",
+          "resources": {
+            "cpu": "1 core",
+            "memory": "4Gi"
+          }
+        },
+        {
+          "name": "Executor Pool",
+          "description": "1 executor instance",
+          "icon": "pi pi-server",
+          "status": "failed",
+          "resources": {
+            "cpu": "2 cores",
+            "memory": "8Gi"
+          }
+        },
+        {
+          "name": "Log Parser",
+          "description": "Regex parsing",
+          "icon": "pi pi-filter",
+          "status": "failed"
+        }
+      ],
+      "storage": [
+        {
+          "name": "Log Storage",
+          "description": "Raw logs",
+          "icon": "pi pi-file",
+          "status": "failed",
+          "error": "Permission denied"
+        },
+        {
+          "name": "Output Store",
+          "description": "Parsed logs",
+          "icon": "pi pi-folder",
+          "status": "failed"
+        }
+      ],
+      "networking": [
+        {
+          "name": "Log Ingestion",
+          "description": "Fluentd input",
+          "icon": "pi pi-download",
+          "status": "failed"
+        },
+        {
+          "name": "Error Handler",
+          "description": "DLQ service",
+          "icon": "pi pi-exclamation-triangle",
+          "status": "active"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "Error Logs",
+          "description": "Failure analysis",
+          "icon": "pi pi-times-circle",
+          "status": "active",
+          "errors": 42
+        },
+        {
+          "name": "Alert System",
+          "description": "PagerDuty alerts",
+          "icon": "pi pi-bell",
+          "status": "active"
+        }
+      ]
+    },
+    "spark-job-4": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "Stream controller",
+          "icon": "pi pi-microchip",
+          "status": "running",
+          "resources": {
+            "cpu": "4 cores",
+            "memory": "16Gi"
+          }
+        },
+        {
+          "name": "Executor Pool",
+          "description": "10 executor instances",
+          "icon": "pi pi-server",
+          "status": "running",
+          "resources": {
+            "cpu": "40 cores",
+            "memory": "160Gi"
+          }
+        },
+        {
+          "name": "Stream Engine",
+          "description": "Structured streaming",
+          "icon": "pi pi-sync",
+          "status": "running",
+          "batchInterval": "10s"
+        },
+        {
+          "name": "State Manager",
+          "description": "Stateful operations",
+          "icon": "pi pi-database",
+          "status": "running"
+        }
+      ],
+      "storage": [
+        {
+          "name": "Kafka Topics",
+          "description": "15 input topics",
+          "icon": "pi pi-list",
+          "status": "running",
+          "throughput": "1M msg/s"
+        },
+        {
+          "name": "State Store",
+          "description": "RocksDB backend",
+          "icon": "pi pi-hdd",
+          "status": "running",
+          "size": "100GB"
+        },
+        {
+          "name": "Archive Store",
+          "description": "S3 cold storage",
+          "icon": "pi pi-box",
+          "status": "running"
+        },
+        {
+          "name": "Cache Layer",
+          "description": "Redis cache",
+          "icon": "pi pi-flash",
+          "status": "running"
+        }
+      ],
+      "networking": [
+        {
+          "name": "Kafka Cluster",
+          "description": "Multi-consumer",
+          "icon": "pi pi-sitemap",
+          "status": "running",
+          "brokers": 5
+        },
+        {
+          "name": "Load Balancer",
+          "description": "ALB ingress",
+          "icon": "pi pi-compass",
+          "status": "running"
+        },
+        {
+          "name": "CDC Connector",
+          "description": "Database CDC",
+          "icon": "pi pi-refresh",
+          "status": "running"
+        },
+        {
+          "name": "Event Hub",
+          "description": "Event routing",
+          "icon": "pi pi-send",
+          "status": "running"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "Lag Monitor",
+          "description": "Consumer lag",
+          "icon": "pi pi-clock",
+          "status": "running",
+          "maxLag": "5s"
+        },
+        {
+          "name": "Throughput",
+          "description": "Messages/sec",
+          "icon": "pi pi-chart-line",
+          "status": "running"
+        },
+        {
+          "name": "Kafka Manager",
+          "description": "Cluster health",
+          "icon": "pi pi-heart",
+          "status": "running"
+        },
+        {
+          "name": "Custom Dashboard",
+          "description": "Grafana metrics",
+          "icon": "pi pi-desktop",
+          "status": "running",
+          "url": "http://grafana.example.com"
+        }
+      ]
+    },
+    "spark-job-5": {
+      "core": [
+        {
+          "name": "Spark Driver",
+          "description": "Awaiting resources",
+          "icon": "pi pi-microchip",
+          "status": "pending",
+          "resources": {
+            "cpu": "4 cores",
+            "memory": "16Gi"
+          }
+        },
+        {
+          "name": "Executor Pool",
+          "description": "Not allocated",
+          "icon": "pi pi-server",
+          "status": "pending",
+          "resources": {
+            "cpu": "0 cores",
+            "memory": "0Gi"
+          }
+        },
+        {
+          "name": "Resource Manager",
+          "description": "YARN queue",
+          "icon": "pi pi-hourglass",
+          "status": "pending"
+        }
+      ],
+      "storage": [
+        {
+          "name": "Data Warehouse",
+          "description": "Snowflake connector",
+          "icon": "pi pi-database",
+          "status": "pending"
+        },
+        {
+          "name": "Stage Area",
+          "description": "ETL staging",
+          "icon": "pi pi-inbox",
+          "status": "pending"
+        },
+        {
+          "name": "Archive",
+          "description": "Historical data",
+          "icon": "pi pi-archive",
+          "status": "pending"
+        }
+      ],
+      "networking": [
+        {
+          "name": "VPC Endpoint",
+          "description": "Private link",
+          "icon": "pi pi-lock",
+          "status": "pending"
+        },
+        {
+          "name": "Data Gateway",
+          "description": "API gateway",
+          "icon": "pi pi-globe",
+          "status": "pending"
+        }
+      ],
+      "monitoring": [
+        {
+          "name": "Queue Monitor",
+          "description": "Job queue status",
+          "icon": "pi pi-list",
+          "status": "active",
+          "position": 3
+        },
+        {
+          "name": "Resource Wait",
+          "description": "Waiting for nodes",
+          "icon": "pi pi-spinner",
+          "status": "active"
+        }
+      ]
+    }
+  }
+}

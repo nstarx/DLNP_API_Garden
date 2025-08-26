@@ -1,0 +1,44 @@
+{
+  "s3Items": [
+    {
+      "name": "HP Printer logs Data",
+      "connectionID": "2732763284",
+      "description": "AWS S3 location for HP Printer logs folder, from all geos and is partitioned by event date. These are brought in with privacy-preserving, and are AES-256 encrypted symmetrically. Also archived to glacier every 30d.",
+      "owner": "Suresh Kondapuram",
+      "tag": {
+        "category": "Telemetry",
+        "priority": "Low",
+        "version": "1.0"
+      },
+      "environment": "Dev",
+      "severity": "warn",
+      "bucket": "printers-data",
+      "key": "logs",
+      "folder": "geos",
+      "created": "Thu, May 15, 2025",
+      "updated": "Fri, May 16, 2025",
+      "service": "new service",
+      "aiZoneName": "HP Observability AIZone- Dev"
+    },
+    {
+      "name": "HP A/B Testing events Data",
+      "connectionID": "2732763289",
+      "description": "AWS S3 location for HP A/B Testing Analytics folder, from all geos and is partitioned by event date. These are brought in with privacy-preserving, and are AES-256 encrypted symmetrically. Also archived to glacier every 30d.",
+      "owner": "Alice Shrivastav",
+      "tag": {
+        "experiment": "Alpha",
+        "department": "AI/ML",
+        "version": "1.1"
+      },
+      "environment": "Prod",
+      "severity": "success",
+      "bucket": "experiments-data",
+      "key": "A/B testing",
+      "folder": "events",
+      "service": "new service",
+      "created": "Tue, Jun 02, 2025",
+      "updated": "Wed, Jun 03, 2025",
+      "aiZoneName": "HP AI/ML AIZone- Prod"
+    }
+  ]
+}

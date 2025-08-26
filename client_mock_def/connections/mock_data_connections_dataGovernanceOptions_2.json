@@ -1,0 +1,9 @@
+{
+  "dataGovernanceOptions": [
+    {
+      "name": "Apache Ranger",
+      "code": "Al",
+      "iconType": "apache ranger"
+    }
+  ]
+}

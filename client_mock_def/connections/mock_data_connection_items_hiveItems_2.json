@@ -1,0 +1,24 @@
+{
+  "hiveItems": [
+    {
+      "name": "HP Hive Metastore System",
+      "db": "postgres",
+      "host": "rds-122344.aws.us-east-1.rds.com",
+      "port": "5432",
+      "user": "beeline",
+      "path": "s3://config_path/prod/hive/.metastore/",
+      "connectionID": "2732763284",
+      "description": "Hive Metastore for cataloging and governing various HP underlying datasources inside various AWSes",
+      "owner": "Sai Khanna",
+      "tag": {
+        "deployment": "Helm Charts- Hive Metastore Deployment",
+        "version": "1.0"
+      },
+      "environment": "Prod",
+      "severity": "success",
+      "created": "Mon, Apr 21, 2025",
+      "updated": "Fri, May 16, 2025",
+      "aiZoneName": "HP Observability AIZone- Dev"
+    }
+  ]
+}

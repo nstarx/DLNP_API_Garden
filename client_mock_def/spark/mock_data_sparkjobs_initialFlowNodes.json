@@ -1,0 +1,3 @@
+{
+  "initialFlowNodes": "[\n    {\n        id: 'data-source',\n        type: 'sparkNode',\n        position: { x: 100, y: 100 },\n        data: { label: 'Data Source', nodeType: 'data-source' }\n    },\nexport const initialFlowEdges = [\n    {\n        id: 'edge-source-processing',\n        source: 'data-source',\n        target: 'spark-processing',\n        type: 'smoothstep',\n        animated: true,\n        style: { stroke: '#3b82f6', strokeWidth: 2 }\n    },\nexport const defaultSparkJob = {\n    id: '',\n    name: '',\n    application: '',\n    version: 1,\n    status: 'Pending',\n    k8sNodes: []"
+}

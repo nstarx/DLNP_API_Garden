@@ -1,0 +1,48 @@
+{
+  "mockColumnOptions": [
+    {
+      "label": "Deployment Name",
+      "value": "deploymentName"
+    },
+    {
+      "label": "Version",
+      "value": "activeVersion"
+    },
+    {
+      "label": "Cloud",
+      "value": "cloudProvider"
+    },
+    {
+      "label": "Region",
+      "value": "region"
+    },
+    {
+      "label": "AI Zone",
+      "value": "aiZoneId"
+    },
+    {
+      "label": "Project",
+      "value": "projectId"
+    },
+    {
+      "label": "Access Level",
+      "value": "accessControl"
+    },
+    {
+      "label": "Endpoint",
+      "value": "endpoint"
+    },
+    {
+      "label": "Status",
+      "value": "status"
+    },
+    {
+      "label": "Artifacts",
+      "value": "artifacts"
+    },
+    {
+      "label": "Actions",
+      "value": "actions"
+    }
+  ]
+}

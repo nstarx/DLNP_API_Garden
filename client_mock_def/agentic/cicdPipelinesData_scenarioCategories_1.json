@@ -1,0 +1,19 @@
+{
+  "scenarioCategories": [
+    {
+      "name": "Customer Support"
+    },
+    {
+      "name": "Document Processing"
+    },
+    {
+      "name": "Data Analysis"
+    },
+    {
+      "name": "Research"
+    },
+    {
+      "name": "Content Generation"
+    }
+  ]
+}

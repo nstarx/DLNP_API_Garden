@@ -1,0 +1,97 @@
+{
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Customer Support Bot",
+      "description": "AI-powered customer service assistant",
+      "status": "Live",
+      "datasets": [
+        {
+          "id": "ds-1",
+          "name": "Support Documentation",
+          "documentCount": 1250
+        }
+      ],
+      "pipelines": [
+        {
+          "id": "pipe-1",
+          "name": "v1.0 - Production",
+          "version": "1.0"
+        }
+      ],
+      "deployments": [
+        {
+          "id": "dep-1",
+          "name": "Production",
+          "status": "active"
+        }
+      ],
+      "experiments": [],
+      "metrics": {
+        "contextAdherence": 0.92,
+        "userSatisfaction": 0.88
+      }
+    },
+    {
+      "id": "proj-2",
+      "name": "Internal Knowledge Base",
+      "description": "Employee resource search system",
+      "status": "In Development",
+      "datasets": [
+        {
+          "id": "ds-2",
+          "name": "Company Policies",
+          "documentCount": 450
+        }
+      ],
+      "pipelines": [
+        {
+          "id": "pipe-2",
+          "name": "v0.1 - Testing",
+          "version": "0.1"
+        }
+      ],
+      "deployments": [],
+      "experiments": [],
+      "metrics": {
+        "contextAdherence": 0.85,
+        "userSatisfaction": null
+      }
+    }
+  ],
+  "navigationSections": {
+    "designer": {
+      "icon": "pi pi-palette",
+      "items": [
+        { "id": "projects", "label": "Projects", "icon": "pi pi-folder" },
+        { "id": "data", "label": "Data", "icon": "pi pi-database" },
+        { "id": "pipeline", "label": "Pipeline Builder", "icon": "pi pi-sitemap" },
+        { "id": "experiments", "label": "Experiments", "icon": "pi pi-chart-line" }
+      ]
+    },
+    "monitoring": {
+      "icon": "pi pi-chart-bar",
+      "items": [
+        { "id": "deployments", "label": "Deployments", "icon": "pi pi-cloud-upload" },
+        { "id": "monitoring", "label": "Monitoring", "icon": "pi pi-chart-bar" },
+        { "id": "debugging", "label": "Debugging", "icon": "pi pi-bug" }
+      ]
+    },
+    "security": {
+      "icon": "pi pi-shield",
+      "items": [
+        { "id": "governance", "label": "Governance", "icon": "pi pi-shield" }
+      ]
+    }
+  },
+  "validModules": [
+    "projects",
+    "data",
+    "pipeline",
+    "experiments",
+    "deployments",
+    "monitoring",
+    "debugging",
+    "governance"
+  ]
+}

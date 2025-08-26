@@ -1,0 +1,44 @@
+{
+  "rdsItems": [
+    {
+      "name": "HP Customer Support Tickets Database",
+      "connectionID": "2732763284",
+      "description": "AWS RDS Server for HP CST tickets, runbooks, Case Histories etc. Indexed by created_date and updated_date.",
+      "owner": "Adrian Paleacu",
+      "tag": {
+        "category": "CST",
+        "priority": "High",
+        "access": "CONFIDENTIAL"
+      },
+      "rdbms": "Postgres",
+      "version": "v14.2",
+      "host": "rds-v3243521.us-east-1.rds.aws.com",
+      "port": 5432,
+      "securityGroup": "HP rds SG",
+      "region": "us-east-1",
+      "az": [
+        "us-east-1a",
+        "us-east-1b"
+      ],
+      "vpc": "vpc-12114566",
+      "subnets": [
+        "subnet-11882349",
+        "subnet-102294532"
+      ],
+      "iam": "my_ec2_rds_readonly_role",
+      "username": "rdsuser",
+      "database": "public",
+      "ssl": true,
+      "cert": "aws-cm-452219",
+      "environment": "Dev",
+      "severity": "warn",
+      "bucket": "printers-data",
+      "key": "logs",
+      "folder": "geos",
+      "created": "Mon, Apr 15, 2025",
+      "updated": "Sat, Jun 01, 2025",
+      "service": "new service",
+      "aiZoneName": "HP Observability AIZone- Dev"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "dashboardAdminMenuItems": [
+    {
+      "id": 1,
+      "label": "Admin Dashboard",
+      "icon": "pi pi-cog",
+      "path": "/admin",
+      "roles": [
+        "admin",
+        "dashboard_admin"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "About",
+      "icon": "pi pi-info-circle",
+      "path": "/about",
+      "roles": [
+        "admin",
+        "ops",
+        "ds",
+        "biz",
+        "dashboard_admin"
+      ]
+    }
+  ]
+}

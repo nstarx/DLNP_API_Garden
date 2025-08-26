@@ -1,0 +1,3 @@
+{
+  "sparkConfigurations": "{\n    appName: {\n        default: 'python_spark_app',\n        options: ['python_spark_app', 'spark_etl_job', 'spark_ml_job', 'spark_streaming_job']\n    }"
+}

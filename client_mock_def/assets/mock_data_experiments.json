@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Sentiment Model Tuning",
+    "status": "Completed",
+    "model": "Sentiment Analysis",
+    "dataset": "Customer Feedback",
+    "startDate": "2023-03-15",
+    "endDate": "2023-03-18"
+  },
+  {
+    "id": 2,
+    "name": "Image Model Training",
+    "status": "Running",
+    "model": "Image Classification",
+    "dataset": "Product Images",
+    "startDate": "2023-04-10",
+    "endDate": null
+  },
+  {
+    "id": 3,
+    "name": "Sales Model Validation",
+    "status": "Failed",
+    "model": "Sales Forecasting",
+    "dataset": "Sales Transactions",
+    "startDate": "2023-05-22",
+    "endDate": "2023-05-23"
+  },
+  {
+    "id": 4,
+    "name": "Churn Model A/B Test",
+    "status": "Scheduled",
+    "model": "Customer Churn Prediction",
+    "dataset": "Customer Data",
+    "startDate": "2023-06-05",
+    "endDate": null
+  }
+]

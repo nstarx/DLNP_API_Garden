@@ -1,0 +1,31 @@
+{
+  "mockTestSuites": [
+    {
+      "id": 1,
+      "name": "Daily Regression Suite",
+      "type": "regression",
+      "scenarios": 15,
+      "lastRun": "2024-01-15",
+      "status": "passed",
+      "passRate": 93
+    },
+    {
+      "id": 2,
+      "name": "API Integration Suite",
+      "type": "integration",
+      "scenarios": 8,
+      "lastRun": "2024-01-14",
+      "status": "partial",
+      "passRate": 75
+    },
+    {
+      "id": 3,
+      "name": "Performance Test Suite",
+      "type": "performance",
+      "scenarios": 10,
+      "lastRun": "2024-01-13",
+      "status": "passed",
+      "passRate": 88
+    }
+  ]
+}

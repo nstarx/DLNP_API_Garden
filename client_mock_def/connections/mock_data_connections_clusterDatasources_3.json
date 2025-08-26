@@ -1,0 +1,9 @@
+{
+  "clusterDatasources": [
+    {
+      "name": "Cluster Datasources",
+      "code": "CDS",
+      "icon": "pi pi-sitemap"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "licenseInfo": {
+    "type": "Enterprise",
+    "status": "Active",
+    "expiryDate": "2024-12-31",
+    "seats": {
+      "total": 200,
+      "used": 156,
+      "available": 44
+    },
+    "features": [
+      {
+        "name": "AI Catalog",
+        "status": "enabled"
+      },
+      {
+        "name": "Federated Learning",
+        "status": "enabled"
+      },
+      {
+        "name": "RAG Platform",
+        "status": "enabled"
+      },
+      {
+        "name": "Advanced Analytics",
+        "status": "enabled"
+      },
+      {
+        "name": "Custom Integrations",
+        "status": "enabled"
+      },
+      {
+        "name": "Priority Support",
+        "status": "enabled"
+      }
+    ]
+  }
+}

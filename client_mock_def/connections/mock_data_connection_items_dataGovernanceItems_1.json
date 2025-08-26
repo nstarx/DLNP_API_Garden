@@ -1,0 +1,35 @@
+{
+  "dataGovernanceItems": [
+    {
+      "image": "ranger/ranger",
+      "version": "2.1.3",
+      "mem": "8",
+      "heap": "8",
+      "ssd": "128",
+      "hdd": "512",
+      "master": 1,
+      "worker": 3,
+      "uss": "AWS S3 Object Storage(s3n://)",
+      "mnt": "/usr/mnt1",
+      "uri": "alluxio://s3n/",
+      "name": "Apache Ranger -ACL Governance",
+      "connectionID": "2732763284",
+      "description": "Apache Ranger ACL Policies configuration at AWS S3 location of the HP Printer logs folder, from all geos and is partitioned by event date. These are brought in with privacy-preserving, and are AES-256 encrypted symmetrically. Also archived to glacier every 30d.",
+      "owner": "Raju Pasunuri",
+      "tag": {
+        "deployment": "Manual",
+        "priority": "Low",
+        "version": "1.0"
+      },
+      "environment": "Stg",
+      "severity": "info",
+      "bucket": "printers-data",
+      "key": "logs",
+      "folder": "geos",
+      "created": "Thu, May 15, 2025",
+      "updated": "Fri, May 16, 2025",
+      "service": "new service",
+      "aiZoneName": "HP Observability AIZone- Dev"
+    }
+  ]
+}

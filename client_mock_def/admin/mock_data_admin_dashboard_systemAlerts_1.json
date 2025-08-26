@@ -1,0 +1,28 @@
+{
+  "systemAlerts": [
+    {
+      "id": "alert1",
+      "severity": "high",
+      "title": "Security Update Required",
+      "message": "Critical security patches available for 3 components",
+      "timestamp": "2024-01-20 12:00:00",
+      "status": "active"
+    },
+    {
+      "id": "alert2",
+      "severity": "medium",
+      "title": "Storage Usage Warning",
+      "message": "Database storage at 85% capacity",
+      "timestamp": "2024-01-20 10:30:00",
+      "status": "active"
+    },
+    {
+      "id": "alert3",
+      "severity": "low",
+      "title": "Scheduled Maintenance",
+      "message": "System maintenance scheduled for Feb 1, 2024",
+      "timestamp": "2024-01-19 09:00:00",
+      "status": "acknowledged"
+    }
+  ]
+}

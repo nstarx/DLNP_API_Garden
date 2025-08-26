@@ -1,0 +1,14 @@
+{
+  "objectStorage": [
+    {
+      "name": "Minio",
+      "code": "NY",
+      "icon": "pi pi-objects-column"
+    },
+    {
+      "name": "Ceph",
+      "code": "RM",
+      "icon": "pi pi-database"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fileOptions": [
+    {
+      "name": "Url",
+      "code": "NY",
+      "icon": "pi pi-globe"
+    },
+    {
+      "name": "Local",
+      "code": "RM",
+      "icon": "pi pi-folder-open"
+    },
+    {
+      "name": "Drop Box",
+      "code": "LDN",
+      "icon": "pi pi-cloud-upload"
+    },
+    {
+      "name": "Google Drive",
+      "code": "LDN",
+      "icon": "pi pi-google"
+    }
+  ]
+}

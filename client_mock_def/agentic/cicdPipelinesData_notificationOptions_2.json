@@ -1,0 +1,20 @@
+{
+  "notificationOptions": [
+    {
+      "id": 1,
+      "name": "Email Notifications"
+    },
+    {
+      "id": 2,
+      "name": "Slack Alerts"
+    },
+    {
+      "id": 3,
+      "name": "MS Teams Notifications"
+    },
+    {
+      "id": 4,
+      "name": "SMS Alerts"
+    }
+  ]
+}

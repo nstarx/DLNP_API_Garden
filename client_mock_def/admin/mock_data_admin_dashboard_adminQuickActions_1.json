@@ -1,0 +1,46 @@
+{
+  "adminQuickActions": [
+    {
+      "id": "qa1",
+      "title": "Add New User",
+      "icon": "pi pi-user-plus",
+      "path": "/admin/users/new",
+      "color": "blue"
+    },
+    {
+      "id": "qa2",
+      "title": "Create Role",
+      "icon": "pi pi-shield",
+      "path": "/admin/roles/new",
+      "color": "green"
+    },
+    {
+      "id": "qa3",
+      "title": "View Audit Log",
+      "icon": "pi pi-history",
+      "path": "/admin/audit",
+      "color": "orange"
+    },
+    {
+      "id": "qa4",
+      "title": "System Settings",
+      "icon": "pi pi-cog",
+      "path": "/admin/settings",
+      "color": "purple"
+    },
+    {
+      "id": "qa5",
+      "title": "Backup Data",
+      "icon": "pi pi-download",
+      "path": "/admin/backup",
+      "color": "red"
+    },
+    {
+      "id": "qa6",
+      "title": "View Reports",
+      "icon": "pi pi-chart-bar",
+      "path": "/admin/reports",
+      "color": "teal"
+    }
+  ]
+}

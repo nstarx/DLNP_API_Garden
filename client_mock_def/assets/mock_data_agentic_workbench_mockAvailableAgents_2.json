@@ -1,0 +1,62 @@
+{
+  "mockAvailableAgents": [
+    {
+      "id": 1,
+      "name": "Customer Support Agent",
+      "type": {
+        "name": "API Agent",
+        "icon": "pi pi-users",
+        "provider": "google",
+        "description": "customer support and service",
+        "endpoint": "/customer-support-google-adk",
+        "appname": "customer_service"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Technical Assistant",
+      "type": {
+        "name": "API Agent",
+        "icon": "pi pi-cog",
+        "provider": "openai",
+        "description": "technical troubleshooting and guidance",
+        "endpoint": "/openai-use-case-1"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Research Assistant",
+      "type": {
+        "name": "API Agent",
+        "icon": "pi pi-chart-bar",
+        "provider": "google",
+        "description": "data analysis and research",
+        "endpoint": "/research-assistant-google-adk",
+        "appname": "academic_research"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Code Assistant",
+      "type": {
+        "name": "RAG Agent",
+        "icon": "pi pi-code",
+        "provider": "anthropic",
+        "description": "code generation and debugging",
+        "endpoint": "/anthropic-code-assistant-rag",
+        "appname": "development_assistant"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Legal Advisor",
+      "type": {
+        "name": "LLM Agent",
+        "icon": "pi pi-briefcase",
+        "provider": "ollama",
+        "description": "legal document analysis",
+        "endpoint": "/ollama-legal-advisor"
+      }
+    }
+  ]
+}

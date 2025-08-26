@@ -1,0 +1,5 @@
+{
+  "batchSize": 32,
+  "learningRate": 0.001,
+  "numRounds": 10
+}

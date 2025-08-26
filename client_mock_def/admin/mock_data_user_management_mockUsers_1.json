@@ -1,0 +1,119 @@
+{
+  "mockUsers": [
+    {
+      "id": 1,
+      "name": "Adrian",
+      "email": "adrian@nstarxinc.com",
+      "country": {
+        "name": "Romania",
+        "code": "ro"
+      },
+      "company": "DLNP Tech",
+      "date": "2023-01-15",
+      "status": "qualified",
+      "verified": true,
+      "activity": 85,
+      "representative": {
+        "name": "admin",
+        "image": "amyelsner.png"
+      },
+      "balance": 75000,
+      "roles": [
+        "admin",
+        "ds",
+        "ops",
+        "biz"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sai",
+      "email": "Sai@nstarxinc.com",
+      "country": {
+        "name": "India",
+        "code": "in"
+      },
+      "company": "DLNP Tech",
+      "date": "2023-02-20",
+      "status": "qualified",
+      "verified": true,
+      "activity": 78,
+      "representative": {
+        "name": "admin",
+        "image": "asiyajavayant.png"
+      },
+      "balance": 68000,
+      "roles": [
+        "ds",
+        "ops"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Suresh",
+      "email": "suresh@nstarxinc.com",
+      "country": {
+        "name": "India",
+        "code": "in"
+      },
+      "company": "DLNP Tech",
+      "date": "2023-03-10",
+      "status": "qualified",
+      "verified": true,
+      "activity": 72,
+      "representative": {
+        "name": "admin",
+        "image": "xuxuefeng.png"
+      },
+      "balance": 65000,
+      "roles": [
+        "ds"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Suman",
+      "email": "suman@nstarxinc.com",
+      "country": {
+        "name": "United States",
+        "code": "us"
+      },
+      "company": "DLNP Tech",
+      "date": "2023-04-05",
+      "status": "qualified",
+      "verified": true,
+      "activity": 68,
+      "representative": {
+        "name": "admin",
+        "image": "ionibowcher.png"
+      },
+      "balance": 62000,
+      "roles": [
+        "biz"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sujay",
+      "email": "sujay@nstarxinc.com",
+      "country": {
+        "name": "United States",
+        "code": "us"
+      },
+      "company": "DLNP Tech",
+      "date": "2023-05-12",
+      "status": "qualified",
+      "verified": true,
+      "activity": 75,
+      "representative": {
+        "name": "admin",
+        "image": "stephenshaw.png"
+      },
+      "balance": 70000,
+      "roles": [
+        "ops",
+        "biz"
+      ]
+    }
+  ]
+}

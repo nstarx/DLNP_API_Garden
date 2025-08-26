@@ -1,0 +1,16 @@
+{
+  "deploymentStatus": {
+    "development": {
+      "version": "v1.3.0-dev",
+      "status": "deployed 2 hours ago"
+    },
+    "staging": {
+      "version": "v1.2.4-beta",
+      "status": "deploying..."
+    },
+    "production": {
+      "version": "v1.2.3",
+      "status": "awaiting approval"
+    }
+  }
+}

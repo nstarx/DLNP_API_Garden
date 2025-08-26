@@ -1,0 +1,20 @@
+{
+  "mockDeploymentData": {
+    "deploymentName": "",
+    "activeVersion": "",
+    "sourceAndArtifacts": "",
+    "workspace": "",
+    "endpoint": "",
+    "baseUrl": "",
+    "cost": "",
+    "cloudProvider": null,
+    "region": "",
+    "kubernetesCluster": "",
+    "namespace": "",
+    "status": "stopped",
+    "deploymentSource": "direct",
+    "helmChartUrl": "",
+    "githubRepoUrl": "",
+    "artifacts": []
+  }
+}

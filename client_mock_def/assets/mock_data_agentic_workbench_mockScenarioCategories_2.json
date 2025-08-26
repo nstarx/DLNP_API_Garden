@@ -1,0 +1,19 @@
+{
+  "mockScenarioCategories": [
+    {
+      "name": "Conversation"
+    },
+    {
+      "name": "Analysis"
+    },
+    {
+      "name": "Integration"
+    },
+    {
+      "name": "Code Review"
+    },
+    {
+      "name": "Moderation"
+    }
+  ]
+}

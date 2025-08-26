@@ -1,0 +1,36 @@
+{
+  "mockRecentTestResults": [
+    {
+      "id": 1,
+      "testName": "Conversation Flow #1243",
+      "agent": "Customer Support Agent",
+      "duration": "2m 35s",
+      "status": "passed",
+      "timestamp": "10 mins ago"
+    },
+    {
+      "id": 2,
+      "testName": "API Integration #1242",
+      "agent": "Technical Assistant",
+      "duration": "3m 12s",
+      "status": "failed",
+      "timestamp": "25 mins ago"
+    },
+    {
+      "id": 3,
+      "testName": "Code Review #1241",
+      "agent": "Code Assistant",
+      "duration": "4m 8s",
+      "status": "passed",
+      "timestamp": "1 hour ago"
+    },
+    {
+      "id": 4,
+      "testName": "Content Moderation #1240",
+      "agent": "Research Assistant",
+      "duration": "1m 45s",
+      "status": "warning",
+      "timestamp": "2 hours ago"
+    }
+  ]
+}

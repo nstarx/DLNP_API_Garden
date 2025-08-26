@@ -1,0 +1,20 @@
+{
+  "menuTypes": [
+    {
+      "name": "ds",
+      "label": "Data Science Menu"
+    },
+    {
+      "name": "ops",
+      "label": "Operations Menu"
+    },
+    {
+      "name": "biz",
+      "label": "Business Menu"
+    },
+    {
+      "name": "dashboard_admin",
+      "label": "Dashboard Admin Menu"
+    }
+  ]
+}

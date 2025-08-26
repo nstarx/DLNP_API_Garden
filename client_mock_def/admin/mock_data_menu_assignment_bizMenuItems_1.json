@@ -1,0 +1,85 @@
+{
+  "bizMenuItems": [
+    {
+      "id": 1,
+      "label": "AI Catalog",
+      "icon": "pi pi-database",
+      "path": "/ai-catalog",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Document Browser",
+      "icon": "pi pi-folder",
+      "path": "/document-browser",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "All Files",
+      "icon": "pi pi-file",
+      "path": "/all-files",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Uploads",
+      "icon": "pi pi-upload",
+      "path": "/uploads",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Departments",
+      "icon": "pi pi-building",
+      "path": "/departments",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Query History",
+      "icon": "pi pi-history",
+      "path": "/query-history",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 7,
+      "label": "Insights",
+      "icon": "pi pi-chart-line",
+      "path": "/insights",
+      "roles": [
+        "admin",
+        "biz"
+      ]
+    },
+    {
+      "id": 8,
+      "label": "RAG Chat",
+      "icon": "pi pi-comments",
+      "path": "/rag-chat",
+      "roles": [
+        "admin",
+        "biz",
+        "ds"
+      ]
+    }
+  ]
+}

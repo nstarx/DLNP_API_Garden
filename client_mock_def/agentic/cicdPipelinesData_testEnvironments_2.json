@@ -1,0 +1,8 @@
+{
+  "testEnvironments": [
+    "Development",
+    "Staging",
+    "Production",
+    "Sandbox"
+  ]
+}

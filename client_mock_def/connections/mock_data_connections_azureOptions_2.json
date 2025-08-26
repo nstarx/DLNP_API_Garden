@@ -1,0 +1,14 @@
+{
+  "azureOptions": [
+    {
+      "name": "Blob Storage",
+      "code": "NY",
+      "icon": "pi pi-box"
+    },
+    {
+      "name": "CosmosDB",
+      "code": "RM",
+      "icon": "pi pi-server"
+    }
+  ]
+}

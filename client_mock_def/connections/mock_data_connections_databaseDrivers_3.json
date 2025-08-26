@@ -1,0 +1,16 @@
+{
+  "databaseDrivers": [
+    {
+      "label": "PostgreSQL",
+      "value": "postgres"
+    },
+    {
+      "label": "MySQL",
+      "value": "mysql"
+    },
+    {
+      "label": "SQL Server",
+      "value": "mssql"
+    }
+  ]
+}

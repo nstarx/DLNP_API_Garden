@@ -1,0 +1,3 @@
+{
+  "riskAssessment": "[\n    {\n        id: 'risk1',\n        category: 'Technical',\n        description: 'Legacy system integration complexity',\n        impact: 'High',\n        probability: 'Medium',\n        mitigation: 'Implement adapter pattern and thorough testing',\n        status: 'Mitigated'\n    },\nexport const complianceChecklist = [\n    { id: 'gdpr', name: 'GDPR Compliance', status: 'compliant', lastAudit: '2024-01-10' },"
+}

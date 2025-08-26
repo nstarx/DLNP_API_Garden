@@ -1,0 +1,32 @@
+{
+  "mockArtifactTypeOptions": [
+    {
+      "label": "Model",
+      "value": "model"
+    },
+    {
+      "label": "API",
+      "value": "api"
+    },
+    {
+      "label": "Client",
+      "value": "client"
+    },
+    {
+      "label": "Server",
+      "value": "server"
+    },
+    {
+      "label": "Indexer",
+      "value": "indexer"
+    },
+    {
+      "label": "Retriever",
+      "value": "retriever"
+    },
+    {
+      "label": "Other",
+      "value": "other"
+    }
+  ]
+}

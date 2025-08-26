@@ -1,0 +1,217 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "role": "Admin",
+      "permissions": ["read", "write", "delete"],
+      "lastAccess": "2024-01-20T14:30:00.000Z"
+    },
+    {
+      "id": "user-2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "role": "Developer",
+      "permissions": ["read", "write"],
+      "lastAccess": "2024-01-20T16:45:00.000Z"
+    },
+    {
+      "id": "user-3",
+      "name": "Mike Johnson",
+      "email": "mike.johnson@example.com",
+      "role": "Viewer",
+      "permissions": ["read"],
+      "lastAccess": "2024-01-19T11:20:00.000Z"
+    }
+  ],
+  "securityPolicies": [
+    {
+      "id": "policy-1",
+      "name": "Data Encryption",
+      "icon": "pi pi-lock",
+      "description": "Encrypt all data at rest and in transit",
+      "enabled": true,
+      "settings": [
+        {
+          "key": "algorithm",
+          "label": "Algorithm",
+          "type": "select",
+          "value": "AES-256",
+          "options": ["AES-256", "AES-128"]
+        },
+        {
+          "key": "keyRotation",
+          "label": "Key Rotation (days)",
+          "type": "number",
+          "value": 90
+        }
+      ]
+    },
+    {
+      "id": "policy-2",
+      "name": "Access Control",
+      "icon": "pi pi-shield",
+      "description": "Enforce role-based access control",
+      "enabled": true,
+      "settings": [
+        {
+          "key": "mfa",
+          "label": "Require MFA",
+          "type": "select",
+          "value": "required",
+          "options": ["required", "optional", "disabled"]
+        },
+        {
+          "key": "sessionTimeout",
+          "label": "Session Timeout (min)",
+          "type": "number",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "policy-3",
+      "name": "API Rate Limiting",
+      "icon": "pi pi-chart-line",
+      "description": "Limit API requests to prevent abuse",
+      "enabled": true,
+      "settings": [
+        {
+          "key": "rateLimit",
+          "label": "Requests per minute",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "key": "burstLimit",
+          "label": "Burst Limit",
+          "type": "number",
+          "value": 150
+        }
+      ]
+    }
+  ],
+  "dataClassificationRules": [
+    {
+      "id": "rule-1",
+      "name": "Personal Identifiable Information",
+      "level": "Critical",
+      "description": "Detects and classifies PII data",
+      "patterns": [
+        "SSN: \\d{3}-\\d{2}-\\d{4}",
+        "Email: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+      ]
+    },
+    {
+      "id": "rule-2",
+      "name": "Financial Data",
+      "level": "High",
+      "description": "Identifies financial information",
+      "patterns": [
+        "CC: \\d{4}-\\d{4}-\\d{4}-\\d{4}",
+        "Account: \\d{8,12}"
+      ]
+    },
+    {
+      "id": "rule-3",
+      "name": "Health Information",
+      "level": "Critical",
+      "description": "HIPAA protected health information",
+      "patterns": [
+        "MRN: [A-Z]{2}\\d{6}",
+        "Diagnosis Code: [A-Z]\\d{2}\\.\\d{1,2}"
+      ]
+    }
+  ],
+  "retentionPolicies": [
+    {
+      "id": "ret-1",
+      "dataType": "Query Logs",
+      "retentionPeriod": 90,
+      "periodUnit": "days",
+      "action": "archive",
+      "lastExecuted": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "ret-2",
+      "dataType": "User Activity",
+      "retentionPeriod": 1,
+      "periodUnit": "year",
+      "action": "delete",
+      "lastExecuted": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "ret-3",
+      "dataType": "System Metrics",
+      "retentionPeriod": 30,
+      "periodUnit": "days",
+      "action": "compress",
+      "lastExecuted": "2024-01-18T00:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1",
+      "timestamp": "2024-01-20T15:30:00.000Z",
+      "user": "john.doe@example.com",
+      "action": "CREATE",
+      "resource": "Pipeline: customer-support-v2",
+      "details": {
+        "pipelineId": "pipe-123",
+        "config": {}
+      }
+    },
+    {
+      "id": "log-2",
+      "timestamp": "2024-01-20T14:15:00.000Z",
+      "user": "jane.smith@example.com",
+      "action": "UPDATE",
+      "resource": "Security Policy: Data Encryption",
+      "details": {
+        "changes": ["algorithm: AES-128 -> AES-256"]
+      }
+    },
+    {
+      "id": "log-3",
+      "timestamp": "2024-01-20T13:45:00.000Z",
+      "user": "system",
+      "action": "DELETE",
+      "resource": "Expired Query Logs",
+      "details": {
+        "count": 1523,
+        "policy": "ret-1"
+      }
+    }
+  ],
+  "eventTypes": ["CREATE", "UPDATE", "DELETE", "ACCESS", "LOGIN", "LOGOUT"],
+  "roles": ["Admin", "Developer", "Analyst", "Viewer"],
+  "availablePermissions": ["read", "write", "delete", "manage_users", "manage_policies"],
+  "newUser": {
+    "name": "",
+    "email": "",
+    "role": "Viewer",
+    "permissions": ["read"]
+  },
+  "auditFindings": [
+    {
+      "id": "finding-1",
+      "severity": "High",
+      "title": "Inactive Users with Admin Access",
+      "description": "3 users with admin privileges have not logged in for over 90 days"
+    },
+    {
+      "id": "finding-2",
+      "severity": "Medium",
+      "title": "Weak Password Policy",
+      "description": "Password complexity requirements should be increased"
+    },
+    {
+      "id": "finding-3",
+      "severity": "Low",
+      "title": "Outdated API Keys",
+      "description": "12 API keys have not been rotated in the last 180 days"
+    }
+  ],
+  "securityScore": 85
+}

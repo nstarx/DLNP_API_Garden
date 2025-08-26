@@ -1,0 +1,25 @@
+{
+  "mockPromptTemplates": [
+    {
+      "id": 1,
+      "name": "Research Paper Analysis",
+      "category": "Research",
+      "description": "Template for analyzing academic research papers",
+      "template": "Analyze the following research paper:\n\nTitle: {title}\nAuthors: {authors}\n\nPlease provide:\n1. Key findings\n2. Methodology used\n3. Implications\n4. Limitations"
+    },
+    {
+      "id": 2,
+      "name": "Customer Issue Resolution",
+      "category": "Support",
+      "description": "Template for resolving customer support issues",
+      "template": "Customer Issue:\n{issue_description}\n\nCustomer History:\n{history}\n\nPlease provide a solution that addresses the issue while maintaining customer satisfaction."
+    },
+    {
+      "id": 3,
+      "name": "Data Analysis Report",
+      "category": "Analytics",
+      "description": "Template for generating data analysis reports",
+      "template": "Dataset: {dataset_name}\nPeriod: {time_period}\n\nAnalyze the data and provide:\n1. Key metrics\n2. Trends observed\n3. Anomalies detected\n4. Recommendations"
+    }
+  ]
+}

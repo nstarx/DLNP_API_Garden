@@ -1,0 +1,26 @@
+{
+  "mockJobStatistics": {
+    "total": 11,
+    "completed": 5,
+    "running": 2,
+    "failed": 1,
+    "pending": 3,
+    "successRate": 83.3,
+    "avgDuration": "32m",
+    "lastWeekRuns": 45,
+    "environments": {
+      "dev": {
+        "total": 5,
+        "active": 2
+      },
+      "staging": {
+        "total": 3,
+        "active": 1
+      },
+      "production": {
+        "total": 3,
+        "active": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "mockSQLQueries": {
+    "default": "SELECT * FROM products;",
+    "analytics": "SELECT category, COUNT(*) as count, AVG(price) as avg_price FROM products GROUP BY category;",
+    "developer": "SELECT * FROM products WHERE category = \"Electronics\" ORDER BY price DESC;",
+    "admin": "SHOW TABLES; DESCRIBE products;"
+  }
+}

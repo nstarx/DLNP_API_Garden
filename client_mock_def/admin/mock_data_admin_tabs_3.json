@@ -1,0 +1,24 @@
+{
+  "adminTabInfo": [
+    {
+      "name": "User Management",
+      "icon": "pi pi-users",
+      "description": "Add, edit, and manage user accounts and their role assignments"
+    },
+    {
+      "name": "Role Management",
+      "icon": "pi pi-shield",
+      "description": "Create and configure roles with specific permissions"
+    },
+    {
+      "name": "Menu Assignment",
+      "icon": "pi pi-list",
+      "description": "Configure menu items and role-based access control"
+    },
+    {
+      "name": "Project Management",
+      "icon": "pi pi-folder",
+      "description": "Manage projects and their access control"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "metrics": {
+    "contextAdherence": {
+      "value": 92,
+      "unit": "%",
+      "trend": {
+        "direction": "up",
+        "value": 2.3,
+        "unit": "%"
+      }
+    },
+    "avgLatency": {
+      "value": 1.2,
+      "unit": "s",
+      "trend": {
+        "direction": "down",
+        "value": 150,
+        "unit": "ms"
+      }
+    },
+    "userSatisfaction": {
+      "value": 88,
+      "unit": "%",
+      "trend": {
+        "direction": "up",
+        "value": 5.1,
+        "unit": "%"
+      }
+    },
+    "errorRate": {
+      "value": 0.3,
+      "unit": "%",
+      "trend": {
+        "direction": "down",
+        "value": 0.1,
+        "unit": "%"
+      }
+    }
+  },
+  "safetyMetrics": {
+    "toxicityDetection": 2,
+    "piiDetection": 0.5,
+    "hallucinationRate": 3.2
+  }
+}

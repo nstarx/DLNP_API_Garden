@@ -1,0 +1,8 @@
+{
+  "mockTranscriptionResults": {
+    "txt": "This is a sample transcribed text from your video. The AI has successfully converted the audio content into readable text format. This demonstrates the capabilities of our advanced transcription system, which can handle various audio qualities and languages. The system processes the audio through multiple stages including noise reduction, speech recognition, and text formatting to provide you with accurate and readable transcriptions.",
+    "srt": "1\n00:00:00,000 --> 00:00:05,000\nThis is a sample transcribed text from your video.\n\n2\n00:00:05,000 --> 00:00:10,000\nThe AI has successfully converted the audio content.\n\n3\n00:00:10,000 --> 00:00:15,000\ninto readable text format.",
+    "vtt": "WEBVTT\n\n00:00:00.000 --> 00:00:05.000\nThis is a sample transcribed text from your video.\n\n00:00:05.000 --> 00:00:10.000\nThe AI has successfully converted the audio content.\n\n00:00:10.000 --> 00:00:15.000\ninto readable text format.",
+    "sbv": "0:00:00.000,0:00:05.000\nThis is a sample transcribed text from your video.\n\n0:00:05.000,0:00:10.000\nThe AI has successfully converted the audio content.\n\n0:00:10.000,0:00:15.000\ninto readable text format."
+  }
+}

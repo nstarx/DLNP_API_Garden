@@ -1,0 +1,8 @@
+{
+  "mockPerformanceMetrics": {
+    "avgResponseTime": 245,
+    "successRate": 87,
+    "totalTests": 1243,
+    "totalCost": 28.75
+  }
+}

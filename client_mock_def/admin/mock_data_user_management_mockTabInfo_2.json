@@ -1,0 +1,24 @@
+{
+  "mockTabInfo": [
+    {
+      "name": "User Management",
+      "icon": "pi pi-users",
+      "description": "Add, edit, and manage user accounts and their role assignments"
+    },
+    {
+      "name": "Role Management",
+      "icon": "pi pi-shield",
+      "description": "Create and configure roles with specific permissions"
+    },
+    {
+      "name": "Menu Assignment",
+      "icon": "pi pi-sitemap",
+      "description": "Assign menu access permissions to different user roles"
+    },
+    {
+      "name": "Project Management",
+      "icon": "pi pi-briefcase",
+      "description": "Manage projects and team assignments"
+    }
+  ]
+}

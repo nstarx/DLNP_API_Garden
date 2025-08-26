@@ -1,0 +1,444 @@
+{
+  "sampleClusterDatasources": [
+    {
+      "id": "cluster-1",
+      "name": "Data Lake Integration Cluster",
+      "description": "Heterogeneous datasources for data lake integration",
+      "owner": "John Doe",
+      "created": "2023-05-15",
+      "updated": "2023-06-20",
+      "tags": [
+        "data-lake",
+        "integration",
+        "analytics"
+      ],
+      "status": "active",
+      "nodes": [
+        {
+          "id": "node-1",
+          "type": "postgres",
+          "name": "Customer Database",
+          "description": "Primary PostgreSQL database for customer data",
+          "connectionDetails": {
+            "type": "postgres",
+            "host": "postgres.example.com",
+            "port": 5432,
+            "username": "db_user",
+            "database": "customers"
+          },
+          "status": "active",
+          "tags": [
+            "database",
+            "relational",
+            "primary"
+          ],
+          "metadata": {
+            "version": "13.4",
+            "size": "500GB"
+          }
+        },
+        {
+          "id": "node-2",
+          "type": "s3",
+          "name": "Raw Data Storage",
+          "description": "S3 bucket for raw data storage",
+          "connectionDetails": {
+            "type": "s3",
+            "bucket": "raw-data-bucket",
+            "region": "us-west-2"
+          },
+          "status": "active",
+          "tags": [
+            "storage",
+            "raw-data"
+          ],
+          "metadata": {
+            "size": "2TB"
+          }
+        },
+        {
+          "id": "node-3",
+          "type": "mongodb",
+          "name": "Analytics Store",
+          "description": "MongoDB for analytics data",
+          "connectionDetails": {
+            "type": "mongodb",
+            "host": "mongo.example.com",
+            "port": 27017,
+            "database": "analytics"
+          },
+          "status": "active",
+          "tags": [
+            "database",
+            "nosql",
+            "analytics"
+          ],
+          "metadata": {
+            "version": "5.0",
+            "size": "1TB"
+          }
+        },
+        {
+          "id": "node-4",
+          "type": "elasticsearch",
+          "name": "Search Index",
+          "description": "Elasticsearch for search capabilities",
+          "connectionDetails": {
+            "type": "elasticsearch",
+            "host": "es.example.com",
+            "port": 9200
+          },
+          "status": "active",
+          "tags": [
+            "search",
+            "index"
+          ],
+          "metadata": {
+            "version": "7.10",
+            "size": "300GB"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-1",
+          "source": "node-1",
+          "target": "node-2",
+          "label": "Exports to",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Regular export of customer data to raw storage",
+            "schedule": "0 0 * * *"
+          }
+        },
+        {
+          "id": "edge-2",
+          "source": "node-2",
+          "target": "node-3",
+          "label": "Processes to",
+          "type": "data-flow",
+          "metadata": {
+            "description": "ETL process from raw data to analytics store",
+            "schedule": "0 2 * * *"
+          }
+        },
+        {
+          "id": "edge-3",
+          "source": "node-3",
+          "target": "node-4",
+          "label": "Indexes to",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Indexing of analytics data for search",
+            "schedule": "0 4 * * *"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cluster-3",
+      "name": "Trino Query Federation Cluster",
+      "description": "Trino master node with federated datasources",
+      "owner": "Data Engineering Team",
+      "created": "2023-09-10",
+      "updated": "2023-10-15",
+      "tags": [
+        "trino",
+        "query-federation",
+        "data-virtualization"
+      ],
+      "status": "active",
+      "nodes": [
+        {
+          "id": "presto-master",
+          "type": "presto",
+          "name": "Trino Query Engine",
+          "description": "Master Presto node for federated queries across datasources",
+          "connectionDetails": {
+            "type": "presto",
+            "host": "trino.example.com",
+            "port": 8080,
+            "username": "trino_admin",
+            "catalog": "federated"
+          },
+          "status": "active",
+          "tags": [
+            "query-engine",
+            "master",
+            "federation"
+          ],
+          "metadata": {
+            "version": "0.273",
+            "workers": "5",
+            "memory": "64GB"
+          },
+          "isMaster": true,
+          "role": "presto"
+        },
+        {
+          "id": "postgres-child",
+          "type": "postgres",
+          "name": "Product Database",
+          "description": "PostgreSQL database for product information",
+          "connectionDetails": {
+            "type": "postgres",
+            "host": "products-db.example.com",
+            "port": 5432,
+            "username": "product_user",
+            "database": "products"
+          },
+          "status": "active",
+          "tags": [
+            "database",
+            "relational",
+            "products"
+          ],
+          "metadata": {
+            "version": "14.1",
+            "size": "800GB"
+          },
+          "isMaster": false,
+          "role": "datasource",
+          "parentId": "presto-master"
+        },
+        {
+          "id": "mysql-child",
+          "type": "mysql",
+          "name": "Customer Database",
+          "description": "MySQL database for customer information",
+          "connectionDetails": {
+            "type": "mysql",
+            "host": "customers-db.example.com",
+            "port": 3306,
+            "username": "customer_user",
+            "database": "customers"
+          },
+          "status": "active",
+          "tags": [
+            "database",
+            "relational",
+            "customers"
+          ],
+          "metadata": {
+            "version": "8.0",
+            "size": "1.2TB"
+          },
+          "isMaster": false,
+          "role": "datasource",
+          "parentId": "presto-master"
+        },
+        {
+          "id": "hive-child",
+          "type": "hive",
+          "name": "Analytics Data Lake",
+          "description": "Hive metastore for data lake analytics",
+          "connectionDetails": {
+            "type": "hive",
+            "host": "hive.example.com",
+            "port": 10000,
+            "username": "hive_user",
+            "database": "analytics"
+          },
+          "status": "active",
+          "tags": [
+            "data-lake",
+            "analytics",
+            "hive"
+          ],
+          "metadata": {
+            "version": "3.1.2",
+            "size": "15TB"
+          },
+          "isMaster": false,
+          "role": "datasource",
+          "parentId": "presto-master"
+        },
+        {
+          "id": "mongodb-child",
+          "type": "mongodb",
+          "name": "Document Store",
+          "description": "MongoDB for document storage",
+          "connectionDetails": {
+            "type": "mongodb",
+            "host": "documents-db.example.com",
+            "port": 27017,
+            "database": "documents"
+          },
+          "status": "active",
+          "tags": [
+            "database",
+            "nosql",
+            "documents"
+          ],
+          "metadata": {
+            "version": "5.0",
+            "size": "3TB"
+          },
+          "isMaster": false,
+          "role": "datasource",
+          "parentId": "presto-master"
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-presto-postgres",
+          "source": "presto-master",
+          "target": "postgres-child",
+          "label": "Queries",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Presto queries PostgreSQL for product data",
+            "direction": "one-way"
+          }
+        },
+        {
+          "id": "edge-presto-mysql",
+          "source": "presto-master",
+          "target": "mysql-child",
+          "label": "Queries",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Presto queries MySQL for customer data",
+            "direction": "one-way"
+          }
+        },
+        {
+          "id": "edge-presto-hive",
+          "source": "presto-master",
+          "target": "hive-child",
+          "label": "Queries",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Presto queries Hive for analytics data",
+            "direction": "one-way"
+          }
+        },
+        {
+          "id": "edge-presto-mongodb",
+          "source": "presto-master",
+          "target": "mongodb-child",
+          "label": "Queries",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Presto queries MongoDB for document data",
+            "direction": "one-way"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cluster-2",
+      "name": "Multi-Cloud Data Platform",
+      "description": "Cross-cloud data integration platform",
+      "owner": "Jane Smith",
+      "created": "2023-07-10",
+      "updated": "2023-08-15",
+      "tags": [
+        "multi-cloud",
+        "data-platform",
+        "enterprise"
+      ],
+      "status": "active",
+      "nodes": [
+        {
+          "id": "node-1",
+          "type": "mysql",
+          "name": "Product Database",
+          "description": "MySQL database for product information",
+          "connectionDetails": {
+            "type": "mysql",
+            "host": "mysql.example.com",
+            "port": 3306,
+            "username": "product_user",
+            "database": "products"
+          },
+          "status": "active",
+          "tags": [
+            "database",
+            "relational",
+            "products"
+          ],
+          "metadata": {
+            "version": "8.0",
+            "size": "200GB"
+          }
+        },
+        {
+          "id": "node-2",
+          "type": "azure-blob",
+          "name": "Document Storage",
+          "description": "Azure Blob Storage for documents",
+          "connectionDetails": {
+            "type": "azure-blob",
+            "accountName": "docstorageaccount",
+            "container": "documents"
+          },
+          "status": "active",
+          "tags": [
+            "storage",
+            "documents",
+            "azure"
+          ],
+          "metadata": {
+            "size": "1.5TB"
+          }
+        },
+        {
+          "id": "node-3",
+          "type": "snowflake",
+          "name": "Data Warehouse",
+          "description": "Snowflake data warehouse",
+          "connectionDetails": {
+            "type": "snowflake",
+            "account": "company.us-west-2",
+            "warehouse": "compute_wh",
+            "database": "analytics"
+          },
+          "status": "active",
+          "tags": [
+            "data-warehouse",
+            "analytics"
+          ],
+          "metadata": {
+            "size": "5TB"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-1",
+          "source": "node-1",
+          "target": "node-2",
+          "label": "Stores documents in",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Product documentation storage",
+            "schedule": "0 */6 * * *"
+          }
+        },
+        {
+          "id": "edge-2",
+          "source": "node-1",
+          "target": "node-3",
+          "label": "Loads data to",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Regular data load to warehouse",
+            "schedule": "0 1 * * *"
+          }
+        },
+        {
+          "id": "edge-3",
+          "source": "node-2",
+          "target": "node-3",
+          "label": "Analyzes documents in",
+          "type": "data-flow",
+          "metadata": {
+            "description": "Document metadata analysis",
+            "schedule": "0 3 * * *"
+          }
+        }
+      ]
+    }
+  ]
+}

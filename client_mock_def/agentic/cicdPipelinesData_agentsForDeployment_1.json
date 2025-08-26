@@ -1,0 +1,24 @@
+{
+  "agentsForDeployment": [
+    {
+      "id": 1,
+      "name": "Research Assistant",
+      "icon": "pi pi-search-plus"
+    },
+    {
+      "id": 2,
+      "name": "Data Analyst",
+      "icon": "pi pi-chart-bar"
+    },
+    {
+      "id": 3,
+      "name": "Customer Support",
+      "icon": "pi pi-comments"
+    },
+    {
+      "id": 4,
+      "name": "Document Processor",
+      "icon": "pi pi-file"
+    }
+  ]
+}

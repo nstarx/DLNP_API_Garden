@@ -1,0 +1,25 @@
+{
+  "mockQueryHistory": [
+    {
+      "query": "SELECT * FROM products WHERE price > 500;",
+      "time": 245,
+      "timestamp": "2024-01-15 10:30:00",
+      "status": "success",
+      "rowsAffected": 3
+    },
+    {
+      "query": "UPDATE products SET stock = stock - 1 WHERE id = 2;",
+      "time": 120,
+      "timestamp": "2024-01-15 10:28:00",
+      "status": "success",
+      "rowsAffected": 1
+    },
+    {
+      "query": "SELECT category, AVG(price) FROM products GROUP BY category;",
+      "time": 180,
+      "timestamp": "2024-01-15 10:25:00",
+      "status": "success",
+      "rowsAffected": 3
+    }
+  ]
+}

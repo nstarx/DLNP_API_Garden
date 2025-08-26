@@ -1,0 +1,19 @@
+{
+  "testResults": {
+    "promptRegression": {
+      "progress": 80,
+      "label": "12/15 Passing",
+      "severity": "success"
+    },
+    "responseQuality": {
+      "progress": 80,
+      "label": "8/10 Passing",
+      "severity": "warning"
+    },
+    "edgeCases": {
+      "progress": 90,
+      "label": "18/20 Passing",
+      "severity": "success"
+    }
+  }
+}

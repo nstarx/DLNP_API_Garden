@@ -1,0 +1,58 @@
+{
+  "mockTestScenarios": [
+    {
+      "id": 1,
+      "name": "Basic Conversation Flow",
+      "category": "Conversation",
+      "type": "conversation",
+      "complexity": "Low",
+      "estimatedDuration": 15,
+      "description": "Tests the agent's ability to maintain a coherent conversation with basic queries."
+    },
+    {
+      "id": 2,
+      "name": "Complex Problem Solving",
+      "category": "Analysis",
+      "type": "analysis",
+      "complexity": "High",
+      "estimatedDuration": 45,
+      "description": "Evaluates the agent's capability to solve complex problems requiring multi-step reasoning."
+    },
+    {
+      "id": 3,
+      "name": "API Integration Test",
+      "category": "Integration",
+      "type": "integration",
+      "complexity": "Medium",
+      "estimatedDuration": 30,
+      "description": "Tests the agent's ability to interact with external APIs and process the returned data correctly."
+    },
+    {
+      "id": 4,
+      "name": "Code Review Accuracy",
+      "category": "Code Review",
+      "type": "code-review",
+      "complexity": "High",
+      "estimatedDuration": 40,
+      "description": "Evaluates how accurately the agent can identify bugs and suggest improvements in code samples."
+    },
+    {
+      "id": 5,
+      "name": "Content Moderation",
+      "category": "Moderation",
+      "type": "moderation",
+      "complexity": "Medium",
+      "estimatedDuration": 25,
+      "description": "Tests the agent's ability to identify and handle inappropriate content according to guidelines."
+    },
+    {
+      "id": 6,
+      "name": "Multi-turn Conversation",
+      "category": "Conversation",
+      "type": "conversation",
+      "complexity": "Medium",
+      "estimatedDuration": 35,
+      "description": "Tests the agent's ability to maintain context across multiple conversation turns."
+    }
+  ]
+}

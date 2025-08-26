@@ -1,0 +1,49 @@
+{
+  "mockContentAnalytics": {
+    "confidence": 92,
+    "wpm": 145,
+    "speakers": 2,
+    "sentiment": "Positive",
+    "uniqueWords": 156,
+    "sentences": 12,
+    "paragraphs": 3,
+    "avgWordsPerSentence": 18,
+    "readingLevel": "High School",
+    "audioDuration": "12:34",
+    "sampleRate": "44.1 kHz",
+    "audioQuality": "Excellent",
+    "noiseLevel": "Low",
+    "silentPeriods": 15,
+    "processingTime": "2.3s",
+    "detectedLanguage": "English (US)",
+    "languageConfidence": 95,
+    "profanityCount": 0,
+    "namedEntities": 8,
+    "keyTopics": 1,
+    "complexityScore": 7,
+    "keyPhrases": [
+      {
+        "text": "dell pro 14 premium",
+        "frequency": 1
+      }
+    ],
+    "cotentCategories": [
+      {
+        "name": "Technology",
+        "confidence": 92
+      },
+      {
+        "name": "Education",
+        "confidence": 78
+      },
+      {
+        "name": "Business",
+        "confidence": 65
+      },
+      {
+        "name": "Science",
+        "confidence": 58
+      }
+    ]
+  }
+}

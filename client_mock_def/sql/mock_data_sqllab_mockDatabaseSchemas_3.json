@@ -1,0 +1,67 @@
+{
+  "mockDatabaseSchemas": [
+    {
+      "name": "ecommerce",
+      "tables": [
+        {
+          "name": "products",
+          "columns": [
+            "id",
+            "product",
+            "category",
+            "price",
+            "stock",
+            "created_at"
+          ]
+        },
+        {
+          "name": "orders",
+          "columns": [
+            "id",
+            "customer_id",
+            "product_id",
+            "quantity",
+            "total",
+            "order_date"
+          ]
+        },
+        {
+          "name": "customers",
+          "columns": [
+            "id",
+            "name",
+            "email",
+            "address",
+            "phone",
+            "created_at"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "analytics",
+      "tables": [
+        {
+          "name": "user_events",
+          "columns": [
+            "id",
+            "user_id",
+            "event_type",
+            "timestamp",
+            "metadata"
+          ]
+        },
+        {
+          "name": "page_views",
+          "columns": [
+            "id",
+            "user_id",
+            "page_url",
+            "view_time",
+            "referrer"
+          ]
+        }
+      ]
+    }
+  ]
+}

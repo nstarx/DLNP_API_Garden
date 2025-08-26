@@ -1,0 +1,29 @@
+{
+  "sortOptions": [
+    {
+      "name": "Popularity",
+      "value": "popularity",
+      "direction": "desc"
+    },
+    {
+      "name": "Name (A-Z)",
+      "value": "name",
+      "direction": "asc"
+    },
+    {
+      "name": "Name (Z-A)",
+      "value": "name",
+      "direction": "desc"
+    },
+    {
+      "name": "Newest",
+      "value": "lastUpdated",
+      "direction": "desc"
+    },
+    {
+      "name": "Most Used",
+      "value": "usageCount",
+      "direction": "desc"
+    }
+  ]
+}

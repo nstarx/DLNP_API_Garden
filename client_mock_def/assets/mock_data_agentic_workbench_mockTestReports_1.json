@@ -1,0 +1,20 @@
+{
+  "mockTestReports": [
+    {
+      "id": 1,
+      "name": "Weekly Test Report - Week 2",
+      "type": "PDF",
+      "generatedDate": "2024-01-14",
+      "testsIncluded": 234,
+      "size": "2.1 MB"
+    },
+    {
+      "id": 2,
+      "name": "Monthly Summary - December",
+      "type": "Excel",
+      "generatedDate": "2024-01-01",
+      "testsIncluded": 1002,
+      "size": "3.8 MB"
+    }
+  ]
+}

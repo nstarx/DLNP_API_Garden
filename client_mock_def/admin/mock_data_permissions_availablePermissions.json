@@ -1,0 +1,134 @@
+{
+  "availablePermissions": [
+    {
+      "name": "view_dashboard",
+      "label": "View Dashboard",
+      "category": "Dashboard"
+    },
+    {
+      "name": "view_users",
+      "label": "View Users",
+      "category": "User Management"
+    },
+    {
+      "name": "create_user",
+      "label": "Create User",
+      "category": "User Management"
+    },
+    {
+      "name": "edit_user",
+      "label": "Edit User",
+      "category": "User Management"
+    },
+    {
+      "name": "delete_user",
+      "label": "Delete User",
+      "category": "User Management"
+    },
+    {
+      "name": "view_roles",
+      "label": "View Roles",
+      "category": "Role Management"
+    },
+    {
+      "name": "create_role",
+      "label": "Create Role",
+      "category": "Role Management"
+    },
+    {
+      "name": "edit_role",
+      "label": "Edit Role",
+      "category": "Role Management"
+    },
+    {
+      "name": "delete_role",
+      "label": "Delete Role",
+      "category": "Role Management"
+    },
+    {
+      "name": "assign_menu",
+      "label": "Assign Menu Items",
+      "category": "Menu Management"
+    },
+    {
+      "name": "view_ai_catalog",
+      "label": "View AI Catalog",
+      "category": "AI Operations"
+    },
+    {
+      "name": "create_model",
+      "label": "Create Model",
+      "category": "AI Operations"
+    },
+    {
+      "name": "deploy_model",
+      "label": "Deploy Model",
+      "category": "AI Operations"
+    },
+    {
+      "name": "view_data",
+      "label": "View Data",
+      "category": "Data Management"
+    },
+    {
+      "name": "upload_data",
+      "label": "Upload Data",
+      "category": "Data Management"
+    },
+    {
+      "name": "modify_data",
+      "label": "Modify Data",
+      "category": "Data Management"
+    },
+    {
+      "name": "delete_data",
+      "label": "Delete Data",
+      "category": "Data Management"
+    },
+    {
+      "name": "view_logs",
+      "label": "View System Logs",
+      "category": "System"
+    },
+    {
+      "name": "view_monitoring",
+      "label": "View Monitoring",
+      "category": "System"
+    },
+    {
+      "name": "manage_resources",
+      "label": "Manage Resources",
+      "category": "System"
+    },
+    {
+      "name": "view_billing",
+      "label": "View Billing",
+      "category": "Finance"
+    },
+    {
+      "name": "manage_budget",
+      "label": "Manage Budget",
+      "category": "Finance"
+    },
+    {
+      "name": "approve_expenses",
+      "label": "Approve Expenses",
+      "category": "Finance"
+    },
+    {
+      "name": "view_reports",
+      "label": "View Reports",
+      "category": "Reports"
+    },
+    {
+      "name": "generate_reports",
+      "label": "Generate Reports",
+      "category": "Reports"
+    },
+    {
+      "name": "export_data",
+      "label": "Export Data",
+      "category": "Data Management"
+    }
+  ]
+}

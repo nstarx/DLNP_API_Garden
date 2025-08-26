@@ -1,0 +1,95 @@
+{
+  "dsMenuItems": [
+    {
+      "id": 1,
+      "label": "AI Catalog",
+      "icon": "pi pi-database",
+      "path": "/ai-catalog",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "AI Workbench",
+      "icon": "pi pi-desktop",
+      "path": "/ai-workbench",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Federated Learning",
+      "icon": "pi pi-globe",
+      "path": "/fl",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Agentic AI",
+      "icon": "pi pi-cog",
+      "path": "/agentic-ai",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 5,
+      "label": "LLM Models",
+      "icon": "pi pi-sparkles",
+      "path": "/llmModels",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 6,
+      "label": "RAG Chat",
+      "icon": "pi pi-comments",
+      "path": "/rag-chat",
+      "roles": [
+        "admin",
+        "ds",
+        "biz"
+      ]
+    },
+    {
+      "id": 7,
+      "label": "WorkFlows",
+      "icon": "pi pi-share-alt",
+      "path": "/workflows",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 8,
+      "label": "Datasets",
+      "icon": "pi pi-database",
+      "path": "/datasets",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    },
+    {
+      "id": 9,
+      "label": "SQL Lab",
+      "icon": "pi pi-search",
+      "path": "/sql-lab",
+      "roles": [
+        "admin",
+        "ds"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "mockTranscriptionPhases": [
+    "Uploading and processing...",
+    "Extracting audio...",
+    "Running AI transcription...",
+    "Generating output formats...",
+    "Finalizing results..."
+  ]
+}

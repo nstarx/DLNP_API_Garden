@@ -1,0 +1,3 @@
+{
+  "mockAppTypes": "[\n    { value: 'dashboard', label: 'Dashboard' },\nexport const mockMcpTools = [\n    { id: 'database', name: 'Database Connector' },\nexport const mockGenerationSteps = [\n    { id: 1, label: 'Analyzing prompt' },\nexport const mockGeneratedApps = [\n    {\n        id: 'gen-001',\n        name: 'Dashboard',\n        description: 'Real-time monitoring dashboard with intelligent alerts and predictive analytics',\n        type: 'Dashboard',\n        status: 'Ready to Deploy',\n        features: ['Real-time data visualization']"
+}

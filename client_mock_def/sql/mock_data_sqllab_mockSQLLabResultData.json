@@ -1,0 +1,34 @@
+{
+  "mockSQLLabResultData": [
+    {
+      "id": 1,
+      "product": "Laptop",
+      "category": "Electronics",
+      "price": 1200
+    },
+    {
+      "id": 2,
+      "product": "Smartphone",
+      "category": "Electronics",
+      "price": 800
+    },
+    {
+      "id": 3,
+      "product": "Desk",
+      "category": "Furniture",
+      "price": 350
+    },
+    {
+      "id": 4,
+      "product": "Chair",
+      "category": "Furniture",
+      "price": 150
+    },
+    {
+      "id": 5,
+      "product": "Pen",
+      "category": "Stationery",
+      "price": 5
+    }
+  ]
+}

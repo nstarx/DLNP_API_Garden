@@ -1,0 +1,24 @@
+{
+  "mockAgentTypes": [
+    {
+      "label": "Research Assistant",
+      "value": "research"
+    },
+    {
+      "label": "Customer Support",
+      "value": "support"
+    },
+    {
+      "label": "Data Analyst",
+      "value": "analyst"
+    },
+    {
+      "label": "Content Creator",
+      "value": "creator"
+    },
+    {
+      "label": "Document Processor",
+      "value": "processor"
+    }
+  ]
+}

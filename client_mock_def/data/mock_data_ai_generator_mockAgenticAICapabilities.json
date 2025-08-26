@@ -1,0 +1,3 @@
+{
+  "mockAgenticAICapabilities": "[\n    {\n        id: 'code-gen',\n        name: 'Code Generation',\n        description: 'Automatically generates optimized code based on requirements',\n        status: 'active'\n    },"
+}

@@ -1,0 +1,28 @@
+{
+  "adminNotifications": [
+    {
+      "id": "notif1",
+      "type": "info",
+      "title": "New Feature Available",
+      "message": "RAG Platform v2.0 is now available with enhanced capabilities",
+      "timestamp": "2024-01-20 14:00:00",
+      "read": false
+    },
+    {
+      "id": "notif2",
+      "type": "warning",
+      "title": "License Renewal",
+      "message": "Your enterprise license will expire in 345 days",
+      "timestamp": "2024-01-19 10:00:00",
+      "read": true
+    },
+    {
+      "id": "notif3",
+      "type": "success",
+      "title": "Backup Completed",
+      "message": "System backup completed successfully",
+      "timestamp": "2024-01-19 03:00:00",
+      "read": true
+    }
+  ]
+}

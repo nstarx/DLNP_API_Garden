@@ -1,0 +1,44 @@
+{
+  "userActivityLog": [
+    {
+      "id": "log1",
+      "timestamp": "2024-01-20 14:45:23",
+      "user": "Adrian",
+      "action": "Login",
+      "details": "Successful login from IP 192.168.1.100",
+      "status": "success"
+    },
+    {
+      "id": "log2",
+      "timestamp": "2024-01-20 14:30:15",
+      "user": "Sai",
+      "action": "Create Model",
+      "details": "Created new AI model: Customer Churn Predictor",
+      "status": "success"
+    },
+    {
+      "id": "log3",
+      "timestamp": "2024-01-20 14:15:45",
+      "user": "Suresh",
+      "action": "Deploy",
+      "details": "Deployed model to production environment",
+      "status": "success"
+    },
+    {
+      "id": "log4",
+      "timestamp": "2024-01-20 14:00:00",
+      "user": "Suman",
+      "action": "Access Denied",
+      "details": "Attempted to access restricted area: Admin Settings",
+      "status": "warning"
+    },
+    {
+      "id": "log5",
+      "timestamp": "2024-01-20 13:45:30",
+      "user": "Sujay",
+      "action": "Export Data",
+      "details": "Exported 5000 records from customer database",
+      "status": "info"
+    }
+  ]
+}

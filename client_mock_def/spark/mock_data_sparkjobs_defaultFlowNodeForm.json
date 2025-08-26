@@ -1,0 +1,3 @@
+{
+  "defaultFlowNodeForm": "{\n    name: '',\n    application: '',\n    sparkJobId: '',\n    nodeType: 'processing',\n    configuration: {\n        inputFormat: '',\n        outputFormat: '',\n        transformationType: '',\n        parallelism: 1,\n        partitions: 1,\n        memory: '2g',\n        cores: '2'\n    }"
+}

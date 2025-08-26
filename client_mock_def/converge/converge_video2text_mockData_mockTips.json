@@ -1,0 +1,19 @@
+{
+  "mockTips": [
+    {
+      "icon": "pi pi-info-circle",
+      "color": "text-blue-500",
+      "text": "For best results, use clear audio with minimal background noise"
+    },
+    {
+      "icon": "pi pi-clock",
+      "color": "text-orange-500",
+      "text": "Processing time depends on video length and selected model"
+    },
+    {
+      "icon": "pi pi-file",
+      "color": "text-green-500",
+      "text": "Supported formats: MP4, AVI, MOV, YouTube URLs"
+    }
+  ]
+}

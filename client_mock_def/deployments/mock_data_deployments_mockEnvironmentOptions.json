@@ -1,0 +1,16 @@
+{
+  "mockEnvironmentOptions": [
+    {
+      "label": "Production",
+      "value": "production"
+    },
+    {
+      "label": "Staging",
+      "value": "staging"
+    },
+    {
+      "label": "Development",
+      "value": "development"
+    }
+  ]
+}

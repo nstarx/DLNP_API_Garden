@@ -1,0 +1,19 @@
+{
+  "metadataCatalogOptions": [
+    {
+      "name": "AWS Glue Catalog",
+      "code": "glue",
+      "iconType": "glue"
+    },
+    {
+      "name": "Hive Metastore",
+      "code": "hive",
+      "iconType": "hive"
+    },
+    {
+      "name": "DataHub",
+      "code": "datahub",
+      "iconType": "datahub"
+    }
+  ]
+}

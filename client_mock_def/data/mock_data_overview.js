@@ -1,0 +1,14 @@
+export const systemMetrics = [
+    { id: 1, name: 'CPU Usage', value: '45%', status: 'Normal', trend: 'stable', lastUpdated: '2023-07-15T10:30:00' },
+export const securityAlerts = [
+    { id: 1, type: 'Authentication Failure', severity: 'High', source: 'User Login', timestamp: '2024-07-09T08:47:00', status: 'Open' },
+export const deploymentStatus = [
+    { id: 1, name: 'Production API Gateway', status: 'Healthy', uptime: '99.99%', lastDeployed: '2024-10-20T16:46:00', version: 'v2.3.1' },
+export const userActivityData = [
+    { id: 1, user: 'John Doe', action: 'Login', resource: 'Dashboard', timestamp: '2025-01-11T11:43:00', status: 'Success' },
+export const documents = [
+    { id: 1, name: 'Q2 Financial Report', type: 'PDF', department: 'Finance', uploadedAt: '2024-11-21T20:20:00', uploadedBy: 'Adrian', size: '2.4 MB', status: 'Indexed' },
+export const insights = [
+    { id: 1, name: 'Revenue Trend Analysis', type: 'Chart', createdAt: '2025-04-14T13:25:00', createdBy: 'Adrian', department: 'Finance', status: 'Updated' },
+export const queryHistory = [
+    { id: 1, query: 'What were our Q2 financial results?', timestamp: '2024-04-15T11:30:00', user: 'Raju Pasunuri', documents: 3, status: 'Completed' },

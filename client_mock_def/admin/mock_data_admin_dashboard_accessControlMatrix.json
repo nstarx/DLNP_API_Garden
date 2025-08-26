@@ -1,0 +1,46 @@
+{
+  "accessControlMatrix": {
+    "modules": [
+      {
+        "name": "AI Catalog",
+        "admin": "full",
+        "dataScientist": "full",
+        "operations": "read",
+        "business": "read",
+        "dashboardAdmin": "none"
+      },
+      {
+        "name": "Deployments",
+        "admin": "full",
+        "dataScientist": "read",
+        "operations": "full",
+        "business": "none",
+        "dashboardAdmin": "none"
+      },
+      {
+        "name": "User Management",
+        "admin": "full",
+        "dataScientist": "none",
+        "operations": "none",
+        "business": "none",
+        "dashboardAdmin": "full"
+      },
+      {
+        "name": "Documents",
+        "admin": "full",
+        "dataScientist": "read",
+        "operations": "read",
+        "business": "full",
+        "dashboardAdmin": "read"
+      },
+      {
+        "name": "Monitoring",
+        "admin": "full",
+        "dataScientist": "read",
+        "operations": "full",
+        "business": "none",
+        "dashboardAdmin": "read"
+      }
+    ]
+  }
+}

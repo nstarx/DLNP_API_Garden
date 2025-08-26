@@ -1,0 +1,34 @@
+{
+  "mockPromptHistory": [
+    {
+      "id": 1,
+      "promptId": 1,
+      "agentName": "Research Assistant System",
+      "version": "v1.2.2",
+      "modifiedBy": "Adrian",
+      "modifiedDate": "2024-01-10",
+      "changes": "Updated context handling for research papers",
+      "content": "Previous version of the research assistant prompt..."
+    },
+    {
+      "id": 2,
+      "promptId": 1,
+      "agentName": "Research Assistant System",
+      "version": "v1.2.1",
+      "modifiedBy": "Adrian",
+      "modifiedDate": "2024-01-08",
+      "changes": "Added citation formatting guidelines",
+      "content": "Earlier version of the research assistant prompt..."
+    },
+    {
+      "id": 3,
+      "promptId": 2,
+      "agentName": "Customer Support Network",
+      "version": "v2.0.0",
+      "modifiedBy": "Adrian",
+      "modifiedDate": "2024-01-05",
+      "changes": "Major update to support workflow",
+      "content": "Previous major version of customer support prompt..."
+    }
+  ]
+}

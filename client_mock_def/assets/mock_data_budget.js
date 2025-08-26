@@ -1,0 +1,49 @@
+export const mockBudgetData = {
+    budgetApprovers: [
+        { id: 1, name: 'Michael Chen', role: 'CFO', email: 'michael.chen@company.com', limit: 1000000 },
+        { id: 2, name: 'Adrian', role: 'VP Finance', email: 'sarah.j@company.com', limit: 500000 },
+        { id: 3, name: 'Robert Williams', role: 'Finance Director', email: 'robert.w@company.com', limit: 250000 },
+        { id: 4, name: 'Adrian', role: 'Budget Analyst', email: 'emily.d@company.com', limit: 100000 }
+    ],
+
+    budgetCategories: [
+        { value: 'personnel', label: 'Personnel', color: '#3B82F6' },
+        { value: 'infrastructure', label: 'Infrastructure', color: '#10B981' },
+        { value: 'software', label: 'Software & Licenses', color: '#8B5CF6' },
+        { value: 'consulting', label: 'Consulting', color: '#F59E0B' },
+        { value: 'training', label: 'Training', color: '#EF4444' },
+        { value: 'operations', label: 'Operations', color: '#6366F1' },
+        { value: 'marketing', label: 'Marketing', color: '#EC4899' },
+        { value: 'contingency', label: 'Contingency', color: '#6B7280' }
+    ],
+
+    notificationRecipients: [
+        { id: 1, name: 'Project Sponsor', email: 'sponsor@company.com', notifyAt: [75, 90, 100] },
+        { id: 2, name: 'Finance Team', email: 'finance@company.com', notifyAt: [80, 95, 110] },
+        { id: 3, name: 'PMO Office', email: 'pmo@company.com', notifyAt: [85, 100, 115] },
+        { id: 4, name: 'Executive Committee', email: 'exec@company.com', notifyAt: [100, 120] }
+    ],
+
+    budgetAlerts: [
+        { threshold: 75, severity: 'info', action: 'email', message: 'Budget utilization at 75%' },
+        { threshold: 90, severity: 'warning', action: 'email', message: 'Budget utilization at 90% - Review required' },
+        { threshold: 100, severity: 'danger', action: 'email_escalate', message: 'Budget exhausted - Immediate action required' },
+        { threshold: 110, severity: 'critical', action: 'freeze', message: 'Budget exceeded - Project spending frozen' }
+    ],
+
+    budgetHistory: [
+        { date: new Date('2024-01-15'), amount: 500000, type: 'initial', approvedBy: 'Michael Chen', reason: 'Initial budget allocation' },
+        { date: new Date('2024-03-20'), amount: 150000, type: 'increase', approvedBy: 'Adrian', reason: 'Q2 expansion approved' },
+        { date: new Date('2024-06-10'), amount: -50000, type: 'reduction', approvedBy: 'Robert Williams', reason: 'Cost optimization initiative' },
+        { date: new Date('2024-08-05'), amount: 200000, type: 'increase', approvedBy: 'Michael Chen', reason: 'New feature development' }
+    ],
+
+    mockExpenses: [
+        { id: 1, date: new Date('2024-01-20'), category: 'personnel', amount: 85000, description: 'Team salaries - January', status: 'approved' },
+        { id: 2, date: new Date('2024-01-25'), category: 'software', amount: 15000, description: 'AWS services', status: 'approved' },
+        { id: 3, date: new Date('2024-02-10'), category: 'consulting', amount: 35000, description: 'Security audit', status: 'approved' },
+        { id: 4, date: new Date('2024-02-20'), category: 'personnel', amount: 85000, description: 'Team salaries - February', status: 'approved' },
+        { id: 5, date: new Date('2024-03-05'), category: 'infrastructure', amount: 45000, description: 'Server upgrades', status: 'pending' },
+        { id: 6, date: new Date('2024-03-15'), category: 'training', amount: 12000, description: 'Team certifications', status: 'approved' }
+    ]
+};

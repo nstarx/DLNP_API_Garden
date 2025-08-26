@@ -1,0 +1,25 @@
+{
+  "recentTestResults": [
+    {
+      "testName": "Basic Functionality",
+      "status": "Passed",
+      "score": 98,
+      "duration": 1250,
+      "timestamp": "2023-07-15 14:30"
+    },
+    {
+      "testName": "Edge Cases",
+      "status": "Failed",
+      "score": 65,
+      "duration": 2100,
+      "timestamp": "2023-07-15 14:35"
+    },
+    {
+      "testName": "Performance Test",
+      "status": "Warning",
+      "score": 82,
+      "duration": 3500,
+      "timestamp": "2023-07-15 14:40"
+    }
+  ]
+}

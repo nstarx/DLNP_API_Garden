@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "artifact": "Customer Feedback",
+    "type": "Dataset",
+    "action": "Created",
+    "user": "Alice",
+    "time": "2023-01-15 10:12",
+    "description": "Initial upload of customer feedback dataset."
+  },
+  {
+    "id": 2,
+    "artifact": "Customer Feedback",
+    "type": "Dataset",
+    "action": "Modified",
+    "user": "Bob",
+    "time": "2023-02-01 14:22",
+    "description": "Cleaned and deduplicated records."
+  },
+  {
+    "id": 3,
+    "artifact": "Sentiment Analysis",
+    "type": "Model",
+    "action": "Created",
+    "user": "Carol",
+    "time": "2023-02-15 09:30",
+    "description": "Trained initial sentiment analysis model."
+  },
+  {
+    "id": 4,
+    "artifact": "Sentiment Analysis",
+    "type": "Model",
+    "action": "Used",
+    "user": "Dave",
+    "time": "2023-03-01 11:05",
+    "description": "Used for experiment: Sentiment Model Tuning."
+  },
+  {
+    "id": 5,
+    "artifact": "Sentiment Analysis",
+    "type": "Model",
+    "action": "Modified",
+    "user": "Alice",
+    "time": "2023-03-10 16:40",
+    "description": "Improved model accuracy with new data."
+  },
+  {
+    "id": 6,
+    "artifact": "Sentiment Analysis",
+    "type": "Model",
+    "action": "Exported",
+    "user": "Bob",
+    "time": "2023-03-20 13:10",
+    "description": "Exported model for deployment."
+  },
+  {
+    "id": 7,
+    "artifact": "Customer Feedback",
+    "type": "Dataset",
+    "action": "Used",
+    "user": "Carol",
+    "time": "2023-03-15 10:00",
+    "description": "Used in Sentiment Model Tuning experiment."
+  },
+  {
+    "id": 8,
+    "artifact": "Sentiment Analysis",
+    "type": "Model",
+    "action": "Deleted",
+    "user": "Dave",
+    "time": "2023-04-01 08:30",
+    "description": "Deprecated old model version."
+  },
+  {
+    "id": 9,
+    "artifact": "Sales Transactions",
+    "type": "Dataset",
+    "action": "Created",
+    "user": "Alice",
+    "time": "2023-03-22 12:00",
+    "description": "Uploaded sales transaction data."
+  },
+  {
+    "id": 10,
+    "artifact": "Sales Forecasting",
+    "type": "Model",
+    "action": "Created",
+    "user": "Bob",
+    "time": "2023-04-22 15:45",
+    "description": "Trained sales forecasting model."
+  },
+  {
+    "id": 11,
+    "artifact": "Sales Forecasting",
+    "type": "Model",
+    "action": "Used",
+    "user": "Carol",
+    "time": "2023-05-01 09:10",
+    "description": "Used for validation experiment."
+  },
+  {
+    "id": 12,
+    "artifact": "Sales Forecasting",
+    "type": "Model",
+    "action": "Modified",
+    "user": "Dave",
+    "time": "2023-05-10 17:20",
+    "description": "Updated model with new features."
+  },
+  {
+    "id": 13,
+    "artifact": "Sales Forecasting",
+    "type": "Model",
+    "action": "Exported",
+    "user": "Alice",
+    "time": "2023-05-20 10:30",
+    "description": "Exported for production deployment."
+  },
+  {
+    "id": 14,
+    "artifact": "Sales Transactions",
+    "type": "Dataset",
+    "action": "Used",
+    "user": "Bob",
+    "time": "2023-05-22 11:00",
+    "description": "Used in Sales Model Validation experiment."
+  },
+  {
+    "id": 15,
+    "artifact": "Sales Forecasting",
+    "type": "Model",
+    "action": "Deleted",
+    "user": "Carol",
+    "time": "2023-06-01 08:00",
+    "description": "Removed deprecated model version."
+  }
+]

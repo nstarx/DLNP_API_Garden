@@ -1,0 +1,3 @@
+{
+  "sdlcPhases": "[\n    {\n        id: 'requirements',\n        name: 'Requirements',\n        description: 'Define business requirements and technical specifications',\n        status: 'active',\n        progress: 100,\n        stages: [\n            { id: 'gathering', name: 'Requirements Gathering', status: 'completed', assignee: 'Business Analyst' },\n            { id: 'analysis', name: 'Requirements Analysis', status: 'completed', assignee: 'Tech Lead' },\n            { id: 'documentation', name: 'Documentation', status: 'completed', assignee: 'Technical Writer' }\n        ]"
+}

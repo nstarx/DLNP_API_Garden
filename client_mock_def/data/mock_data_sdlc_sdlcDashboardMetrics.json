@@ -1,0 +1,3 @@
+{
+  "sdlcDashboardMetrics": "{\n    overall: {\n        totalProjects: 15,\n        activeProjects: 8,\n        completedProjects: 5,\n        onHoldProjects: 2,\n        averageCycleTime: '4 days',\n        successRate: 87,\n        blockedItems: 3,\n        pendingApprovals: 7\n    }"
+}

@@ -1,0 +1,19 @@
+{
+  "relationalOptions": [
+    {
+      "name": "Postgres",
+      "code": "NY",
+      "icon": "pi pi-database"
+    },
+    {
+      "name": "Sql Server",
+      "code": "RM",
+      "icon": "pi pi-server"
+    },
+    {
+      "name": "OracleDB",
+      "code": "LDN",
+      "icon": "pi pi-box"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "mockK8sStats": {
+    "pods": 0,
+    "services": 0,
+    "deployments": 0,
+    "replicaSets": 0,
+    "configMaps": 0,
+    "secrets": 0,
+    "persistentVolumes": 0,
+    "persistentVolumeClaims": 0,
+    "cpu": "0 cores",
+    "memory": "0 GB",
+    "storage": "0 GB"
+  }
+}

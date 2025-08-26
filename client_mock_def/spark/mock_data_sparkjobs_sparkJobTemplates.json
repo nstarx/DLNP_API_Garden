@@ -1,0 +1,3 @@
+{
+  "sparkJobTemplates": "[\n    {\n        name: 'Basic ETL Job',\n        description: 'Standard configuration for ETL workloads',\n        config: {\n            appName: 'etl_job',\n            executorMemory: '4g',\n            driverMemory: '2g',\n            executorCores: 4,\n            minExecutors: 2,\n            maxExecutors: 20\n        }\n    },\nexport const sparkJobsMockData = [\n    {\n        id: 'spark-job-1',\n        name: 'data-processing-job',\n        application: 'data-etl',\n        version: 1,\n        status: 'Running',\n        k8sNodes: ['worker-node-1', 'worker-node-2', 'worker-node-3']"
+}
