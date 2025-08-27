@@ -1,0 +1,72 @@
+[
+  {
+    "alias": "Client-1",
+    "client_image": "flclient:latest",
+    "location": {
+      "name": "Germany",
+      "code": "DE",
+      "label": "DE"
+    },
+    "data": "Dataset A",
+    "aiZone": {
+      "clusterName": "nstarx-azure-demo-de",
+      "id": "nstarx-azure-demo"
+    }
+  },
+  {
+    "alias": "Client-2",
+    "client_image": "flclient:latest",
+    "location": {
+      "name": "France",
+      "code": "FR",
+      "label": "FR"
+    },
+    "data": "Dataset B",
+    "aiZone": {
+      "clusterName": "nstarx-azure-demo-fr",
+      "id": "nstarx-azure-demo"
+    }
+  },
+  {
+    "alias": "Client-3",
+    "client_image": "flclient:latest",
+    "location": {
+      "name": "Italy",
+      "code": "IT",
+      "label": "IT"
+    },
+    "data": "Dataset C",
+    "aiZone": {
+      "clusterName": "nstarx-azure-demo-it",
+      "id": "nstarx-azure-demo"
+    }
+  },
+  {
+    "alias": "Client-4",
+    "client_image": "flclient:latest",
+    "location": {
+      "name": "Spain",
+      "code": "ES",
+      "label": "ES"
+    },
+    "data": "Dataset D",
+    "aiZone": {
+      "clusterName": "nstarx-azure-demo-es",
+      "id": "nstarx-azure-demo"
+    }
+  },
+  {
+    "alias": "Client-5",
+    "client_image": "flclient:latest",
+    "location": {
+      "name": "United Kingdom",
+      "code": "GB",
+      "label": "GB"
+    },
+    "data": "Dataset E",
+    "aiZone": {
+      "clusterName": "nstarx-azure-demo-gb",
+      "id": "nstarx-azure-demo"
+    }
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "labels": [],
+  "datasets": [
+    {
+      "label": "Loss",
+      "data": [],
+      "fill": false,
+      "borderColor": "#42A5F5",
+      "tension": 0.4,
+      "yAxisID": "y-loss"
+    },
+    {
+      "label": "Precision",
+      "data": [],
+      "fill": false,
+      "borderColor": "#66BB6A",
+      "tension": 0.4,
+      "yAxisID": "y-metrics"
+    },
+    {
+      "label": "Recall",
+      "data": [],
+      "fill": false,
+      "borderColor": "#FFA726",
+      "tension": 0.4,
+      "yAxisID": "y-metrics"
+    },
+    {
+      "label": "F1",
+      "data": [],
+      "fill": false,
+      "borderColor": "#EC407A",
+      "tension": 0.4,
+      "yAxisID": "y-metrics"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "mockABTestExperiments": [
+    {
+      "id": 1,
+      "name": "Response Time Optimization",
+      "description": "Testing different caching strategies",
+      "status": "running",
+      "variantA": {
+        "name": "Standard Cache",
+        "score": 82
+      },
+      "variantB": {
+        "name": "Enhanced Cache",
+        "score": 87
+      },
+      "sampleSize": 500
+    },
+    {
+      "id": 2,
+      "name": "Context Window Size",
+      "description": "Comparing 4k vs 8k context windows",
+      "status": "completed",
+      "variantA": {
+        "name": "4k Context",
+        "score": 75
+      },
+      "variantB": {
+        "name": "8k Context",
+        "score": 83
+      },
+      "sampleSize": 300
+    }
+  ]
+}

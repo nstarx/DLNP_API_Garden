@@ -1,0 +1,44 @@
+{
+  "deploymentStatus": [
+    {
+      "id": 1,
+      "name": "Production API Gateway",
+      "status": "Healthy",
+      "uptime": "99.99%",
+      "lastDeployed": "2024-10-20T16:46:00",
+      "version": "v2.3.1"
+    },
+    {
+      "id": 2,
+      "name": "Staging Environment",
+      "status": "Healthy",
+      "uptime": "99.95%",
+      "lastDeployed": "2024-11-24T17:55:00",
+      "version": "v2.4.0-rc1"
+    },
+    {
+      "id": 3,
+      "name": "Development Environment",
+      "status": "Degraded",
+      "uptime": "98.50%",
+      "lastDeployed": "2024-09-25T11:45:00",
+      "version": "v2.4.0-dev"
+    },
+    {
+      "id": 4,
+      "name": "Authentication Service",
+      "status": "Healthy",
+      "uptime": "99.97%",
+      "lastDeployed": "2024-12-08T10:15:00",
+      "version": "v1.8.2"
+    },
+    {
+      "id": 5,
+      "name": "Data Processing Pipeline",
+      "status": "Healthy",
+      "uptime": "99.90%",
+      "lastDeployed": "2025-02-12T14:20:00",
+      "version": "v3.1.0"
+    }
+  ]
+}

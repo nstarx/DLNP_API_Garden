@@ -1,0 +1,89 @@
+{
+  "dataProcessingComponents": [
+    {
+      "id": "chunker",
+      "name": "Text Chunker",
+      "icon": "pi pi-align-justify"
+    },
+    {
+      "id": "cleaner",
+      "name": "Data Cleaner",
+      "icon": "pi pi-filter"
+    },
+    {
+      "id": "parser",
+      "name": "Document Parser",
+      "icon": "pi pi-file"
+    }
+  ],
+  "embeddingComponents": [
+    {
+      "id": "openai-embed",
+      "name": "OpenAI Embeddings",
+      "icon": "pi pi-sparkles"
+    },
+    {
+      "id": "cohere-embed",
+      "name": "Cohere Embeddings",
+      "icon": "pi pi-sparkles"
+    },
+    {
+      "id": "local-embed",
+      "name": "Local Embeddings",
+      "icon": "pi pi-server"
+    }
+  ],
+  "vectorStoreComponents": [
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "icon": "pi pi-database"
+    },
+    {
+      "id": "weaviate",
+      "name": "Weaviate",
+      "icon": "pi pi-database"
+    },
+    {
+      "id": "qdrant",
+      "name": "Qdrant",
+      "icon": "pi pi-database"
+    }
+  ],
+  "retrievalComponents": [
+    {
+      "id": "semantic",
+      "name": "Semantic Search",
+      "icon": "pi pi-search"
+    },
+    {
+      "id": "hybrid",
+      "name": "Hybrid Search",
+      "icon": "pi pi-search-plus"
+    },
+    {
+      "id": "reranker",
+      "name": "Reranker",
+      "icon": "pi pi-sort-amount-up"
+    }
+  ],
+  "availableModels": [
+    {
+      "id": "gpt-4",
+      "name": "GPT-4"
+    },
+    {
+      "id": "gpt-3.5",
+      "name": "GPT-3.5 Turbo"
+    },
+    {
+      "id": "claude-3",
+      "name": "Claude 3"
+    }
+  ],
+  "defaultNodeConfig": {
+    "model": null,
+    "chunkSize": 512,
+    "overlap": 50
+  }
+}

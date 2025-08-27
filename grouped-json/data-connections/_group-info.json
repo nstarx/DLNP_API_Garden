@@ -1,0 +1,960 @@
+{
+  "groupName": "Data Connections",
+  "description": "Database connections, cloud integrations, and data source configurations",
+  "fileCount": 68,
+  "totalSize": 83912,
+  "files": [
+    {
+      "fileName": "mock_data_cluster_datasources_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_cluster_datasources_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sampleClusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 12097
+    },
+    {
+      "fileName": "mock_data_cluster_datasources_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_cluster_datasources_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sampleClusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 12097
+    },
+    {
+      "fileName": "mock_data_cluster_datasources_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_cluster_datasources_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sampleClusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 12097
+    },
+    {
+      "fileName": "mock_data_cluster_datasources.json",
+      "originalPath": "client_mock_def/connections/mock_data_cluster_datasources.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sampleClusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 12097
+    },
+    {
+      "fileName": "mock_data_connection_items_dataGovernanceItems_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_dataGovernanceItems_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1122
+    },
+    {
+      "fileName": "mock_data_connection_items_dataGovernanceItems_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_dataGovernanceItems_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1122
+    },
+    {
+      "fileName": "mock_data_connection_items_dataGovernanceItems_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_dataGovernanceItems_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1122
+    },
+    {
+      "fileName": "mock_data_connection_items_dataGovernanceItems.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_dataGovernanceItems.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1122
+    },
+    {
+      "fileName": "mock_data_connection_items_datahubItems_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_datahubItems_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "datahubItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 727
+    },
+    {
+      "fileName": "mock_data_connection_items_datahubItems_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_datahubItems_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "datahubItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 727
+    },
+    {
+      "fileName": "mock_data_connection_items_datahubItems_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_datahubItems_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "datahubItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 727
+    },
+    {
+      "fileName": "mock_data_connection_items_datahubItems.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_datahubItems.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "datahubItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 727
+    },
+    {
+      "fileName": "mock_data_connection_items_glueCatalogItems_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_glueCatalogItems_1.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "glueCatalogItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1322
+    },
+    {
+      "fileName": "mock_data_connection_items_glueCatalogItems_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_glueCatalogItems_2.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "glueCatalogItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1322
+    },
+    {
+      "fileName": "mock_data_connection_items_glueCatalogItems_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_glueCatalogItems_3.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "glueCatalogItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1322
+    },
+    {
+      "fileName": "mock_data_connection_items_glueCatalogItems.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_glueCatalogItems.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "glueCatalogItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1322
+    },
+    {
+      "fileName": "mock_data_connection_items_hiveItems_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_hiveItems_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "hiveItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 741
+    },
+    {
+      "fileName": "mock_data_connection_items_hiveItems_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_hiveItems_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "hiveItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 741
+    },
+    {
+      "fileName": "mock_data_connection_items_hiveItems_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_hiveItems_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "hiveItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 741
+    },
+    {
+      "fileName": "mock_data_connection_items_hiveItems.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_hiveItems.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "hiveItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 741
+    },
+    {
+      "fileName": "mock_data_connection_items_rdsItems_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_rdsItems_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rdsItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1207
+    },
+    {
+      "fileName": "mock_data_connection_items_rdsItems_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_rdsItems_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rdsItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1207
+    },
+    {
+      "fileName": "mock_data_connection_items_rdsItems_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_rdsItems_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rdsItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1207
+    },
+    {
+      "fileName": "mock_data_connection_items_rdsItems.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_rdsItems.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rdsItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1207
+    },
+    {
+      "fileName": "mock_data_connection_items_s3Items_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_s3Items_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "s3Items"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_connection_items_s3Items_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_s3Items_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "s3Items"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_connection_items_s3Items_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_s3Items_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "s3Items"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_connection_items_s3Items.json",
+      "originalPath": "client_mock_def/connections/mock_data_connection_items_s3Items.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "s3Items"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_connections_awsOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_awsOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "awsOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 186
+    },
+    {
+      "fileName": "mock_data_connections_awsOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_awsOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "awsOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 186
+    },
+    {
+      "fileName": "mock_data_connections_awsOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_awsOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "awsOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 186
+    },
+    {
+      "fileName": "mock_data_connections_awsOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_awsOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "awsOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 186
+    },
+    {
+      "fileName": "mock_data_connections_azureOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_azureOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "azureOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 203
+    },
+    {
+      "fileName": "mock_data_connections_azureOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_azureOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "azureOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 203
+    },
+    {
+      "fileName": "mock_data_connections_azureOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_azureOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "azureOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 203
+    },
+    {
+      "fileName": "mock_data_connections_azureOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_azureOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "azureOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 203
+    },
+    {
+      "fileName": "mock_data_connections_clusterDatasources_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_clusterDatasources_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "clusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_clusterDatasources_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_clusterDatasources_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "clusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_clusterDatasources_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_clusterDatasources_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "clusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_clusterDatasources.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_clusterDatasources.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "clusterDatasources"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_databaseDrivers_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_databaseDrivers_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "databaseDrivers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 222
+    },
+    {
+      "fileName": "mock_data_connections_databaseDrivers_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_databaseDrivers_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "databaseDrivers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 222
+    },
+    {
+      "fileName": "mock_data_connections_databaseDrivers_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_databaseDrivers_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "databaseDrivers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 222
+    },
+    {
+      "fileName": "mock_data_connections_databaseDrivers.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_databaseDrivers.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "databaseDrivers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 222
+    },
+    {
+      "fileName": "mock_data_connections_dataGovernanceOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_dataGovernanceOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_dataGovernanceOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_dataGovernanceOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_dataGovernanceOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_dataGovernanceOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_dataGovernanceOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_dataGovernanceOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataGovernanceOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 133
+    },
+    {
+      "fileName": "mock_data_connections_fileOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_fileOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "fileOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 385
+    },
+    {
+      "fileName": "mock_data_connections_fileOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_fileOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "fileOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 385
+    },
+    {
+      "fileName": "mock_data_connections_fileOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_fileOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "fileOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 385
+    },
+    {
+      "fileName": "mock_data_connections_fileOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_fileOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "fileOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 385
+    },
+    {
+      "fileName": "mock_data_connections_metadataCatalogOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_metadataCatalogOptions_1.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "metadataCatalogOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 313
+    },
+    {
+      "fileName": "mock_data_connections_metadataCatalogOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_metadataCatalogOptions_2.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "metadataCatalogOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 313
+    },
+    {
+      "fileName": "mock_data_connections_metadataCatalogOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_metadataCatalogOptions_3.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "metadataCatalogOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 313
+    },
+    {
+      "fileName": "mock_data_connections_metadataCatalogOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_metadataCatalogOptions.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "metadataCatalogOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 313
+    },
+    {
+      "fileName": "mock_data_connections_objectStorage_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_objectStorage_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "objectStorage"
+        ],
+        "hasNestedData": true
+      },
+      "size": 206
+    },
+    {
+      "fileName": "mock_data_connections_objectStorage_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_objectStorage_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "objectStorage"
+        ],
+        "hasNestedData": true
+      },
+      "size": 206
+    },
+    {
+      "fileName": "mock_data_connections_objectStorage_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_objectStorage_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "objectStorage"
+        ],
+        "hasNestedData": true
+      },
+      "size": 206
+    },
+    {
+      "fileName": "mock_data_connections_objectStorage.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_objectStorage.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "objectStorage"
+        ],
+        "hasNestedData": true
+      },
+      "size": 206
+    },
+    {
+      "fileName": "mock_data_connections_relationalOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_relationalOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "relationalOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 297
+    },
+    {
+      "fileName": "mock_data_connections_relationalOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_relationalOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "relationalOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 297
+    },
+    {
+      "fileName": "mock_data_connections_relationalOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_relationalOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "relationalOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 297
+    },
+    {
+      "fileName": "mock_data_connections_relationalOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_relationalOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "relationalOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 297
+    },
+    {
+      "fileName": "mock_data_connections_virtualMountOptions_1.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_virtualMountOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "virtualMountOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 114
+    },
+    {
+      "fileName": "mock_data_connections_virtualMountOptions_2.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_virtualMountOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "virtualMountOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 114
+    },
+    {
+      "fileName": "mock_data_connections_virtualMountOptions_3.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_virtualMountOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "virtualMountOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 114
+    },
+    {
+      "fileName": "mock_data_connections_virtualMountOptions.json",
+      "originalPath": "client_mock_def/connections/mock_data_connections_virtualMountOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "virtualMountOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 114
+    }
+  ]
+}

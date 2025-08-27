@@ -1,0 +1,9 @@
+{
+  "virtualMountOptions": [
+    {
+      "name": "Alluxio",
+      "code": "Al",
+      "iconType": "s3"
+    }
+  ]
+}

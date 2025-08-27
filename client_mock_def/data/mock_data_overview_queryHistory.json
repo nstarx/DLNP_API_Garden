@@ -1,0 +1,44 @@
+{
+  "queryHistory": [
+    {
+      "id": 1,
+      "query": "What were our Q2 financial results?",
+      "timestamp": "2024-04-15T11:30:00",
+      "user": "Raju Pasunuri",
+      "documents": 3,
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "query": "Show me the latest marketing campaign performance",
+      "timestamp": "2024-03-14T14:45:00",
+      "user": "Suresh Kondapuram",
+      "documents": 5,
+      "status": "Completed"
+    },
+    {
+      "id": 3,
+      "query": "What are the current HR policies for remote work?",
+      "timestamp": "2025-01-18T09:15:00",
+      "user": "Adrian Paleacu",
+      "documents": 2,
+      "status": "Completed"
+    },
+    {
+      "id": 4,
+      "query": "When is the next product release scheduled?",
+      "timestamp": "2025-02-22T16:20:00",
+      "user": "Sai Khanna",
+      "documents": 4,
+      "status": "Completed"
+    },
+    {
+      "id": 5,
+      "query": "What is our customer satisfaction score trend?",
+      "timestamp": "2023-04-11T11:10:00",
+      "user": "Sai Khanna",
+      "documents": 6,
+      "status": "Completed"
+    }
+  ]
+}

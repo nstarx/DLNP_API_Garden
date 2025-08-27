@@ -1,0 +1,3 @@
+{
+  "categories": "[\n    { name: 'Knowledge Processing', icon: 'pi pi-book' },\nexport const sortOptions = [\n    { name: 'Popularity', value: 'popularity', direction: 'desc' },"
+}

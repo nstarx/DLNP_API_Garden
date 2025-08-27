@@ -1,0 +1,16 @@
+{
+  "validationDatasets": [
+    {
+      "id": 1,
+      "name": "Production Queries"
+    },
+    {
+      "id": 2,
+      "name": "Edge Cases"
+    },
+    {
+      "id": 3,
+      "name": "Benchmark Suite"
+    }
+  ]
+}

@@ -27,6 +27,7 @@ export interface DatasourceNode {
     role?: 'presto' | 'datasource';
     parentId?: string;
 }
+
 export interface ClusterDatasource {
     id: string;
     name: string;
@@ -39,6 +40,7 @@ export interface ClusterDatasource {
     tags: string[];
     status: 'active' | 'inactive' | 'draft';
 }
+
 export interface ClusterDatasourceEdge {
     id: string;
     source: string;

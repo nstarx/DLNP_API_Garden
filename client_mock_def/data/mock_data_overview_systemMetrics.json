@@ -1,0 +1,44 @@
+{
+  "systemMetrics": [
+    {
+      "id": 1,
+      "name": "CPU Usage",
+      "value": "45%",
+      "status": "Normal",
+      "trend": "stable",
+      "lastUpdated": "2023-07-15T10:30:00"
+    },
+    {
+      "id": 2,
+      "name": "Memory Usage",
+      "value": "62%",
+      "status": "Normal",
+      "trend": "increasing",
+      "lastUpdated": "2024-07-15T10:30:00"
+    },
+    {
+      "id": 3,
+      "name": "Storage Usage",
+      "value": "78%",
+      "status": "Warning",
+      "trend": "increasing",
+      "lastUpdated": "2024-07-16T10:35:00"
+    },
+    {
+      "id": 4,
+      "name": "Network Throughput",
+      "value": "1.2 GB/s",
+      "status": "Normal",
+      "trend": "stable",
+      "lastUpdated": "2025-01-11T11:37:00"
+    },
+    {
+      "id": 5,
+      "name": "API Response Time",
+      "value": "120ms",
+      "status": "Normal",
+      "trend": "decreasing",
+      "lastUpdated": "2024-11-19T15:36:00"
+    }
+  ]
+}

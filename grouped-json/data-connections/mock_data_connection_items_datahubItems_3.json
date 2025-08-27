@@ -1,0 +1,24 @@
+{
+  "datahubItems": [
+    {
+      "name": "HP Data Hub Instance",
+      "db": "postgres",
+      "host": "rds-122344.aws.us-east-1.rds.com",
+      "port": "5432",
+      "user": "datahub",
+      "path": "s3://config_path/prod/datahub/",
+      "connectionID": "2732763284",
+      "description": "Data Hub Catalog for cataloging and governing various HP underlying datasources inside various AWSes",
+      "owner": "Adrian Paleacu",
+      "tag": {
+        "deployment": "Helm Charts- DataHub Deployment",
+        "version": "1.0"
+      },
+      "environment": "Dev",
+      "severity": "warn",
+      "created": "Mon, Apr 21, 2025",
+      "updated": "Fri, May 16, 2025",
+      "aiZoneName": "HP Observability AIZone- Dev"
+    }
+  ]
+}

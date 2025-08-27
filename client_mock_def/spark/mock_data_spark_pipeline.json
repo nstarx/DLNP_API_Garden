@@ -1,0 +1,974 @@
+{
+  "pipelineFlowData": {
+    "job001": {
+      "nodes": [
+        {
+          "id": "source-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 50
+          },
+          "data": {
+            "label": "S3 Data Lake",
+            "nodeType": "data-source",
+            "status": "active",
+            "metrics": {
+              "records": "10M/s",
+              "size": "1.2TB"
+            }
+          }
+        },
+        {
+          "id": "source-2",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 300
+          },
+          "data": {
+            "label": "HDFS Source",
+            "nodeType": "data-source",
+            "status": "active",
+            "metrics": {
+              "records": "5M/s",
+              "size": "800GB"
+            }
+          }
+        },
+        {
+          "id": "transform-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 350,
+            "y": 175
+          },
+          "data": {
+            "label": "Data Validation",
+            "nodeType": "transformation",
+            "status": "processing",
+            "operations": [
+              "Schema validation",
+              "Null check",
+              "Type casting"
+            ]
+          }
+        },
+        {
+          "id": "transform-2",
+          "type": "sparkNode",
+          "position": {
+            "x": 650,
+            "y": 50
+          },
+          "data": {
+            "label": "Feature Engineering",
+            "nodeType": "transformation",
+            "status": "processing",
+            "operations": [
+              "Normalization",
+              "Encoding",
+              "Feature extraction"
+            ]
+          }
+        },
+        {
+          "id": "transform-3",
+          "type": "sparkNode",
+          "position": {
+            "x": 650,
+            "y": 300
+          },
+          "data": {
+            "label": "Aggregation",
+            "nodeType": "transformation",
+            "status": "processing",
+            "operations": [
+              "Group by",
+              "Window functions",
+              "Rollup"
+            ]
+          }
+        },
+        {
+          "id": "ml-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 175
+          },
+          "data": {
+            "label": "ML Pipeline",
+            "nodeType": "processing",
+            "status": "processing",
+            "model": "XGBoost",
+            "accuracy": "94.5%"
+          }
+        },
+        {
+          "id": "sink-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 1250,
+            "y": 50
+          },
+          "data": {
+            "label": "Delta Lake",
+            "nodeType": "data-sink",
+            "status": "active",
+            "tables": [
+              "features",
+              "predictions"
+            ]
+          }
+        },
+        {
+          "id": "sink-2",
+          "type": "sparkNode",
+          "position": {
+            "x": 1250,
+            "y": 300
+          },
+          "data": {
+            "label": "Redis Cache",
+            "nodeType": "data-sink",
+            "status": "active",
+            "keys": "1.2M"
+          }
+        },
+        {
+          "id": "monitor-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 450
+          },
+          "data": {
+            "label": "Performance Monitor",
+            "nodeType": "monitoring",
+            "status": "active",
+            "alerts": 0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "e1-3",
+          "source": "source-1",
+          "sourceHandle": "source-1-source",
+          "target": "transform-1",
+          "targetHandle": "transform-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e2-3",
+          "source": "source-2",
+          "sourceHandle": "source-2-source",
+          "target": "transform-1",
+          "targetHandle": "transform-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e3-4",
+          "source": "transform-1",
+          "sourceHandle": "transform-1-source",
+          "target": "transform-2",
+          "targetHandle": "transform-2-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#ef4444",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e3-5",
+          "source": "transform-1",
+          "sourceHandle": "transform-1-source",
+          "target": "transform-3",
+          "targetHandle": "transform-3-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#ef4444",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e4-6",
+          "source": "transform-2",
+          "sourceHandle": "transform-2-source",
+          "target": "ml-1",
+          "targetHandle": "ml-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e5-6",
+          "source": "transform-3",
+          "sourceHandle": "transform-3-source",
+          "target": "ml-1",
+          "targetHandle": "ml-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e6-7",
+          "source": "ml-1",
+          "sourceHandle": "ml-1-source",
+          "target": "sink-1",
+          "targetHandle": "sink-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e6-8",
+          "source": "ml-1",
+          "sourceHandle": "ml-1-source",
+          "target": "sink-2",
+          "targetHandle": "sink-2-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "e6-9",
+          "source": "ml-1",
+          "sourceHandle": "ml-1-source",
+          "target": "monitor-1",
+          "targetHandle": "monitor-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#f59e0b",
+            "strokeWidth": 2
+          }
+        }
+      ]
+    },
+    "job002": {
+      "nodes": [
+        {
+          "id": "kafka-source",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 175
+          },
+          "data": {
+            "label": "Kafka Stream",
+            "nodeType": "data-source",
+            "status": "streaming",
+            "topics": [
+              "events",
+              "logs",
+              "metrics"
+            ],
+            "throughput": "100K msg/s"
+          }
+        },
+        {
+          "id": "window-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 350,
+            "y": 175
+          },
+          "data": {
+            "label": "Tumbling Window",
+            "nodeType": "transformation",
+            "status": "processing",
+            "window": "5 minutes",
+            "watermark": "1 minute"
+          }
+        },
+        {
+          "id": "stateful-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 650,
+            "y": 50
+          },
+          "data": {
+            "label": "Stateful Processing",
+            "nodeType": "processing",
+            "status": "processing",
+            "state": "RocksDB",
+            "checkpoints": "HDFS"
+          }
+        },
+        {
+          "id": "anomaly-1",
+          "type": "sparkNode",
+          "position": {
+            "x": 650,
+            "y": 300
+          },
+          "data": {
+            "label": "Anomaly Detection",
+            "nodeType": "processing",
+            "status": "processing",
+            "algorithm": "Isolation Forest",
+            "threshold": "0.95"
+          }
+        },
+        {
+          "id": "alert-sink",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 300
+          },
+          "data": {
+            "label": "Alert System",
+            "nodeType": "data-sink",
+            "status": "active",
+            "channels": [
+              "email",
+              "slack",
+              "pagerduty"
+            ]
+          }
+        },
+        {
+          "id": "elastic-sink",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 50
+          },
+          "data": {
+            "label": "Elasticsearch",
+            "nodeType": "data-sink",
+            "status": "active",
+            "indices": [
+              "metrics-*",
+              "logs-*"
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "kafka-window",
+          "source": "kafka-source",
+          "sourceHandle": "kafka-source-source",
+          "target": "window-1",
+          "targetHandle": "window-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "window-state",
+          "source": "window-1",
+          "sourceHandle": "window-1-source",
+          "target": "stateful-1",
+          "targetHandle": "stateful-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "window-anomaly",
+          "source": "window-1",
+          "sourceHandle": "window-1-source",
+          "target": "anomaly-1",
+          "targetHandle": "anomaly-1-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "state-elastic",
+          "source": "stateful-1",
+          "sourceHandle": "stateful-1-source",
+          "target": "elastic-sink",
+          "targetHandle": "elastic-sink-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "anomaly-alert",
+          "source": "anomaly-1",
+          "sourceHandle": "anomaly-1-source",
+          "target": "alert-sink",
+          "targetHandle": "alert-sink-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#ef4444",
+            "strokeWidth": 2
+          }
+        }
+      ]
+    },
+    "sparkjob1": {
+      "nodes": [
+        {
+          "id": "data-lake",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 175
+          },
+          "data": {
+            "label": "Data Lake S3",
+            "nodeType": "data-source",
+            "status": "active",
+            "metrics": {
+              "files": "10K",
+              "size": "2.5TB"
+            }
+          }
+        },
+        {
+          "id": "etl-cleanse",
+          "type": "sparkNode",
+          "position": {
+            "x": 400,
+            "y": 50
+          },
+          "data": {
+            "label": "Data Cleansing",
+            "nodeType": "transformation",
+            "status": "processing",
+            "operations": [
+              "Remove duplicates",
+              "Fix nulls",
+              "Standardize formats"
+            ]
+          }
+        },
+        {
+          "id": "etl-transform",
+          "type": "sparkNode",
+          "position": {
+            "x": 400,
+            "y": 300
+          },
+          "data": {
+            "label": "Business Transform",
+            "nodeType": "transformation",
+            "status": "processing",
+            "operations": [
+              "Apply business rules",
+              "Calculate metrics",
+              "Derive fields"
+            ]
+          }
+        },
+        {
+          "id": "warehouse",
+          "type": "sparkNode",
+          "position": {
+            "x": 750,
+            "y": 175
+          },
+          "data": {
+            "label": "Data Warehouse",
+            "nodeType": "data-sink",
+            "status": "active",
+            "tables": [
+              "customers",
+              "transactions",
+              "products"
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "lake-cleanse",
+          "source": "data-lake",
+          "sourceHandle": "data-lake-source",
+          "target": "etl-cleanse",
+          "targetHandle": "etl-cleanse-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "lake-transform",
+          "source": "data-lake",
+          "sourceHandle": "data-lake-source",
+          "target": "etl-transform",
+          "targetHandle": "etl-transform-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "cleanse-warehouse",
+          "source": "etl-cleanse",
+          "sourceHandle": "etl-cleanse-source",
+          "target": "warehouse",
+          "targetHandle": "warehouse-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "transform-warehouse",
+          "source": "etl-transform",
+          "sourceHandle": "etl-transform-source",
+          "target": "warehouse",
+          "targetHandle": "warehouse-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        }
+      ]
+    },
+    "sparkjob2": {
+      "nodes": [
+        {
+          "id": "feature-store",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 175
+          },
+          "data": {
+            "label": "Feature Store",
+            "nodeType": "data-source",
+            "status": "active",
+            "features": 1250,
+            "size": "500GB"
+          }
+        },
+        {
+          "id": "data-prep",
+          "type": "sparkNode",
+          "position": {
+            "x": 350,
+            "y": 175
+          },
+          "data": {
+            "label": "Data Preparation",
+            "nodeType": "transformation",
+            "status": "processing",
+            "operations": [
+              "Feature scaling",
+              "One-hot encoding",
+              "Train/test split"
+            ]
+          }
+        },
+        {
+          "id": "ml-training",
+          "type": "sparkNode",
+          "position": {
+            "x": 650,
+            "y": 175
+          },
+          "data": {
+            "label": "Model Training",
+            "nodeType": "processing",
+            "status": "processing",
+            "model": "XGBoost",
+            "gpus": "2 x A100"
+          }
+        },
+        {
+          "id": "model-registry",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 175
+          },
+          "data": {
+            "label": "MLflow Registry",
+            "nodeType": "data-sink",
+            "status": "active",
+            "models": 23,
+            "version": "v2.3"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "store-prep",
+          "source": "feature-store",
+          "sourceHandle": "feature-store-source",
+          "target": "data-prep",
+          "targetHandle": "data-prep-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "prep-train",
+          "source": "data-prep",
+          "sourceHandle": "data-prep-source",
+          "target": "ml-training",
+          "targetHandle": "ml-training-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "train-registry",
+          "source": "ml-training",
+          "sourceHandle": "ml-training-source",
+          "target": "model-registry",
+          "targetHandle": "model-registry-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        }
+      ]
+    },
+    "sparkjob3": {
+      "nodes": [
+        {
+          "id": "log-source",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 175
+          },
+          "data": {
+            "label": "Log Files",
+            "nodeType": "data-source",
+            "status": "failed",
+            "error": "Access denied",
+            "path": "/var/logs/app"
+          }
+        },
+        {
+          "id": "log-parser",
+          "type": "sparkNode",
+          "position": {
+            "x": 350,
+            "y": 175
+          },
+          "data": {
+            "label": "Log Parser",
+            "nodeType": "transformation",
+            "status": "failed",
+            "error": "Parser exception"
+          }
+        },
+        {
+          "id": "error-handler",
+          "type": "sparkNode",
+          "position": {
+            "x": 350,
+            "y": 350
+          },
+          "data": {
+            "label": "Error Handler",
+            "nodeType": "monitoring",
+            "status": "active",
+            "errors": 42
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "source-parser",
+          "source": "log-source",
+          "sourceHandle": "log-source-source",
+          "target": "log-parser",
+          "targetHandle": "log-parser-target",
+          "type": "bezier",
+          "animated": false,
+          "style": {
+            "stroke": "#ef4444",
+            "strokeWidth": 2,
+            "strokeDasharray": "5,5"
+          }
+        },
+        {
+          "id": "parser-error",
+          "source": "log-parser",
+          "sourceHandle": "log-parser-source",
+          "target": "error-handler",
+          "targetHandle": "error-handler-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#ef4444",
+            "strokeWidth": 2
+          }
+        }
+      ]
+    },
+    "sparkjob4": {
+      "nodes": [
+        {
+          "id": "kafka-events",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 50
+          },
+          "data": {
+            "label": "Event Stream",
+            "nodeType": "data-source",
+            "status": "streaming",
+            "topics": [
+              "user-events",
+              "system-events"
+            ],
+            "throughput": "500K msg/s"
+          }
+        },
+        {
+          "id": "kafka-logs",
+          "type": "sparkNode",
+          "position": {
+            "x": 50,
+            "y": 300
+          },
+          "data": {
+            "label": "Log Stream",
+            "nodeType": "data-source",
+            "status": "streaming",
+            "topics": [
+              "app-logs",
+              "error-logs"
+            ],
+            "throughput": "300K msg/s"
+          }
+        },
+        {
+          "id": "stream-join",
+          "type": "sparkNode",
+          "position": {
+            "x": 350,
+            "y": 175
+          },
+          "data": {
+            "label": "Stream Join",
+            "nodeType": "transformation",
+            "status": "processing",
+            "window": "5 min",
+            "watermark": "1 min"
+          }
+        },
+        {
+          "id": "enrichment",
+          "type": "sparkNode",
+          "position": {
+            "x": 650,
+            "y": 175
+          },
+          "data": {
+            "label": "Data Enrichment",
+            "nodeType": "processing",
+            "status": "processing",
+            "lookups": [
+              "user-profile",
+              "geo-data"
+            ]
+          }
+        },
+        {
+          "id": "real-time-dash",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 50
+          },
+          "data": {
+            "label": "Real-time Dashboard",
+            "nodeType": "data-sink",
+            "status": "active",
+            "latency": "<100ms"
+          }
+        },
+        {
+          "id": "data-archive",
+          "type": "sparkNode",
+          "position": {
+            "x": 950,
+            "y": 300
+          },
+          "data": {
+            "label": "S3 Archive",
+            "nodeType": "data-sink",
+            "status": "active",
+            "format": "parquet"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "events-join",
+          "source": "kafka-events",
+          "sourceHandle": "kafka-events-source",
+          "target": "stream-join",
+          "targetHandle": "stream-join-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "logs-join",
+          "source": "kafka-logs",
+          "sourceHandle": "kafka-logs-source",
+          "target": "stream-join",
+          "targetHandle": "stream-join-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#3b82f6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "join-enrich",
+          "source": "stream-join",
+          "sourceHandle": "stream-join-source",
+          "target": "enrichment",
+          "targetHandle": "enrichment-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "enrich-dash",
+          "source": "enrichment",
+          "sourceHandle": "enrichment-source",
+          "target": "real-time-dash",
+          "targetHandle": "real-time-dash-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        },
+        {
+          "id": "enrich-archive",
+          "source": "enrichment",
+          "sourceHandle": "enrichment-source",
+          "target": "data-archive",
+          "targetHandle": "data-archive-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#10b981",
+            "strokeWidth": 2
+          }
+        }
+      ]
+    },
+    "sparkjob5": {
+      "nodes": [
+        {
+          "id": "pending-queue",
+          "type": "sparkNode",
+          "position": {
+            "x": 250,
+            "y": 175
+          },
+          "data": {
+            "label": "Job Queue",
+            "nodeType": "monitoring",
+            "status": "pending",
+            "position": 3,
+            "waitTime": "15 min"
+          }
+        },
+        {
+          "id": "resource-wait",
+          "type": "sparkNode",
+          "position": {
+            "x": 600,
+            "y": 175
+          },
+          "data": {
+            "label": "Resource Manager",
+            "nodeType": "monitoring",
+            "status": "pending",
+            "waitingFor": "Available executors"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "queue-resources",
+          "source": "pending-queue",
+          "sourceHandle": "pending-queue-source",
+          "target": "resource-wait",
+          "targetHandle": "resource-wait-target",
+          "type": "bezier",
+          "animated": true,
+          "style": {
+            "stroke": "#f59e0b",
+            "strokeWidth": 2,
+            "strokeDasharray": "5,5"
+          }
+        }
+      ]
+    }
+  }
+}

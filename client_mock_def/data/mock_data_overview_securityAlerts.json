@@ -1,0 +1,44 @@
+{
+  "securityAlerts": [
+    {
+      "id": 1,
+      "type": "Authentication Failure",
+      "severity": "High",
+      "source": "User Login",
+      "timestamp": "2024-07-09T08:47:00",
+      "status": "Open"
+    },
+    {
+      "id": 2,
+      "type": "Unusual Access Pattern",
+      "severity": "Medium",
+      "source": "API Gateway",
+      "timestamp": "2024-07-14T12:40:00",
+      "status": "Investigating"
+    },
+    {
+      "id": 3,
+      "type": "Permission Change",
+      "severity": "Low",
+      "source": "User Management",
+      "timestamp": "2025-01-13T10:20:00",
+      "status": "Resolved"
+    },
+    {
+      "id": 4,
+      "type": "Data Access Attempt",
+      "severity": "High",
+      "source": "Database",
+      "timestamp": "2024-12-12T12:15:00",
+      "status": "Resolved"
+    },
+    {
+      "id": 5,
+      "type": "Configuration Change",
+      "severity": "Medium",
+      "source": "System Settings",
+      "timestamp": "2025-11-10T13:50:00",
+      "status": "Resolved"
+    }
+  ]
+}

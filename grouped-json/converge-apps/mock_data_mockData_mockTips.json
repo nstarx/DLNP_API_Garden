@@ -1,0 +1,3 @@
+{
+  "mockTips": "[\n    {\n        icon: 'pi pi-info-circle',\n        color: 'text-blue-500',\n        text: 'For best results, use clear audio with minimal background noise'\n    },\nexport const mockTranscriptionPhases = ['Uploading and processing...', 'Extracting audio...', 'Running AI transcription...', 'Generating output formats...', 'Finalizing results...']"
+}

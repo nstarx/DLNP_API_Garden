@@ -1,0 +1,2584 @@
+{
+  "groupName": "Agentic AI",
+  "description": "AI agent templates, CI/CD pipelines, and agent orchestration",
+  "fileCount": 184,
+  "totalSize": 86147,
+  "files": [
+    {
+      "fileName": "AgentTemplatesLogic_1.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesLogic_1.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAgentTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "AgentTemplatesLogic_2.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesLogic_2.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAgentTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "AgentTemplatesLogic_3.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesLogic_3.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAgentTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "AgentTemplatesLogic.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesLogic.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAgentTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "agentTemplatesMockData_agentTemplates_1.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_agentTemplates_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "agentTemplatesMockData_agentTemplates_2.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_agentTemplates_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "agentTemplatesMockData_agentTemplates_3.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_agentTemplates_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "agentTemplatesMockData_agentTemplates.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_agentTemplates.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "agentTemplatesMockData_categories_1.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_categories_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "agentTemplatesMockData_categories_2.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_categories_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "agentTemplatesMockData_categories_3.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_categories_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "agentTemplatesMockData_categories.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_categories.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "agentTemplatesMockData_sortOptions_1.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_sortOptions_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "agentTemplatesMockData_sortOptions_2.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_sortOptions_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "agentTemplatesMockData_sortOptions_3.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_sortOptions_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "agentTemplatesMockData_sortOptions.json",
+      "originalPath": "client_mock_def/agentic/agentTemplatesMockData_sortOptions.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_agentTemplates_1.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_agentTemplates_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_agentTemplates_2.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_agentTemplates_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_agentTemplates_3.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_agentTemplates_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_agentTemplates.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_agentTemplates.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3527
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_categories_1.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_categories_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_categories_2.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_categories_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_categories_3.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_categories_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_categories.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_categories.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 389
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_sortOptions_1.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_sortOptions_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_sortOptions_2.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_sortOptions_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_sortOptions_3.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_sortOptions_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "AgentTemplatesMockData_views_sortOptions.json",
+      "originalPath": "client_mock_def/agentic/AgentTemplatesMockData_views_sortOptions.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sortOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 488
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForDeployment_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForDeployment_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForDeployment"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForDeployment_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForDeployment_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForDeployment"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForDeployment_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForDeployment_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForDeployment"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForDeployment.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForDeployment.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForDeployment"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForEvaluation_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForEvaluation_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForEvaluation_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForEvaluation_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForEvaluation_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForEvaluation_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForEvaluation.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForEvaluation.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 405
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForTesting_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForTesting_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForTesting"
+        ],
+        "hasNestedData": true
+      },
+      "size": 402
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForTesting_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForTesting_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForTesting"
+        ],
+        "hasNestedData": true
+      },
+      "size": 402
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForTesting_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForTesting_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForTesting"
+        ],
+        "hasNestedData": true
+      },
+      "size": 402
+    },
+    {
+      "fileName": "cicdPipelinesData_agentsForTesting.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_agentsForTesting.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentsForTesting"
+        ],
+        "hasNestedData": true
+      },
+      "size": 402
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStatus_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStatus_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStatus"
+        ],
+        "hasNestedData": true
+      },
+      "size": 305
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStatus_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStatus_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStatus"
+        ],
+        "hasNestedData": true
+      },
+      "size": 305
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStatus_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStatus_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStatus"
+        ],
+        "hasNestedData": true
+      },
+      "size": 305
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStatus.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStatus.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStatus"
+        ],
+        "hasNestedData": true
+      },
+      "size": 305
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStrategies_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStrategies_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStrategies"
+        ],
+        "hasNestedData": true
+      },
+      "size": 274
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStrategies_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStrategies_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStrategies"
+        ],
+        "hasNestedData": true
+      },
+      "size": 274
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStrategies_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStrategies_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStrategies"
+        ],
+        "hasNestedData": true
+      },
+      "size": 274
+    },
+    {
+      "fileName": "cicdPipelinesData_deploymentStrategies.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_deploymentStrategies.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deploymentStrategies"
+        ],
+        "hasNestedData": true
+      },
+      "size": 274
+    },
+    {
+      "fileName": "cicdPipelinesData_evaluationMetrics_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_evaluationMetrics_1.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "evaluationMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 243
+    },
+    {
+      "fileName": "cicdPipelinesData_evaluationMetrics_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_evaluationMetrics_2.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "evaluationMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 243
+    },
+    {
+      "fileName": "cicdPipelinesData_evaluationMetrics_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_evaluationMetrics_3.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "evaluationMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 243
+    },
+    {
+      "fileName": "cicdPipelinesData_evaluationMetrics.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_evaluationMetrics.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "evaluationMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 243
+    },
+    {
+      "fileName": "cicdPipelinesData_notificationOptions_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_notificationOptions_1.json",
+      "purpose": "System notifications and alerts",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "notificationOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 276
+    },
+    {
+      "fileName": "cicdPipelinesData_notificationOptions_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_notificationOptions_2.json",
+      "purpose": "System notifications and alerts",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "notificationOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 276
+    },
+    {
+      "fileName": "cicdPipelinesData_notificationOptions_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_notificationOptions_3.json",
+      "purpose": "System notifications and alerts",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "notificationOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 276
+    },
+    {
+      "fileName": "cicdPipelinesData_notificationOptions.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_notificationOptions.json",
+      "purpose": "System notifications and alerts",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "notificationOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 276
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineConfig_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineConfig_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 244
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineConfig_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineConfig_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 244
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineConfig_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineConfig_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 244
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineConfig.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineConfig.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 244
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineRuns_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineRuns_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineRuns"
+        ],
+        "hasNestedData": true
+      },
+      "size": 866
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineRuns_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineRuns_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineRuns"
+        ],
+        "hasNestedData": true
+      },
+      "size": 866
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineRuns_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineRuns_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineRuns"
+        ],
+        "hasNestedData": true
+      },
+      "size": 866
+    },
+    {
+      "fileName": "cicdPipelinesData_pipelineRuns.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_pipelineRuns.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineRuns"
+        ],
+        "hasNestedData": true
+      },
+      "size": 866
+    },
+    {
+      "fileName": "cicdPipelinesData_recentTestResults_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_recentTestResults_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "recentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 503
+    },
+    {
+      "fileName": "cicdPipelinesData_recentTestResults_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_recentTestResults_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "recentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 503
+    },
+    {
+      "fileName": "cicdPipelinesData_recentTestResults_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_recentTestResults_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "recentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 503
+    },
+    {
+      "fileName": "cicdPipelinesData_recentTestResults.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_recentTestResults.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "recentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 503
+    },
+    {
+      "fileName": "cicdPipelinesData_scenarioCategories_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_scenarioCategories_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "scenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 256
+    },
+    {
+      "fileName": "cicdPipelinesData_scenarioCategories_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_scenarioCategories_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "scenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 256
+    },
+    {
+      "fileName": "cicdPipelinesData_scenarioCategories_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_scenarioCategories_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "scenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 256
+    },
+    {
+      "fileName": "cicdPipelinesData_scenarioCategories.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_scenarioCategories.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "scenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 256
+    },
+    {
+      "fileName": "cicdPipelinesData_testEnvironments_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testEnvironments_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 97
+    },
+    {
+      "fileName": "cicdPipelinesData_testEnvironments_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testEnvironments_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 97
+    },
+    {
+      "fileName": "cicdPipelinesData_testEnvironments_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testEnvironments_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 97
+    },
+    {
+      "fileName": "cicdPipelinesData_testEnvironments.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testEnvironments.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 97
+    },
+    {
+      "fileName": "cicdPipelinesData_testResults_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testResults_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 361
+    },
+    {
+      "fileName": "cicdPipelinesData_testResults_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testResults_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 361
+    },
+    {
+      "fileName": "cicdPipelinesData_testResults_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testResults_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 361
+    },
+    {
+      "fileName": "cicdPipelinesData_testResults.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testResults.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 361
+    },
+    {
+      "fileName": "cicdPipelinesData_testScenarios_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testScenarios_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 664
+    },
+    {
+      "fileName": "cicdPipelinesData_testScenarios_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testScenarios_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 664
+    },
+    {
+      "fileName": "cicdPipelinesData_testScenarios_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testScenarios_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 664
+    },
+    {
+      "fileName": "cicdPipelinesData_testScenarios.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_testScenarios.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 664
+    },
+    {
+      "fileName": "cicdPipelinesData_validationDatasets_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_validationDatasets_1.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "validationDatasets"
+        ],
+        "hasNestedData": true
+      },
+      "size": 210
+    },
+    {
+      "fileName": "cicdPipelinesData_validationDatasets_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_validationDatasets_2.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "validationDatasets"
+        ],
+        "hasNestedData": true
+      },
+      "size": 210
+    },
+    {
+      "fileName": "cicdPipelinesData_validationDatasets_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_validationDatasets_3.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "validationDatasets"
+        ],
+        "hasNestedData": true
+      },
+      "size": 210
+    },
+    {
+      "fileName": "cicdPipelinesData_validationDatasets.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_validationDatasets.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "validationDatasets"
+        ],
+        "hasNestedData": true
+      },
+      "size": 210
+    },
+    {
+      "fileName": "cicdPipelinesData_versionsForEvaluation_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_versionsForEvaluation_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "versionsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "cicdPipelinesData_versionsForEvaluation_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_versionsForEvaluation_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "versionsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "cicdPipelinesData_versionsForEvaluation_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_versionsForEvaluation_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "versionsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "cicdPipelinesData_versionsForEvaluation.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesData_versionsForEvaluation.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "versionsForEvaluation"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_approveProductionDeployment_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_approveProductionDeployment_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "approveProductionDeployment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 60
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_approveProductionDeployment_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_approveProductionDeployment_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "approveProductionDeployment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 60
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_approveProductionDeployment_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_approveProductionDeployment_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "approveProductionDeployment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 60
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_approveProductionDeployment.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_approveProductionDeployment.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "approveProductionDeployment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 60
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_createNewPipeline_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_createNewPipeline_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "createNewPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_createNewPipeline_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_createNewPipeline_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "createNewPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_createNewPipeline_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_createNewPipeline_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "createNewPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_createNewPipeline.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_createNewPipeline.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "createNewPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 50
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToDevelopment_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToDevelopment_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToDevelopment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToDevelopment_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToDevelopment_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToDevelopment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToDevelopment_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToDevelopment_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToDevelopment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToDevelopment.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToDevelopment.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToDevelopment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToProduction_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToProduction_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToProduction"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToProduction_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToProduction_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToProduction"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToProduction_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToProduction_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToProduction"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToProduction.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToProduction.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToProduction"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToStaging_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToStaging_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToStaging"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToStaging_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToStaging_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToStaging"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToStaging_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToStaging_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToStaging"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_deployToStaging.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_deployToStaging.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "deployToStaging"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIcon_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIcon_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIcon"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIcon_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIcon_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIcon"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIcon_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIcon_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIcon"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIcon.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIcon.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIcon"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIconClass_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIconClass_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIconClass"
+        ],
+        "hasNestedData": false
+      },
+      "size": 56
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIconClass_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIconClass_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIconClass"
+        ],
+        "hasNestedData": false
+      },
+      "size": 56
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIconClass_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIconClass_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIconClass"
+        ],
+        "hasNestedData": false
+      },
+      "size": 56
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getEnvironmentIconClass.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getEnvironmentIconClass.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getEnvironmentIconClass"
+        ],
+        "hasNestedData": false
+      },
+      "size": 56
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getPipelineStatusSeverity_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getPipelineStatusSeverity_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getPipelineStatusSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 58
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getPipelineStatusSeverity_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getPipelineStatusSeverity_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getPipelineStatusSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 58
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getPipelineStatusSeverity_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getPipelineStatusSeverity_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getPipelineStatusSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 58
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getPipelineStatusSeverity.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getPipelineStatusSeverity.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getPipelineStatusSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 58
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getTestResultSeverity_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getTestResultSeverity_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getTestResultSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getTestResultSeverity_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getTestResultSeverity_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getTestResultSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getTestResultSeverity_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getTestResultSeverity_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getTestResultSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_getTestResultSeverity.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_getTestResultSeverity.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "getTestResultSeverity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runAllTests_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runAllTests_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runAllTests"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runAllTests_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runAllTests_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runAllTests"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runAllTests_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runAllTests_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runAllTests"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runAllTests.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runAllTests.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runAllTests"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runPipeline_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runPipeline_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runPipeline_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runPipeline_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runPipeline_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runPipeline_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_runPipeline.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_runPipeline.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "runPipeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 44
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_saveNewScenario_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_saveNewScenario_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "saveNewScenario"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_saveNewScenario_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_saveNewScenario_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "saveNewScenario"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_saveNewScenario_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_saveNewScenario_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "saveNewScenario"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_saveNewScenario.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_saveNewScenario.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "saveNewScenario"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_savePipelineConfig_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_savePipelineConfig_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "savePipelineConfig"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_savePipelineConfig_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_savePipelineConfig_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "savePipelineConfig"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_savePipelineConfig_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_savePipelineConfig_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "savePipelineConfig"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_savePipelineConfig.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_savePipelineConfig.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "savePipelineConfig"
+        ],
+        "hasNestedData": false
+      },
+      "size": 51
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_startEvaluation_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_startEvaluation_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "startEvaluation"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_startEvaluation_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_startEvaluation_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "startEvaluation"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_startEvaluation_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_startEvaluation_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "startEvaluation"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_startEvaluation.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_startEvaluation.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "startEvaluation"
+        ],
+        "hasNestedData": false
+      },
+      "size": 48
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_useDeploymentStatus_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_useDeploymentStatus_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useDeploymentStatus"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_useDeploymentStatus_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_useDeploymentStatus_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useDeploymentStatus"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_useDeploymentStatus_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_useDeploymentStatus_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useDeploymentStatus"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_useDeploymentStatus.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_useDeploymentStatus.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useDeploymentStatus"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewDeploymentHistory_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewDeploymentHistory_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewDeploymentHistory"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewDeploymentHistory_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewDeploymentHistory_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewDeploymentHistory"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewDeploymentHistory_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewDeploymentHistory_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewDeploymentHistory"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewDeploymentHistory.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewDeploymentHistory.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewDeploymentHistory"
+        ],
+        "hasNestedData": false
+      },
+      "size": 54
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewPipelineDetails_1.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewPipelineDetails_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewPipelineDetails"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewPipelineDetails_2.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewPipelineDetails_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewPipelineDetails"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewPipelineDetails_3.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewPipelineDetails_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewPipelineDetails"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "cicdPipelinesFunctions_viewPipelineDetails.json",
+      "originalPath": "client_mock_def/agentic/cicdPipelinesFunctions_viewPipelineDetails.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "viewPipelineDetails"
+        ],
+        "hasNestedData": false
+      },
+      "size": 52
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestEnvironments.json",
+      "originalPath": "client_mock_def/agentic/mock_data_agentic_workbench_mockTestEnvironments.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestScenarios.json",
+      "originalPath": "client_mock_def/agentic/mock_data_agentic_workbench_mockTestScenarios.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestScenarios"
+        ],
+        "hasNestedData": false
+      },
+      "size": 2061
+    },
+    {
+      "fileName": "mock_data_agentTemplatesMockData_agentTemplates.json",
+      "originalPath": "client_mock_def/agentic/mock_data_agentTemplatesMockData_agentTemplates.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "agentTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 329
+    },
+    {
+      "fileName": "mock_data_agentTemplatesMockData_categories.json",
+      "originalPath": "client_mock_def/agentic/mock_data_agentTemplatesMockData_categories.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "categories"
+        ],
+        "hasNestedData": false
+      },
+      "size": 181
+    },
+    {
+      "fileName": "mock_data_cicdPipelinesData_pipelineRuns.json",
+      "originalPath": "client_mock_def/agentic/mock_data_cicdPipelinesData_pipelineRuns.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineRuns"
+        ],
+        "hasNestedData": false
+      },
+      "size": 546
+    },
+    {
+      "fileName": "mock_data_cicdPipelinesData_testEnvironments.json",
+      "originalPath": "client_mock_def/agentic/mock_data_cicdPipelinesData_testEnvironments.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 97
+    },
+    {
+      "fileName": "mock_data_cicdPipelinesData_testScenarios.json",
+      "originalPath": "client_mock_def/agentic/mock_data_cicdPipelinesData_testScenarios.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "testScenarios"
+        ],
+        "hasNestedData": false
+      },
+      "size": 738
+    },
+    {
+      "fileName": "mock_data_cicdPipelinesData_validationDatasets.json",
+      "originalPath": "client_mock_def/agentic/mock_data_cicdPipelinesData_validationDatasets.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "validationDatasets"
+        ],
+        "hasNestedData": false
+      },
+      "size": 1197
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockAgentTypes_1.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockAgentTypes_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAgentTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockAgentTypes_2.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockAgentTypes_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAgentTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockAgentTypes_3.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockAgentTypes_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAgentTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockAgentTypes.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockAgentTypes.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAgentTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptHistory_1.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptHistory_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 990
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptHistory_2.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptHistory_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 990
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptHistory_3.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptHistory_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 990
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptHistory.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptHistory.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 990
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptTemplates_1.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptTemplates_1.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1091
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptTemplates_2.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptTemplates_2.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1091
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptTemplates_3.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptTemplates_3.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1091
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockPromptTemplates.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockPromptTemplates.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPromptTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1091
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockSystemPrompts_1.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockSystemPrompts_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSystemPrompts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2424
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockSystemPrompts_2.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockSystemPrompts_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSystemPrompts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2424
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockSystemPrompts_3.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockSystemPrompts_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSystemPrompts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2424
+    },
+    {
+      "fileName": "mock_data_system_prompts_mockSystemPrompts.json",
+      "originalPath": "client_mock_def/agentic/mock_data_system_prompts_mockSystemPrompts.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSystemPrompts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2424
+    }
+  ]
+}

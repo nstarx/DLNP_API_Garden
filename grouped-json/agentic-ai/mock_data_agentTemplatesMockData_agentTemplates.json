@@ -1,0 +1,3 @@
+{
+  "agentTemplates": "[\n    {\n        id: 1,\n        name: 'Research Assistant',\n        icon: 'pi pi-search-plus',\n        category: 'Knowledge Processing',\n        tags: [\n            { label: 'Knowledge Processing', severity: 'info' },\n            { label: 'Information Retrieval', severity: 'success' }\n        ]"
+}

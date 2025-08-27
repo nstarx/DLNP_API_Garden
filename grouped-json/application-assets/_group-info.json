@@ -1,0 +1,908 @@
+{
+  "groupName": "Application Assets",
+  "description": "Mock data for charts, metrics, and application resources",
+  "fileCount": 65,
+  "totalSize": 68158,
+  "files": [
+    {
+      "fileName": "mock_data_agentic_workbench_mockABTestExperiments_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockABTestExperiments_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockABTestExperiments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 720
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockABTestExperiments_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockABTestExperiments_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockABTestExperiments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 720
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockABTestExperiments_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockABTestExperiments_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockABTestExperiments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 720
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockABTestExperiments.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockABTestExperiments.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockABTestExperiments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 720
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockAvailableAgents_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockAvailableAgents_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAvailableAgents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockAvailableAgents_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockAvailableAgents_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAvailableAgents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockAvailableAgents_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockAvailableAgents_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAvailableAgents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockAvailableAgents.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockAvailableAgents.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAvailableAgents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1570
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockComplexityLevels_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockComplexityLevels_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockComplexityLevels"
+        ],
+        "hasNestedData": true
+      },
+      "size": 71
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockComplexityLevels_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockComplexityLevels_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockComplexityLevels"
+        ],
+        "hasNestedData": true
+      },
+      "size": 71
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockComplexityLevels_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockComplexityLevels_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockComplexityLevels"
+        ],
+        "hasNestedData": true
+      },
+      "size": 71
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockComplexityLevels.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockComplexityLevels.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockComplexityLevels"
+        ],
+        "hasNestedData": true
+      },
+      "size": 71
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockPerformanceMetrics_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockPerformanceMetrics_1.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPerformanceMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 135
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockPerformanceMetrics_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockPerformanceMetrics_2.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPerformanceMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 135
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockPerformanceMetrics_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockPerformanceMetrics_3.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPerformanceMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 135
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockPerformanceMetrics.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockPerformanceMetrics.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPerformanceMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 135
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockRecentTestResults_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockRecentTestResults_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 816
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockRecentTestResults_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockRecentTestResults_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 816
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockRecentTestResults_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockRecentTestResults_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 816
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockRecentTestResults.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockRecentTestResults.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 816
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockScenarioCategories_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockScenarioCategories_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockScenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 238
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockScenarioCategories_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockScenarioCategories_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockScenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 238
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockScenarioCategories_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockScenarioCategories_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockScenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 238
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockScenarioCategories.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockScenarioCategories.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockScenarioCategories"
+        ],
+        "hasNestedData": true
+      },
+      "size": 238
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestEnvironments_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestEnvironments_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestEnvironments_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestEnvironments_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestEnvironments_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestEnvironments_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestEnvironments.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestEnvironments.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestEnvironments"
+        ],
+        "hasNestedData": true
+      },
+      "size": 86
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestReports_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestReports_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestReports"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestReports_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestReports_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestReports"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestReports_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestReports_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestReports"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestReports.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestReports.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestReports"
+        ],
+        "hasNestedData": true
+      },
+      "size": 395
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestScenarios_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestScenarios_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1843
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestScenarios_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestScenarios_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1843
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestScenarios_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestScenarios_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1843
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestScenarios.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestScenarios.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestScenarios"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1843
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestSuites_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestSuites_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestSuites"
+        ],
+        "hasNestedData": true
+      },
+      "size": 620
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestSuites_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestSuites_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestSuites"
+        ],
+        "hasNestedData": true
+      },
+      "size": 620
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestSuites_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestSuites_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestSuites"
+        ],
+        "hasNestedData": true
+      },
+      "size": 620
+    },
+    {
+      "fileName": "mock_data_agentic_workbench_mockTestSuites.json",
+      "originalPath": "client_mock_def/assets/mock_data_agentic_workbench_mockTestSuites.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTestSuites"
+        ],
+        "hasNestedData": true
+      },
+      "size": 620
+    },
+    {
+      "fileName": "mock_data_ai-company-models.json",
+      "originalPath": "client_mock_def/assets/mock_data_ai-company-models.json",
+      "purpose": "Machine learning model definitions",
+      "structure": {
+        "type": "array",
+        "count": 8,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 2488
+    },
+    {
+      "fileName": "mock_data_budget_1.json",
+      "originalPath": "client_mock_def/assets/mock_data_budget_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockBudgetData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 4883
+    },
+    {
+      "fileName": "mock_data_budget_2.json",
+      "originalPath": "client_mock_def/assets/mock_data_budget_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockBudgetData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 4883
+    },
+    {
+      "fileName": "mock_data_budget_3.json",
+      "originalPath": "client_mock_def/assets/mock_data_budget_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockBudgetData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 4883
+    },
+    {
+      "fileName": "mock_data_budget.json",
+      "originalPath": "client_mock_def/assets/mock_data_budget.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockBudgetData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 4883
+    },
+    {
+      "fileName": "mock_data_chartData.json",
+      "originalPath": "client_mock_def/assets/mock_data_chartData.json",
+      "purpose": "Chart and graph visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "labels",
+          "datasets"
+        ],
+        "hasNestedData": true
+      },
+      "size": 673
+    },
+    {
+      "fileName": "mock_data_clientChartData.json",
+      "originalPath": "client_mock_def/assets/mock_data_clientChartData.json",
+      "purpose": "Chart and graph visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "labels",
+          "datasets"
+        ],
+        "hasNestedData": true
+      },
+      "size": 673
+    },
+    {
+      "fileName": "mock_data_clientLogEntries.json",
+      "originalPath": "client_mock_def/assets/mock_data_clientLogEntries.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "Client-1",
+          "Client-2",
+          "Client-3",
+          "Client-4",
+          "Client-5"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1647
+    },
+    {
+      "fileName": "mock_data_clients.json",
+      "originalPath": "client_mock_def/assets/mock_data_clients.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 5,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 1440
+    },
+    {
+      "fileName": "mock_data_datasets.json",
+      "originalPath": "client_mock_def/assets/mock_data_datasets.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 649
+    },
+    {
+      "fileName": "mock_data_endpoints.json",
+      "originalPath": "client_mock_def/assets/mock_data_endpoints.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 737
+    },
+    {
+      "fileName": "mock_data_executions.json",
+      "originalPath": "client_mock_def/assets/mock_data_executions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 805
+    },
+    {
+      "fileName": "mock_data_experiments.json",
+      "originalPath": "client_mock_def/assets/mock_data_experiments.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 847
+    },
+    {
+      "fileName": "mock_data_feature-sets.json",
+      "originalPath": "client_mock_def/assets/mock_data_feature-sets.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 694
+    },
+    {
+      "fileName": "mock_data_filter-options.json",
+      "originalPath": "client_mock_def/assets/mock_data_filter-options.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "modelCategories",
+          "modelProviders",
+          "sortOptions",
+          "datasetTypes",
+          "modelTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2848
+    },
+    {
+      "fileName": "mock_data_flOperations.json",
+      "originalPath": "client_mock_def/assets/mock_data_flOperations.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 0,
+        "keys": null,
+        "hasNestedData": false
+      },
+      "size": 4
+    },
+    {
+      "fileName": "mock_data_logEntries.json",
+      "originalPath": "client_mock_def/assets/mock_data_logEntries.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "array",
+        "count": 11,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 4182
+    },
+    {
+      "fileName": "mock_data_modelDetails.json",
+      "originalPath": "client_mock_def/assets/mock_data_modelDetails.json",
+      "purpose": "Machine learning model definitions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "architecture",
+          "parameters",
+          "createdBy",
+          "updateHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 320
+    },
+    {
+      "fileName": "mock_data_models.json",
+      "originalPath": "client_mock_def/assets/mock_data_models.json",
+      "purpose": "Machine learning model definitions",
+      "structure": {
+        "type": "array",
+        "count": 5,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 246
+    },
+    {
+      "fileName": "mock_data_modelVersions.json",
+      "originalPath": "client_mock_def/assets/mock_data_modelVersions.json",
+      "purpose": "Machine learning model definitions",
+      "structure": {
+        "type": "array",
+        "count": 2,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 115
+    },
+    {
+      "fileName": "mock_data_performanceMetrics.json",
+      "originalPath": "client_mock_def/assets/mock_data_performanceMetrics.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "validationScore",
+          "biasAssessment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 73
+    },
+    {
+      "fileName": "mock_data_policies.json",
+      "originalPath": "client_mock_def/assets/mock_data_policies.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 695
+    },
+    {
+      "fileName": "mock_data_provenance-data.json",
+      "originalPath": "client_mock_def/assets/mock_data_provenance-data.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "array",
+        "count": 15,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 3245
+    },
+    {
+      "fileName": "mock_data_service_tree.json",
+      "originalPath": "client_mock_def/assets/mock_data_service_tree.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockServicesWithParents"
+        ],
+        "hasNestedData": false
+      },
+      "size": 203
+    },
+    {
+      "fileName": "mock_data_trainingSettings.json",
+      "originalPath": "client_mock_def/assets/mock_data_trainingSettings.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "batchSize",
+          "learningRate",
+          "numRounds"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "mockSystemPrompts": [
+    {
+      "id": 1,
+      "agentName": "Research Assistant System",
+      "agentType": "Research Assistant",
+      "agentIcon": "pi pi-search-plus",
+      "promptType": "System",
+      "lastModified": "2 days ago",
+      "version": "v1.2.3",
+      "status": "Active",
+      "content": "You are a research assistant specialized in analyzing academic papers and generating comprehensive summaries. Your role is to help users understand complex research topics by breaking them down into digestible insights."
+    },
+    {
+      "id": 2,
+      "agentName": "Customer Support Network",
+      "agentType": "Customer Support",
+      "agentIcon": "pi pi-comments",
+      "promptType": "System",
+      "lastModified": "1 week ago",
+      "version": "v2.0.1",
+      "status": "Active",
+      "content": "You are a helpful customer support agent. Your goal is to assist customers with their inquiries in a friendly, professional manner. Always be empathetic and provide clear, actionable solutions."
+    },
+    {
+      "id": 3,
+      "agentName": "Data Processing Pipeline",
+      "agentType": "Data Analyst",
+      "agentIcon": "pi pi-chart-bar",
+      "promptType": "System",
+      "lastModified": "3 days ago",
+      "version": "v0.9.5",
+      "status": "Draft",
+      "content": "You are a data analyst AI that processes and analyzes large datasets. Focus on identifying patterns, trends, and insights that can drive business decisions."
+    },
+    {
+      "id": 4,
+      "agentName": "Creative Content Generator",
+      "agentType": "Content Creator",
+      "agentIcon": "pi pi-palette",
+      "promptType": "System",
+      "lastModified": "5 days ago",
+      "version": "v1.8.0",
+      "status": "Active",
+      "content": "You are a creative content generation AI. Your task is to help users create engaging, original content for various platforms. Be creative, but maintain accuracy and relevance."
+    },
+    {
+      "id": 5,
+      "agentName": "Document Analysis Engine",
+      "agentType": "Document Processor",
+      "agentIcon": "pi pi-file-text",
+      "promptType": "System",
+      "lastModified": "1 day ago",
+      "version": "v3.1.2",
+      "status": "Active",
+      "content": "You are a document processing AI specialized in extracting, analyzing, and organizing information from various document formats. Ensure accuracy in data extraction and maintain document structure."
+    }
+  ]
+}

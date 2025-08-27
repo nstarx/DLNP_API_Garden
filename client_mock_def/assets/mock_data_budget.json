@@ -141,28 +141,28 @@
     ],
     "budgetHistory": [
       {
-        "date": {},
+        "date": "2024-01-15T00:00:00.000Z",
         "amount": 500000,
         "type": "initial",
         "approvedBy": "Michael Chen",
         "reason": "Initial budget allocation"
       },
       {
-        "date": {},
+        "date": "2024-03-20T00:00:00.000Z",
         "amount": 150000,
         "type": "increase",
         "approvedBy": "Adrian",
         "reason": "Q2 expansion approved"
       },
       {
-        "date": {},
+        "date": "2024-06-10T00:00:00.000Z",
         "amount": -50000,
         "type": "reduction",
         "approvedBy": "Robert Williams",
         "reason": "Cost optimization initiative"
       },
       {
-        "date": {},
+        "date": "2024-08-05T00:00:00.000Z",
         "amount": 200000,
         "type": "increase",
         "approvedBy": "Michael Chen",
@@ -172,7 +172,7 @@
     "mockExpenses": [
       {
         "id": 1,
-        "date": {},
+        "date": "2024-01-20T00:00:00.000Z",
         "category": "personnel",
         "amount": 85000,
         "description": "Team salaries - January",
@@ -180,7 +180,7 @@
       },
       {
         "id": 2,
-        "date": {},
+        "date": "2024-01-25T00:00:00.000Z",
         "category": "software",
         "amount": 15000,
         "description": "AWS services",
@@ -188,7 +188,7 @@
       },
       {
         "id": 3,
-        "date": {},
+        "date": "2024-02-10T00:00:00.000Z",
         "category": "consulting",
         "amount": 35000,
         "description": "Security audit",
@@ -196,7 +196,7 @@
       },
       {
         "id": 4,
-        "date": {},
+        "date": "2024-02-20T00:00:00.000Z",
         "category": "personnel",
         "amount": 85000,
         "description": "Team salaries - February",
@@ -204,7 +204,7 @@
       },
       {
         "id": 5,
-        "date": {},
+        "date": "2024-03-05T00:00:00.000Z",
         "category": "infrastructure",
         "amount": 45000,
         "description": "Server upgrades",
@@ -212,7 +212,7 @@
       },
       {
         "id": 6,
-        "date": {},
+        "date": "2024-03-15T00:00:00.000Z",
         "category": "training",
         "amount": 12000,
         "description": "Team certifications",

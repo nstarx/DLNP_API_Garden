@@ -1,0 +1,3 @@
+{
+  "approvalTemplates": "[\n    {\n        id: 'req_approval',\n        name: 'Requirements Approval',\n        subject: 'Requirements Review Request - [PROJECT_NAME]"
+}

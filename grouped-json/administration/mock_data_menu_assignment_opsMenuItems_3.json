@@ -1,0 +1,98 @@
+{
+  "opsMenuItems": [
+    {
+      "id": 1,
+      "label": "AI Zones",
+      "icon": "pi pi-microchip-ai",
+      "path": "/ai-zone-dashboard",
+      "roles": [
+        "admin",
+        "ops"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Monitoring",
+      "icon": "pi pi-chart-bar",
+      "path": "/monitoring",
+      "roles": [
+        "admin",
+        "ops"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Deployments",
+      "icon": "pi pi-objects-column",
+      "path": "/deployments",
+      "roles": [
+        "admin",
+        "ds",
+        "ops"
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Security",
+      "icon": "pi pi-shield",
+      "path": "/security2",
+      "roles": [
+        "admin",
+        "ops"
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Connections",
+      "icon": "pi pi-sitemap",
+      "path": "/connections",
+      "roles": [
+        "admin",
+        "ops"
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Cost Center",
+      "icon": "pi pi-dollar",
+      "path": "/dashboard-sales",
+      "roles": [
+        "admin",
+        "ops"
+      ]
+    },
+    {
+      "id": 7,
+      "label": "CI/CD",
+      "icon": "pi pi-circle",
+      "path": "/cicd-ui",
+      "roles": [
+        "admin",
+        "ops"
+      ]
+    },
+    {
+      "id": 8,
+      "label": "About",
+      "icon": "pi pi-info-circle",
+      "path": "/about",
+      "roles": [
+        "admin",
+        "ops",
+        "ds",
+        "biz",
+        "dashboard_admin"
+      ]
+    },
+    {
+      "id": 9,
+      "label": "Admin Dashboard",
+      "icon": "pi pi-cog",
+      "path": "/admin",
+      "roles": [
+        "admin",
+        "dashboard_admin"
+      ]
+    }
+  ]
+}

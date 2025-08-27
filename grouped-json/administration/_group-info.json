@@ -1,0 +1,1352 @@
+{
+  "groupName": "Administration",
+  "description": "Administrative dashboard, user management, and access control features",
+  "fileCount": 96,
+  "totalSize": 122496,
+  "files": [
+    {
+      "fileName": "mock_data_admin_dashboard_accessControlMatrix_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_accessControlMatrix_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "accessControlMatrix"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1041
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_accessControlMatrix_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_accessControlMatrix_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "accessControlMatrix"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1041
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_accessControlMatrix_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_accessControlMatrix_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "accessControlMatrix"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1041
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_accessControlMatrix.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_accessControlMatrix.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "accessControlMatrix"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1041
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminDashboardMetrics_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminDashboardMetrics_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminDashboardMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1360
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminDashboardMetrics_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminDashboardMetrics_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminDashboardMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1360
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminDashboardMetrics_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminDashboardMetrics_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminDashboardMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1360
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminDashboardMetrics.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminDashboardMetrics.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminDashboardMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1360
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminNotifications_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminNotifications_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminNotifications"
+        ],
+        "hasNestedData": true
+      },
+      "size": 709
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminNotifications_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminNotifications_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminNotifications"
+        ],
+        "hasNestedData": true
+      },
+      "size": 709
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminNotifications_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminNotifications_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminNotifications"
+        ],
+        "hasNestedData": true
+      },
+      "size": 709
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminNotifications.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminNotifications.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminNotifications"
+        ],
+        "hasNestedData": true
+      },
+      "size": 709
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminQuickActions_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminQuickActions_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminQuickActions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 928
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminQuickActions_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminQuickActions_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminQuickActions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 928
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminQuickActions_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminQuickActions_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminQuickActions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 928
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_adminQuickActions.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_adminQuickActions.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminQuickActions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 928
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_licenseInfo_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_licenseInfo_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "licenseInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 697
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_licenseInfo_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_licenseInfo_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "licenseInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 697
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_licenseInfo_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_licenseInfo_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "licenseInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 697
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_licenseInfo.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_licenseInfo.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "licenseInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 697
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_systemAlerts_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_systemAlerts_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "systemAlerts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 731
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_systemAlerts_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_systemAlerts_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "systemAlerts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 731
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_systemAlerts_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_systemAlerts_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "systemAlerts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 731
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_systemAlerts.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_systemAlerts.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "systemAlerts"
+        ],
+        "hasNestedData": true
+      },
+      "size": 731
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_userActivityLog_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_userActivityLog_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "userActivityLog"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1117
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_userActivityLog_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_userActivityLog_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "userActivityLog"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1117
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_userActivityLog_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_userActivityLog_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "userActivityLog"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1117
+    },
+    {
+      "fileName": "mock_data_admin_dashboard_userActivityLog.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_dashboard_userActivityLog.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "userActivityLog"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1117
+    },
+    {
+      "fileName": "mock_data_admin_tabs_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_tabs_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 630
+    },
+    {
+      "fileName": "mock_data_admin_tabs_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_tabs_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 630
+    },
+    {
+      "fileName": "mock_data_admin_tabs_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_tabs_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 630
+    },
+    {
+      "fileName": "mock_data_admin_tabs.json",
+      "originalPath": "client_mock_def/admin/mock_data_admin_tabs.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "adminTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 630
+    },
+    {
+      "fileName": "mock_data_available_roles_availableRoles_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_availableRoles_1.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availableRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 743
+    },
+    {
+      "fileName": "mock_data_available_roles_availableRoles_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_availableRoles_2.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availableRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 743
+    },
+    {
+      "fileName": "mock_data_available_roles_availableRoles_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_availableRoles_3.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availableRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 743
+    },
+    {
+      "fileName": "mock_data_available_roles_availableRoles.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_availableRoles.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availableRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 743
+    },
+    {
+      "fileName": "mock_data_available_roles_rolesList_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_rolesList_1.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rolesList"
+        ],
+        "hasNestedData": true
+      },
+      "size": 431
+    },
+    {
+      "fileName": "mock_data_available_roles_rolesList_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_rolesList_2.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rolesList"
+        ],
+        "hasNestedData": true
+      },
+      "size": 431
+    },
+    {
+      "fileName": "mock_data_available_roles_rolesList_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_rolesList_3.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rolesList"
+        ],
+        "hasNestedData": true
+      },
+      "size": 431
+    },
+    {
+      "fileName": "mock_data_available_roles_rolesList.json",
+      "originalPath": "client_mock_def/admin/mock_data_available_roles_rolesList.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "rolesList"
+        ],
+        "hasNestedData": true
+      },
+      "size": 431
+    },
+    {
+      "fileName": "mock_data_menu_assignment_bizMenuItems_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_bizMenuItems_1.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "bizMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1429
+    },
+    {
+      "fileName": "mock_data_menu_assignment_bizMenuItems_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_bizMenuItems_2.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "bizMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1429
+    },
+    {
+      "fileName": "mock_data_menu_assignment_bizMenuItems_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_bizMenuItems_3.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "bizMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1429
+    },
+    {
+      "fileName": "mock_data_menu_assignment_bizMenuItems.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_bizMenuItems.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "bizMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1429
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dashboardAdminMenuItems_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dashboardAdminMenuItems_1.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dashboardAdminMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 441
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dashboardAdminMenuItems_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dashboardAdminMenuItems_2.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dashboardAdminMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 441
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dashboardAdminMenuItems_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dashboardAdminMenuItems_3.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dashboardAdminMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 441
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dashboardAdminMenuItems.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dashboardAdminMenuItems.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dashboardAdminMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 441
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dsMenuItems_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dsMenuItems_1.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1574
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dsMenuItems_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dsMenuItems_2.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1574
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dsMenuItems_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dsMenuItems_3.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1574
+    },
+    {
+      "fileName": "mock_data_menu_assignment_dsMenuItems.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_dsMenuItems.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1574
+    },
+    {
+      "fileName": "mock_data_menu_assignment_menuTypes_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_menuTypes_1.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "menuTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 307
+    },
+    {
+      "fileName": "mock_data_menu_assignment_menuTypes_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_menuTypes_2.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "menuTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 307
+    },
+    {
+      "fileName": "mock_data_menu_assignment_menuTypes_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_menuTypes_3.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "menuTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 307
+    },
+    {
+      "fileName": "mock_data_menu_assignment_menuTypes.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_menuTypes.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "menuTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 307
+    },
+    {
+      "fileName": "mock_data_menu_assignment_opsMenuItems_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_opsMenuItems_1.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "opsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1670
+    },
+    {
+      "fileName": "mock_data_menu_assignment_opsMenuItems_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_opsMenuItems_2.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "opsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1670
+    },
+    {
+      "fileName": "mock_data_menu_assignment_opsMenuItems_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_opsMenuItems_3.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "opsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1670
+    },
+    {
+      "fileName": "mock_data_menu_assignment_opsMenuItems.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_assignment_opsMenuItems.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "opsMenuItems"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1670
+    },
+    {
+      "fileName": "mock_data_menu_icons_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_icons_1.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "iconOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1032
+    },
+    {
+      "fileName": "mock_data_menu_icons_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_icons_2.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "iconOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1032
+    },
+    {
+      "fileName": "mock_data_menu_icons_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_icons_3.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "iconOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1032
+    },
+    {
+      "fileName": "mock_data_menu_icons.json",
+      "originalPath": "client_mock_def/admin/mock_data_menu_icons.json",
+      "purpose": "Navigation menu items and structure",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "iconOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1032
+    },
+    {
+      "fileName": "mock_data_permissions_availablePermissions_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_availablePermissions_1.json",
+      "purpose": "Access permissions and security controls",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2820
+    },
+    {
+      "fileName": "mock_data_permissions_availablePermissions_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_availablePermissions_2.json",
+      "purpose": "Access permissions and security controls",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2820
+    },
+    {
+      "fileName": "mock_data_permissions_availablePermissions_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_availablePermissions_3.json",
+      "purpose": "Access permissions and security controls",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2820
+    },
+    {
+      "fileName": "mock_data_permissions_availablePermissions.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_availablePermissions.json",
+      "purpose": "Access permissions and security controls",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2820
+    },
+    {
+      "fileName": "mock_data_permissions_defaultRoleTemplates_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_defaultRoleTemplates_1.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "defaultRoleTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2040
+    },
+    {
+      "fileName": "mock_data_permissions_defaultRoleTemplates_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_defaultRoleTemplates_2.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "defaultRoleTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2040
+    },
+    {
+      "fileName": "mock_data_permissions_defaultRoleTemplates_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_defaultRoleTemplates_3.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "defaultRoleTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2040
+    },
+    {
+      "fileName": "mock_data_permissions_defaultRoleTemplates.json",
+      "originalPath": "client_mock_def/admin/mock_data_permissions_defaultRoleTemplates.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "defaultRoleTemplates"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2040
+    },
+    {
+      "fileName": "mock_data_project_management_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_project_management_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "projectMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3525
+    },
+    {
+      "fileName": "mock_data_project_management_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_project_management_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "projectMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3525
+    },
+    {
+      "fileName": "mock_data_project_management_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_project_management_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "projectMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3525
+    },
+    {
+      "fileName": "mock_data_project_management.json",
+      "originalPath": "client_mock_def/admin/mock_data_project_management.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "projectMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3525
+    },
+    {
+      "fileName": "mock_data_role_management_availablePermissions_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_availablePermissions_1.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1859
+    },
+    {
+      "fileName": "mock_data_role_management_availablePermissions_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_availablePermissions_2.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1859
+    },
+    {
+      "fileName": "mock_data_role_management_availablePermissions_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_availablePermissions_3.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1859
+    },
+    {
+      "fileName": "mock_data_role_management_availablePermissions.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_availablePermissions.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "availablePermissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1859
+    },
+    {
+      "fileName": "mock_data_role_management_mockRoles_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_mockRoles_1.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1794
+    },
+    {
+      "fileName": "mock_data_role_management_mockRoles_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_mockRoles_2.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1794
+    },
+    {
+      "fileName": "mock_data_role_management_mockRoles_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_mockRoles_3.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1794
+    },
+    {
+      "fileName": "mock_data_role_management_mockRoles.json",
+      "originalPath": "client_mock_def/admin/mock_data_role_management_mockRoles.json",
+      "purpose": "Role-based access control and permissions",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1794
+    },
+    {
+      "fileName": "mock_data_user_management_mockRoles_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockRoles_1.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 728
+    },
+    {
+      "fileName": "mock_data_user_management_mockRoles_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockRoles_2.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 728
+    },
+    {
+      "fileName": "mock_data_user_management_mockRoles_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockRoles_3.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 728
+    },
+    {
+      "fileName": "mock_data_user_management_mockRoles.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockRoles.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRoles"
+        ],
+        "hasNestedData": true
+      },
+      "size": 728
+    },
+    {
+      "fileName": "mock_data_user_management_mockTabInfo_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockTabInfo_1.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 635
+    },
+    {
+      "fileName": "mock_data_user_management_mockTabInfo_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockTabInfo_2.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 635
+    },
+    {
+      "fileName": "mock_data_user_management_mockTabInfo_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockTabInfo_3.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 635
+    },
+    {
+      "fileName": "mock_data_user_management_mockTabInfo.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockTabInfo.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTabInfo"
+        ],
+        "hasNestedData": true
+      },
+      "size": 635
+    },
+    {
+      "fileName": "mock_data_user_management_mockUsers_1.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockUsers_1.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockUsers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2383
+    },
+    {
+      "fileName": "mock_data_user_management_mockUsers_2.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockUsers_2.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockUsers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2383
+    },
+    {
+      "fileName": "mock_data_user_management_mockUsers_3.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockUsers_3.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockUsers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2383
+    },
+    {
+      "fileName": "mock_data_user_management_mockUsers.json",
+      "originalPath": "client_mock_def/admin/mock_data_user_management_mockUsers.json",
+      "purpose": "User account and profile information",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockUsers"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2383
+    }
+  ]
+}

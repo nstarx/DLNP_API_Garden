@@ -1,3 +1,8 @@
+import { ref, computed } from 'vue';
+import { sparkJobsMockData } from '@/mocks/mock_data_sparkjobs';
+import { getSparkJobs } from '@/service/SparkJobService';
+import type { SparkJob } from '@/service/SparkJobService';
+
 export function useSparkJobsData() {
     const jobs = ref<SparkJob[]>([]);
     const loading = ref(true);

@@ -1,0 +1,48 @@
+{
+  "automationRules": [
+    {
+      "id": "rule1",
+      "name": "Auto-request on phase completion",
+      "description": "Automatically request approval when a phase reaches 100% completion",
+      "enabled": true,
+      "trigger": "phase_complete",
+      "conditions": {
+        "completionPercentage": 100,
+        "allStagesComplete": true
+      },
+      "actions": [
+        "send_approval_request",
+        "notify_slack"
+      ]
+    },
+    {
+      "id": "rule2",
+      "name": "Escalate if no response",
+      "description": "Escalate to manager if no response within 24 hours",
+      "enabled": true,
+      "trigger": "no_response",
+      "conditions": {
+        "waitTime": 24,
+        "unit": "hours"
+      },
+      "actions": [
+        "escalate_to_manager",
+        "send_reminder"
+      ]
+    },
+    {
+      "id": "rule3",
+      "name": "Block phase transition",
+      "description": "Prevent moving to next phase without approval",
+      "enabled": true,
+      "trigger": "phase_transition_attempt",
+      "conditions": {
+        "approvalStatus": "pending"
+      },
+      "actions": [
+        "block_transition",
+        "show_warning"
+      ]
+    }
+  ]
+}

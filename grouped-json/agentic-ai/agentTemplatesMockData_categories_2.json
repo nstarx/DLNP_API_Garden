@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "name": "Knowledge Processing",
+      "icon": "pi pi-book"
+    },
+    {
+      "name": "Data Analysis",
+      "icon": "pi pi-chart-bar"
+    },
+    {
+      "name": "Communication",
+      "icon": "pi pi-comments"
+    },
+    {
+      "name": "Automation",
+      "icon": "pi pi-cog"
+    },
+    {
+      "name": "Integration",
+      "icon": "pi pi-link"
+    }
+  ]
+}

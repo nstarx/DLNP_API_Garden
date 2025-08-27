@@ -1,0 +1,134 @@
+{
+  "groupName": "AI Catalog",
+  "description": "AI models, datasets, experiments, and ML pipeline definitions",
+  "fileCount": 10,
+  "totalSize": 13536,
+  "files": [
+    {
+      "fileName": "ai-company-models.json",
+      "originalPath": "client_mock_def/ai-catalog/ai-company-models.json",
+      "purpose": "Machine learning model definitions",
+      "structure": {
+        "type": "array",
+        "count": 8,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 2488
+    },
+    {
+      "fileName": "datasets.json",
+      "originalPath": "client_mock_def/ai-catalog/datasets.json",
+      "purpose": "Training and validation datasets",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 649
+    },
+    {
+      "fileName": "endpoints.json",
+      "originalPath": "client_mock_def/ai-catalog/endpoints.json",
+      "purpose": "Application data and configuration",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 737
+    },
+    {
+      "fileName": "experiments.json",
+      "originalPath": "client_mock_def/ai-catalog/experiments.json",
+      "purpose": "ML experiments and A/B tests",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 847
+    },
+    {
+      "fileName": "feature-sets.json",
+      "originalPath": "client_mock_def/ai-catalog/feature-sets.json",
+      "purpose": "Application data and configuration",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 694
+    },
+    {
+      "fileName": "filter-options.json",
+      "originalPath": "client_mock_def/ai-catalog/filter-options.json",
+      "purpose": "Application data and configuration",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "modelCategories",
+          "modelProviders",
+          "sortOptions",
+          "datasetTypes",
+          "modelTypes"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2848
+    },
+    {
+      "fileName": "models.json",
+      "originalPath": "client_mock_def/ai-catalog/models.json",
+      "purpose": "Machine learning model definitions",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 669
+    },
+    {
+      "fileName": "pipelines.json",
+      "originalPath": "client_mock_def/ai-catalog/pipelines.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 664
+    },
+    {
+      "fileName": "policies.json",
+      "originalPath": "client_mock_def/ai-catalog/policies.json",
+      "purpose": "Application data and configuration",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 695
+    },
+    {
+      "fileName": "provenance-data.json",
+      "originalPath": "client_mock_def/ai-catalog/provenance-data.json",
+      "purpose": "Application data and configuration",
+      "structure": {
+        "type": "array",
+        "count": 15,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 3245
+    }
+  ]
+}

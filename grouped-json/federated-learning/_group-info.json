@@ -1,0 +1,26 @@
+{
+  "groupName": "Federated Learning",
+  "description": "Federated learning operations and configurations",
+  "fileCount": 1,
+  "totalSize": 12505,
+  "files": [
+    {
+      "fileName": "mock_data_fl-mockup-data.json",
+      "originalPath": "client_mock_def/fl/mock_data_fl-mockup-data.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "executions",
+          "clients",
+          "globalLogEntries",
+          "clientLogEntries",
+          "serverConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 12505
+    }
+  ]
+}

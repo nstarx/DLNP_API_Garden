@@ -1,0 +1,49 @@
+{
+  "insights": [
+    {
+      "id": 1,
+      "name": "Revenue Trend Analysis",
+      "type": "Chart",
+      "createdAt": "2025-04-14T13:25:00",
+      "createdBy": "Adrian",
+      "department": "Finance",
+      "status": "Updated"
+    },
+    {
+      "id": 2,
+      "name": "Customer Satisfaction Metrics",
+      "type": "Dashboard",
+      "createdAt": "2025-03-29T10:15:00",
+      "createdBy": "Emily Johnson",
+      "department": "Customer Success",
+      "status": "Updated"
+    },
+    {
+      "id": 3,
+      "name": "Employee Turnover Report",
+      "type": "Report",
+      "createdAt": "2025-02-12T15:40:00",
+      "createdBy": "Michael Brown",
+      "department": "Human Resources",
+      "status": "Scheduled"
+    },
+    {
+      "id": 4,
+      "name": "Market Share Analysis",
+      "type": "Chart",
+      "createdAt": "2024-05-11T09:30:00",
+      "createdBy": "Sarah Davis",
+      "department": "Marketing",
+      "status": "Updated"
+    },
+    {
+      "id": 5,
+      "name": "Product Usage Statistics",
+      "type": "Dashboard",
+      "createdAt": "2024-02-17T14:20:00",
+      "createdBy": "David Wilson",
+      "department": "Product",
+      "status": "Scheduled"
+    }
+  ]
+}

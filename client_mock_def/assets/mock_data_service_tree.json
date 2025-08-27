@@ -1,3 +1,53 @@
 {
-  "mockServicesWithParents": "[\n    {\n        name: 'api-gateway',\n        type: 'LoadBalancer',\n        namespace: 'default',\n        loadbalancer_ip: '10.0.0.1',\n        parent: null\n    },"
+  "mockServicesWithParents": [
+    {
+      "name": "api-gateway",
+      "type": "LoadBalancer",
+      "namespace": "default",
+      "loadbalancer_ip": "10.0.0.1",
+      "parent": null
+    },
+    {
+      "name": "auth-service",
+      "type": "NodePort",
+      "namespace": "default",
+      "loadbalancer_ip": "10.0.0.2",
+      "parent": "api-gateway"
+    },
+    {
+      "name": "user-service",
+      "type": "NodePort",
+      "namespace": "default",
+      "loadbalancer_ip": "10.0.0.3",
+      "parent": "api-gateway"
+    },
+    {
+      "name": "database-migration",
+      "type": "Job",
+      "namespace": "default",
+      "job_status": "Completed",
+      "parent": "user-service"
+    },
+    {
+      "name": "notification-service",
+      "type": "NodePort",
+      "namespace": "default",
+      "loadbalancer_ip": "10.0.0.4",
+      "parent": "api-gateway"
+    },
+    {
+      "name": "email-worker",
+      "type": "Job",
+      "namespace": "default",
+      "job_status": "Running",
+      "parent": "notification-service"
+    },
+    {
+      "name": "sms-worker",
+      "type": "Job",
+      "namespace": "default",
+      "job_status": "Pending",
+      "parent": "notification-service"
+    }
+  ]
 }

@@ -1,0 +1,1059 @@
+{
+  "groupName": "Core Data",
+  "description": "Core application data including chat, mail, tasks, and SDLC",
+  "fileCount": 73,
+  "totalSize": 332373,
+  "files": [
+    {
+      "fileName": "fl-mockup-data.json",
+      "originalPath": "client_mock_def/fl-mockup-data.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "executions",
+          "clients",
+          "globalLogEntries",
+          "clientLogEntries",
+          "serverConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 12505
+    },
+    {
+      "fileName": "mock_data_ai_generator_mockAgenticAICapabilities.json",
+      "originalPath": "client_mock_def/data/mock_data_ai_generator_mockAgenticAICapabilities.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAgenticAICapabilities"
+        ],
+        "hasNestedData": false
+      },
+      "size": 224
+    },
+    {
+      "fileName": "mock_data_ai_generator_mockAppTypes.json",
+      "originalPath": "client_mock_def/data/mock_data_ai_generator_mockAppTypes.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockAppTypes"
+        ],
+        "hasNestedData": false
+      },
+      "size": 555
+    },
+    {
+      "fileName": "mock_data_chat.json",
+      "originalPath": "client_mock_def/data/mock_data_chat.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "data"
+        ],
+        "hasNestedData": true
+      },
+      "size": 4243
+    },
+    {
+      "fileName": "mock_data_DataManagement.json",
+      "originalPath": "client_mock_def/rag/mock_data_DataManagement.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataSources",
+          "parsedElements",
+          "chunks",
+          "availableConnectors",
+          "parserViewOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2799
+    },
+    {
+      "fileName": "mock_data_DebuggingWorkbench.json",
+      "originalPath": "client_mock_def/rag/mock_data_DebuggingWorkbench.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "debugLevels",
+          "logLevels",
+          "queryResults",
+          "queryHistory",
+          "newQuery"
+        ],
+        "hasNestedData": true
+      },
+      "size": 4570
+    },
+    {
+      "fileName": "mock_data_DeploymentManager.json",
+      "originalPath": "client_mock_def/rag/mock_data_DeploymentManager.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "timeRangeOptions",
+          "deployments",
+          "endpoints",
+          "environments",
+          "scalingConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2503
+    },
+    {
+      "fileName": "mock_data_ex_tab_1.json",
+      "originalPath": "client_mock_def/federation/mock_data_ex_tab_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab_1.json",
+      "originalPath": "client_mock_def/mock/mock_data_ex_tab_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab_2.json",
+      "originalPath": "client_mock_def/federation/mock_data_ex_tab_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab_2.json",
+      "originalPath": "client_mock_def/mock/mock_data_ex_tab_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab_3.json",
+      "originalPath": "client_mock_def/federation/mock_data_ex_tab_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab_3.json",
+      "originalPath": "client_mock_def/mock/mock_data_ex_tab_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab.json",
+      "originalPath": "client_mock_def/federation/mock_data_ex_tab.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ex_tab.json",
+      "originalPath": "client_mock_def/mock/mock_data_ex_tab.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationExConfig"
+        ],
+        "hasNestedData": true
+      },
+      "size": 780
+    },
+    {
+      "fileName": "mock_data_ExperimentationHub.json",
+      "originalPath": "client_mock_def/rag/mock_data_ExperimentationHub.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "activeExperiments",
+          "evaluationDatasets",
+          "newExperiment",
+          "abTest",
+          "abTestResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2603
+    },
+    {
+      "fileName": "mock_data_GovernanceCenter.json",
+      "originalPath": "client_mock_def/rag/mock_data_GovernanceCenter.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "users",
+          "securityPolicies",
+          "dataClassificationRules",
+          "retentionPolicies",
+          "auditLogs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 5528
+    },
+    {
+      "fileName": "mock_data_mail.json",
+      "originalPath": "client_mock_def/data/mock_data_mail.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "data"
+        ],
+        "hasNestedData": true
+      },
+      "size": 22328
+    },
+    {
+      "fileName": "mock_data_members.json",
+      "originalPath": "client_mock_def/data/mock_data_members.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "data"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1111
+    },
+    {
+      "fileName": "mock_data_module_federation_1.json",
+      "originalPath": "client_mock_def/federation/mock_data_module_federation_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 14567
+    },
+    {
+      "fileName": "mock_data_module_federation_2.json",
+      "originalPath": "client_mock_def/federation/mock_data_module_federation_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 14567
+    },
+    {
+      "fileName": "mock_data_module_federation_3.json",
+      "originalPath": "client_mock_def/federation/mock_data_module_federation_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 14567
+    },
+    {
+      "fileName": "mock_data_module_federation.json",
+      "originalPath": "client_mock_def/federation/mock_data_module_federation.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "moduleFederationMockData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 14567
+    },
+    {
+      "fileName": "mock_data_MonitoringDashboard.json",
+      "originalPath": "client_mock_def/rag/mock_data_MonitoringDashboard.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "metrics",
+          "safetyMetrics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 783
+    },
+    {
+      "fileName": "mock_data_overview.json",
+      "originalPath": "client_mock_def/data/mock_data_overview.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "systemMetrics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 1228
+    },
+    {
+      "fileName": "mock_data_PipelineBuilder.json",
+      "originalPath": "client_mock_def/rag/mock_data_PipelineBuilder.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "dataProcessingComponents",
+          "embeddingComponents",
+          "vectorStoreComponents",
+          "retrievalComponents",
+          "availableModels"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1619
+    },
+    {
+      "fileName": "mock_data_pipelines.json",
+      "originalPath": "client_mock_def/spark/mock_data_pipelines.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "array",
+        "count": 4,
+        "keys": null,
+        "hasNestedData": true
+      },
+      "size": 664
+    },
+    {
+      "fileName": "mock_data_RAGPlatform.json",
+      "originalPath": "client_mock_def/rag/mock_data_RAGPlatform.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "projects",
+          "navigationSections",
+          "validModules"
+        ],
+        "hasNestedData": true
+      },
+      "size": 2386
+    },
+    {
+      "fileName": "mock_data_sdlc_documentRepository.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_documentRepository.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "documentRepository"
+        ],
+        "hasNestedData": false
+      },
+      "size": 2354
+    },
+    {
+      "fileName": "mock_data_sdlc_integrationPoints.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_integrationPoints.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "integrationPoints"
+        ],
+        "hasNestedData": false
+      },
+      "size": 1147
+    },
+    {
+      "fileName": "mock_data_sdlc_lifecycle_qualityMetrics.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_lifecycle_qualityMetrics.json",
+      "purpose": "Performance and analytics metrics",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "qualityMetrics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 767
+    },
+    {
+      "fileName": "mock_data_sdlc_lifecycle_riskAssessment.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_lifecycle_riskAssessment.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "riskAssessment"
+        ],
+        "hasNestedData": false
+      },
+      "size": 445
+    },
+    {
+      "fileName": "mock_data_sdlc_lifecycle_sdlcPhases.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_lifecycle_sdlcPhases.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sdlcPhases"
+        ],
+        "hasNestedData": false
+      },
+      "size": 590
+    },
+    {
+      "fileName": "mock_data_sdlc_projectTimeline.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_projectTimeline.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "projectTimeline"
+        ],
+        "hasNestedData": false
+      },
+      "size": 1145
+    },
+    {
+      "fileName": "mock_data_sdlc_sdlcDashboardMetrics.json",
+      "originalPath": "client_mock_def/data/mock_data_sdlc_sdlcDashboardMetrics.json",
+      "purpose": "Dashboard metrics and visualization data",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sdlcDashboardMetrics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 289
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_pipelineFlowData_1.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_pipelineFlowData_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineFlowData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 24488
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_pipelineFlowData_2.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_pipelineFlowData_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineFlowData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 24488
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_pipelineFlowData_3.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_pipelineFlowData_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineFlowData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 24488
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_pipelineFlowData.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_pipelineFlowData.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "pipelineFlowData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 24488
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_sparkPipelineComponents_1.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_sparkPipelineComponents_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sparkPipelineComponents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 18827
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_sparkPipelineComponents_2.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_sparkPipelineComponents_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sparkPipelineComponents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 18827
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_sparkPipelineComponents_3.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_sparkPipelineComponents_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sparkPipelineComponents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 18827
+    },
+    {
+      "fileName": "mock_data_spark_pipeline_sparkPipelineComponents.json",
+      "originalPath": "client_mock_def/spark/mock_data_spark_pipeline_sparkPipelineComponents.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sparkPipelineComponents"
+        ],
+        "hasNestedData": true
+      },
+      "size": 18827
+    },
+    {
+      "fileName": "mock_data_sparkjobs_columnOptions.json",
+      "originalPath": "client_mock_def/spark/mock_data_sparkjobs_columnOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "columnOptions"
+        ],
+        "hasNestedData": false
+      },
+      "size": 592
+    },
+    {
+      "fileName": "mock_data_sparkjobs_defaultFlowNodeForm.json",
+      "originalPath": "client_mock_def/spark/mock_data_sparkjobs_defaultFlowNodeForm.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "defaultFlowNodeForm"
+        ],
+        "hasNestedData": false
+      },
+      "size": 326
+    },
+    {
+      "fileName": "mock_data_sparkjobs_flowNodeOptions.json",
+      "originalPath": "client_mock_def/spark/mock_data_sparkjobs_flowNodeOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "flowNodeOptions"
+        ],
+        "hasNestedData": false
+      },
+      "size": 98
+    },
+    {
+      "fileName": "mock_data_sparkjobs_initialFlowNodes.json",
+      "originalPath": "client_mock_def/spark/mock_data_sparkjobs_initialFlowNodes.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "initialFlowNodes"
+        ],
+        "hasNestedData": false
+      },
+      "size": 613
+    },
+    {
+      "fileName": "mock_data_sparkjobs_sparkConfigurations.json",
+      "originalPath": "client_mock_def/spark/mock_data_sparkjobs_sparkConfigurations.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sparkConfigurations"
+        ],
+        "hasNestedData": false
+      },
+      "size": 188
+    },
+    {
+      "fileName": "mock_data_sparkjobs_sparkJobTemplates.json",
+      "originalPath": "client_mock_def/spark/mock_data_sparkjobs_sparkJobTemplates.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "sparkJobTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 628
+    },
+    {
+      "fileName": "mock_data_sqllab_mockDatabaseSchemas_1.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockDatabaseSchemas_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDatabaseSchemas"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1226
+    },
+    {
+      "fileName": "mock_data_sqllab_mockDatabaseSchemas_2.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockDatabaseSchemas_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDatabaseSchemas"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1226
+    },
+    {
+      "fileName": "mock_data_sqllab_mockDatabaseSchemas_3.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockDatabaseSchemas_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDatabaseSchemas"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1226
+    },
+    {
+      "fileName": "mock_data_sqllab_mockDatabaseSchemas.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockDatabaseSchemas.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDatabaseSchemas"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1226
+    },
+    {
+      "fileName": "mock_data_sqllab_mockQueryHistory_1.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockQueryHistory_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockQueryHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 614
+    },
+    {
+      "fileName": "mock_data_sqllab_mockQueryHistory_2.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockQueryHistory_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockQueryHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 614
+    },
+    {
+      "fileName": "mock_data_sqllab_mockQueryHistory_3.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockQueryHistory_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockQueryHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 614
+    },
+    {
+      "fileName": "mock_data_sqllab_mockQueryHistory.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockQueryHistory.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockQueryHistory"
+        ],
+        "hasNestedData": true
+      },
+      "size": 614
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLLabResultData_1.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLLabResultData_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLLabResultData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 561
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLLabResultData_2.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLLabResultData_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLLabResultData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 561
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLLabResultData_3.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLLabResultData_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLLabResultData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 561
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLLabResultData.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLLabResultData.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLLabResultData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 561
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLQueries_1.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLQueries_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLQueries"
+        ],
+        "hasNestedData": true
+      },
+      "size": 328
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLQueries_2.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLQueries_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLQueries"
+        ],
+        "hasNestedData": true
+      },
+      "size": 328
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLQueries_3.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLQueries_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLQueries"
+        ],
+        "hasNestedData": true
+      },
+      "size": 328
+    },
+    {
+      "fileName": "mock_data_sqllab_mockSQLQueries.json",
+      "originalPath": "client_mock_def/sql/mock_data_sqllab_mockSQLQueries.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockSQLQueries"
+        ],
+        "hasNestedData": true
+      },
+      "size": 328
+    },
+    {
+      "fileName": "mock_data_stakeholders_approvalHistory.json",
+      "originalPath": "client_mock_def/data/mock_data_stakeholders_approvalHistory.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "approvalHistory"
+        ],
+        "hasNestedData": false
+      },
+      "size": 737
+    },
+    {
+      "fileName": "mock_data_stakeholders_approvalTemplates.json",
+      "originalPath": "client_mock_def/data/mock_data_stakeholders_approvalTemplates.json",
+      "purpose": "Reusable configuration templates",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "approvalTemplates"
+        ],
+        "hasNestedData": false
+      },
+      "size": 170
+    },
+    {
+      "fileName": "mock_data_stakeholders_stakeholders.json",
+      "originalPath": "client_mock_def/data/mock_data_stakeholders_stakeholders.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "stakeholders"
+        ],
+        "hasNestedData": false
+      },
+      "size": 263
+    },
+    {
+      "fileName": "mock_data_tasks.json",
+      "originalPath": "client_mock_def/data/mock_data_tasks.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "data"
+        ],
+        "hasNestedData": true
+      },
+      "size": 7492
+    },
+    {
+      "fileName": "mock_data_useAICatalogData_1.json",
+      "originalPath": "client_mock_def/composables/mock_data_useAICatalogData_1.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAICatalogData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 49
+    },
+    {
+      "fileName": "mock_data_useAICatalogData_2.json",
+      "originalPath": "client_mock_def/composables/mock_data_useAICatalogData_2.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAICatalogData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 49
+    },
+    {
+      "fileName": "mock_data_useAICatalogData_3.json",
+      "originalPath": "client_mock_def/composables/mock_data_useAICatalogData_3.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAICatalogData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 49
+    },
+    {
+      "fileName": "mock_data_useAICatalogData.json",
+      "originalPath": "client_mock_def/composables/mock_data_useAICatalogData.json",
+      "purpose": "Activity logs and audit trails",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "useAICatalogData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 49
+    }
+  ]
+}

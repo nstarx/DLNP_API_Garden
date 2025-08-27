@@ -1,0 +1,70 @@
+{
+  "modelCategories": [
+    { "name": "Computer Vision", "value": "Computer Vision" },
+    { "name": "Natural Language Processing", "value": "Natural Language Processing" },
+    { "name": "Predictive Analytics", "value": "Predictive Analytics" },
+    { "name": "Recommendation Systems", "value": "Recommendation Systems" },
+    { "name": "Generative AI", "value": "Generative AI" },
+    { "name": "Speech Recognition", "value": "Speech Recognition" }
+  ],
+  "modelProviders": [
+    { "name": "AI Solutions Inc.", "value": "AI Solutions Inc." },
+    { "name": "LinguaTech", "value": "LinguaTech" },
+    { "name": "DataSense", "value": "DataSense" },
+    { "name": "RecTech", "value": "RecTech" },
+    { "name": "Neural Systems", "value": "Neural Systems" },
+    { "name": "VoiceAI", "value": "VoiceAI" }
+  ],
+  "sortOptions": [
+    { "name": "Name (A-Z)", "value": "name-asc" },
+    { "name": "Name (Z-A)", "value": "name-desc" },
+    { "name": "Rating (High-Low)", "value": "rating-desc" },
+    { "name": "Rating (Low-High)", "value": "rating-asc" },
+    { "name": "Newest First", "value": "date-desc" },
+    { "name": "Oldest First", "value": "date-asc" }
+  ],
+  "datasetTypes": [
+    { "name": "Text", "value": "text" },
+    { "name": "Image", "value": "image" },
+    { "name": "Audio", "value": "audio" },
+    { "name": "Video", "value": "video" },
+    { "name": "Tabular", "value": "tabular" },
+    { "name": "Time Series", "value": "timeseries" }
+  ],
+  "modelTypes": [
+    { "name": "NLP", "value": "NLP" },
+    { "name": "Computer Vision", "value": "Computer Vision" },
+    { "name": "Time Series", "value": "Time Series" },
+    { "name": "Classification", "value": "Classification" },
+    { "name": "Regression", "value": "Regression" },
+    { "name": "Recommendation", "value": "Recommendation" }
+  ],
+  "modelFrameworks": [
+    { "name": "PyTorch", "value": "PyTorch" },
+    { "name": "TensorFlow", "value": "TensorFlow" },
+    { "name": "Scikit-learn", "value": "Scikit-learn" },
+    { "name": "XGBoost", "value": "XGBoost" },
+    { "name": "Keras", "value": "Keras" },
+    { "name": "Other", "value": "Other" }
+  ],
+  "provenanceTypes": [
+    { "name": "Dataset", "value": "Dataset" },
+    { "name": "Model", "value": "Model" },
+    { "name": "Pipeline", "value": "Pipeline" },
+    { "name": "Report", "value": "Report" },
+    { "name": "Experiment", "value": "Experiment" }
+  ],
+  "provenanceUsers": [
+    { "name": "Alice", "value": "Alice" },
+    { "name": "Bob", "value": "Bob" },
+    { "name": "Carol", "value": "Carol" },
+    { "name": "Dave", "value": "Dave" }
+  ],
+  "provenanceActions": [
+    { "name": "Created", "value": "Created" },
+    { "name": "Modified", "value": "Modified" },
+    { "name": "Used", "value": "Used" },
+    { "name": "Exported", "value": "Exported" },
+    { "name": "Deleted", "value": "Deleted" }
+  ]
+}

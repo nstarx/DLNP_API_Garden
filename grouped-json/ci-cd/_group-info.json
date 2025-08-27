@@ -1,0 +1,344 @@
+{
+  "groupName": "CI/CD",
+  "description": "Continuous integration and deployment configurations",
+  "fileCount": 24,
+  "totalSize": 35408,
+  "files": [
+    {
+      "fileName": "mock_data_cicd_jobs_mockCICDJobs_1.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockCICDJobs_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCICDJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3596
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockCICDJobs_2.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockCICDJobs_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCICDJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3596
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockCICDJobs_3.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockCICDJobs_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCICDJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3596
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockCICDJobs.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockCICDJobs.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCICDJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 3596
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockDevJobs_1.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockDevJobs_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDevJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1616
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockDevJobs_2.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockDevJobs_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDevJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1616
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockDevJobs_3.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockDevJobs_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDevJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1616
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockDevJobs.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockDevJobs.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDevJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1616
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockJobStatistics_1.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockJobStatistics_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockJobStatistics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 427
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockJobStatistics_2.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockJobStatistics_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockJobStatistics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 427
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockJobStatistics_3.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockJobStatistics_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockJobStatistics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 427
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockJobStatistics.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockJobStatistics.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockJobStatistics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 427
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockPipelines_1.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockPipelines_1.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPipelines"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1173
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockPipelines_2.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockPipelines_2.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPipelines"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1173
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockPipelines_3.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockPipelines_3.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPipelines"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1173
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockPipelines.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockPipelines.json",
+      "purpose": "Data processing and ML pipelines",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockPipelines"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1173
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockProductionJobs_1.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockProductionJobs_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockProductionJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1037
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockProductionJobs_2.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockProductionJobs_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockProductionJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1037
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockProductionJobs_3.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockProductionJobs_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockProductionJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1037
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockProductionJobs.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockProductionJobs.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockProductionJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1037
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockStagingJobs_1.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockStagingJobs_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStagingJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1003
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockStagingJobs_2.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockStagingJobs_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStagingJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1003
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockStagingJobs_3.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockStagingJobs_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStagingJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1003
+    },
+    {
+      "fileName": "mock_data_cicd_jobs_mockStagingJobs.json",
+      "originalPath": "client_mock_def/cicd/mock_data_cicd_jobs_mockStagingJobs.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStagingJobs"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1003
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "Client-1": [
+    {
+      "type": "info",
+      "timestamp": "2025-04-04 15:05:31",
+      "trainingId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "message": "val {'loss': 0.0075, 'MSE': 0.0075, 'MAE': 0.0525, 'RMSE': 0.08660254037844387, 'R2': 0.8926278948783875, 'Precision': 0.98, 'Recall': 0.895, 'F1': 0.935}"
+    }
+  ],
+  "Client-2": [
+    {
+      "type": "info",
+      "timestamp": "2025-04-04 15:05:31",
+      "trainingId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "message": "val {'loss': 0.008, 'MSE': 0.008, 'MAE': 0.056, 'RMSE': 0.08944271909999159, 'R2': 0.8926278948783875, 'Precision': 0.97, 'Recall': 0.9, 'F1': 0.93}"
+    }
+  ],
+  "Client-3": [
+    {
+      "type": "info",
+      "timestamp": "2025-04-04 15:05:31",
+      "trainingId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "message": "val {'loss': 0.0085, 'MSE': 0.0085, 'MAE': 0.0595, 'RMSE': 0.09219544457292888, 'R2': 0.8926278948783875, 'Precision': 0.96, 'Recall': 0.905, 'F1': 0.925}"
+    }
+  ],
+  "Client-4": [
+    {
+      "type": "info",
+      "timestamp": "2025-04-04 15:05:31",
+      "trainingId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "message": "val {'loss': 0.009, 'MSE': 0.009, 'MAE': 0.063, 'RMSE': 0.09486832980505138, 'R2': 0.8926278948783875, 'Precision': 0.95, 'Recall': 0.91, 'F1': 0.92}"
+    }
+  ],
+  "Client-5": [
+    {
+      "type": "info",
+      "timestamp": "2025-04-04 15:05:31",
+      "trainingId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "message": "val {'loss': 0.0095, 'MSE': 0.0095, 'MAE': 0.0665, 'RMSE': 0.09746794344808963, 'R2': 0.8926278948783875, 'Precision': 0.94, 'Recall': 0.915, 'F1': 0.915}"
+    }
+  ]
+}

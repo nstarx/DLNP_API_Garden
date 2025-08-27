@@ -1,0 +1,40 @@
+{
+  "mockStagingJobs": [
+    {
+      "id": "stg-1",
+      "name": "Deploy AI Model to Staging",
+      "pipeline": "ai-model-deploy-pipeline",
+      "status": "completed",
+      "startTime": "2023-06-14T13:30:00Z",
+      "endTime": "2023-06-14T14:15:00Z",
+      "duration": "45m",
+      "aiZone": "zone-2",
+      "createdBy": "system",
+      "environment": "staging"
+    },
+    {
+      "id": "stg-2",
+      "name": "Integration Tests",
+      "pipeline": "integration-test-pipeline",
+      "status": "running",
+      "startTime": "2023-06-16T11:00:00Z",
+      "endTime": null,
+      "duration": "Running",
+      "aiZone": "zone-1",
+      "createdBy": "qa-team",
+      "environment": "staging"
+    },
+    {
+      "id": "stg-3",
+      "name": "Performance Testing",
+      "pipeline": "perf-test-pipeline",
+      "status": "pending",
+      "startTime": null,
+      "endTime": null,
+      "duration": "Pending",
+      "aiZone": "zone-3",
+      "createdBy": "system",
+      "environment": "staging"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "sparkJobTemplates": [
+    {
+      "name": "Basic ETL Job",
+      "description": "Standard configuration for ETL workloads",
+      "config": {
+        "appName": "etl_job",
+        "executorMemory": "4g",
+        "driverMemory": "2g",
+        "executorCores": 4,
+        "minExecutors": 2,
+        "maxExecutors": 20
+      }
+    },
+    {
+      "name": "Machine Learning Job",
+      "description": "Optimized for ML training workloads",
+      "config": {
+        "appName": "ml_training",
+        "executorMemory": "8g",
+        "driverMemory": "4g",
+        "executorCores": 8,
+        "minExecutors": 4,
+        "maxExecutors": 50
+      }
+    },
+    {
+      "name": "Stream Processing",
+      "description": "Real-time data processing configuration",
+      "config": {
+        "appName": "stream_processor",
+        "executorMemory": "2g",
+        "driverMemory": "2g",
+        "executorCores": 2,
+        "minExecutors": 3,
+        "maxExecutors": 30
+      }
+    },
+    {
+      "name": "Large Scale Analytics",
+      "description": "Heavy analytics workloads",
+      "config": {
+        "appName": "analytics_job",
+        "executorMemory": "16g",
+        "driverMemory": "8g",
+        "executorCores": 16,
+        "minExecutors": 5,
+        "maxExecutors": 100
+      }
+    }
+  ],
+  "columnOptions": [
+    {
+      "label": "Name",
+      "value": "name"
+    },
+    {
+      "label": "Application",
+      "value": "application"
+    },
+    {
+      "label": "Version",
+      "value": "version"
+    },
+    {
+      "label": "Status",
+      "value": "status"
+    },
+    {
+      "label": "K8s Nodes",
+      "value": "k8sNodes"
+    },
+    {
+      "label": "Resources",
+      "value": "resources"
+    },
+    {
+      "label": "Start Time",
+      "value": "startTime"
+    },
+    {
+      "label": "End Time",
+      "value": "endTime"
+    },
+    {
+      "label": "Owner",
+      "value": "owner"
+    },
+    {
+      "label": "Project",
+      "value": "projectId"
+    },
+    {
+      "label": "Access Level",
+      "value": "accessControl"
+    },
+    {
+      "label": "Actions",
+      "value": "actions"
+    },
+    {
+      "label": "Git Repo",
+      "value": "gitRepo"
+    }
+  ],
+  "applicationOptions": [
+    {
+      "label": "data-etl",
+      "value": "data-etl"
+    },
+    {
+      "label": "model-training",
+      "value": "model-training"
+    },
+    {
+      "label": "log-processing",
+      "value": "log-processing"
+    },
+    {
+      "label": "stream-processing",
+      "value": "stream-processing"
+    },
+    {
+      "label": "data-warehouse",
+      "value": "data-warehouse"
+    }
+  ],
+  "statusOptions": [
+    {
+      "label": "Running",
+      "value": "Running"
+    },
+    {
+      "label": "Completed",
+      "value": "Completed"
+    },
+    {
+      "label": "Failed",
+      "value": "Failed"
+    },
+    {
+      "label": "Pending",
+      "value": "Pending"
+    }
+  ],
+  "ownerOptions": [
+    {
+      "label": "data-team",
+      "value": "data-team"
+    },
+    {
+      "label": "ml-team",
+      "value": "ml-team"
+    },
+    {
+      "label": "analytics-team",
+      "value": "analytics-team"
+    },
+    {
+      "label": "streaming-team",
+      "value": "streaming-team"
+    }
+  ],
+  "availableUsers": [
+    {
+      "name": "Adrian",
+      "email": "adrian@nstarxinc.com",
+      "role": "admin"
+    },
+    {
+      "name": "Sai",
+      "email": "Sai@nstarxinc.com",
+      "role": "ds"
+    },
+    {
+      "name": "Suresh",
+      "email": "suresh@nstarxinc.com",
+      "role": "ds"
+    },
+    {
+      "name": "Suman",
+      "email": "suman@nstarxinc.com",
+      "role": "biz"
+    },
+    {
+      "name": "Sujay",
+      "email": "sujay@nstarxinc.com",
+      "role": "ops"
+    }
+  ],
+  "defaultVisibleColumns": [
+    "name",
+    "application",
+    "version",
+    "gitRepo",
+    "status",
+    "k8sNodes",
+    "resources",
+    "startTime",
+    "owner",
+    "projectId",
+    "accessControl",
+    "actions"
+  ],
+  "flowNodeOptions": {
+    "types": [
+      {
+        "label": "Data Source",
+        "value": "data-source"
+      },
+      {
+        "label": "Processing",
+        "value": "processing"
+      },
+      {
+        "label": "Transformation",
+        "value": "transformation"
+      },
+      {
+        "label": "Data Sink",
+        "value": "data-sink"
+      },
+      {
+        "label": "Monitoring",
+        "value": "monitoring"
+      }
+    ],
+    "formats": [
+      {
+        "label": "Parquet",
+        "value": "parquet"
+      },
+      {
+        "label": "JSON",
+        "value": "json"
+      },
+      {
+        "label": "CSV",
+        "value": "csv"
+      },
+      {
+        "label": "Avro",
+        "value": "avro"
+      },
+      {
+        "label": "ORC",
+        "value": "orc"
+      }
+    ],
+    "transformations": [
+      {
+        "label": "Filter",
+        "value": "filter"
+      },
+      {
+        "label": "Map",
+        "value": "map"
+      },
+      {
+        "label": "Reduce",
+        "value": "reduce"
+      },
+      {
+        "label": "Join",
+        "value": "join"
+      },
+      {
+        "label": "Aggregate",
+        "value": "aggregate"
+      },
+      {
+        "label": "Window",
+        "value": "window"
+      }
+    ]
+  },
+  "initialFlowNodes": [
+    {
+      "id": "data-source",
+      "type": "sparkNode",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "data": {
+        "label": "Data Source",
+        "nodeType": "data-source"
+      }
+    },
+    {
+      "id": "spark-processing",
+      "type": "sparkNode",
+      "position": {
+        "x": 300,
+        "y": 100
+      },
+      "data": {
+        "label": "Spark Processing",
+        "nodeType": "processing"
+      }
+    },
+    {
+      "id": "data-transformation",
+      "type": "sparkNode",
+      "position": {
+        "x": 500,
+        "y": 100
+      },
+      "data": {
+        "label": "Data Transformation",
+        "nodeType": "transformation"
+      }
+    },
+    {
+      "id": "data-sink",
+      "type": "sparkNode",
+      "position": {
+        "x": 700,
+        "y": 100
+      },
+      "data": {
+        "label": "Data Sink",
+        "nodeType": "data-sink"
+      }
+    },
+    {
+      "id": "monitoring",
+      "type": "sparkNode",
+      "position": {
+        "x": 500,
+        "y": 250
+      },
+      "data": {
+        "label": "Monitoring",
+        "nodeType": "monitoring"
+      }
+    }
+  ],
+  "initialFlowEdges": [
+    {
+      "id": "edge-source-processing",
+      "source": "data-source",
+      "target": "spark-processing",
+      "type": "smoothstep",
+      "animated": true,
+      "style": {
+        "stroke": "#3b82f6",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-processing-transformation",
+      "source": "spark-processing",
+      "target": "data-transformation",
+      "type": "smoothstep",
+      "animated": true,
+      "style": {
+        "stroke": "#ef4444",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-transformation-sink",
+      "source": "data-transformation",
+      "target": "data-sink",
+      "type": "smoothstep",
+      "animated": true,
+      "style": {
+        "stroke": "#3b82f6",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-transformation-monitoring",
+      "source": "data-transformation",
+      "target": "monitoring",
+      "type": "smoothstep",
+      "animated": true,
+      "style": {
+        "stroke": "#22c55e",
+        "strokeWidth": 2
+      }
+    }
+  ],
+  "defaultSparkJob": {
+    "id": "",
+    "name": "",
+    "application": "",
+    "version": 1,
+    "status": "Pending",
+    "k8sNodes": [],
+    "resources": {
+      "cpu": "",
+      "memory": ""
+    },
+    "startTime": "",
+    "gitRepo": "",
+    "owner": "",
+    "projectId": "",
+    "accessControl": {
+      "accessLevel": "public",
+      "authorizedUsers": [],
+      "authorizedRoles": []
+    }
+  },
+  "defaultFlowNodeForm": {
+    "name": "",
+    "application": "",
+    "sparkJobId": "",
+    "nodeType": "processing",
+    "configuration": {
+      "inputFormat": "",
+      "outputFormat": "",
+      "transformationType": "",
+      "parallelism": 1,
+      "partitions": 1,
+      "memory": "2g",
+      "cores": "2"
+    }
+  }
+}

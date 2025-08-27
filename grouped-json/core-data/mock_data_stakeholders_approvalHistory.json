@@ -1,0 +1,3 @@
+{
+  "approvalHistory": "[\n    {\n        id: 'ah1',\n        phaseId: 'requirements',\n        stakeholder: 'Adrian',\n        action: 'approved',\n        date: '2024-01-15 10:30',\n        comments: 'Requirements look comprehensive. Approved to proceed.',\n        duration: '2 hours'\n    },\nexport const automationRules = [\n    {\n        id: 'rule1',\n        name: 'Auto-request on phase completion',\n        description: 'Automatically request approval when a phase reaches 100% completion',\n        enabled: true,\n        trigger: 'phase_complete',\n        conditions: {\n            completionPercentage: 100,\n            allStagesComplete: true\n        },\n        actions: ['send_approval_request', 'notify_slack']"
+}

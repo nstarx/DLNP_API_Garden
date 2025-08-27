@@ -1,0 +1,16 @@
+{
+  "mockStatusOptions": [
+    {
+      "label": "Running",
+      "value": "running"
+    },
+    {
+      "label": "Stopped",
+      "value": "stopped"
+    },
+    {
+      "label": "Processing",
+      "value": "processing"
+    }
+  ]
+}

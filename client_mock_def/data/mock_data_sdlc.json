@@ -1,0 +1,508 @@
+{
+  "sdlcDashboardMetrics": {
+    "overall": {
+      "totalProjects": 15,
+      "activeProjects": 8,
+      "completedProjects": 5,
+      "onHoldProjects": 2,
+      "averageCycleTime": "4 days",
+      "successRate": 87,
+      "blockedItems": 3,
+      "pendingApprovals": 7
+    },
+    "phaseMetrics": {
+      "requirements": {
+        "active": 3,
+        "avgDuration": "7 days",
+        "efficiency": 92
+      },
+      "design": {
+        "active": 2,
+        "avgDuration": "10 days",
+        "efficiency": 85
+      },
+      "development": {
+        "active": 4,
+        "avgDuration": "21 days",
+        "efficiency": 78
+      },
+      "testing": {
+        "active": 2,
+        "avgDuration": "14 days",
+        "efficiency": 90
+      },
+      "deployment": {
+        "active": 1,
+        "avgDuration": "3 days",
+        "efficiency": 95
+      },
+      "maintenance": {
+        "active": 3,
+        "avgDuration": "Ongoing",
+        "efficiency": 88
+      }
+    },
+    "teamPerformance": {
+      "velocity": 85,
+      "quality": 92,
+      "collaboration": 88,
+      "deliveryRate": 91
+    }
+  },
+  "projectTimeline": [
+    {
+      "id": "milestone1",
+      "title": "Project Kickoff",
+      "date": "2024-01-01",
+      "status": "completed",
+      "description": "Initial project setup and team formation"
+    },
+    {
+      "id": "milestone2",
+      "title": "Requirements Complete",
+      "date": "2024-01-15",
+      "status": "completed",
+      "description": "All requirements gathered and approved"
+    },
+    {
+      "id": "milestone3",
+      "title": "Design Approval",
+      "date": "2024-01-25",
+      "status": "in_progress",
+      "description": "System design review and approval"
+    },
+    {
+      "id": "milestone4",
+      "title": "Development Sprint 1",
+      "date": "2024-02-05",
+      "status": "upcoming",
+      "description": "First development sprint completion"
+    },
+    {
+      "id": "milestone5",
+      "title": "Beta Release",
+      "date": "2024-03-01",
+      "status": "upcoming",
+      "description": "Beta version release for testing"
+    },
+    {
+      "id": "milestone6",
+      "title": "Production Launch",
+      "date": "2024-03-15",
+      "status": "upcoming",
+      "description": "Full production deployment"
+    }
+  ],
+  "dependencyMatrix": [
+    {
+      "id": "dep1",
+      "source": "Requirements",
+      "target": "Design",
+      "type": "blocking",
+      "status": "resolved",
+      "description": "Design cannot start without approved requirements"
+    },
+    {
+      "id": "dep2",
+      "source": "Design",
+      "target": "Development",
+      "type": "blocking",
+      "status": "active",
+      "description": "Development waiting for API design completion"
+    },
+    {
+      "id": "dep3",
+      "source": "Development",
+      "target": "Testing",
+      "type": "partial",
+      "status": "pending",
+      "description": "Testing can start with completed modules"
+    },
+    {
+      "id": "dep4",
+      "source": "Testing",
+      "target": "Deployment",
+      "type": "blocking",
+      "status": "pending",
+      "description": "Deployment requires all tests to pass"
+    }
+  ],
+  "resourceAllocation": [
+    {
+      "id": "res1",
+      "phase": "Requirements",
+      "resources": [
+        {
+          "name": "Adrian",
+          "role": "Business Analyst",
+          "allocation": 100,
+          "availability": "Full-time"
+        },
+        {
+          "name": "Adrian",
+          "role": "Product Owner",
+          "allocation": 50,
+          "availability": "Part-time"
+        }
+      ],
+      "totalHours": 120,
+      "utilization": 85
+    },
+    {
+      "id": "res2",
+      "phase": "Design",
+      "resources": [
+        {
+          "name": "Adrian",
+          "role": "Solution Architect",
+          "allocation": 100,
+          "availability": "Full-time"
+        },
+        {
+          "name": "UI/UX Team",
+          "role": "Designers",
+          "allocation": 75,
+          "availability": "Part-time"
+        }
+      ],
+      "totalHours": 200,
+      "utilization": 70
+    },
+    {
+      "id": "res3",
+      "phase": "Development",
+      "resources": [
+        {
+          "name": "Backend Team",
+          "role": "Developers",
+          "allocation": 100,
+          "availability": "Full-time"
+        },
+        {
+          "name": "Frontend Team",
+          "role": "Developers",
+          "allocation": 100,
+          "availability": "Full-time"
+        },
+        {
+          "name": "Adrian",
+          "role": "Tech Lead",
+          "allocation": 75,
+          "availability": "Part-time"
+        }
+      ],
+      "totalHours": 800,
+      "utilization": 0
+    }
+  ],
+  "documentRepository": [
+    {
+      "id": "doc1",
+      "name": "Requirements Specification v2.0",
+      "type": "Requirements",
+      "phase": "requirements",
+      "version": "2.0",
+      "author": "Adrian",
+      "lastModified": "2024-01-15",
+      "status": "Approved",
+      "size": "2.4 MB",
+      "icon": "pi-file-pdf"
+    },
+    {
+      "id": "doc2",
+      "name": "System Architecture Design",
+      "type": "Design",
+      "phase": "design",
+      "version": "1.3",
+      "author": "Adrian",
+      "lastModified": "2024-01-18",
+      "status": "In Review",
+      "size": "5.1 MB",
+      "icon": "pi-file"
+    },
+    {
+      "id": "doc3",
+      "name": "API Documentation",
+      "type": "Technical",
+      "phase": "design",
+      "version": "1.0",
+      "author": "Backend Team",
+      "lastModified": "2024-01-17",
+      "status": "Draft",
+      "size": "1.8 MB",
+      "icon": "pi-code"
+    },
+    {
+      "id": "doc4",
+      "name": "Test Plan",
+      "type": "Testing",
+      "phase": "testing",
+      "version": "1.0",
+      "author": "Lisa Anderson",
+      "lastModified": "2024-01-16",
+      "status": "Draft",
+      "size": "890 KB",
+      "icon": "pi-check-square"
+    },
+    {
+      "id": "doc5",
+      "name": "Deployment Guide",
+      "type": "Operations",
+      "phase": "deployment",
+      "version": "0.5",
+      "author": "Tom Wilson",
+      "lastModified": "2024-01-14",
+      "status": "In Progress",
+      "size": "1.2 MB",
+      "icon": "pi-cloud-upload"
+    }
+  ],
+  "issuesAndBlockers": [
+    {
+      "id": "issue1",
+      "title": "API Authentication Design Pending",
+      "severity": "high",
+      "phase": "design",
+      "assignee": "Adrian",
+      "status": "open",
+      "createdDate": "2024-01-18",
+      "dueDate": "2024-01-22",
+      "description": "Need to finalize OAuth 2.0 implementation details",
+      "impact": "Blocking backend development start"
+    },
+    {
+      "id": "issue2",
+      "title": "Performance Requirements Unclear",
+      "severity": "medium",
+      "phase": "requirements",
+      "assignee": "Adrian",
+      "status": "in_progress",
+      "createdDate": "2024-01-17",
+      "dueDate": "2024-01-21",
+      "description": "Need specific metrics for response time and throughput",
+      "impact": "May affect architecture decisions"
+    },
+    {
+      "id": "issue3",
+      "title": "Test Environment Not Ready",
+      "severity": "low",
+      "phase": "testing",
+      "assignee": "Tom Wilson",
+      "status": "open",
+      "createdDate": "2024-01-16",
+      "dueDate": "2024-02-01",
+      "description": "Staging environment setup pending",
+      "impact": "Testing phase may be delayed"
+    }
+  ],
+  "changeRequests": [
+    {
+      "id": "cr1",
+      "title": "Add Multi-factor Authentication",
+      "requestor": "Mike Chen",
+      "priority": "high",
+      "status": "approved",
+      "impact": "medium",
+      "effort": "40 hours",
+      "approvedBy": "Adrian",
+      "approvalDate": "2024-01-19",
+      "targetPhase": "development",
+      "description": "Implement MFA for enhanced security"
+    },
+    {
+      "id": "cr2",
+      "title": "Update UI Color Scheme",
+      "requestor": "Adrian",
+      "priority": "low",
+      "status": "pending",
+      "impact": "low",
+      "effort": "8 hours",
+      "approvedBy": null,
+      "approvalDate": null,
+      "targetPhase": "design",
+      "description": "Align with new brand guidelines"
+    },
+    {
+      "id": "cr3",
+      "title": "Add Export Functionality",
+      "requestor": "Adrian",
+      "priority": "medium",
+      "status": "rejected",
+      "impact": "medium",
+      "effort": "24 hours",
+      "rejectedBy": "Adrian",
+      "rejectionDate": "2024-01-18",
+      "targetPhase": "development",
+      "description": "Export reports to PDF/Excel",
+      "rejectionReason": "Out of scope for current release"
+    }
+  ],
+  "metricsAndKPIs": {
+    "velocity": {
+      "current": 32,
+      "average": 28,
+      "trend": "up",
+      "unit": "story points/sprint"
+    },
+    "defectRate": {
+      "current": 2.3,
+      "target": 3,
+      "trend": "down",
+      "unit": "defects per KLOC"
+    },
+    "codeQuality": {
+      "coverage": 85,
+      "complexity": 12,
+      "duplication": 3.2,
+      "techDebt": "120 hours"
+    },
+    "scheduleAdherence": {
+      "onTime": 78,
+      "delayed": 15,
+      "ahead": 7,
+      "unit": "%"
+    },
+    "budgetUtilization": {
+      "spent": 2,
+      "allocated": 30,
+      "remaining": 55,
+      "burnRate": "normal"
+    }
+  },
+  "trainingAndOnboarding": [
+    {
+      "id": "train1",
+      "title": "System Overview",
+      "type": "documentation",
+      "status": "completed",
+      "completedBy": [
+        "Adrian",
+        "Adrian",
+        "Mike Chen"
+      ],
+      "duration": "2 hours",
+      "mandatory": true
+    },
+    {
+      "id": "train2",
+      "title": "Development Standards",
+      "type": "workshop",
+      "status": "scheduled",
+      "scheduledDate": "2024-01-25",
+      "duration": "4 hours",
+      "mandatory": true,
+      "instructor": "Adrian"
+    },
+    {
+      "id": "train3",
+      "title": "Security Best Practices",
+      "type": "online",
+      "status": "available",
+      "completedBy": [
+        "Mike Chen"
+      ],
+      "duration": "3 hours",
+      "mandatory": true
+    },
+    {
+      "id": "train4",
+      "title": "User Training",
+      "type": "hands-on",
+      "status": "planned",
+      "plannedDate": "2024-03-01",
+      "duration": "8 hours",
+      "mandatory": false,
+      "targetAudience": "End Users"
+    }
+  ],
+  "integrationPoints": [
+    {
+      "id": "int1",
+      "system": "SAP ERP",
+      "type": "REST API",
+      "status": "configured",
+      "environment": "production",
+      "lastTested": "2024-01-18",
+      "healthStatus": "healthy"
+    },
+    {
+      "id": "int2",
+      "system": "Salesforce CRM",
+      "type": "OAuth 2.0",
+      "status": "pending",
+      "environment": "staging",
+      "lastTested": null,
+      "healthStatus": "not_tested"
+    },
+    {
+      "id": "int3",
+      "system": "Azure AD",
+      "type": "SAML SSO",
+      "status": "configured",
+      "environment": "all",
+      "lastTested": "2024-01-19",
+      "healthStatus": "healthy"
+    },
+    {
+      "id": "int4",
+      "system": "AWS S3",
+      "type": "SDK",
+      "status": "in_progress",
+      "environment": "development",
+      "lastTested": "2024-01-17",
+      "healthStatus": "intermittent"
+    }
+  ],
+  "testingMetrics": {
+    "testCases": {
+      "total": 250,
+      "automated": 180,
+      "manual": 70,
+      "executed": 145,
+      "passed": 132,
+      "failed": 8,
+      "blocked": 5
+    },
+    "coverage": {
+      "unit": 85,
+      "integration": 72,
+      "e2e": 45,
+      "performance": 30,
+      "security": 60
+    },
+    "defects": {
+      "critical": 2,
+      "high": 5,
+      "medium": 12,
+      "low": 23,
+      "resolved": 35,
+      "open": 7
+    },
+    "environments": [
+      {
+        "name": "Dev",
+        "status": "active",
+        "version": "1.2.0",
+        "lastDeployed": "2024-01-20"
+      },
+      {
+        "name": "QA",
+        "status": "active",
+        "version": "1.1.5",
+        "lastDeployed": "2024-01-18"
+      },
+      {
+        "name": "Staging",
+        "status": "preparing",
+        "version": "1.1.0",
+        "lastDeployed": "2024-01-15"
+      },
+      {
+        "name": "Production",
+        "status": "stable",
+        "version": "1.0.0",
+        "lastDeployed": "2023-12-15"
+      }
+    ]
+  }
+}

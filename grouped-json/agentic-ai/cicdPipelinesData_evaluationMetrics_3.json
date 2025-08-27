@@ -1,0 +1,20 @@
+{
+  "evaluationMetrics": [
+    {
+      "id": 1,
+      "name": "Accuracy"
+    },
+    {
+      "id": 2,
+      "name": "Latency"
+    },
+    {
+      "id": 3,
+      "name": "Consistency"
+    },
+    {
+      "id": 4,
+      "name": "Safety"
+    }
+  ]
+}

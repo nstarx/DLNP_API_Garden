@@ -1,0 +1,89 @@
+{
+  "availablePermissions": [
+    {
+      "name": "view_dashboard",
+      "label": "View Dashboard",
+      "category": "System"
+    },
+    {
+      "name": "view_users",
+      "label": "View Users",
+      "category": "User Management"
+    },
+    {
+      "name": "create_user",
+      "label": "Create User",
+      "category": "User Management"
+    },
+    {
+      "name": "edit_user",
+      "label": "Edit User",
+      "category": "User Management"
+    },
+    {
+      "name": "delete_user",
+      "label": "Delete User",
+      "category": "User Management"
+    },
+    {
+      "name": "view_roles",
+      "label": "View Roles",
+      "category": "Role Management"
+    },
+    {
+      "name": "create_role",
+      "label": "Create Role",
+      "category": "Role Management"
+    },
+    {
+      "name": "edit_role",
+      "label": "Edit Role",
+      "category": "Role Management"
+    },
+    {
+      "name": "delete_role",
+      "label": "Delete Role",
+      "category": "Role Management"
+    },
+    {
+      "name": "assign_menu",
+      "label": "Assign Menu",
+      "category": "System"
+    },
+    {
+      "name": "view_ai_catalog",
+      "label": "View AI Catalog",
+      "category": "AI"
+    },
+    {
+      "name": "manage_ai_catalog",
+      "label": "Manage AI Catalog",
+      "category": "AI"
+    },
+    {
+      "name": "view_deployments",
+      "label": "View Deployments",
+      "category": "Operations"
+    },
+    {
+      "name": "manage_deployments",
+      "label": "Manage Deployments",
+      "category": "Operations"
+    },
+    {
+      "name": "view_monitoring",
+      "label": "View Monitoring",
+      "category": "Operations"
+    },
+    {
+      "name": "view_documents",
+      "label": "View Documents",
+      "category": "Business"
+    },
+    {
+      "name": "manage_documents",
+      "label": "Manage Documents",
+      "category": "Business"
+    }
+  ]
+}

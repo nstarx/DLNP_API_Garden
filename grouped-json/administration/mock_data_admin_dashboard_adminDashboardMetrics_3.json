@@ -1,0 +1,63 @@
+{
+  "adminDashboardMetrics": {
+    "users": {
+      "total": 156,
+      "active": 142,
+      "inactive": 14,
+      "newThisMonth": 8,
+      "growth": "+5.2%",
+      "distribution": {
+        "admin": 3,
+        "dataScientist": 45,
+        "operations": 38,
+        "business": 52,
+        "dashboardAdmin": 18
+      }
+    },
+    "roles": {
+      "total": 5,
+      "custom": 2,
+      "system": 3,
+      "mostUsed": "Data Scientist",
+      "leastUsed": "Dashboard Admin"
+    },
+    "permissions": {
+      "total": 17,
+      "categories": 6,
+      "mostAssigned": "view_dashboard",
+      "leastAssigned": "delete_role",
+      "recentChanges": 3
+    },
+    "activity": {
+      "loginsToday": 89,
+      "activeNow": 23,
+      "peakTime": "10:00 AM",
+      "avgSessionDuration": "45 minutes",
+      "topActions": [
+        {
+          "action": "View Dashboard",
+          "count": 1250
+        },
+        {
+          "action": "Access AI Catalog",
+          "count": 890
+        },
+        {
+          "action": "Run Deployment",
+          "count": 456
+        },
+        {
+          "action": "View Documents",
+          "count": 623
+        }
+      ]
+    },
+    "system": {
+      "uptime": "99.98%",
+      "lastBackup": "2024-01-20 03:00:00",
+      "nextMaintenance": "2024-02-01 02:00:00",
+      "version": "2.4.1",
+      "environment": "Production"
+    }
+  }
+}

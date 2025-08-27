@@ -1,0 +1,3 @@
+{
+  "mockServicesWithParents": "[\n    {\n        name: 'api-gateway',\n        type: 'LoadBalancer',\n        namespace: 'default',\n        loadbalancer_ip: '10.0.0.1',\n        parent: null\n    },"
+}

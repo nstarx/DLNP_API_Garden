@@ -1,0 +1,1058 @@
+{
+  "groupName": "Converge Apps",
+  "description": "Convergent applications including video/audio processing tools",
+  "fileCount": 75,
+  "totalSize": 39181,
+  "files": [
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramData_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramData_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramData_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramData_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramData_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramData_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramData.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramData.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramStats_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramStats_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramStats_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramStats_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramStats_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramStats_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateHistogramStats.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateHistogramStats.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateMockAnalytics_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateMockAnalytics_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateMockAnalytics_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateMockAnalytics_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateMockAnalytics_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateMockAnalytics_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_generateMockAnalytics.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_generateMockAnalytics.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockContentAnalytics_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockContentAnalytics_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockContentAnalytics_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockContentAnalytics_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockContentAnalytics_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockContentAnalytics_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockContentAnalytics.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockContentAnalytics.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockRecentActivity_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockRecentActivity_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockRecentActivity_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockRecentActivity_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockRecentActivity_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockRecentActivity_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockRecentActivity.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockRecentActivity.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockStats_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockStats_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockStats_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockStats_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockStats_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockStats_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockStats.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockStats.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTips_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTips_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTips_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTips_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTips_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTips_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTips.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTips.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionPhases_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionPhases_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionPhases_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionPhases_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionPhases_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionPhases_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionPhases.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionPhases.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionResults_1.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionResults_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionResults_2.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionResults_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionResults_3.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionResults_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "converge_video2text_mockData_mockTranscriptionResults.json",
+      "originalPath": "client_mock_def/converge/converge_video2text_mockData_mockTranscriptionResults.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "mock_data_mockData_mockRecentActivity.json",
+      "originalPath": "client_mock_def/converge/mock_data_mockData_mockRecentActivity.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": false
+      },
+      "size": 2268
+    },
+    {
+      "fileName": "mock_data_mockData_mockStats.json",
+      "originalPath": "client_mock_def/converge/mock_data_mockData_mockStats.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "mock_data_mockData_mockTips.json",
+      "originalPath": "client_mock_def/converge/mock_data_mockData_mockTips.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": false
+      },
+      "size": 369
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramData_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramData_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramData_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramData_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramData_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramData_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramData.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramData.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramData"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramStats_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramStats_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramStats_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramStats_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramStats_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramStats_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "video2text_mockData_generateHistogramStats.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateHistogramStats.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateHistogramStats"
+        ],
+        "hasNestedData": false
+      },
+      "size": 68
+    },
+    {
+      "fileName": "video2text_mockData_generateMockAnalytics_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateMockAnalytics_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateMockAnalytics_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateMockAnalytics_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateMockAnalytics_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateMockAnalytics_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_generateMockAnalytics.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_generateMockAnalytics.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "generateMockAnalytics"
+        ],
+        "hasNestedData": false
+      },
+      "size": 66
+    },
+    {
+      "fileName": "video2text_mockData_mockContentAnalytics_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockContentAnalytics_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "video2text_mockData_mockContentAnalytics_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockContentAnalytics_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "video2text_mockData_mockContentAnalytics_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockContentAnalytics_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "video2text_mockData_mockContentAnalytics.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockContentAnalytics.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockContentAnalytics"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1009
+    },
+    {
+      "fileName": "video2text_mockData_mockRecentActivity_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockRecentActivity_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "video2text_mockData_mockRecentActivity_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockRecentActivity_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "video2text_mockData_mockRecentActivity_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockRecentActivity_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "video2text_mockData_mockRecentActivity.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockRecentActivity.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockRecentActivity"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1331
+    },
+    {
+      "fileName": "video2text_mockData_mockStats_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockStats_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "video2text_mockData_mockStats_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockStats_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "video2text_mockData_mockStats_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockStats_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "video2text_mockData_mockStats.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockStats.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 120
+    },
+    {
+      "fileName": "video2text_mockData_mockTips_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTips_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "video2text_mockData_mockTips_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTips_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "video2text_mockData_mockTips_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTips_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "video2text_mockData_mockTips.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTips.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTips"
+        ],
+        "hasNestedData": true
+      },
+      "size": 470
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionPhases_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionPhases_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionPhases_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionPhases_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionPhases_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionPhases_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionPhases.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionPhases.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionPhases"
+        ],
+        "hasNestedData": true
+      },
+      "size": 199
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionResults_1.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionResults_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionResults_2.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionResults_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionResults_3.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionResults_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    },
+    {
+      "fileName": "video2text_mockData_mockTranscriptionResults.json",
+      "originalPath": "client_mock_def/converge/video2text_mockData_mockTranscriptionResults.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockTranscriptionResults"
+        ],
+        "hasNestedData": true
+      },
+      "size": 1224
+    }
+  ]
+}

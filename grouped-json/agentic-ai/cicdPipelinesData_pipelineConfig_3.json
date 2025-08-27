@@ -1,0 +1,10 @@
+{
+  "pipelineConfig": {
+    "gitRepo": "https://github.com/organization/agent-repo.git",
+    "branch": "main",
+    "buildCommand": "npm run build",
+    "testCommand": "npm run test",
+    "deploymentStrategy": null,
+    "notifications": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "mockCloudOptions": [
+    {
+      "label": "AWS",
+      "value": "AWS"
+    },
+    {
+      "label": "Azure",
+      "value": "AZURE"
+    },
+    {
+      "label": "Google Cloud",
+      "value": "GCP"
+    }
+  ]
+}

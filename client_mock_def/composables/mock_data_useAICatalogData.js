@@ -1,3 +1,15 @@
+import { ref, computed } from 'vue';
+import datasetsData from '@/assets/mock/ai-catalog/datasets.json';
+import modelsData from '@/assets/mock/ai-catalog/models.json';
+import experimentsData from '@/assets/mock/ai-catalog/experiments.json';
+import pipelinesData from '@/assets/mock/ai-catalog/pipelines.json';
+import featureSetsData from '@/assets/mock/ai-catalog/feature-sets.json';
+import endpointsData from '@/assets/mock/ai-catalog/endpoints.json';
+import policiesData from '@/assets/mock/ai-catalog/policies.json';
+import aiCompanyModelsData from '@/assets/mock/ai-catalog/ai-company-models.json';
+import provenanceData from '@/assets/mock/ai-catalog/provenance-data.json';
+import filterOptions from '@/assets/mock/ai-catalog/filter-options.json';
+
 export const useAICatalogData = () => {
     // Core data
     const datasets = ref(datasetsData);

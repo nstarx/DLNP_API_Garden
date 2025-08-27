@@ -1,0 +1,54 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "name": "Q2 Financial Report",
+      "type": "PDF",
+      "department": "Finance",
+      "uploadedAt": "2024-11-21T20:20:00",
+      "uploadedBy": "Adrian",
+      "size": "2.4 MB",
+      "status": "Indexed"
+    },
+    {
+      "id": 2,
+      "name": "Marketing Strategy 2023",
+      "type": "DOCX",
+      "department": "Marketing",
+      "uploadedAt": "2024-05-11T12:45:00",
+      "uploadedBy": "Emily Johnson",
+      "size": "1.8 MB",
+      "status": "Indexed"
+    },
+    {
+      "id": 3,
+      "name": "HR Policy Update",
+      "type": "PDF",
+      "department": "Human Resources",
+      "uploadedAt": "2024-01-25T09:55:00",
+      "uploadedBy": "Michael Brown",
+      "size": "3.2 MB",
+      "status": "Indexed"
+    },
+    {
+      "id": 4,
+      "name": "Product Roadmap",
+      "type": "PPTX",
+      "department": "Product",
+      "uploadedAt": "2025-02-18T17:32:00",
+      "uploadedBy": "Sarah Davis",
+      "size": "5.7 MB",
+      "status": "Processing"
+    },
+    {
+      "id": 5,
+      "name": "Customer Feedback Analysis",
+      "type": "XLSX",
+      "department": "Customer Success",
+      "uploadedAt": "2025-03-28T08:35:00",
+      "uploadedBy": "David Wilson",
+      "size": "1.2 MB",
+      "status": "Indexed"
+    }
+  ]
+}

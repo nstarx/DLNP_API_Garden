@@ -1,0 +1,400 @@
+{
+  "groupName": "Deployments",
+  "description": "Deployment configurations and cloud deployment options",
+  "fileCount": 28,
+  "totalSize": 10444,
+  "files": [
+    {
+      "fileName": "mock_data_deployments_mockArtifactTypeOptions_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockArtifactTypeOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockArtifactTypeOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 469
+    },
+    {
+      "fileName": "mock_data_deployments_mockArtifactTypeOptions_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockArtifactTypeOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockArtifactTypeOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 469
+    },
+    {
+      "fileName": "mock_data_deployments_mockArtifactTypeOptions_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockArtifactTypeOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockArtifactTypeOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 469
+    },
+    {
+      "fileName": "mock_data_deployments_mockArtifactTypeOptions.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockArtifactTypeOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockArtifactTypeOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 469
+    },
+    {
+      "fileName": "mock_data_deployments_mockCloudOptions_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockCloudOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCloudOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 211
+    },
+    {
+      "fileName": "mock_data_deployments_mockCloudOptions_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockCloudOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCloudOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 211
+    },
+    {
+      "fileName": "mock_data_deployments_mockCloudOptions_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockCloudOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCloudOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 211
+    },
+    {
+      "fileName": "mock_data_deployments_mockCloudOptions.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockCloudOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockCloudOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 211
+    },
+    {
+      "fileName": "mock_data_deployments_mockColumnOptions_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockColumnOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockColumnOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 776
+    },
+    {
+      "fileName": "mock_data_deployments_mockColumnOptions_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockColumnOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockColumnOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 776
+    },
+    {
+      "fileName": "mock_data_deployments_mockColumnOptions_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockColumnOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockColumnOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 776
+    },
+    {
+      "fileName": "mock_data_deployments_mockColumnOptions.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockColumnOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockColumnOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 776
+    },
+    {
+      "fileName": "mock_data_deployments_mockDeploymentData_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockDeploymentData_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDeploymentData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 413
+    },
+    {
+      "fileName": "mock_data_deployments_mockDeploymentData_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockDeploymentData_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDeploymentData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 413
+    },
+    {
+      "fileName": "mock_data_deployments_mockDeploymentData_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockDeploymentData_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDeploymentData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 413
+    },
+    {
+      "fileName": "mock_data_deployments_mockDeploymentData.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockDeploymentData.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockDeploymentData"
+        ],
+        "hasNestedData": true
+      },
+      "size": 413
+    },
+    {
+      "fileName": "mock_data_deployments_mockEnvironmentOptions_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockEnvironmentOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockEnvironmentOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 242
+    },
+    {
+      "fileName": "mock_data_deployments_mockEnvironmentOptions_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockEnvironmentOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockEnvironmentOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 242
+    },
+    {
+      "fileName": "mock_data_deployments_mockEnvironmentOptions_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockEnvironmentOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockEnvironmentOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 242
+    },
+    {
+      "fileName": "mock_data_deployments_mockEnvironmentOptions.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockEnvironmentOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockEnvironmentOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 242
+    },
+    {
+      "fileName": "mock_data_deployments_mockK8sStats_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockK8sStats_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockK8sStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 271
+    },
+    {
+      "fileName": "mock_data_deployments_mockK8sStats_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockK8sStats_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockK8sStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 271
+    },
+    {
+      "fileName": "mock_data_deployments_mockK8sStats_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockK8sStats_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockK8sStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 271
+    },
+    {
+      "fileName": "mock_data_deployments_mockK8sStats.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockK8sStats.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockK8sStats"
+        ],
+        "hasNestedData": true
+      },
+      "size": 271
+    },
+    {
+      "fileName": "mock_data_deployments_mockStatusOptions_1.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockStatusOptions_1.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStatusOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 229
+    },
+    {
+      "fileName": "mock_data_deployments_mockStatusOptions_2.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockStatusOptions_2.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStatusOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 229
+    },
+    {
+      "fileName": "mock_data_deployments_mockStatusOptions_3.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockStatusOptions_3.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStatusOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 229
+    },
+    {
+      "fileName": "mock_data_deployments_mockStatusOptions.json",
+      "originalPath": "client_mock_def/deployments/mock_data_deployments_mockStatusOptions.json",
+      "purpose": "Mock data for testing and development",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "mockStatusOptions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 229
+    }
+  ]
+}

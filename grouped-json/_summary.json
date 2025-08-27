@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2025-08-26T20:11:57.988Z",
+  "sourceDirectory": "client_mock_def",
+  "outputDirectory": "grouped-json",
+  "statistics": {
+    "totalFiles": 625,
+    "totalGroups": 11,
+    "filesByGroup": {
+      "Administration": 96,
+      "Agentic AI": 184,
+      "AI Catalog": 10,
+      "Application Assets": 65,
+      "CI/CD": 24,
+      "Converge Apps": 75,
+      "Core Data": 73,
+      "Data Connections": 68,
+      "Deployments": 28,
+      "Federated Learning": 1,
+      "General": 1
+    },
+    "errors": 0
+  },
+  "groups": [
+    {
+      "name": "Administration",
+      "directory": "administration",
+      "fileCount": 96,
+      "description": "Administrative dashboard, user management, and access control features"
+    },
+    {
+      "name": "Agentic AI",
+      "directory": "agentic-ai",
+      "fileCount": 184,
+      "description": "AI agent templates, CI/CD pipelines, and agent orchestration"
+    },
+    {
+      "name": "AI Catalog",
+      "directory": "ai-catalog",
+      "fileCount": 10,
+      "description": "AI models, datasets, experiments, and ML pipeline definitions"
+    },
+    {
+      "name": "Application Assets",
+      "directory": "application-assets",
+      "fileCount": 65,
+      "description": "Mock data for charts, metrics, and application resources"
+    },
+    {
+      "name": "CI/CD",
+      "directory": "ci-cd",
+      "fileCount": 24,
+      "description": "Continuous integration and deployment configurations"
+    },
+    {
+      "name": "Converge Apps",
+      "directory": "converge-apps",
+      "fileCount": 75,
+      "description": "Convergent applications including video/audio processing tools"
+    },
+    {
+      "name": "Core Data",
+      "directory": "core-data",
+      "fileCount": 73,
+      "description": "Core application data including chat, mail, tasks, and SDLC"
+    },
+    {
+      "name": "Data Connections",
+      "directory": "data-connections",
+      "fileCount": 68,
+      "description": "Database connections, cloud integrations, and data source configurations"
+    },
+    {
+      "name": "Deployments",
+      "directory": "deployments",
+      "fileCount": 28,
+      "description": "Deployment configurations and cloud deployment options"
+    },
+    {
+      "name": "Federated Learning",
+      "directory": "federated-learning",
+      "fileCount": 1,
+      "description": "Federated learning operations and configurations"
+    },
+    {
+      "name": "General",
+      "directory": "general",
+      "fileCount": 1,
+      "description": "General application data"
+    }
+  ],
+  "errors": []
+}

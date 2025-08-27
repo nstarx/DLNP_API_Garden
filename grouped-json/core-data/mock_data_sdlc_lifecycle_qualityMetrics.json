@@ -1,0 +1,3 @@
+{
+  "qualityMetrics": "[\n    {\n        id: 'code_quality',\n        name: 'Code Quality',\n        score: 85,\n        threshold: 80,\n        status: 'passed',\n        details: {\n            coverage: 87,\n            complexity: 'Low',\n            duplication: 2.3,\n            issues: 12\n        }\n    },\nexport const approvalWorkflow = [\n    {\n        id: 'review',\n        name: 'Technical Review',\n        status: 'completed',\n        reviewer: 'Adrian',\n        date: '2024-01-18',\n        comments: 'Code meets technical standards',\n        checkItems: [\n            { name: 'Code Standards', status: 'passed' },\n            { name: 'Documentation', status: 'passed' },\n            { name: 'Test Coverage', status: 'passed' }\n        ]"
+}

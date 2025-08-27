@@ -1,0 +1,22 @@
+{
+  "groupName": "General",
+  "description": "General application data",
+  "fileCount": 1,
+  "totalSize": 121,
+  "files": [
+    {
+      "fileName": "settings.local.json",
+      "originalPath": ".claude/settings.local.json",
+      "purpose": "Application data and configuration",
+      "structure": {
+        "type": "object",
+        "count": null,
+        "keys": [
+          "permissions"
+        ],
+        "hasNestedData": true
+      },
+      "size": 121
+    }
+  ]
+}

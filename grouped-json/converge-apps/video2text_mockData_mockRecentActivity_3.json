@@ -1,0 +1,49 @@
+{
+  "mockRecentActivity": [
+    {
+      "id": 1,
+      "title": "YouTube video transcribed",
+      "time": "2 minutes ago",
+      "status": "completed",
+      "icon": "pi pi-check-circle",
+      "details": "AI Conference 2024 - 15 min video",
+      "source": "https://youtube.com/watch?v=example1",
+      "duration": "15:32",
+      "fileSize": "45.2 MB"
+    },
+    {
+      "id": 2,
+      "title": "MP4 file uploaded",
+      "time": "15 minutes ago",
+      "status": "processing",
+      "icon": "pi pi-clock",
+      "details": "Meeting_Recording_2024.mp4",
+      "source": "local_file",
+      "duration": "32:18",
+      "fileSize": "128.7 MB"
+    },
+    {
+      "id": 3,
+      "title": "Translation to Spanish",
+      "time": "1 hour ago",
+      "status": "completed",
+      "icon": "pi pi-language",
+      "details": "Product Demo - English to Spanish",
+      "source": "https://youtube.com/watch?v=example2",
+      "duration": "8:45",
+      "fileSize": "23.1 MB"
+    },
+    {
+      "id": 4,
+      "title": "Podcast transcription",
+      "time": "3 hours ago",
+      "status": "failed",
+      "icon": "pi pi-times-circle",
+      "details": "Tech_Talk_Episode_42.mp3",
+      "source": "local_file",
+      "duration": "58:12",
+      "fileSize": "89.4 MB",
+      "error": "Audio quality too low for accurate transcription"
+    }
+  ]
+}

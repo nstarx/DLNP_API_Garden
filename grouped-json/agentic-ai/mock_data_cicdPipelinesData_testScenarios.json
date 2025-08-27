@@ -1,0 +1,3 @@
+{
+  "testScenarios": "[\n    {\n        id: 1,\n        name: 'Customer Service Escalation',\n        category: 'Customer Support',\n        type: 'conversation',\n        complexity: 'Medium',\n        estimatedDuration: 15,\n        description: 'Test agent ability to handle escalated customer complaints and provide appropriate solutions.'\n    },\nexport const recentTestResults = [\n    {\n        testName: 'Basic Functionality',\n        status: 'Passed',\n        score: 98,\n        duration: 1250,\n        timestamp: '2023-07-15 14:30'\n    },\nexport const scenarioCategories = [{ name: 'Customer Support' }, { name: 'Document Processing' }, { name: 'Data Analysis' }, { name: 'Research' }, { name: 'Content Generation' }]"
+}

@@ -1,0 +1,14 @@
+{
+  "awsOptions": [
+    {
+      "name": "AWS S3",
+      "code": "NY",
+      "iconType": "s3"
+    },
+    {
+      "name": "AWS RDS",
+      "code": "RM",
+      "iconType": "rds"
+    }
+  ]
+}

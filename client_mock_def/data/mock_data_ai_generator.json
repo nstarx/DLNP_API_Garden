@@ -1,0 +1,190 @@
+{
+  "mockAppTypes": [
+    {
+      "value": "dashboard",
+      "label": "Dashboard"
+    },
+    {
+      "value": "api",
+      "label": "API Service"
+    },
+    {
+      "value": "webapp",
+      "label": "Web Application"
+    },
+    {
+      "value": "microservice",
+      "label": "Microservice"
+    },
+    {
+      "value": "analytics",
+      "label": "Analytics Platform"
+    },
+    {
+      "value": "monitoring",
+      "label": "Monitoring System"
+    }
+  ],
+  "mockMcpTools": [
+    {
+      "id": "database",
+      "name": "Database Connector"
+    },
+    {
+      "id": "api",
+      "name": "API Gateway"
+    },
+    {
+      "id": "auth",
+      "name": "Authentication"
+    },
+    {
+      "id": "cache",
+      "name": "Cache Management"
+    },
+    {
+      "id": "queue",
+      "name": "Message Queue"
+    },
+    {
+      "id": "storage",
+      "name": "File Storage"
+    },
+    {
+      "id": "ai",
+      "name": "AI/ML Services"
+    },
+    {
+      "id": "notifications",
+      "name": "Notifications"
+    },
+    {
+      "id": "logging",
+      "name": "Logging & Monitoring"
+    },
+    {
+      "id": "security",
+      "name": "Security Tools"
+    }
+  ],
+  "mockGenerationSteps": [
+    {
+      "id": 1,
+      "label": "Analyzing prompt"
+    },
+    {
+      "id": 2,
+      "label": "Selecting architecture"
+    },
+    {
+      "id": 3,
+      "label": "Configuring MCP tools"
+    },
+    {
+      "id": 4,
+      "label": "Generating components"
+    },
+    {
+      "id": 5,
+      "label": "Optimizing performance"
+    },
+    {
+      "id": 6,
+      "label": "Finalizing application"
+    }
+  ],
+  "mockGeneratedApps": [
+    {
+      "id": "gen-001",
+      "name": "Dashboard",
+      "description": "Real-time monitoring dashboard with intelligent alerts and predictive analytics",
+      "type": "Dashboard",
+      "status": "Ready to Deploy",
+      "features": [
+        "Real-time data visualization"
+      ],
+      "techStack": [
+        "Vue.js",
+        "Node.js",
+        "Chart.js"
+      ],
+      "mcpToolsUsed": [
+        "Database Connector",
+        "API Gateway",
+        "Notifications",
+        "AI/ML Services"
+      ],
+      "estimatedDeployTime": "5-10 minutes",
+      "resources": {
+        "cpu": "2 cores",
+        "memory": "4GB",
+        "storage": "20GB"
+      }
+    },
+    {
+      "id": "gen-002",
+      "name": "Customer Analytics API",
+      "description": "RESTful API service for customer behavior analytics with machine learning insights",
+      "type": "API Service",
+      "status": "Ready to Deploy",
+      "features": [
+        "Customer segmentation",
+        "Behavior prediction",
+        "Real-time analytics",
+        "RESTful endpoints",
+        "Rate limiting"
+      ],
+      "techStack": [
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Pandas",
+        "Scikit-learn"
+      ],
+      "mcpToolsUsed": [
+        "Database Connector",
+        "Cache Management",
+        "AI/ML Services",
+        "Security Tools"
+      ],
+      "estimatedDeployTime": "3-7 minutes",
+      "resources": {
+        "cpu": "4 cores",
+        "memory": "8GB",
+        "storage": "50GB"
+      }
+    }
+  ],
+  "mockAgenticAICapabilities": [
+    {
+      "id": "code-gen",
+      "name": "Code Generation",
+      "description": "Automatically generates optimized code based on requirements",
+      "status": "active"
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture Design",
+      "description": "Designs scalable application architecture",
+      "status": "active"
+    },
+    {
+      "id": "testing",
+      "name": "Test Generation",
+      "description": "Creates comprehensive test suites",
+      "status": "active"
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "Generates technical documentation",
+      "status": "active"
+    },
+    {
+      "id": "optimization",
+      "name": "Performance Optimization",
+      "description": "Optimizes application performance",
+      "status": "active"
+    }
+  ]
+}

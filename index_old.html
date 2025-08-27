@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Design Documentation Hub</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Marked.js for Markdown parsing - Latest version with fallback -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <script>
+        // Fallback if CDN fails
+        if (typeof marked === 'undefined') {
+            document.write('<script src="https://unpkg.com/marked@4.3.0/marked.min.js"><\/script>');
+        }
+    </script>
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-http.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom styles for markdown content */
+        .markdown-content {
+            max-width: none;
+        }
+        
+        .markdown-content h1 {
+            @apply text-4xl font-bold mb-6 text-gray-900 dark:text-white border-b pb-4;
+        }
+        
+        .markdown-content h2 {
+            @apply text-3xl font-bold mt-8 mb-4 text-gray-800 dark:text-gray-100;
+        }
+        
+        .markdown-content h3 {
+            @apply text-2xl font-semibold mt-6 mb-3 text-gray-700 dark:text-gray-200;
+        }
+        
+        .markdown-content h4 {
+            @apply text-xl font-semibold mt-4 mb-2 text-gray-600 dark:text-gray-300;
+        }
+        
+        .markdown-content h5 {
+            @apply text-lg font-medium mt-3 mb-2 text-gray-600 dark:text-gray-300;
+        }
+        
+        .markdown-content p {
+            @apply mb-4 text-gray-700 dark:text-gray-300 leading-relaxed;
+        }
+        
+        .markdown-content ul {
+            @apply list-disc list-inside mb-4 ml-4 text-gray-700 dark:text-gray-300;
+        }
+        
+        .markdown-content ol {
+            @apply list-decimal list-inside mb-4 ml-4 text-gray-700 dark:text-gray-300;
+        }
+        
+        .markdown-content li {
+            @apply mb-2;
+        }
+        
+        .markdown-content table {
+            @apply w-full mb-6 border-collapse;
+        }
+        
+        .markdown-content th {
+            @apply bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold text-gray-700 dark:text-gray-200;
+        }
+        
+        .markdown-content td {
+            @apply border border-gray-300 dark:border-gray-600 px-4 py-2 text-gray-700 dark:text-gray-300;
+        }
+        
+        .markdown-content tr:nth-child(even) {
+            @apply bg-gray-50 dark:bg-gray-800;
+        }
+        
+        /* Inline code */
+        .markdown-content :not(pre) > code {
+            @apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-pink-600 dark:text-pink-400;
+        }
+        
+        .markdown-content pre {
+            @apply bg-gray-900 p-4 rounded-lg overflow-x-auto mb-4 shadow-lg;
+            max-width: 100%;
+        }
+        
+        .markdown-content pre code {
+            @apply bg-transparent p-0 text-gray-100;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Fix for code blocks without language */
+        .markdown-content pre:not([class*="language-"]) {
+            @apply bg-gray-100 dark:bg-gray-800;
+        }
+        
+        .markdown-content pre:not([class*="language-"]) code {
+            @apply text-gray-800 dark:text-gray-200;
+        }
+        
+        .markdown-content blockquote {
+            @apply border-l-4 border-blue-500 pl-4 italic my-4 text-gray-600 dark:text-gray-400;
+        }
+        
+        .markdown-content hr {
+            @apply my-8 border-gray-300 dark:border-gray-600;
+        }
+        
+        .markdown-content a {
+            @apply text-blue-600 dark:text-blue-400 hover:underline;
+        }
+        
+        /* Sidebar scrollbar */
+        .sidebar-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .sidebar-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 3px;
+        }
+        
+        .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0;
+        }
+        
+        /* Loading animation */
+        .loader {
+            border-top-color: #3b82f6;
+            animation: spinner 1.5s linear infinite;
+        }
+        
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Table of Contents */
+        .toc-link {
+            @apply block py-1 px-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors;
+        }
+        
+        .toc-link.active {
+            @apply text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800 font-medium;
+        }
+        
+        /* Search highlight */
+        .search-highlight {
+            background-color: yellow;
+            color: black;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-code text-3xl text-blue-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">API Design Documentation Hub</h1>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Search endpoints..."
+                            class="px-4 py-2 pl-10 pr-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
+                        >
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-moon text-gray-700 dark:text-yellow-400"></i>
+                    </button>
+                    
+                    <!-- GitHub Link -->
+                    <a href="https://github.com" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex gap-6">
+            
+            <!-- Sidebar -->
+            <aside class="w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg h-fit sticky top-24">
+                <div class="p-4 border-b dark:border-gray-700">
+                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+                        <i class="fas fa-list mr-2"></i>
+                        API Documentation Files
+                    </h2>
+                </div>
+                
+                <!-- File List -->
+                <div id="fileList" class="sidebar-scroll max-h-[calc(100vh-200px)] overflow-y-auto p-4">
+                    <div class="flex items-center justify-center py-8">
+                        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-8 w-8"></div>
+                    </div>
+                </div>
+                
+                <!-- Statistics Summary -->
+                <div id="statsSummary" class="p-4 border-t dark:border-gray-700 hidden">
+                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Quick Stats</h3>
+                    <div class="space-y-1 text-xs text-gray-600 dark:text-gray-400">
+                        <div>Total Files: <span id="totalFiles" class="font-medium">0</span></div>
+                        <div>Total Endpoints: <span id="totalEndpoints" class="font-medium">0</span></div>
+                        <div>Last Updated: <span id="lastUpdated" class="font-medium">-</span></div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <main class="flex-1">
+                <!-- Welcome Screen -->
+                <div id="welcomeScreen" class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 text-center">
+                    <i class="fas fa-book-open text-6xl text-blue-600 mb-6"></i>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Welcome to API Documentation Hub</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">Select an API design document from the sidebar to view its contents</p>
+                    
+                    <div class="grid grid-cols-3 gap-6 mt-8 max-w-2xl mx-auto">
+                        <div class="text-center">
+                            <i class="fas fa-file-code text-3xl text-green-600 mb-2"></i>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Markdown Files</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-search text-3xl text-purple-600 mb-2"></i>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Search Endpoints</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-chart-bar text-3xl text-orange-600 mb-2"></i>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">API Statistics</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Document Content -->
+                <div id="documentContent" class="hidden">
+                    <!-- Document Header -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h2 id="docTitle" class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Document Title</h2>
+                                <p id="docPath" class="text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-file-alt mr-1"></i>
+                                    <span></span>
+                                </p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button onclick="copyLink()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors" title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </button>
+                                <button onclick="downloadMarkdown()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button onclick="toggleTOC()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors" title="Table of Contents">
+                                    <i class="fas fa-list-ul"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-6">
+                        <!-- Table of Contents -->
+                        <div id="tableOfContents" class="hidden w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 h-fit sticky top-24">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Table of Contents</h3>
+                            <nav id="tocList" class="space-y-1 max-h-[calc(100vh-200px)] overflow-y-auto">
+                                <!-- TOC will be generated here -->
+                            </nav>
+                        </div>
+                        
+                        <!-- Markdown Content -->
+                        <div class="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+                            <div id="markdownContent" class="markdown-content">
+                                <!-- Markdown will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loading State -->
+                <div id="loadingState" class="hidden bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 text-center">
+                    <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4 mx-auto"></div>
+                    <p class="text-gray-600 dark:text-gray-300">Loading document...</p>
+                </div>
+                
+                <!-- Error State -->
+                <div id="errorState" class="hidden bg-white dark:bg-gray-800 rounded-lg shadow-lg p-12 text-center">
+                    <i class="fas fa-exclamation-triangle text-6xl text-red-500 mb-6"></i>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Error Loading Document</h2>
+                    <p id="errorMessage" class="text-gray-600 dark:text-gray-300"></p>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 shadow-md mt-12">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400">
+            <p>API Documentation Hub · Built with <i class="fas fa-heart text-red-500"></i> for developers</p>
+            <p class="text-sm mt-2">Powered by Marked.js, Prism.js, and Tailwind CSS</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Configuration - Load files from ./design folder
+        const API_FILES = [
+            'design/admin-rest-api-design.md',
+            'design/agentic-rest-api-design.md',
+            'design/ai-system-rest-api-design.md',
+            'design/ai-catalog-rest-api-design.md',
+            'design/assets-platform-rest-api-design.md',
+            'design/cicd-platform-rest-api-design.md',
+            'design/composables-ai-catalog-rest-api-design.md',
+            'design/connections-platform-rest-api-design.md',
+            'design/data-platform-rest-api-design.md',
+            'design/deployments-platform-rest-api-design.md',
+            'design/federation-fl-platform-rest-api-design.md',
+            'design/rag-platform-rest-api-design.md',
+            'design/spark-services-platform-rest-api-design.md',
+            'design/views-ui-platform-rest-api-design.md',
+            'design/api-statistics-report.md',
+            'design/sample-rest-api-design.md'
+        ];
+        
+        // State
+        let currentFile = null;
+        let currentContent = null;
+        let fileStats = {};
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if marked is loaded
+            if (typeof marked === 'undefined') {
+                console.error('Marked.js not loaded!');
+                alert('Error: Markdown parser not loaded. Please refresh the page.');
+                return;
+            }
+            console.log('Marked.js version:', marked.version || 'unknown');
+            
+            initializeTheme();
+            loadFileList();
+            setupEventListeners();
+            checkURLHash();
+        });
+        
+        // Theme Management
+        function initializeTheme() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            updateThemeIcon(theme);
+        }
+        
+        function updateThemeIcon(theme) {
+            const icon = document.querySelector('#themeToggle i');
+            icon.className = theme === 'dark' ? 'fas fa-sun text-yellow-400' : 'fas fa-moon text-gray-700';
+        }
+        
+        // Event Listeners
+        function setupEventListeners() {
+            // Theme toggle
+            document.getElementById('themeToggle').addEventListener('click', () => {
+                const isDark = document.documentElement.classList.toggle('dark');
+                const theme = isDark ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+                updateThemeIcon(theme);
+            });
+            
+            // Search functionality
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                filterDocuments(searchTerm);
+            });
+            
+            // Handle browser back/forward
+            window.addEventListener('popstate', checkURLHash);
+        }
+        
+        // Load File List
+        async function loadFileList() {
+            const fileListEl = document.getElementById('fileList');
+            const availableFiles = [];
+            
+            // Check which files exist
+            for (const file of API_FILES) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        availableFiles.push(file);
+                        // Extract basic stats from content
+                        const content = await response.text();
+                        fileStats[file] = extractFileStats(content);
+                    }
+                } catch (error) {
+                    console.log(`File ${file} not found`);
+                }
+            }
+            
+            // Render file list
+            if (availableFiles.length > 0) {
+                renderFileList(availableFiles);
+                updateStatsSummary(availableFiles);
+            } else {
+                fileListEl.innerHTML = `
+                    <div class="text-center py-8">
+                        <i class="fas fa-folder-open text-4xl text-gray-400 mb-4"></i>
+                        <p class="text-gray-600 dark:text-gray-400">No API documentation files found</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">Add .md files to this directory</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Extract stats from markdown content
+        function extractFileStats(content) {
+            const endpointMatches = content.match(/^(GET|POST|PUT|DELETE|PATCH)\s+\/api/gm) || [];
+            const lines = content.split('\n').length;
+            return {
+                endpoints: endpointMatches.length,
+                lines: lines,
+                size: (content.length / 1024).toFixed(1) + ' KB'
+            };
+        }
+        
+        // Render file list
+        function renderFileList(files) {
+            const fileListEl = document.getElementById('fileList');
+            const categories = categorizeFiles(files);
+            
+            let html = '';
+            for (const [category, categoryFiles] of Object.entries(categories)) {
+                html += `
+                    <div class="mb-6">
+                        <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">${category}</h3>
+                        <div class="space-y-1">
+                `;
+                
+                categoryFiles.forEach(file => {
+                    const displayName = formatFileName(file);
+                    const stats = fileStats[file];
+                    const icon = getFileIcon(file);
+                    
+                    html += `
+                        <a href="#${file}" 
+                           onclick="loadDocument('${file}'); return false;"
+                           class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors cursor-pointer group"
+                           data-file="${file}">
+                            <div class="flex items-start">
+                                <i class="${icon} text-blue-500 mt-1 mr-3"></i>
+                                <div class="flex-1">
+                                    <div class="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                        ${displayName}
+                                    </div>
+                                    ${stats ? `
+                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                            ${stats.endpoints} endpoints · ${stats.size}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            }
+            
+            fileListEl.innerHTML = html;
+        }
+        
+        // Categorize files
+        function categorizeFiles(files) {
+            const categories = {
+                'Core Services': [],
+                'Platform Services': [],
+                'Infrastructure': [],
+                'Reports': [],
+                'Other': []
+            };
+            
+            files.forEach(file => {
+                if (file.includes('admin') || file.includes('user') || file.includes('governance')) {
+                    categories['Core Services'].push(file);
+                } else if (file.includes('platform') || file.includes('services')) {
+                    categories['Platform Services'].push(file);
+                } else if (file.includes('deployment') || file.includes('cicd') || file.includes('federation')) {
+                    categories['Infrastructure'].push(file);
+                } else if (file.includes('report') || file.includes('statistics')) {
+                    categories['Reports'].push(file);
+                } else {
+                    categories['Other'].push(file);
+                }
+            });
+            
+            // Remove empty categories
+            return Object.fromEntries(
+                Object.entries(categories).filter(([_, files]) => files.length > 0)
+            );
+        }
+        
+        // Format file name for display
+        function formatFileName(filename) {
+            return filename
+                .replace(/-rest-api-design\.md$/, '')
+                .replace(/-/g, ' ')
+                .replace(/\b\w/g, l => l.toUpperCase())
+                .replace(/Api/g, 'API')
+                .replace(/Ai/g, 'AI')
+                .replace(/Fl/g, 'FL')
+                .replace(/Cicd/g, 'CI/CD')
+                .replace(/Rag/g, 'RAG')
+                .replace(/Ui/g, 'UI');
+        }
+        
+        // Get appropriate icon for file
+        function getFileIcon(filename) {
+            if (filename.includes('admin')) return 'fas fa-user-shield';
+            if (filename.includes('ai') || filename.includes('ml')) return 'fas fa-brain';
+            if (filename.includes('data')) return 'fas fa-database';
+            if (filename.includes('deployment')) return 'fas fa-rocket';
+            if (filename.includes('federation')) return 'fas fa-network-wired';
+            if (filename.includes('monitoring')) return 'fas fa-chart-line';
+            if (filename.includes('report') || filename.includes('statistics')) return 'fas fa-chart-bar';
+            if (filename.includes('spark')) return 'fas fa-bolt';
+            if (filename.includes('view') || filename.includes('ui')) return 'fas fa-palette';
+            return 'fas fa-file-code';
+        }
+        
+        // Load and display document
+        async function loadDocument(filename) {
+            // Update UI state
+            showLoading();
+            updateActiveFile(filename);
+            
+            try {
+                console.log('Fetching file:', filename);
+                const response = await fetch(filename);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const contentType = response.headers.get("content-type");
+                console.log('Content-Type:', contentType);
+                
+                const content = await response.text();
+                console.log('Fetched content length:', content.length);
+                console.log('Content starts with:', content.substring(0, 100));
+                
+                // Check if content looks like markdown
+                if (!content.includes('#') && !content.includes('*') && !content.includes('-')) {
+                    console.warn('Content does not appear to be markdown!');
+                }
+                
+                currentFile = filename;
+                currentContent = content;
+                
+                // Update URL
+                window.history.pushState({ file: filename }, '', `#${filename}`);
+                
+                // Render content
+                renderDocument(content, filename);
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+            } catch (error) {
+                console.error('Error loading document:', error);
+                showError(`Failed to load ${filename}: ${error.message}`);
+            }
+        }
+        
+        // Render markdown document
+        function renderDocument(content, filename) {
+            console.log('Rendering document:', filename);
+            console.log('Content preview:', content.substring(0, 200));
+            
+            // Update header
+            document.getElementById('docTitle').textContent = formatFileName(filename);
+            document.getElementById('docPath').querySelector('span').textContent = filename;
+            
+            // Configure marked options for better markdown rendering
+            marked.setOptions({
+                renderer: new marked.Renderer(),
+                highlight: function(code, lang) {
+                    // Handle language aliases
+                    const languageMap = {
+                        'js': 'javascript',
+                        'ts': 'typescript',
+                        'sh': 'bash',
+                        'yml': 'yaml',
+                        'http': 'http',
+                        'json': 'json'
+                    };
+                    
+                    const mappedLang = languageMap[lang] || lang;
+                    
+                    if (mappedLang && Prism.languages[mappedLang]) {
+                        try {
+                            return Prism.highlight(code, Prism.languages[mappedLang], mappedLang);
+                        } catch (e) {
+                            console.error('Prism highlight error:', e);
+                        }
+                    }
+                    // Return escaped code if no language match
+                    return code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                },
+                breaks: true,
+                gfm: true,
+                tables: true,
+                pedantic: false,
+                sanitize: false,
+                smartLists: true,
+                smartypants: false,
+                xhtml: false,
+                headerIds: true,
+                mangle: false
+            });
+            
+            // Parse the markdown content
+            let html = '';
+            try {
+                html = marked.parse(content);
+                console.log('Markdown parsed successfully');
+            } catch (error) {
+                console.error('Markdown parsing error:', error);
+                // Fallback: display raw content with basic formatting
+                html = '<pre>' + content.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>';
+            }
+            
+            // Check if HTML was generated
+            if (!html || html.trim() === '') {
+                console.error('No HTML generated from markdown');
+                html = '<p>Error: Could not render markdown content</p>';
+            }
+            
+            // Post-process HTML to ensure proper structure
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            // Fix code blocks - ensure they have proper classes
+            tempDiv.querySelectorAll('pre code').forEach(block => {
+                const parent = block.parentElement;
+                const className = block.className || '';
+                if (className.includes('language-')) {
+                    parent.className = className;
+                }
+            });
+            
+            // Set processed HTML
+            const markdownElement = document.getElementById('markdownContent');
+            markdownElement.innerHTML = tempDiv.innerHTML;
+            
+            console.log('HTML set to element, checking result...');
+            console.log('Element contains:', markdownElement.innerHTML.substring(0, 200));
+            
+            // Generate table of contents
+            generateTableOfContents();
+            
+            // Show content
+            showContent();
+            
+            // Apply syntax highlighting to all code blocks
+            setTimeout(() => {
+                Prism.highlightAll();
+            }, 100);
+        }
+        
+        // Generate table of contents
+        function generateTableOfContents() {
+            const content = document.getElementById('markdownContent');
+            const headings = content.querySelectorAll('h2, h3, h4');
+            const tocList = document.getElementById('tocList');
+            
+            if (headings.length === 0) {
+                tocList.innerHTML = '<p class="text-sm text-gray-500 dark:text-gray-400">No headings found</p>';
+                return;
+            }
+            
+            let tocHTML = '';
+            headings.forEach((heading, index) => {
+                const id = `heading-${index}`;
+                heading.id = id;
+                
+                const level = parseInt(heading.tagName.charAt(1));
+                const indent = (level - 2) * 16;
+                
+                tocHTML += `
+                    <a href="#${id}" 
+                       class="toc-link"
+                       style="padding-left: ${indent + 8}px"
+                       onclick="scrollToHeading('${id}'); return false;">
+                        ${heading.textContent}
+                    </a>
+                `;
+            });
+            
+            tocList.innerHTML = tocHTML;
+        }
+        
+        // Scroll to heading
+        function scrollToHeading(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Update active TOC item
+                document.querySelectorAll('.toc-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                event.target.classList.add('active');
+            }
+        }
+        
+        // UI State Management
+        function showLoading() {
+            document.getElementById('welcomeScreen').classList.add('hidden');
+            document.getElementById('documentContent').classList.add('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('loadingState').classList.remove('hidden');
+        }
+        
+        function showContent() {
+            document.getElementById('welcomeScreen').classList.add('hidden');
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('documentContent').classList.remove('hidden');
+        }
+        
+        function showError(message) {
+            document.getElementById('welcomeScreen').classList.add('hidden');
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('documentContent').classList.add('hidden');
+            document.getElementById('errorState').classList.remove('hidden');
+            document.getElementById('errorMessage').textContent = message;
+        }
+        
+        // Update active file in sidebar
+        function updateActiveFile(filename) {
+            document.querySelectorAll('[data-file]').forEach(el => {
+                el.classList.remove('bg-blue-50', 'dark:bg-blue-900/20', 'border-l-4', 'border-blue-500');
+                if (el.dataset.file === filename) {
+                    el.classList.add('bg-blue-50', 'dark:bg-blue-900/20', 'border-l-4', 'border-blue-500');
+                }
+            });
+        }
+        
+        // Toggle table of contents
+        function toggleTOC() {
+            document.getElementById('tableOfContents').classList.toggle('hidden');
+        }
+        
+        // Copy link to clipboard
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard!');
+            });
+        }
+        
+        // Download markdown file
+        function downloadMarkdown() {
+            if (!currentContent || !currentFile) return;
+            
+            const blob = new Blob([currentContent], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = currentFile;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        // Filter documents based on search
+        function filterDocuments(searchTerm) {
+            document.querySelectorAll('[data-file]').forEach(el => {
+                const filename = el.dataset.file.toLowerCase();
+                const displayName = el.querySelector('.font-medium').textContent.toLowerCase();
+                const visible = filename.includes(searchTerm) || displayName.includes(searchTerm);
+                el.style.display = visible ? 'block' : 'none';
+            });
+        }
+        
+        // Update stats summary
+        function updateStatsSummary(files) {
+            let totalEndpoints = 0;
+            files.forEach(file => {
+                if (fileStats[file]) {
+                    totalEndpoints += fileStats[file].endpoints;
+                }
+            });
+            
+            document.getElementById('totalFiles').textContent = files.length;
+            document.getElementById('totalEndpoints').textContent = totalEndpoints;
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+            document.getElementById('statsSummary').classList.remove('hidden');
+        }
+        
+        // Check URL hash on load
+        function checkURLHash() {
+            const hash = window.location.hash.slice(1);
+            if (hash && API_FILES.includes(hash)) {
+                loadDocument(hash);
+            }
+        }
+    </script>
+</body>
+</html>

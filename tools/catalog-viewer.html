@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Catalog Viewer & Editor</title>
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-bg: #1f2937;
+            --light-bg: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 30px;
+            color: white;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .header.collapsed {
+            padding: 15px 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: font-size 0.3s ease;
+        }
+        
+        .header.collapsed h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            max-height: 30px;
+        }
+        
+        .header.collapsed .subtitle {
+            max-height: 0;
+            opacity: 0;
+            margin: 0;
+        }
+        
+        .header-toggle {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            border-radius: 8px;
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+        
+        .header-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: white;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .toolbar {
+            background: var(--light-bg);
+            padding: 20px 30px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .toolbar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--dark-bg);
+            border: 2px solid #e5e7eb;
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-bg);
+        }
+
+        .content-area {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            height: calc(100vh - 280px);
+            transition: all 0.3s ease;
+        }
+        
+        .content-area.sidebar-collapsed {
+            grid-template-columns: 60px 1fr;
+        }
+        
+        .content-area.header-collapsed {
+            height: calc(100vh - 200px);
+        }
+        
+        .content-area.header-collapsed.sidebar-collapsed {
+            height: calc(100vh - 200px);
+            grid-template-columns: 60px 1fr;
+        }
+
+        .sidebar {
+            background: var(--light-bg);
+            border-right: 1px solid #e5e7eb;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+            transition: width 0.3s ease;
+        }
+        
+        .sidebar.collapsed {
+            width: 60px;
+            padding: 20px 10px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            white-space: nowrap;
+        }
+        
+        .sidebar-toggle {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+        
+        .sidebar-toggle:hover {
+            background: #2563eb;
+            transform: scale(1.1);
+        }
+        
+        .sidebar.collapsed .sidebar-toggle {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        
+        .sidebar-content {
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+        
+        .sidebar.collapsed .sidebar-content {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .sidebar.collapsed h3 span {
+            display: none;
+        }
+        
+        .expand-all-groups {
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            color: var(--primary-color);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .expand-all-groups:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .group-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .group-item:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .group-header {
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .group-header:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .group-title {
+            font-weight: 600;
+            color: var(--dark-bg);
+        }
+
+        .group-count {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .file-list {
+            display: none;
+            padding: 0 15px 15px;
+        }
+
+        .file-list.expanded {
+            display: block;
+        }
+
+        .file-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: var(--light-bg);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .file-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateX(5px);
+        }
+
+        .file-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .main-content {
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .tab {
+            padding: 12px 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #6b7280;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tab:hover {
+            color: var(--primary-color);
+        }
+
+        .tab.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .info-card h4 {
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .info-card h4::after {
+            content: '▼';
+            margin-left: auto;
+            transition: transform 0.3s;
+            font-size: 0.8rem;
+        }
+        
+        .info-card.collapsed h4::after {
+            transform: rotate(-90deg);
+        }
+        
+        .info-card-content {
+            max-height: 2000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+        
+        .info-card.collapsed .info-card-content {
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        .collapse-all-btn {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 50;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .collapse-all-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            padding: 15px;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: var(--dark-bg);
+            font-weight: 600;
+        }
+
+        .editor-container {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .CodeMirror {
+            height: 400px;
+            font-size: 14px;
+        }
+
+        .mermaid-container {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            min-height: 400px;
+            position: relative;
+            overflow: auto;
+        }
+        
+        .mermaid-wrapper {
+            transform-origin: 0 0;
+            transition: transform 0.3s ease;
+            cursor: move;
+        }
+        
+        .diagram-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            gap: 8px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .diagram-controls button {
+            padding: 8px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .diagram-controls button:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .fullscreen-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+        }
+        
+        .fullscreen-container.active {
+            display: flex;
+        }
+        
+        .fullscreen-header {
+            background: var(--dark-bg);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fullscreen-content {
+            flex: 1;
+            overflow: auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .action-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab-save {
+            background: var(--success-color);
+        }
+
+        .fab-export {
+            background: var(--warning-color);
+        }
+
+        .toast {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: var(--success-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: none;
+            animation: slideIn 0.3s;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .spinner {
+            border: 4px solid var(--light-bg);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            color: #6b7280;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background: #ccc;
+            border-radius: 34px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: var(--primary-color);
+        }
+
+        .toggle-slider {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(24px);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header" id="header">
+            <h1>
+                <i class="fas fa-folder-tree"></i>
+                JSON Catalog Viewer & Editor
+            </h1>
+            <div class="subtitle">Interactive catalog management with visualization and editing capabilities</div>
+            <button class="header-toggle" onclick="toggleHeader()" title="Toggle Header">
+                <i class="fas fa-chevron-up" id="headerToggleIcon"></i>
+            </button>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button class="btn-primary" onclick="loadCatalog('json-catalog.json')">
+                <i class="fas fa-file-code"></i> Load JSON Catalog
+            </button>
+            <button class="btn-primary" onclick="loadCatalog('json-catalog.yaml')">
+                <i class="fas fa-file-alt"></i> Load YAML Catalog
+            </button>
+            <button class="btn-secondary" onclick="loadCompactCatalog()">
+                <i class="fas fa-compress"></i> Compact View
+            </button>
+            <button class="btn-secondary" onclick="toggleEditMode()">
+                <i class="fas fa-edit"></i> Edit Mode
+                <div class="toggle-switch" id="editToggle">
+                    <div class="toggle-slider"></div>
+                </div>
+            </button>
+            <button class="btn-secondary" onclick="refreshDiagram()">
+                <i class="fas fa-sync-alt"></i> Refresh Diagram
+            </button>
+            <input type="file" id="fileInput" style="display: none;" onchange="handleFileUpload(event)">
+            <button class="btn-secondary" onclick="document.getElementById('fileInput').click()">
+                <i class="fas fa-upload"></i> Upload Catalog
+            </button>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <button class="sidebar-toggle" onclick="toggleSidebar()" title="Toggle Sidebar">
+                    <i class="fas fa-chevron-left" id="sidebarToggleIcon"></i>
+                </button>
+                <h3><span>Catalog Explorer</span></h3>
+                <div class="sidebar-content">
+                    <input type="text" class="search-box" id="searchBox" placeholder="Search files..." onkeyup="filterFiles()">
+                    <button class="expand-all-groups" onclick="toggleAllGroups()">
+                        <i class="fas fa-folder-open"></i> Expand All Groups
+                    </button>
+                    <div id="groupList" class="group-list">
+                        <!-- Groups will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('overview')">
+                        <i class="fas fa-chart-pie"></i> Overview
+                    </button>
+                    <button class="tab" onclick="switchTab('details')">
+                        <i class="fas fa-info-circle"></i> File Details
+                    </button>
+                    <button class="tab" onclick="switchTab('editor')">
+                        <i class="fas fa-code"></i> YAML Editor
+                    </button>
+                    <button class="tab" onclick="switchTab('diagram')">
+                        <i class="fas fa-project-diagram"></i> Diagram
+                    </button>
+                    <button class="tab" onclick="switchTab('statistics')">
+                        <i class="fas fa-chart-bar"></i> Statistics
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div id="overview" class="tab-content active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalFiles">0</div>
+                            <div class="stat-label">Total Files</div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <div class="stat-value" id="totalSize">0 KB</div>
+                            <div class="stat-label">Total Size</div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <div class="stat-value" id="totalGroups">0</div>
+                            <div class="stat-label">Groups</div>
+                        </div>
+                        <div class="stat-card" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                            <div class="stat-value" id="avgFileSize">0 KB</div>
+                            <div class="stat-label">Average File Size</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card" onclick="toggleCard(this)">
+                        <h4><i class="fas fa-layer-group"></i> Group Distribution</h4>
+                        <div class="info-card-content">
+                            <div style="position: relative; height: 300px;">
+                                <canvas id="groupChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="details" class="tab-content">
+                    <div class="empty-state" id="detailsEmpty">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <h3>Select a file to view details</h3>
+                        <p>Click on any file in the sidebar to see its information</p>
+                    </div>
+                    <div id="fileDetails" style="display: none;">
+                        <!-- File details will be populated here -->
+                    </div>
+                </div>
+
+                <div id="editor" class="tab-content">
+                    <div class="info-card" onclick="toggleCard(this)">
+                        <h4><i class="fas fa-code"></i> YAML Editor</h4>
+                        <div class="info-card-content">
+                            <div class="editor-container">
+                                <textarea id="yamlEditor"></textarea>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <button class="btn-primary" onclick="saveYaml()">
+                                    <i class="fas fa-save"></i> Save Changes
+                                </button>
+                                <button class="btn-secondary" onclick="formatYaml()">
+                                    <i class="fas fa-align-left"></i> Format YAML
+                                </button>
+                                <button class="btn-secondary" onclick="validateYaml()">
+                                    <i class="fas fa-check-circle"></i> Validate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="diagram" class="tab-content">
+                    <div class="info-card" onclick="toggleCard(this)">
+                        <h4><i class="fas fa-project-diagram"></i> Catalog Structure Diagram</h4>
+                        <div class="info-card-content">
+                            <div class="mermaid-container" id="mermaidContainer">
+                                <div class="diagram-controls">
+                                    <button onclick="zoomDiagram(1.2)" title="Zoom In">
+                                        <i class="fas fa-search-plus"></i>
+                                    </button>
+                                    <button onclick="zoomDiagram(0.8)" title="Zoom Out">
+                                        <i class="fas fa-search-minus"></i>
+                                    </button>
+                                    <button onclick="resetDiagram()" title="Reset View">
+                                        <i class="fas fa-compress-arrows-alt"></i>
+                                    </button>
+                                    <button onclick="toggleFullscreen()" title="Fullscreen">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                                <div class="mermaid-wrapper" id="mermaidWrapper">
+                                    <div class="mermaid" id="mermaidDiagram">
+                                        <!-- Mermaid diagram will be rendered here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <button class="btn-primary" onclick="exportDiagram('svg')">
+                                    <i class="fas fa-download"></i> Export as SVG
+                                </button>
+                                <button class="btn-secondary" onclick="exportDiagram('png')">
+                                    <i class="fas fa-image"></i> Export as PNG
+                                </button>
+                                <button class="btn-secondary" onclick="copyMermaidCode()">
+                                    <i class="fas fa-copy"></i> Copy Mermaid Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="statistics" class="tab-content">
+                    <div class="info-card" onclick="toggleCard(this)">
+                        <h4><i class="fas fa-chart-bar"></i> Detailed Statistics</h4>
+                        <div class="info-card-content">
+                            <div id="statisticsContent">
+                                <!-- Statistics will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collapse All Button -->
+    <button class="collapse-all-btn" onclick="toggleAllCards()" title="Toggle All Panels">
+        <i class="fas fa-compress-alt"></i> Collapse All
+    </button>
+    
+    <!-- Floating Action Buttons -->
+    <div class="action-buttons">
+        <button class="fab fab-save" onclick="saveCatalog()" title="Save Catalog">
+            <i class="fas fa-save"></i>
+        </button>
+        <button class="fab fab-export" onclick="exportCatalog()" title="Export Catalog">
+            <i class="fas fa-download"></i>
+        </button>
+    </div>
+    
+    <!-- Fullscreen Container -->
+    <div class="fullscreen-container" id="fullscreenContainer">
+        <div class="fullscreen-header">
+            <h3>Diagram View - Fullscreen Mode</h3>
+            <button onclick="toggleFullscreen()" style="background: transparent; color: white; border: none; cursor: pointer; font-size: 24px;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="fullscreen-content" id="fullscreenContent">
+            <!-- Fullscreen diagram will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Loading catalog...</p>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/yaml/yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Global variables
+        let catalogData = null;
+        let currentFile = null;
+        let editMode = false;
+        let yamlEditor = null;
+        let groupChart = null;
+        let diagramScale = 1;
+        let isDragging = false;
+        let dragStartX = 0;
+        let dragStartY = 0;
+        let translateX = 0;
+        let translateY = 0;
+        let allCardsCollapsed = false;
+        let allGroupsExpanded = false;
+        let sidebarCollapsed = false;
+        let headerCollapsed = false;
+
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#3b82f6',
+                primaryBorderColor: '#2563eb',
+                primaryTextColor: '#fff'
+            },
+            flowchart: {
+                useMaxWidth: false
+            }
+        });
+
+        // Initialize CodeMirror and diagram controls
+        document.addEventListener('DOMContentLoaded', function() {
+            yamlEditor = CodeMirror.fromTextArea(document.getElementById('yamlEditor'), {
+                mode: 'yaml',
+                theme: 'monokai',
+                lineNumbers: true,
+                lineWrapping: true,
+                autoCloseBrackets: true,
+                matchBrackets: true,
+                indentUnit: 2,
+                tabSize: 2
+            });
+            
+            // Initialize diagram pan/drag functionality
+            initializeDiagramControls();
+        });
+        
+        // Initialize diagram controls
+        function initializeDiagramControls() {
+            const container = document.getElementById('mermaidContainer');
+            const wrapper = document.getElementById('mermaidWrapper');
+            
+            if (container && wrapper) {
+                container.addEventListener('mousedown', startDrag);
+                container.addEventListener('mousemove', drag);
+                container.addEventListener('mouseup', stopDrag);
+                container.addEventListener('mouseleave', stopDrag);
+                container.addEventListener('wheel', handleWheel);
+            }
+        }
+        
+        // Diagram control functions
+        function startDrag(e) {
+            if (e.target.closest('.diagram-controls')) return;
+            isDragging = true;
+            dragStartX = e.clientX - translateX;
+            dragStartY = e.clientY - translateY;
+            document.getElementById('mermaidWrapper').style.cursor = 'grabbing';
+        }
+        
+        function drag(e) {
+            if (!isDragging) return;
+            e.preventDefault();
+            translateX = e.clientX - dragStartX;
+            translateY = e.clientY - dragStartY;
+            updateTransform();
+        }
+        
+        function stopDrag() {
+            isDragging = false;
+            const wrapper = document.getElementById('mermaidWrapper');
+            if (wrapper) wrapper.style.cursor = 'move';
+        }
+        
+        function handleWheel(e) {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                zoomDiagram(delta);
+            }
+        }
+        
+        function updateTransform() {
+            const wrapper = document.getElementById('mermaidWrapper');
+            if (wrapper) {
+                wrapper.style.transform = `translate(${translateX}px, ${translateY}px) scale(${diagramScale})`;
+            }
+        }
+        
+        // Zoom controls
+        function zoomDiagram(factor) {
+            diagramScale *= factor;
+            diagramScale = Math.min(Math.max(diagramScale, 0.1), 5);
+            updateTransform();
+        }
+        
+        function resetDiagram() {
+            diagramScale = 1;
+            translateX = 0;
+            translateY = 0;
+            updateTransform();
+        }
+        
+        // Fullscreen toggle
+        function toggleFullscreen() {
+            const fullscreenContainer = document.getElementById('fullscreenContainer');
+            const fullscreenContent = document.getElementById('fullscreenContent');
+            const mermaidContainer = document.getElementById('mermaidContainer');
+            
+            if (fullscreenContainer.classList.contains('active')) {
+                fullscreenContainer.classList.remove('active');
+                document.getElementById('diagram').querySelector('.info-card-content').appendChild(mermaidContainer);
+            } else {
+                fullscreenContainer.classList.add('active');
+                fullscreenContent.appendChild(mermaidContainer);
+                resetDiagram();
+            }
+        }
+        
+        // Toggle individual card
+        function toggleCard(card) {
+            if (event.target.tagName === 'BUTTON' || event.target.tagName === 'I') return;
+            card.classList.toggle('collapsed');
+        }
+        
+        // Toggle all cards
+        function toggleAllCards() {
+            const cards = document.querySelectorAll('.info-card');
+            const button = document.querySelector('.collapse-all-btn');
+            
+            allCardsCollapsed = !allCardsCollapsed;
+            
+            cards.forEach(card => {
+                if (allCardsCollapsed) {
+                    card.classList.add('collapsed');
+                } else {
+                    card.classList.remove('collapsed');
+                }
+            });
+            
+            if (button) {
+                button.innerHTML = allCardsCollapsed 
+                    ? '<i class="fas fa-expand-alt"></i> Expand All' 
+                    : '<i class="fas fa-compress-alt"></i> Collapse All';
+            }
+        }
+
+        // Load catalog function
+        async function loadCatalog(filename) {
+            showLoading(true);
+            try {
+                const response = await fetch(filename);
+                const text = await response.text();
+                
+                if (filename.endsWith('.yaml')) {
+                    catalogData = jsyaml.load(text);
+                    yamlEditor.setValue(text);
+                } else {
+                    catalogData = JSON.parse(text);
+                    yamlEditor.setValue(jsyaml.dump(catalogData));
+                }
+                
+                renderCatalog();
+                updateStatistics();
+                generateMermaidDiagram();
+                showToast('Catalog loaded successfully!', 'success');
+            } catch (error) {
+                showToast('Error loading catalog: ' + error.message, 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // Render catalog in sidebar
+        function renderCatalog() {
+            if (!catalogData || !catalogData.files) return;
+            
+            const groupList = document.getElementById('groupList');
+            groupList.innerHTML = '';
+            
+            // Group files by their group
+            const groups = {};
+            catalogData.files.forEach(file => {
+                const groupName = file.group || 'Uncategorized';
+                if (!groups[groupName]) {
+                    groups[groupName] = [];
+                }
+                groups[groupName].push(file);
+            });
+            
+            // Render each group
+            Object.entries(groups).forEach(([groupName, files]) => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'group-item';
+                
+                const groupHeader = document.createElement('div');
+                groupHeader.className = 'group-header';
+                groupHeader.innerHTML = `
+                    <span class="group-title">${groupName}</span>
+                    <span class="group-count">${files.length}</span>
+                `;
+                groupHeader.onclick = () => toggleGroup(groupDiv);
+                
+                const fileList = document.createElement('div');
+                fileList.className = 'file-list';
+                
+                files.forEach(file => {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    fileItem.textContent = file.fileName;
+                    fileItem.onclick = () => selectFile(file, fileItem);
+                    fileList.appendChild(fileItem);
+                });
+                
+                groupDiv.appendChild(groupHeader);
+                groupDiv.appendChild(fileList);
+                groupList.appendChild(groupDiv);
+            });
+        }
+
+        // Toggle group expansion
+        function toggleGroup(groupDiv) {
+            const fileList = groupDiv.querySelector('.file-list');
+            fileList.classList.toggle('expanded');
+            
+            // Update expand all button text if needed
+            updateExpandAllButton();
+        }
+        
+        // Toggle all groups
+        function toggleAllGroups() {
+            const fileLists = document.querySelectorAll('.file-list');
+            const button = document.querySelector('.expand-all-groups');
+            
+            allGroupsExpanded = !allGroupsExpanded;
+            
+            fileLists.forEach(fileList => {
+                if (allGroupsExpanded) {
+                    fileList.classList.add('expanded');
+                } else {
+                    fileList.classList.remove('expanded');
+                }
+            });
+            
+            if (button) {
+                button.innerHTML = allGroupsExpanded
+                    ? '<i class="fas fa-folder-minus"></i> Collapse All Groups'
+                    : '<i class="fas fa-folder-open"></i> Expand All Groups';
+            }
+        }
+        
+        // Update expand all button based on current state
+        function updateExpandAllButton() {
+            const fileLists = document.querySelectorAll('.file-list');
+            const expandedLists = document.querySelectorAll('.file-list.expanded');
+            const button = document.querySelector('.expand-all-groups');
+            
+            if (button) {
+                if (expandedLists.length === fileLists.length && fileLists.length > 0) {
+                    allGroupsExpanded = true;
+                    button.innerHTML = '<i class="fas fa-folder-minus"></i> Collapse All Groups';
+                } else if (expandedLists.length === 0) {
+                    allGroupsExpanded = false;
+                    button.innerHTML = '<i class="fas fa-folder-open"></i> Expand All Groups';
+                }
+            }
+        }
+        
+        // Toggle sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const contentArea = document.querySelector('.content-area');
+            const icon = document.getElementById('sidebarToggleIcon');
+            
+            sidebarCollapsed = !sidebarCollapsed;
+            
+            if (sidebarCollapsed) {
+                sidebar.classList.add('collapsed');
+                contentArea.classList.add('sidebar-collapsed');
+                icon.className = 'fas fa-chevron-right';
+            } else {
+                sidebar.classList.remove('collapsed');
+                contentArea.classList.remove('sidebar-collapsed');
+                icon.className = 'fas fa-chevron-left';
+            }
+        }
+        
+        // Toggle header
+        function toggleHeader() {
+            const header = document.getElementById('header');
+            const contentArea = document.querySelector('.content-area');
+            const icon = document.getElementById('headerToggleIcon');
+            const toolbar = document.querySelector('.toolbar');
+            
+            headerCollapsed = !headerCollapsed;
+            
+            if (headerCollapsed) {
+                header.classList.add('collapsed');
+                contentArea.classList.add('header-collapsed');
+                icon.className = 'fas fa-chevron-down';
+                // Optional: also minimize toolbar
+                if (toolbar) {
+                    toolbar.style.padding = '10px 30px';
+                }
+            } else {
+                header.classList.remove('collapsed');
+                contentArea.classList.remove('header-collapsed');
+                icon.className = 'fas fa-chevron-up';
+                if (toolbar) {
+                    toolbar.style.padding = '20px 30px';
+                }
+            }
+        }
+
+        // Select file
+        function selectFile(file, element) {
+            // Remove active class from all file items
+            document.querySelectorAll('.file-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to selected item
+            element.classList.add('active');
+            
+            currentFile = file;
+            showFileDetails(file);
+            switchTab('details');
+        }
+
+        // Show file details
+        function showFileDetails(file) {
+            const detailsEmpty = document.getElementById('detailsEmpty');
+            const fileDetails = document.getElementById('fileDetails');
+            
+            detailsEmpty.style.display = 'none';
+            fileDetails.style.display = 'block';
+            
+            fileDetails.innerHTML = `
+                <div class="info-card" onclick="toggleCard(this)">
+                    <h4><i class="fas fa-file"></i> ${file.fileName}</h4>
+                    <div class="info-card-content">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">Location</div>
+                            <div class="info-value">${file.location}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Group</div>
+                            <div class="info-value">${file.group}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Purpose</div>
+                            <div class="info-value">${file.purpose}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">File Size</div>
+                            <div class="info-value">${formatFileSize(file.fileSize)}</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="info-card" onclick="toggleCard(this)">
+                    <h4><i class="fas fa-code-branch"></i> Structure Information</h4>
+                    <div class="info-card-content">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">Data Type</div>
+                            <div class="info-value">${file.structure?.type || 'Unknown'}</div>
+                        </div>
+                        ${file.structure?.count ? `
+                        <div class="info-item">
+                            <div class="info-label">Item Count</div>
+                            <div class="info-value">${file.structure.count}</div>
+                        </div>
+                        ` : ''}
+                        <div class="info-item">
+                            <div class="info-label">Has Nested Data</div>
+                            <div class="info-value">${file.structure?.hasNestedData ? 'Yes' : 'No'}</div>
+                        </div>
+                        ${file.structure?.keys ? `
+                        <div class="info-item">
+                            <div class="info-label">Top Keys</div>
+                            <div class="info-value">${file.structure.keys.join(', ')}</div>
+                        </div>
+                        ` : ''}
+                    </div>
+                    </div>
+                </div>
+                
+                ${editMode ? `
+                <div class="info-card" onclick="toggleCard(this)">
+                    <h4><i class="fas fa-edit"></i> Edit File Information</h4>
+                    <div class="info-card-content">
+                    <form onsubmit="updateFileInfo(event)">
+                        <div class="mb-3">
+                            <label class="form-label">Purpose</label>
+                            <textarea class="form-control" id="filePurpose" rows="3">${file.purpose}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Group</label>
+                            <input type="text" class="form-control" id="fileGroup" value="${file.group}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Ignored</label>
+                            <input type="checkbox" id="fileIgnored" ${file.ignored ? 'checked' : ''}>
+                        </div>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </form>
+                    </div>
+                </div>
+                ` : ''}
+            `;
+        }
+
+        // Update statistics
+        function updateStatistics() {
+            if (!catalogData || !catalogData.statistics) return;
+            
+            const stats = catalogData.statistics;
+            
+            document.getElementById('totalFiles').textContent = stats.totalFiles || 0;
+            document.getElementById('totalSize').textContent = formatFileSize(stats.totalSize || 0);
+            document.getElementById('totalGroups').textContent = Object.keys(stats.byGroup || {}).length;
+            document.getElementById('avgFileSize').textContent = formatFileSize((stats.totalSize || 0) / (stats.totalFiles || 1));
+            
+            // Update group chart
+            updateGroupChart();
+            
+            // Update statistics tab
+            updateStatisticsTab();
+        }
+
+        // Update group chart
+        function updateGroupChart() {
+            if (!catalogData || !catalogData.statistics) return;
+            
+            const ctx = document.getElementById('groupChart');
+            if (!ctx) return;
+            
+            const labels = Object.keys(catalogData.statistics.byGroup || {});
+            const data = labels.map(group => catalogData.statistics.byGroup[group].count);
+            
+            if (groupChart) {
+                groupChart.destroy();
+            }
+            
+            groupChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data,
+                        backgroundColor: [
+                            '#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b',
+                            '#10b981', '#ef4444', '#06b6d4', '#f97316',
+                            '#14b8a6', '#6366f1', '#84cc16'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    aspectRatio: 2,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                padding: 10,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    layout: {
+                        padding: {
+                            top: 10,
+                            bottom: 10
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update statistics tab
+        function updateStatisticsTab() {
+            if (!catalogData || !catalogData.statistics) return;
+            
+            const statsContent = document.getElementById('statisticsContent');
+            const stats = catalogData.statistics;
+            
+            let html = '<div class="info-grid">';
+            
+            // Group statistics
+            html += '<div class="info-item"><div class="info-label">Groups by File Count</div><div class="info-value">';
+            Object.entries(stats.byGroup || {})
+                .sort((a, b) => b[1].count - a[1].count)
+                .forEach(([group, data]) => {
+                    html += `${group}: ${data.count} files (${formatFileSize(data.size)})<br>`;
+                });
+            html += '</div></div>';
+            
+            // Type statistics
+            html += '<div class="info-item"><div class="info-label">Files by Type</div><div class="info-value">';
+            Object.entries(stats.byType || {}).forEach(([type, count]) => {
+                html += `${type}: ${count} files<br>`;
+            });
+            html += '</div></div>';
+            
+            html += '</div>';
+            
+            statsContent.innerHTML = html;
+        }
+
+        // Generate Mermaid diagram
+        function generateMermaidDiagram() {
+            if (!catalogData || !catalogData.files) return;
+            
+            // Group files by their group
+            const groups = {};
+            catalogData.files.forEach(file => {
+                const groupName = file.group || 'Uncategorized';
+                if (!groups[groupName]) {
+                    groups[groupName] = [];
+                }
+                groups[groupName].push(file);
+            });
+            
+            let mermaidCode = 'graph TB\n';
+            mermaidCode += '    Root[JSON Catalog]\n';
+            
+            Object.entries(groups).forEach(([groupName, files], index) => {
+                const groupId = `G${index}`;
+                mermaidCode += `    Root --> ${groupId}["${groupName}<br/>(${files.length} files)"]\n`;
+                
+                // Show sample files (limit to 3 per group for readability)
+                files.slice(0, 3).forEach((file, fileIndex) => {
+                    const fileId = `${groupId}F${fileIndex}`;
+                    const fileName = file.fileName.length > 20 
+                        ? file.fileName.substring(0, 20) + '...' 
+                        : file.fileName;
+                    mermaidCode += `    ${groupId} --> ${fileId}["${fileName}"]\n`;
+                });
+                
+                if (files.length > 3) {
+                    mermaidCode += `    ${groupId} --> ${groupId}More["... +${files.length - 3} more"]\n`;
+                }
+            });
+            
+            const mermaidDiv = document.getElementById('mermaidDiagram');
+            mermaidDiv.textContent = mermaidCode;
+            mermaidDiv.removeAttribute('data-processed');
+            mermaid.init();
+            
+            // Reset diagram view after rendering
+            setTimeout(() => {
+                resetDiagram();
+                initializeDiagramControls();
+            }, 100);
+        }
+
+        // Switch tabs
+        function switchTab(tabName) {
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.closest('.tab').classList.add('active');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Filter files
+        function filterFiles() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const fileItems = document.querySelectorAll('.file-item');
+            
+            fileItems.forEach(item => {
+                const fileName = item.textContent.toLowerCase();
+                if (fileName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Toggle edit mode
+        function toggleEditMode() {
+            editMode = !editMode;
+            const toggle = document.getElementById('editToggle');
+            toggle.classList.toggle('active');
+            
+            if (currentFile) {
+                showFileDetails(currentFile);
+            }
+            
+            showToast(editMode ? 'Edit mode enabled' : 'Edit mode disabled', 'info');
+        }
+
+        // Update file info
+        function updateFileInfo(event) {
+            event.preventDefault();
+            
+            if (!currentFile) return;
+            
+            currentFile.purpose = document.getElementById('filePurpose').value;
+            currentFile.group = document.getElementById('fileGroup').value;
+            currentFile.ignored = document.getElementById('fileIgnored').checked;
+            
+            // Update in catalog data
+            const fileIndex = catalogData.files.findIndex(f => 
+                f.fileName === currentFile.fileName && 
+                f.location === currentFile.location
+            );
+            
+            if (fileIndex !== -1) {
+                catalogData.files[fileIndex] = currentFile;
+            }
+            
+            // Update YAML editor
+            yamlEditor.setValue(jsyaml.dump(catalogData));
+            
+            showToast('File information updated!', 'success');
+            renderCatalog();
+        }
+
+        // Save YAML
+        function saveYaml() {
+            try {
+                const yamlContent = yamlEditor.getValue();
+                catalogData = jsyaml.load(yamlContent);
+                renderCatalog();
+                updateStatistics();
+                generateMermaidDiagram();
+                showToast('YAML saved successfully!', 'success');
+            } catch (error) {
+                showToast('Error parsing YAML: ' + error.message, 'error');
+            }
+        }
+
+        // Format YAML
+        function formatYaml() {
+            try {
+                const yamlContent = yamlEditor.getValue();
+                const data = jsyaml.load(yamlContent);
+                yamlEditor.setValue(jsyaml.dump(data, { indent: 2 }));
+                showToast('YAML formatted!', 'success');
+            } catch (error) {
+                showToast('Error formatting YAML: ' + error.message, 'error');
+            }
+        }
+
+        // Validate YAML
+        function validateYaml() {
+            try {
+                const yamlContent = yamlEditor.getValue();
+                jsyaml.load(yamlContent);
+                showToast('YAML is valid!', 'success');
+            } catch (error) {
+                showToast('Invalid YAML: ' + error.message, 'error');
+            }
+        }
+
+        // Save catalog
+        function saveCatalog() {
+            const yamlContent = jsyaml.dump(catalogData);
+            const blob = new Blob([yamlContent], { type: 'text/yaml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'catalog-edited.yaml';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Catalog saved to file!', 'success');
+        }
+
+        // Export catalog
+        function exportCatalog() {
+            const format = prompt('Export format (json/yaml/csv):', 'yaml');
+            
+            if (!format) return;
+            
+            let content, mimeType, extension;
+            
+            switch(format.toLowerCase()) {
+                case 'json':
+                    content = JSON.stringify(catalogData, null, 2);
+                    mimeType = 'application/json';
+                    extension = 'json';
+                    break;
+                case 'csv':
+                    content = convertToCSV(catalogData.files);
+                    mimeType = 'text/csv';
+                    extension = 'csv';
+                    break;
+                default:
+                    content = jsyaml.dump(catalogData);
+                    mimeType = 'text/yaml';
+                    extension = 'yaml';
+            }
+            
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `catalog-export.${extension}`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast(`Catalog exported as ${format.toUpperCase()}!`, 'success');
+        }
+
+        // Convert to CSV
+        function convertToCSV(files) {
+            const headers = ['fileName', 'location', 'group', 'purpose', 'fileSize', 'type', 'ignored'];
+            const rows = files.map(file => [
+                file.fileName,
+                file.location,
+                file.group,
+                file.purpose,
+                file.fileSize,
+                file.structure?.type || '',
+                file.ignored || false
+            ]);
+            
+            const csv = [
+                headers.join(','),
+                ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+            ].join('\n');
+            
+            return csv;
+        }
+
+        // Handle file upload
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                
+                try {
+                    if (file.name.endsWith('.yaml') || file.name.endsWith('.yml')) {
+                        catalogData = jsyaml.load(content);
+                        yamlEditor.setValue(content);
+                    } else if (file.name.endsWith('.json')) {
+                        catalogData = JSON.parse(content);
+                        yamlEditor.setValue(jsyaml.dump(catalogData));
+                    } else {
+                        throw new Error('Unsupported file format');
+                    }
+                    
+                    renderCatalog();
+                    updateStatistics();
+                    generateMermaidDiagram();
+                    showToast('Catalog uploaded successfully!', 'success');
+                } catch (error) {
+                    showToast('Error loading file: ' + error.message, 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Export diagram
+        function exportDiagram(format) {
+            const svgElement = document.querySelector('#mermaidDiagram svg');
+            if (!svgElement) {
+                showToast('No diagram to export!', 'error');
+                return;
+            }
+            
+            const svgData = new XMLSerializer().serializeToString(svgElement);
+            
+            if (format === 'svg') {
+                const blob = new Blob([svgData], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'catalog-diagram.svg';
+                a.click();
+                URL.revokeObjectURL(url);
+            } else if (format === 'png') {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                img.onload = function() {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    
+                    canvas.toBlob(function(blob) {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'catalog-diagram.png';
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    });
+                };
+                
+                img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+            }
+            
+            showToast(`Diagram exported as ${format.toUpperCase()}!`, 'success');
+        }
+
+        // Copy Mermaid code
+        function copyMermaidCode() {
+            const mermaidDiv = document.getElementById('mermaidDiagram');
+            const code = mermaidDiv.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                showToast('Mermaid code copied to clipboard!', 'success');
+            }).catch(err => {
+                showToast('Failed to copy: ' + err, 'error');
+            });
+        }
+
+        // Refresh diagram
+        function refreshDiagram() {
+            generateMermaidDiagram();
+            showToast('Diagram refreshed!', 'success');
+        }
+
+        // Load compact catalog
+        function loadCompactCatalog() {
+            loadCatalog('json-catalog-compact.yaml');
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.background = type === 'error' ? '#ef4444' : 
+                                     type === 'info' ? '#3b82f6' : '#10b981';
+            toast.style.display = 'block';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // Show/hide loading spinner
+        function showLoading(show) {
+            document.getElementById('loadingSpinner').style.display = show ? 'block' : 'none';
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Try to load default catalog
+            loadCatalog('json-catalog.json').catch(() => {
+                showToast('No default catalog found. Please load or upload a catalog file.', 'info');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "userActivityData": [
+    {
+      "id": 1,
+      "user": "John Doe",
+      "action": "Login",
+      "resource": "Dashboard",
+      "timestamp": "2025-01-11T11:43:00",
+      "status": "Success"
+    },
+    {
+      "id": 2,
+      "user": "Sai Khanna",
+      "action": "Data Access",
+      "resource": "Customer Database",
+      "timestamp": "2025-04-15T19:25:00",
+      "status": "Success"
+    },
+    {
+      "id": 3,
+      "user": "Suresh Kondapuram",
+      "action": "Configuration Change",
+      "resource": "Security Settings",
+      "timestamp": "2025-09-27T08:45:00",
+      "status": "Success"
+    },
+    {
+      "id": 4,
+      "user": "Adrian Paleacu",
+      "action": "API Call",
+      "resource": "External Service",
+      "timestamp": "2025-01-19T13:20:00",
+      "status": "Failed"
+    },
+    {
+      "id": 5,
+      "user": "Raju Pasunuri",
+      "action": "Deployment",
+      "resource": "Production Environment",
+      "timestamp": "2024-05-10T19:50:00",
+      "status": "Success"
+    }
+  ]
+}

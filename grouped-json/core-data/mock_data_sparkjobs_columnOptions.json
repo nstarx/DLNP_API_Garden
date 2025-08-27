@@ -1,0 +1,3 @@
+{
+  "columnOptions": "[\n    { label: 'Name', value: 'name' },\nexport const applicationOptions = [\n    { label: 'data-etl', value: 'data-etl' },\nexport const statusOptions = [\n    { label: 'Running', value: 'Running' },\nexport const ownerOptions = [\n    { label: 'data-team', value: 'data-team' },\nexport const availableUsers = [\n    { name: 'Adrian', email: 'adrian@nstarxinc.com', role: 'admin' },\nexport const defaultVisibleColumns = ['name', 'application', 'version', 'gitRepo', 'status', 'k8sNodes', 'resources', 'startTime', 'owner', 'projectId', 'accessControl', 'actions']"
+}

@@ -1,0 +1,22 @@
+{
+  "testScenarios": [
+    {
+      "id": 1,
+      "name": "Customer Service Escalation",
+      "category": "Customer Support",
+      "type": "conversation",
+      "complexity": "Medium",
+      "estimatedDuration": 15,
+      "description": "Test agent ability to handle escalated customer complaints and provide appropriate solutions."
+    },
+    {
+      "id": 2,
+      "name": "Multi-language Document Analysis",
+      "category": "Document Processing",
+      "type": "analysis",
+      "complexity": "High",
+      "estimatedDuration": 30,
+      "description": "Test agent ability to analyze documents in multiple languages and extract key information."
+    }
+  ]
+}

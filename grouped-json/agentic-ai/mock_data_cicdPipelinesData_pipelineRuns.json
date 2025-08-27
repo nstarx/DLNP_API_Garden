@@ -1,0 +1,3 @@
+{
+  "pipelineRuns": "[\n    {\n        id: 1,\n        agentName: 'Research Assistant',\n        icon: 'pi pi-search-plus',\n        version: 'v1.2.3',\n        status: 'Completed',\n        lastRun: '2 hours ago',\n        duration: '3m 45s'\n    },\nexport const agentsForTesting = [\n    { id: 1, name: 'Research Assistant', icon: 'pi pi-search-plus' },\nexport const agentsForEvaluation = [\n    { id: 1, name: 'Research Assistant', icon: 'pi pi-search-plus' },\nexport const versionsForEvaluation = ['v1.2.3', 'v1.2.4-beta', 'v1.3.0-dev']"
+}

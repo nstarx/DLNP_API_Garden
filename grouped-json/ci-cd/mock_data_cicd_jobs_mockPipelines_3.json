@@ -1,0 +1,56 @@
+{
+  "mockPipelines": [
+    {
+      "id": "ai-build-pipeline",
+      "name": "AI Model Build Pipeline",
+      "description": "Builds and packages AI models",
+      "stages": [
+        "Source",
+        "Build",
+        "Test",
+        "Package"
+      ],
+      "triggers": [
+        "Push",
+        "Manual",
+        "Schedule"
+      ],
+      "lastRun": "2023-06-16T09:00:00Z",
+      "avgDuration": "25m"
+    },
+    {
+      "id": "test-pipeline",
+      "name": "Test Pipeline",
+      "description": "Runs unit and integration tests",
+      "stages": [
+        "Setup",
+        "Unit Tests",
+        "Integration Tests",
+        "Report"
+      ],
+      "triggers": [
+        "Push",
+        "Pull Request"
+      ],
+      "lastRun": "2023-06-16T08:30:00Z",
+      "avgDuration": "15m"
+    },
+    {
+      "id": "deploy-pipeline",
+      "name": "Deployment Pipeline",
+      "description": "Handles deployment to various environments",
+      "stages": [
+        "Validate",
+        "Deploy",
+        "Verify",
+        "Notify"
+      ],
+      "triggers": [
+        "Manual",
+        "Schedule"
+      ],
+      "lastRun": "2023-06-15T14:00:00Z",
+      "avgDuration": "45m"
+    }
+  ]
+}

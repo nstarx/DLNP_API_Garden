@@ -1,0 +1,116 @@
+{
+  "dataSources": [
+    {
+      "id": "ds-1",
+      "name": "Product Documentation",
+      "type": "file-upload",
+      "description": "Technical documentation and user guides",
+      "documentCount": 45,
+      "lastSync": "2024-01-15T00:00:00.000Z",
+      "documents": [
+        {
+          "id": "doc-1",
+          "name": "User Guide.pdf",
+          "type": "pdf",
+          "content": "User guide content..."
+        },
+        {
+          "id": "doc-2",
+          "name": "API Reference.txt",
+          "type": "txt",
+          "content": "API documentation..."
+        }
+      ]
+    },
+    {
+      "id": "ds-2",
+      "name": "Knowledge Base Articles",
+      "type": "web-crawler",
+      "description": "Support articles from help.example.com",
+      "documentCount": 128,
+      "lastSync": "2024-01-20T00:00:00.000Z",
+      "documents": []
+    }
+  ],
+  "parsedElements": [
+    {
+      "id": 1,
+      "type": "Title",
+      "text": "Getting Started with Our Product",
+      "metadata": {
+        "page": 1
+      }
+    },
+    {
+      "id": 2,
+      "type": "NarrativeText",
+      "text": "This guide will help you understand the basics...",
+      "metadata": {
+        "page": 1
+      }
+    },
+    {
+      "id": 3,
+      "type": "Table",
+      "text": "Feature | Description | Status",
+      "metadata": {
+        "page": 2
+      }
+    },
+    {
+      "id": 4,
+      "type": "NarrativeText",
+      "text": "Follow these steps to configure your environment...",
+      "metadata": {
+        "page": 3
+      }
+    }
+  ],
+  "chunks": [
+    {
+      "id": "chunk-1",
+      "text": "Getting Started with Our Product. This guide will help you understand the basics of our platform and get you up and running quickly.",
+      "source": "User Guide.pdf",
+      "metadata": {
+        "page": 1,
+        "section": "Introduction"
+      }
+    },
+    {
+      "id": "chunk-2",
+      "text": "Installation Requirements: You will need Node.js version 16 or higher, at least 4GB of RAM, and 10GB of free disk space.",
+      "source": "User Guide.pdf",
+      "metadata": {
+        "page": 2,
+        "section": "Installation"
+      }
+    }
+  ],
+  "availableConnectors": [
+    {
+      "id": "s3",
+      "name": "Amazon S3",
+      "icon": "pi pi-aws",
+      "description": "Connect to S3 buckets"
+    },
+    {
+      "id": "gcs",
+      "name": "Google Cloud Storage",
+      "icon": "pi pi-google",
+      "description": "Connect to GCS buckets"
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "icon": "pi pi-database",
+      "description": "Connect to PostgreSQL databases"
+    },
+    {
+      "id": "web",
+      "name": "Web Crawler",
+      "icon": "pi pi-globe",
+      "description": "Crawl websites and documentation"
+    }
+  ],
+  "parserViewOptions": ["original", "parsed", "side-by-side"]
+}
