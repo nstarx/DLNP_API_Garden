@@ -113,34 +113,44 @@ AI System
 
 ### Core Entities and Relationships
 
-```
-Model (1) ─────────────┬──── (*) Version
-    │                  │
-    │ (*)             │ (*)
-    ├──── (*) Dataset ├──── (*) Experiment
-    │                 │
-    │ (1)            │ (*)
-    ├──── (*) Feature├──── (*) Training Job
-    │                │
-    │ (*)            │ (1)
-    ├──── (*) Endpoint──── (*) Deployment
-    │
-    │ (*)
-    └──── (*) Policy
+```mermaid
+graph TD
+  Model[[Model]] -- "1..* has" --> Version[Version]
+  Model -- "*..* uses" --> Dataset[Dataset]
+  Model -- "*..* evaluated by" --> Experiment[Experiment]
+  Model -- "1..* includes" --> Feature[Feature]
+  Model -- "1..* served by" --> Endpoint[Endpoint]
+  Endpoint -- "*..* deployed as" --> Deployment[Deployment]
+  Model -- "*..* governed by" --> Policy[Policy]
 
-Marketplace Model (1) ──┬──── (1) Provider
-    │                   │
-    │ (1)              │ (*)
-    ├──── (1) Category └──── (*) License
-    │
-    │ (*)
-    └──── (*) Review
+  MarketplaceModel[[Marketplace Model]] -- "1..1 provided by" --> Provider[Provider]
+  MarketplaceModel -- "1..1 categorized as" --> Category[Category]
+  MarketplaceModel -- "1..* licensed with" --> License[License]
+  MarketplaceModel -- "1..* reviewed by" --> Review[Review]
 
-AI Generator (1) ───────┬──── (*) Generated App
-    │                   │
-    │ (*)              │ (*)
-    └──── (*) MCP Tool └──── (*) Resource
+  AIGenerator[[AI Generator]] -- "1..* creates" --> GeneratedApp[Generated App]
+  AIGenerator -- "*..* integrates" --> MCPTool[MCP Tool]
+  GeneratedApp -- "*..* uses" --> Resource[Resource]
 ```
+
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
+
+| From             | Relationship   | To            | Cardinality |
+|------------------|----------------|---------------|-------------|
+| Model            | has            | Version       | 1..*        |
+| Model            | uses           | Dataset       | *..*        |
+| Model            | evaluated by   | Experiment    | *..*        |
+| Model            | includes       | Feature       | 1..*        |
+| Model            | served by      | Endpoint      | 1..*        |
+| Endpoint         | deployed as    | Deployment    | *..*        |
+| Model            | governed by    | Policy        | *..*        |
+| Marketplace Model| provided by    | Provider      | 1..1        |
+| Marketplace Model| categorized as | Category      | 1..1        |
+| Marketplace Model| licensed with  | License       | 1..*        |
+| Marketplace Model| reviewed by    | Review        | 1..*        |
+| AI Generator     | creates        | Generated App | 1..*        |
+| AI Generator     | integrates     | MCP Tool      | *..*        |
+| Generated App    | uses           | Resource      | *..*        |
 
 ### Entity Hierarchy
 

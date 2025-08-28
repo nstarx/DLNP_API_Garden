@@ -124,41 +124,57 @@ Connections Platform
 
 ## Entity Model
 
-### Core Entities and Relationships
+```mermaid
+graph TD
+  Connection[[Connection]] -- "1..* uses" --> Credential[Credential]
+  Connection -- "1..1 provided by" --> Provider[Provider]
+  Connection -- "1..1 in" --> Environment[Environment]
+  Connection -- "1..* discovers" --> Schema[Schema]
+  Environment -- "1..* hosts" --> AIZone[AI Zone]
 
+  Cluster[[Cluster]] -- "1..* has" --> Node[Node]
+  Cluster -- "*..* links via" --> Edge[Edge]
+  Cluster -- "1..1 has" --> Topology[Topology]
+  Cluster -- "*..* manages" --> Resource[Resource]
+  Cluster -- "*..* connects" --> CConnection[Connection]
+
+  Node[[Node]] -- "1..1 via" --> NConnection[Connection]
+  Node -- "1..1 type" --> NType[Type]
+  Node -- "1..* has" --> Property[Property]
+  Node -- "1..* emits" --> Metric[Metric]
+  Node -- "1..1 health" --> Health[Health]
+
+  Federation[[Federation]] -- "1..* includes" --> DataSource[Data Source]
+  Federation -- "1..1 engine" --> Engine[Engine]
+  Federation -- "1..* performs" --> Query[Query]
+  Federation -- "1..* catalogs" --> Catalog[Catalog]
+  Query -- "1..* returns" --> Result[Result]
 ```
-Connection (1) ───────────┬──── (*) Credential
-    │                     │
-    │ (*)                │ (1)
-    ├──── (1) Provider   └──── (1) Environment
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Schema           └──── (*) AI Zone
 
-Cluster (1) ──────────────┬──── (*) Node
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Edge       └──── (*) Connection
-    │                            │
-    │ (1)                       │ (*)
-    └──── (1) Topology         └──── (*) Resource
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Node (1) ─────────────────┬──── (1) Connection
-    │                     │
-    │ (1)                │ (*)
-    ├──── (1) Type       └──── (*) Metric
-    │                            │
-    │ (*)                       │ (1)
-    └──── (*) Property         └──── (1) Health
-
-Federation (1) ────────────┬──── (*) Data Source
-    │                     │
-    │ (1)                │ (*)
-    ├──── (1) Engine     └──── (*) Query
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Catalog          └──── (*) Result
-```
+| From        | Relationship | To           | Cardinality |
+|-------------|--------------|--------------|-------------|
+| Connection  | uses         | Credential   | 1..*        |
+| Connection  | provided by  | Provider     | 1..1        |
+| Connection  | in           | Environment  | 1..1        |
+| Connection  | discovers    | Schema       | 1..*        |
+| Environment | hosts        | AI Zone      | 1..*        |
+| Cluster     | has          | Node         | 1..*        |
+| Cluster     | links via    | Edge         | *..*        |
+| Cluster     | has          | Topology     | 1..1        |
+| Cluster     | manages      | Resource     | *..*        |
+| Cluster     | connects     | Connection   | *..*        |
+| Node        | via          | Connection   | 1..1        |
+| Node        | type         | Type         | 1..1        |
+| Node        | has          | Property     | 1..*        |
+| Node        | emits        | Metric       | 1..*        |
+| Node        | health       | Health       | 1..1        |
+| Federation  | includes     | Data Source  | 1..*        |
+| Federation  | engine       | Engine       | 1..1        |
+| Federation  | performs     | Query        | 1..*        |
+| Federation  | catalogs     | Catalog      | 1..*        |
+| Query       | returns      | Result       | 1..*        |
 
 ### Entity Hierarchy
 

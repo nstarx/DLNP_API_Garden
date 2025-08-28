@@ -130,64 +130,79 @@ AI Catalog System
 
 ### Core Entities and Relationships
 
+```mermaid
+graph TD
+  Model[[Model]] -- "1..* has" --> MVersion[Version]
+  Model -- "*..* uses" --> MDataset[Dataset]
+  Model -- "*..* evaluated by" --> MExperiment[Experiment]
+  Model -- "1..* includes" --> MFeature[Feature]
+  Model -- "1..* served by" --> MEndpoint[Endpoint]
+  Model -- "*..* measured by" --> MMetric[Metric]
+  Model -- "*..* governed by" --> MPolicy[Policy]
+
+  Dataset[[Dataset]] -- "1..* has" --> DVersion[Version]
+  Dataset -- "1..* contains" --> DFeature[Feature]
+  Dataset -- "1..* quality" --> QualityMetric[Quality Metric]
+  Dataset -- "*..* transformed by" --> Transform[Transform]
+
+  Pipeline[[Pipeline]] -- "1..* has" --> Stage[Stage]
+  Pipeline -- "1..* run" --> Run[Run]
+  Pipeline -- "1..* component" --> Component[Component]
+  Pipeline -- "1..* schedule" --> Schedule[Schedule]
+
+  FeatureSet[[Feature Set]] -- "1..* has" --> FSFeature[Feature]
+  FeatureSet -- "1..1 stored in" --> Store[Store]
+  FeatureSet -- "1..* transformed by" --> FSTransform[Transform]
+  FeatureSet -- "1..* consumed by" --> Consumer[Consumer]
+
+  MarketplaceModel[[Marketplace Model]] -- "1..1 provided by" --> Provider[Provider]
+  MarketplaceModel -- "1..1 categorized as" --> Category[Category]
+  MarketplaceModel -- "1..* has" --> Subscription[Subscription]
+  MarketplaceModel -- "1..* licensed under" --> License[License]
+  MarketplaceModel -- "1..* reviewed by" --> Review[Review]
+  MarketplaceModel -- "1..* rated" --> Rating[Rating]
+
+  Provenance[[Provenance]] -- "1..1 artifact" --> Artifact[Artifact]
+  Provenance -- "1..1 user" --> User[User]
+  Provenance -- "1..1 action" --> Action[Action]
+  Provenance -- "1..1 time" --> Time[Time]
+  Provenance -- "1..* dependency" --> Dependency[Dependency]
 ```
-Model (1) ──────────────┬──── (*) Version
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Dataset  ├──── (*) Experiment
-    │                  │
-    │ (*)              │ (*)
-    ├──── (*) Feature  ├──── (*) Pipeline Run
-    │                  │
-    │ (1)              │ (*)
-    ├──── (*) Endpoint └──── (*) Metric
-    │
-    │ (*)
-    └──── (*) Policy
 
-Dataset (1) ────────────┬──── (*) Version
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Feature  └──── (*) Quality Metric
-    │
-    │ (*)
-    └──── (*) Transform
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Pipeline (1) ───────────┬──── (*) Stage
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Run      └──── (*) Component
-    │
-    │ (*)
-    └──── (*) Schedule
-
-Feature Set (1) ────────┬──── (*) Feature
-    │                   │
-    │ (1)              │ (*)
-    ├──── (1) Store    └──── (*) Transform
-    │
-    │ (*)
-    └──── (*) Consumer
-
-Marketplace Model (1) ──┬──── (1) Provider
-    │                   │
-    │ (1)              │ (*)
-    ├──── (1) Category ├──── (*) Subscription
-    │                  │
-    │ (*)              │ (*)
-    ├──── (*) Review   └──── (*) License
-    │
-    │ (*)
-    └──── (*) Rating
-
-Provenance (1) ─────────┬──── (1) Artifact
-    │                   │
-    │ (1)              │ (1)
-    ├──── (1) User     ├──── (1) Action
-    │                  │
-    │ (1)              │ (*)
-    └──── (1) Time     └──── (*) Dependency
-```
+| From              | Relationship     | To            | Cardinality |
+|-------------------|------------------|---------------|-------------|
+| Model             | has              | Version       | 1..*        |
+| Model             | uses             | Dataset       | *..*        |
+| Model             | evaluated by     | Experiment    | *..*        |
+| Model             | includes         | Feature       | 1..*        |
+| Model             | served by        | Endpoint      | 1..*        |
+| Model             | measured by      | Metric        | *..*        |
+| Model             | governed by      | Policy        | *..*        |
+| Dataset           | has              | Version       | 1..*        |
+| Dataset           | contains         | Feature       | 1..*        |
+| Dataset           | quality          | Quality Metric| 1..*        |
+| Dataset           | transformed by   | Transform     | *..*        |
+| Pipeline          | has              | Stage         | 1..*        |
+| Pipeline          | run              | Run           | 1..*        |
+| Pipeline          | component        | Component     | 1..*        |
+| Pipeline          | schedule         | Schedule      | 1..*        |
+| Feature Set       | has              | Feature       | 1..*        |
+| Feature Set       | stored in        | Store         | 1..1        |
+| Feature Set       | transformed by   | Transform     | 1..*        |
+| Feature Set       | consumed by      | Consumer      | 1..*        |
+| Marketplace Model | provided by      | Provider      | 1..1        |
+| Marketplace Model | categorized as   | Category      | 1..1        |
+| Marketplace Model | has              | Subscription  | 1..*        |
+| Marketplace Model | licensed under   | License       | 1..*        |
+| Marketplace Model | reviewed by      | Review        | 1..*        |
+| Marketplace Model | rated            | Rating        | 1..*        |
+| Provenance        | artifact         | Artifact      | 1..1        |
+| Provenance        | user             | User          | 1..1        |
+| Provenance        | action           | Action        | 1..1        |
+| Provenance        | time             | Time          | 1..1        |
+| Provenance        | dependency       | Dependency    | 1..*        |
 
 ### Entity Hierarchy
 

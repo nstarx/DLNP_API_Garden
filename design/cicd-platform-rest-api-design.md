@@ -123,39 +123,51 @@ CI/CD Platform
 
 ### Core Entities and Relationships
 
+```mermaid
+graph TD
+  Pipeline[[Pipeline]] -- "1..* has" --> Stage[Stage]
+  Pipeline -- "1..* triggers" --> Trigger[Trigger]
+  Pipeline -- "1..* creates" --> Run[Run]
+  Pipeline -- "1..* runs" --> PJob[Job]
+
+  Job[[Job]] -- "1..1 of" --> JPipeline[Pipeline]
+  Job -- "1..1 in" --> Environment[Environment]
+  Job -- "1..1 allocated to" --> AIZone[AI Zone]
+  Job -- "1..* produces" --> Artifact[Artifact]
+  Job -- "1..* writes" --> Log[Log]
+  Job -- "1..1 has" --> Status[Status]
+
+  Environment[[Environment]] -- "1..* runs" --> EJob[Job]
+  Environment -- "1..* has" --> Config[Config]
+  Environment -- "1..* has" --> Deployment[Deployment]
+  Environment -- "1..* provides" --> Resource[Resource]
+
+  AIZone[[AI Zone]] -- "1..* runs" --> ZJob[Job]
+  AIZone -- "1..* provides" --> ZResource[Resource]
+  AIZone -- "1..* has" --> Node[Node]
 ```
-Pipeline (1) ───────────┬──── (*) Stage
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Job      └──── (*) Trigger
-    │
-    │ (*)
-    └──── (*) Run
 
-Job (1) ────────────────┬──── (1) Pipeline
-    │                   │
-    │ (1)              │ (1)
-    ├──── (1) Environment──── (1) AI Zone
-    │                  │
-    │ (*)              │ (*)
-    ├──── (*) Artifact └──── (*) Log
-    │
-    │ (1)
-    └──── (1) Status
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Environment (1) ────────┬──── (*) Job
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Config   └──── (*) Deployment
-    │
-    │ (*)
-    └──── (*) Resource
-
-AI Zone (1) ────────────┬──── (*) Job
-    │                   │
-    │ (*)              │ (*)
-    └──── (*) Resource └──── (*) Node
-```
+| From        | Relationship  | To         | Cardinality |
+|-------------|---------------|------------|-------------|
+| Pipeline    | has           | Stage      | 1..*        |
+| Pipeline    | triggers      | Trigger    | 1..*        |
+| Pipeline    | creates       | Run        | 1..*        |
+| Pipeline    | runs          | Job        | 1..*        |
+| Job         | of            | Pipeline   | 1..1        |
+| Job         | in            | Environment| 1..1        |
+| Job         | allocated to  | AI Zone    | 1..1        |
+| Job         | produces      | Artifact   | 1..*        |
+| Job         | writes        | Log        | 1..*        |
+| Job         | has           | Status     | 1..1        |
+| Environment | runs          | Job        | 1..*        |
+| Environment | has           | Config     | 1..*        |
+| Environment | has           | Deployment | 1..*        |
+| Environment | provides      | Resource   | 1..*        |
+| AI Zone     | runs          | Job        | 1..*        |
+| AI Zone     | provides      | Resource   | 1..*        |
+| AI Zone     | has           | Node       | 1..*        |
 
 ### Entity Hierarchy
 

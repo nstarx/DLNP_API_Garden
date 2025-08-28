@@ -80,18 +80,30 @@ Admin System
 
 ### Core Entities and Relationships
 
+<!-- Visual: Simple Mermaid graph for quick comprehension; followed by matrix for accessibility -->
+
+```mermaid
+graph TD
+  User[[User]] -- "1..1 has" --> Profile[Profile]
+  User -- "1..* owns" --> Project[Project]
+  User -- "1..* performs" --> Activity[Activity]
+  User -- "*..* assigned to" --> Role[Role]
+  Role -- "*..* grants" --> Permission[Permission]
+  Role -- "*..* shows" --> MenuItem[Menu Item]
+  Role -- "1..1 uses" --> Template[Template]
 ```
-User (1) ────────────┬──── (*) Role
-  │                  │
-  │ (1)              │ (*)
-  ├──── (*) Project  ├──── (*) Permission
-  │                  │
-  │ (*)              │ (*)
-  ├──── (*) Activity ├──── (*) Menu Item
-  │                  │
-  │ (1)              │ (1)
-  └──── (1) Profile  └──── (1) Template
-```
+
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
+
+| From     | Relationship         | To           | Cardinality |
+|----------|----------------------|--------------|-------------|
+| User     | has                  | Profile      | 1..1        |
+| User     | owns                 | Project      | 1..*        |
+| User     | performs             | Activity     | 1..*        |
+| User     | assigned to          | Role         | *..*        |
+| Role     | grants               | Permission   | *..*        |
+| Role     | shows                | Menu Item    | *..*        |
+| Role     | uses                 | Template     | 1..1        |
 
 ### Entity Hierarchy
 

@@ -134,44 +134,53 @@ AI Catalog Composables
 
 ## Entity Model
 
-### Core Entities and Relationships
+```mermaid
+graph TD
+  Dataset[[Dataset]] -- "*..* used by" --> Model[Model]
+  Dataset -- "1..* has" --> FeatureSet[Feature Set]
+  Dataset -- "1..* processed by" --> Pipeline[Pipeline]
+  Pipeline -- "1..* exposes" --> Endpoint[Endpoint]
 
+  Model[[Model]] -- "1..* has" --> Version[Version]
+  Model -- "*..* evaluated by" --> Experiment[Experiment]
+  Model -- "1..1 provided by" --> Provider[Provider]
+  Model -- "1..* rated by" --> Rating[Rating]
+  Model -- "1..* categorized as" --> Category[Category]
+  Model -- "1..* deployed as" --> Deployment[Deployment]
+
+  Marketplace[[Marketplace]] -- "1..* lists" --> CompanyModel[Company Model]
+  Marketplace -- "1..* includes" --> MProvider[Provider]
+  Marketplace -- "1..* organizes into" --> MCategory[Category]
+  Marketplace -- "1..* highlights" --> Trending[Trending]
+
+  Provenance[[Provenance]] -- "1..* has" --> AuditEntry[Audit Entry]
+  Provenance -- "1..* records" --> Lineage[Lineage]
+  Provenance -- "1..* tracks" --> Activity[Activity]
+  Provenance -- "1..* ensures" --> Compliance[Compliance]
 ```
-Dataset (1) ──────────────┬──── (*) Model
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Feature Set └──── (*) Experiment
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Pipeline ────────┴──── (*) Endpoint
 
-Model (1) ────────────────┬──── (*) Version
-    │                     │
-    │ (*)                │ (1)
-    ├──── (*) Experiment └──── (1) Provider
-    │                            │
-    │ (*)                       │ (*)
-    ├──── (*) Rating            └──── (*) Category
-    │
-    │ (*)
-    └──── (*) Deployment
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Marketplace (1) ──────────┬──── (*) Company Model
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Provider   └──── (*) Category
-    │
-    │ (*)
-    └──── (*) Trending
-
-Provenance (1) ───────────┬──── (*) Audit Entry
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Lineage    └──── (*) Activity
-    │
-    │ (*)
-    └──── (*) Compliance
-```
+| From         | Relationship     | To             | Cardinality |
+|--------------|------------------|----------------|-------------|
+| Dataset      | used by          | Model          | *..*        |
+| Dataset      | has              | Feature Set    | 1..*        |
+| Dataset      | processed by     | Pipeline       | 1..*        |
+| Pipeline     | exposes          | Endpoint       | 1..*        |
+| Model        | has              | Version        | 1..*        |
+| Model        | evaluated by     | Experiment     | *..*        |
+| Model        | provided by      | Provider       | 1..1        |
+| Model        | rated by         | Rating         | 1..*        |
+| Model        | categorized as   | Category       | 1..*        |
+| Model        | deployed as      | Deployment     | 1..*        |
+| Marketplace  | lists            | Company Model  | 1..*        |
+| Marketplace  | includes         | Provider       | 1..*        |
+| Marketplace  | organizes into   | Category       | 1..*        |
+| Marketplace  | highlights       | Trending       | 1..*        |
+| Provenance   | has              | Audit Entry    | 1..*        |
+| Provenance   | records          | Lineage        | 1..*        |
+| Provenance   | tracks           | Activity       | 1..*        |
+| Provenance   | ensures          | Compliance     | 1..*        |
 
 ### Entity Hierarchy
 

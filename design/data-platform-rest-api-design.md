@@ -158,52 +158,70 @@ Data Platform
 
 ## Entity Model
 
-### Core Entities and Relationships
+```mermaid
+graph TD
+  Project[[Project]] -- "1..* has" --> Phase[Phase]
+  Project -- "1..* has" --> Task[Task]
+  Project -- "1..* has" --> Milestone[Milestone]
+  Project -- "1..* has" --> Member[Member]
+  Project -- "1..* has" --> Document[Document]
+  Milestone -- "*..* depends on" --> Dependency[Dependency]
 
+  Phase[[Phase]] -- "1..* uses" --> Resource[Resource]
+  Phase -- "1..* has" --> Issue[Issue]
+  Phase -- "1..* has" --> ChangeRequest[Change Request]
+  Phase -- "1..* measures" --> Metric[Metric]
+  ChangeRequest -- "1..1 approval" --> Approval[Approval]
+
+  Member[[Member]] -- "1..* works on" --> MTask[Task]
+  Member -- "1..* sends" --> Message[Message]
+  Member -- "1..* sends" --> Email[Email]
+  Member -- "1..* logs" --> Activity[Activity]
+  Member -- "1..* requests" --> MApproval[Approval]
+
+  AIGen[[AI Generator]] -- "1..* creates" --> GeneratedApp[Generated App]
+  AIGen -- "*..* integrates" --> MCPTool[MCP Tool]
+  AIGen -- "1..* uses" --> Template[Template]
+  AIGen -- "1..* enables" --> Capability[Capability]
+  GeneratedApp -- "*..* uses" --> Resource2[Resource]
+
+  System[[System]] -- "1..* has" --> SysMetric[Metric]
+  System -- "1..* raises" --> Alert[Alert]
+  System -- "1..* writes" --> Log[Log]
+  System -- "*..* integrates" --> Integration[Integration]
+  System -- "1..* deploys" --> Deployment[Deployment]
 ```
-Project (1) ──────────────┬──── (*) Phase
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Task       └──── (*) Milestone
-    │                            │
-    │ (*)                       │ (*)
-    ├──── (*) Member           └──── (*) Dependency
-    │
-    │ (*)
-    └──── (*) Document
 
-Phase (1) ────────────────┬──── (*) Resource
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Issue      └──── (*) Change Request
-    │                            │
-    │ (*)                       │ (1)
-    └──── (*) Metric           └──── (1) Approval
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Member (1) ───────────────┬──── (*) Task
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Message    └──── (*) Email
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Activity         └──── (*) Approval
-
-AI Generator (1) ─────────┬──── (*) Generated App
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) MCP Tool   └──── (*) Template
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Capability       └──── (*) Resource
-
-System (1) ───────────────┬──── (*) Metric
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Alert      └──── (*) Log
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Integration      └──── (*) Deployment
-```
+| From          | Relationship | To              | Cardinality |
+|---------------|--------------|-----------------|-------------|
+| Project       | has          | Phase           | 1..*        |
+| Project       | has          | Task            | 1..*        |
+| Project       | has          | Milestone       | 1..*        |
+| Project       | has          | Member          | 1..*        |
+| Project       | has          | Document        | 1..*        |
+| Milestone     | depends on   | Dependency      | *..*        |
+| Phase         | uses         | Resource        | 1..*        |
+| Phase         | has          | Issue           | 1..*        |
+| Phase         | has          | Change Request  | 1..*        |
+| Phase         | measures     | Metric          | 1..*        |
+| Change Request| approval     | Approval        | 1..1        |
+| Member        | works on     | Task            | 1..*        |
+| Member        | sends        | Message         | 1..*        |
+| Member        | sends        | Email           | 1..*        |
+| Member        | logs         | Activity        | 1..*        |
+| Member        | requests     | Approval        | 1..*        |
+| AI Generator  | creates      | Generated App   | 1..*        |
+| AI Generator  | integrates   | MCP Tool        | *..*        |
+| AI Generator  | uses         | Template        | 1..*        |
+| AI Generator  | enables      | Capability      | 1..*        |
+| Generated App | uses         | Resource        | *..*        |
+| System        | has          | Metric          | 1..*        |
+| System        | raises       | Alert           | 1..*        |
+| System        | writes       | Log             | 1..*        |
+| System        | integrates   | Integration     | *..*        |
+| System        | deploys      | Deployment      | 1..*        |
 
 ### Entity Hierarchy
 

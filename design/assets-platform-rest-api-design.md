@@ -122,52 +122,67 @@ Assets Platform
 
 ### Core Entities and Relationships
 
+```mermaid
+graph TD
+  Service[[Service]] -- "1..* has child" --> ChildService[Child Service]
+  Service -- "1..1 has type" --> Type[Type]
+  Service -- "1..* runs" --> Job[Job]
+  Service -- "*..* in" --> Namespace[Namespace]
+
+  Budget[[Budget]] -- "1..* has" --> Category[Category]
+  Budget -- "*..* approved by" --> Approver[Approver]
+  Budget -- "*..* triggers" --> Alert[Alert]
+  Budget -- "*..* notifies" --> Notification[Notification]
+
+  Client[[Client]] -- "1..1 located at" --> Location[Location]
+  Client -- "1..1 uses" --> Dataset[Dataset]
+  Client -- "1..1 assigned to" --> AIZone[AI Zone]
+  Client -- "1..* executes" --> Execution[Execution]
+  Client -- "1..* has" --> TrainingRound[Training Round]
+
+  Execution[[Execution]] -- "1..* has" --> LogEntry[Log Entry]
+  Execution -- "1..* includes" --> Round[Round]
+  Execution -- "1..* records" --> Metric[Metric]
+  Execution -- "1..1 uses" --> Model[Model]
+
+  TestSuite[[Test Suite]] -- "1..* includes" --> TestScenario[Test Scenario]
+  TestSuite -- "1..* has" --> TestRun[Test Run]
+  TestSuite -- "1..* produces" --> TestResult[Test Result]
+  TestSuite -- "1..* generates" --> Report[Report]
+
+  ChartData[[Chart Data]] -- "1..* uses" --> CDataset[Dataset]
+  ChartData -- "*..* tracks" --> CMetric[Metric]
+  ChartData -- "*..* contains" --> TimeSeries[Time Series]
 ```
-Service (1) ────────────┬──── (*) Child Service
-    │                   │
-    │ (1)              │ (*)
-    ├──── (1) Type     └──── (*) Job
-    │
-    │ (*)
-    └──── (*) Namespace
 
-Budget (1) ─────────────┬──── (*) Category
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Approver └──── (*) Alert
-    │
-    │ (*)
-    └──── (*) Notification
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Client (1) ─────────────┬──── (1) Location
-    │                   │
-    │ (1)              │ (1)
-    ├──── (1) Dataset  ├──── (1) AI Zone
-    │                  │
-    │ (*)              │ (*)
-    └──── (*) Execution└──── (*) Training Round
-
-Execution (1) ──────────┬──── (*) Log Entry
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Round    └──── (*) Metric
-    │
-    │ (1)
-    └──── (1) Model
-
-Test Suite (1) ─────────┬──── (*) Test Scenario
-    │                   │
-    │ (*)              │ (*)
-    ├──── (*) Test Run └──── (*) Test Result
-    │
-    │ (*)
-    └──── (*) Report
-
-Chart Data (1) ─────────┬──── (*) Dataset
-    │                   │
-    │ (*)              │ (*)
-    └──── (*) Metric   └──── (*) Time Series
-```
+| From         | Relationship  | To             | Cardinality |
+|--------------|---------------|----------------|-------------|
+| Service      | has child     | Child Service  | 1..*        |
+| Service      | has type      | Type           | 1..1        |
+| Service      | runs          | Job            | 1..*        |
+| Service      | in            | Namespace      | *..*        |
+| Budget       | has           | Category       | 1..*        |
+| Budget       | approved by   | Approver       | *..*        |
+| Budget       | triggers      | Alert          | *..*        |
+| Budget       | notifies      | Notification   | *..*        |
+| Client       | located at    | Location       | 1..1        |
+| Client       | uses          | Dataset        | 1..1        |
+| Client       | assigned to   | AI Zone        | 1..1        |
+| Client       | executes      | Execution      | 1..*        |
+| Client       | has           | Training Round | 1..*        |
+| Execution    | has           | Log Entry      | 1..*        |
+| Execution    | includes      | Round          | 1..*        |
+| Execution    | records       | Metric         | 1..*        |
+| Execution    | uses          | Model          | 1..1        |
+| Test Suite   | includes      | Test Scenario  | 1..*        |
+| Test Suite   | has           | Test Run       | 1..*        |
+| Test Suite   | produces      | Test Result    | 1..*        |
+| Test Suite   | generates     | Report         | 1..*        |
+| Chart Data   | uses          | Dataset        | 1..*        |
+| Chart Data   | tracks        | Metric         | *..*        |
+| Chart Data   | contains      | Time Series    | *..*        |
 
 ### Entity Hierarchy
 

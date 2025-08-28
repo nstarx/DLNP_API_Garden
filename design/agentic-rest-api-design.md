@@ -99,26 +99,36 @@ Agentic System
 
 ### Core Entities and Relationships
 
+<!-- Visual: Mermaid graph for quick comprehension; followed by a relationship matrix for accessibility -->
+
+```mermaid
+graph TD
+  Template[[Agent Template]] -- "1..* creates" --> Instance[Agent Instance]
+  Template -- "1..* tagged by" --> Tag[Tag]
+  Template -- "1..1 categorized as" --> Category[Category]
+  Instance -- "1..1 uses" --> SystemPrompt[System Prompt]
+  Instance -- "1..* has" --> Version[Version]
+  Instance -- "*..* validated by" --> TestScenario[Test Scenario]
+  Pipeline[[Pipeline]] -- "1..* runs" --> PipelineRun[Pipeline Run]
+  Pipeline -- "1..* contains" --> Stage[Stage]
+  PipelineRun -- "*..* deploys" --> Deployment[Deployment]
+  PipelineRun -- "*..* produces" --> TestResult[Test Result]
 ```
-Agent Template (1) ─────┬──── (*) Agent Instance
-      │                 │
-      │ (1)            │ (1)
-      ├──── (*) Tag    ├──── (1) System Prompt
-      │                │
-      │ (*)            │ (*)
-      ├──── (1) Category├──── (*) Version
-      │                │
-      │                │ (*)
-      │                ├──── (*) Test Scenario
-      │                │
-Pipeline (1) ──────────┼──── (*) Pipeline Run
-      │                │
-      │ (1)            │ (*)
-      ├──── (*) Stage  └──── (*) Deployment
-      │
-      │ (*)
-      └──── (*) Test Result
-```
+
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
+
+| From           | Relationship      | To            | Cardinality |
+|----------------|-------------------|---------------|-------------|
+| Agent Template | creates           | Agent Instance| 1..*        |
+| Agent Template | tagged by         | Tag           | 1..*        |
+| Agent Template | categorized as    | Category      | 1..1        |
+| Agent Instance | uses              | System Prompt | 1..1        |
+| Agent Instance | has               | Version       | 1..*        |
+| Agent Instance | validated by      | Test Scenario | *..*        |
+| Pipeline       | runs              | Pipeline Run  | 1..*        |
+| Pipeline       | contains          | Stage         | 1..*        |
+| Pipeline Run   | deploys           | Deployment    | *..*        |
+| Pipeline Run   | produces          | Test Result   | *..*        |
 
 ### Entity Hierarchy
 

@@ -152,50 +152,69 @@ Deployments Platform
 
 ### Core Entities and Relationships
 
+```mermaid
+graph TD
+  Deployment[[Deployment]] -- "1..* has" --> DVersion[Version]
+  Deployment -- "1..1 targets" --> Environment[Environment]
+  Deployment -- "1..* packages" --> DArtifact[Artifact]
+  Deployment -- "1..1 uses" --> CloudProvider[Cloud Provider]
+  Deployment -- "1..1 on" --> KCluster[Kubernetes Cluster]
+  DArtifact -- "1..1 type" --> AType[Type]
+
+  KCluster[[Kubernetes Cluster]] -- "1..* has" --> Namespace[Namespace]
+  KCluster -- "1..* has" --> Node[Node]
+  KCluster -- "1..* runs" --> KDeployment[Deployment]
+  KDeployment -- "1..* exposes" --> Service[Service]
+  KCluster -- "1..* provides" --> KResource[Resource]
+
+  Artifact[[Artifact]] -- "1..1 type" --> Type[Type]
+  Artifact -- "1..* version" --> AVersion[Version]
+  Artifact -- "1..1 stored in" --> Storage[Storage]
+  Artifact -- "1..1 registry" --> Registry[Registry]
+  Artifact -- "1..* tagged" --> Tag[Tag]
+
+  Environment[[Environment]] -- "1..* has" --> EDeployment[Deployment]
+  Environment -- "1..* config" --> Config[Config]
+  Environment -- "1..* secret" --> Secret[Secret]
+  Environment -- "1..* resource" --> EResource[Resource]
+  Environment -- "1..* limit" --> Limit[Limit]
+
+  Source[[Source]] -- "1..* deploys" --> SDeployment[Deployment]
+  Source -- "1..1 type" --> SType[Type]
+  Source -- "1..* artifact" --> SArtifact[Artifact]
+  Source -- "1..* credential" --> Credential[Credential]
+  SArtifact -- "1..1 repository" --> Repository[Repository]
 ```
-Deployment (1) ───────────┬──── (*) Version
-    │                     │
-    │ (1)                │ (*)
-    ├──── (1) Environment └──── (*) Artifact
-    │                            │
-    │ (1)                       │ (1)
-    ├──── (1) Cloud Provider    └──── (1) Type
-    │
-    │ (1)
-    └──── (1) Kubernetes Cluster
 
-Kubernetes Cluster (1) ────┬──── (*) Namespace
-    │                      │
-    │ (*)                 │ (*)
-    ├──── (*) Node        └──── (*) Deployment
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Resource         └──── (*) Service
+Legend: 1 = one, * = many, 1..* = one-to-many, *..* = many-to-many, 1..1 = one-to-one
 
-Artifact (1) ─────────────┬──── (1) Type
-    │                     │
-    │ (*)                │ (1)
-    ├──── (*) Version    └──── (1) Storage
-    │                            │
-    │ (1)                       │ (*)
-    └──── (1) Registry         └──── (*) Tag
-
-Environment (1) ──────────┬──── (*) Deployment
-    │                     │
-    │ (*)                │ (*)
-    ├──── (*) Config     └──── (*) Secret
-    │                            │
-    │ (*)                       │ (*)
-    └──── (*) Resource         └──── (*) Limit
-
-Source (1) ───────────────┬──── (*) Deployment
-    │                     │
-    │ (1)                │ (*)
-    ├──── (1) Type       └──── (*) Artifact
-    │                            │
-    │ (*)                       │ (1)
-    └──── (*) Credential       └──── (1) Repository
-```
+| From          | Relationship | To                | Cardinality |
+|---------------|--------------|-------------------|-------------|
+| Deployment    | has          | Version           | 1..*        |
+| Deployment    | targets      | Environment       | 1..1        |
+| Deployment    | packages     | Artifact          | 1..*        |
+| Deployment    | uses         | Cloud Provider    | 1..1        |
+| Deployment    | on           | Kubernetes Cluster| 1..1        |
+| Artifact      | type         | Type              | 1..1        |
+| Kubernetes Cl.| has          | Namespace         | 1..*        |
+| Kubernetes Cl.| has          | Node              | 1..*        |
+| Kubernetes Cl.| runs         | Deployment        | 1..*        |
+| Deployment    | exposes      | Service           | 1..*        |
+| Kubernetes Cl.| provides     | Resource          | 1..*        |
+| Artifact      | version      | Version           | 1..*        |
+| Artifact      | stored in    | Storage           | 1..1        |
+| Artifact      | registry     | Registry          | 1..1        |
+| Artifact      | tagged       | Tag               | 1..*        |
+| Environment   | has          | Deployment        | 1..*        |
+| Environment   | config       | Config            | 1..*        |
+| Environment   | secret       | Secret            | 1..*        |
+| Environment   | resource     | Resource          | 1..*        |
+| Environment   | limit        | Limit             | 1..*        |
+| Source        | deploys      | Deployment        | 1..*        |
+| Source        | type         | Type              | 1..1        |
+| Source        | artifact     | Artifact          | 1..*        |
+| Source        | credential   | Credential        | 1..*        |
+| Artifact      | repository   | Repository        | 1..1        |
 
 ### Entity Hierarchy
 

@@ -19,6 +19,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-http.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
     
+    <!-- Mermaid.js for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -509,6 +512,28 @@
                     // Apply syntax highlighting
                     if (typeof Prism !== 'undefined') {
                         Prism.highlightAll();
+                    }
+
+                    // Render Mermaid diagrams from fenced code blocks
+                    try {
+                        if (typeof mermaid !== 'undefined') {
+                            mermaid.initialize({ startOnLoad: false });
+                            const container = document.getElementById('markdownContent');
+                            const codeBlocks = container.querySelectorAll('pre > code.language-mermaid, pre > code.mermaid');
+                            codeBlocks.forEach(codeEl => {
+                                const preEl = codeEl.parentElement;
+                                const graphDefinition = codeEl.textContent;
+                                const mermaidDiv = document.createElement('div');
+                                mermaidDiv.className = 'mermaid';
+                                mermaidDiv.textContent = graphDefinition;
+                                // Replace the entire <pre> with the mermaid div
+                                preEl.replaceWith(mermaidDiv);
+                            });
+                            // Initialize Mermaid on the inserted elements
+                            mermaid.init(undefined, container.querySelectorAll('.mermaid'));
+                        }
+                    } catch (e) {
+                        console.warn('Mermaid rendering failed:', e);
                     }
                     
                     // Show the content
