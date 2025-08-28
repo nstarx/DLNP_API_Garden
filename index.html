@@ -213,6 +213,16 @@
             100% { transform: rotate(360deg); }
         }
     </style>
+    <style>
+        /* Diagrams view styles */
+        .diagram-wrapper { transition: transform 0.2s ease; transform-origin: 0 0; }
+        .diagram-container { background: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1rem; }
+        .dark .diagram-container { background: #1f2937; }
+        .btn { padding: 0.5rem 0.75rem; border-radius: 0.375rem; background: #e5e7eb; color: #111827; }
+        .btn:hover { background: #d1d5db; }
+        .dark .btn { background: #374151; color: #f3f4f6; }
+        .dark .btn:hover { background: #4b5563; }
+    </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
     
@@ -231,6 +241,11 @@
                         <i class="fas fa-moon text-gray-700 dark:text-yellow-400"></i>
                     </button>
                     
+                    <!-- Diagrams View Toggle -->
+                    <a href="#" id="openDiagrams" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" title="All Mermaid Diagrams">
+                        <i class="fas fa-diagram-project text-2xl"></i>
+                    </a>
+                    
                     <!-- GitHub Link -->
                     <a href="https://github.com" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <i class="fab fa-github text-2xl"></i>
@@ -241,7 +256,7 @@
     </header>
     
     <!-- Main Content -->
-    <div class="container mx-auto px-4 py-8">
+    <div id="docsView" class="container mx-auto px-4 py-8">
         <div class="flex gap-6">
             
             <!-- Sidebar -->
@@ -298,6 +313,30 @@
             </main>
         </div>
     </div>
+
+    <!-- Diagrams View (integrated) -->
+    <div id="diagramsView" class="container mx-auto px-4 py-8 hidden">
+        <div class="w-full">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-3 mb-4 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <button id="prevBtn" class="btn" title="Previous diagram"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextBtn" class="btn" title="Next diagram"><i class="fas fa-chevron-right"></i></button>
+                    <span class="text-gray-700 dark:text-gray-300 ml-2" id="counter">0 / 0</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="zoomOutBtn" class="btn" title="Zoom out"><i class="fas fa-magnifying-glass-minus"></i></button>
+                    <button id="zoomResetBtn" class="btn" title="Reset zoom"><i class="fas fa-magnifying-glass"></i></button>
+                    <button id="zoomInBtn" class="btn" title="Zoom in"><i class="fas fa-magnifying-glass-plus"></i></button>
+                    <button id="closeDiagrams" class="btn" title="Back to Docs"><i class="fas fa-book-open"></i></button>
+                </div>
+            </div>
+            <div id="gallery" class="space-y-6"></div>
+            <div id="emptyState" class="hidden text-center p-12 bg-white dark:bg-gray-800 rounded-lg shadow">
+                <i class="far fa-face-frown text-5xl text-gray-400 mb-4"></i>
+                <p class="text-gray-700 dark:text-gray-300">No Mermaid diagrams found in the configured documents.</p>
+            </div>
+        </div>
+    </div>
     
     <script>
         // Configuration - Load files from ./design folder
@@ -332,6 +371,9 @@
             
             // Setup event listeners
             setupEventListeners();
+
+            // Setup diagrams view toggle
+            setupDiagramsView();
             
             // Load file list
             await loadFileList();
@@ -366,6 +408,162 @@
             // Handle browser back/forward
             window.addEventListener('popstate', checkURLHash);
         }
+        
+        // Diagrams view state
+        let diagrams = [];
+        let diagramsLoaded = false;
+        let diagramCurrentIndex = 0;
+        let diagramZoom = 1;
+        
+        function setupDiagramsView() {
+            const open = document.getElementById('openDiagrams');
+            const close = document.getElementById('closeDiagrams');
+            open.addEventListener('click', (e) => {
+                e.preventDefault();
+                showDiagramsView();
+            });
+            close.addEventListener('click', () => {
+                hideDiagramsView();
+            });
+            // Hook control buttons
+            document.getElementById('prevBtn').addEventListener('click', () => navigateDiagram(-1));
+            document.getElementById('nextBtn').addEventListener('click', () => navigateDiagram(1));
+            document.getElementById('zoomInBtn').addEventListener('click', () => changeDiagramZoom(0.1));
+            document.getElementById('zoomOutBtn').addEventListener('click', () => changeDiagramZoom(-0.1));
+            document.getElementById('zoomResetBtn').addEventListener('click', () => setDiagramZoom(1));
+            document.addEventListener('keydown', (e) => {
+                const dv = document.getElementById('diagramsView');
+                const isVisible = !dv.classList.contains('hidden');
+                if (!isVisible) return;
+                if (e.key === 'ArrowLeft') navigateDiagram(-1);
+                if (e.key === 'ArrowRight') navigateDiagram(1);
+                if ((e.ctrlKey || e.metaKey) && e.key === '+') { e.preventDefault(); changeDiagramZoom(0.1); }
+                if ((e.ctrlKey || e.metaKey) && e.key === '-') { e.preventDefault(); changeDiagramZoom(-0.1); }
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === '0') { e.preventDefault(); setDiagramZoom(1); }
+            });
+        }
+        
+        function showDiagramsView() {
+            document.getElementById('docsView').classList.add('hidden');
+            document.getElementById('diagramsView').classList.remove('hidden');
+            if (!diagramsLoaded) {
+                loadAllMermaidBlocks();
+            }
+        }
+        
+        function hideDiagramsView() {
+            document.getElementById('diagramsView').classList.add('hidden');
+            document.getElementById('docsView').classList.remove('hidden');
+        }
+        
+        async function loadAllMermaidBlocks() {
+            // Determine available files
+            const available = [];
+            for (const file of API_FILES) {
+                try {
+                    const head = await fetch(file, { method: 'HEAD' });
+                    if (head.ok) available.push(file);
+                } catch {}
+            }
+            const found = [];
+            for (const file of available) {
+                try {
+                    const res = await fetch(file);
+                    if (!res.ok) continue;
+                    const text = await res.text();
+                    const blocks = extractMermaidBlocks(text);
+                    blocks.forEach((code, idx) => {
+                        found.push({ sourceFile: file, code, idx });
+                    });
+                } catch {}
+            }
+            const counter = document.getElementById('counter');
+            const empty = document.getElementById('emptyState');
+            const gallery = document.getElementById('gallery');
+            if (found.length === 0) {
+                empty.classList.remove('hidden');
+                counter.textContent = '0 / 0';
+                diagramsLoaded = true;
+                return;
+            }
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({ startOnLoad: false });
+            }
+            gallery.innerHTML = '';
+            diagrams = [];
+            for (let i = 0; i < found.length; i++) {
+                const item = found[i];
+                const container = document.createElement('div');
+                container.className = 'diagram-container';
+                const header = document.createElement('div');
+                header.className = 'flex items-center justify-between mb-2';
+                header.innerHTML = `
+                  <div class="text-sm text-gray-600 dark:text-gray-300"><i class="fas fa-file"></i>
+                    <span class="ml-1">${item.sourceFile} #${item.idx + 1}</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <a class="btn" target="_blank" href="${item.sourceFile}"><i class="fas fa-link"></i></a>
+                    <button class="btn copyBtn" title="Copy code"><i class="fas fa-copy"></i></button>
+                  </div>`;
+                const wrapper = document.createElement('div');
+                wrapper.className = 'diagram-wrapper overflow-auto';
+                wrapper.style.transform = `scale(${diagramZoom})`;
+                const md = document.createElement('div');
+                md.className = 'mermaid';
+                md.textContent = item.code;
+                wrapper.appendChild(md);
+                container.appendChild(header);
+                container.appendChild(wrapper);
+                gallery.appendChild(container);
+                diagrams.push({ id: i, sourceFile: item.sourceFile, code: item.code, element: container });
+            }
+            await new Promise(r => setTimeout(r, 0));
+            if (typeof mermaid !== 'undefined') {
+                mermaid.init(undefined, document.querySelectorAll('#gallery .mermaid'));
+            }
+            diagramCurrentIndex = 0;
+            updateDiagramCounter();
+            updateDiagramFocus();
+            // copy buttons
+            document.querySelectorAll('.copyBtn').forEach((btn, idx) => {
+                btn.addEventListener('click', () => copyToClipboard(found[idx].code));
+            });
+            diagramsLoaded = true;
+        }
+        
+        function extractMermaidBlocks(md) {
+            const blocks = [];
+            const fenceRegex = /```\s*mermaid\s*\n([\s\S]*?)```/gim;
+            let m;
+            while ((m = fenceRegex.exec(md)) !== null) {
+                blocks.push(m[1].trim());
+            }
+            return blocks;
+        }
+        
+        function navigateDiagram(delta) {
+            if (diagrams.length === 0) return;
+            diagramCurrentIndex = (diagramCurrentIndex + delta + diagrams.length) % diagrams.length;
+            updateDiagramCounter();
+            updateDiagramFocus();
+        }
+        function updateDiagramCounter() {
+            const c = document.getElementById('counter');
+            c.textContent = `${diagrams.length ? diagramCurrentIndex + 1 : 0} / ${diagrams.length}`;
+        }
+        function updateDiagramFocus() {
+            diagrams.forEach((d, idx) => {
+                d.element.classList.toggle('ring-2', idx === diagramCurrentIndex);
+                d.element.classList.toggle('ring-blue-500', idx === diagramCurrentIndex);
+                if (idx === diagramCurrentIndex) d.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+        function changeDiagramZoom(delta) { setDiagramZoom(Math.min(3, Math.max(0.3, diagramZoom + delta))); }
+        function setDiagramZoom(value) {
+            diagramZoom = value;
+            document.querySelectorAll('#gallery .diagram-wrapper').forEach(w => { w.style.transform = `scale(${diagramZoom})`; });
+        }
+        async function copyToClipboard(text) { try { await navigator.clipboard.writeText(text); } catch {} }
         
         // Load and display file list
         async function loadFileList() {
