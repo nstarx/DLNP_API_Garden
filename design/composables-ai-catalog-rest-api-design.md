@@ -1,18 +1,43 @@
 # Composables AI Catalog REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Filtering & Search](#filtering--search)
-8. [Marketplace Management](#marketplace-management)
-9. [Provenance & Auditing](#provenance--auditing)
-10. [Real-time Updates](#real-time-updates)
-11. [Caching Strategy](#caching-strategy)
-12. [Error Handling](#error-handling)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Filtering & Search](#filtering--search)
+9. [Marketplace Management](#marketplace-management)
+10. [Provenance & Auditing](#provenance--auditing)
+11. [Real-time Updates](#real-time-updates)
+12. [Caching Strategy](#caching-strategy)
+13. [Error Handling](#error-handling)
 
 ## Overview
 

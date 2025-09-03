@@ -1,18 +1,43 @@
 # Connections Platform REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Connection Types](#connection-types)
-8. [Cluster Management](#cluster-management)
-9. [Data Federation](#data-federation)
-10. [Security & Compliance](#security--compliance)
-11. [Monitoring & Health](#monitoring--health)
-12. [Error Handling](#error-handling)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Connection Types](#connection-types)
+9. [Cluster Management](#cluster-management)
+10. [Data Federation](#data-federation)
+11. [Security & Compliance](#security--compliance)
+12. [Monitoring & Health](#monitoring--health)
+13. [Error Handling](#error-handling)
 
 ## Overview
 
@@ -292,12 +317,28 @@ https://api.connections-platform.example.com/v1
 
 ```
 # Connection Registry
-GET    /connections                           # List all connections
+GET    /connections?page={page}&limit={limit}&type={type}&status={status}&environment={env}&provider={provider}  # List all connections
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
+       X-Tenant-Id: {tenant-id}
 GET    /connections/{connectionId}            # Get connection details
+       Authorization: Bearer {token}
 POST   /connections                           # Create connection
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, type, provider, configuration
+       Validation: name (3-100 chars), type (database|storage|warehouse|catalog), provider (supported list), configuration (valid schema per type)
 PUT    /connections/{connectionId}            # Update connection
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /connections/{connectionId}            # Delete connection
+       Authorization: Bearer {token}
 PATCH  /connections/{connectionId}/status     # Update connection status
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: status
+       Validation: status (active|inactive|maintenance|error)
 
 # Connection Testing
 POST   /connections/{connectionId}/test       # Test connection
@@ -361,12 +402,28 @@ POST   /connections/from-template             # Create from template
 
 ```
 # Cluster Registry
-GET    /clusters                              # List all clusters
+GET    /clusters?page={page}&limit={limit}&type={type}&status={status}  # List all clusters
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
+       X-Tenant-Id: {tenant-id}
 GET    /clusters/{clusterId}                  # Get cluster details
+       Authorization: Bearer {token}
 POST   /clusters                              # Create cluster
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, type, description
+       Validation: name (3-100 chars), type (data-lake|query-federation|multi-cloud), description (max 500 chars)
 PUT    /clusters/{clusterId}                  # Update cluster
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /clusters/{clusterId}                  # Delete cluster
+       Authorization: Bearer {token}
 PATCH  /clusters/{clusterId}/status           # Update cluster status
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: status
+       Validation: status (active|inactive|maintenance|error)
 
 # Node Management
 GET    /clusters/{clusterId}/nodes            # List cluster nodes
@@ -401,11 +458,22 @@ GET    /clusters/{clusterId}/events           # Cluster events
 
 ```
 # Federation Configuration
-GET    /federation/engines                    # List federation engines
+GET    /federation/engines?page={page}&limit={limit}&type={type}  # List federation engines
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
 POST   /federation/engines                    # Configure engine
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, type, configuration
+       Validation: name (3-100 chars), type (trino|presto|drill|dremio), configuration (valid engine config)
 GET    /federation/engines/{engineId}         # Get engine details
+       Authorization: Bearer {token}
 PUT    /federation/engines/{engineId}         # Update engine
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /federation/engines/{engineId}         # Remove engine
+       Authorization: Bearer {token}
 
 # Federated Queries
 POST   /federation/query                      # Execute federated query
@@ -1435,10 +1503,19 @@ GET    /ml/models/data-sources                # Model data sources
       "connectionId": "conn-001",
       "reason": "Authentication failed",
       "host": "database.example.com",
-      "timestamp": "2023-10-15T12:00:00Z"
+      "timestamp": "2023-10-15T12:00:00Z",
+      "retryable": true,
+      "suggestedAction": "Check credentials and retry",
+      "category": "authentication_error"
     },
     "requestId": "req-abc123",
+    "traceId": "trace-def456",
     "documentation": "https://docs.connections.com/errors#CONN_001"
+  },
+  "metadata": {
+    "timestamp": "2023-10-15T12:00:00Z",
+    "version": "v1",
+    "service": "connections-platform-api"
   }
 }
 ```
@@ -1530,9 +1607,19 @@ GOV_005: Tag not found
      "data": [...],
      "pagination": {
        "page": 1,
-       "pageSize": 20,
+       "limit": 20,
+       "offset": 0,
        "totalCount": 100,
-       "hasNext": true
+       "totalPages": 5,
+       "hasNext": true,
+       "hasPrevious": false
+     },
+     "links": {
+       "self": "/connections?page=1&limit=20",
+       "next": "/connections?page=2&limit=20",
+       "prev": null,
+       "first": "/connections?page=1&limit=20",
+       "last": "/connections?page=5&limit=20"
      }
    }
    ```

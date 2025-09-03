@@ -1,18 +1,43 @@
 # Deployments Platform REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Kubernetes Management](#kubernetes-management)
-8. [Cloud Provider Integration](#cloud-provider-integration)
-9. [Artifact Management](#artifact-management)
-10. [Deployment Strategies](#deployment-strategies)
-11. [Monitoring & Health](#monitoring--health)
-12. [Error Handling](#error-handling)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Kubernetes Management](#kubernetes-management)
+9. [Cloud Provider Integration](#cloud-provider-integration)
+10. [Artifact Management](#artifact-management)
+11. [Deployment Strategies](#deployment-strategies)
+12. [Monitoring & Health](#monitoring--health)
+13. [Error Handling](#error-handling)
 
 ## Overview
 

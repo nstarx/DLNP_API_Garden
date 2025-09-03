@@ -1,18 +1,43 @@
 # Data Platform REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [SDLC Management](#sdlc-management)
-8. [Communication Services](#communication-services)
-9. [AI Application Generator](#ai-application-generator)
-10. [System Monitoring](#system-monitoring)
-11. [Document Management](#document-management)
-12. [Error Handling](#error-handling)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [SDLC Management](#sdlc-management)
+9. [Communication Services](#communication-services)
+10. [AI Application Generator](#ai-application-generator)
+11. [System Monitoring](#system-monitoring)
+12. [Document Management](#document-management)
+13. [Error Handling](#error-handling)
 
 ## Overview
 
@@ -351,12 +376,28 @@ https://api.data-platform.example.com/v1
 
 ```
 # Project Management
-GET    /projects                              # List all projects
+GET    /projects?page={page}&limit={limit}&status={status}&type={type}&owner={owner}  # List all projects
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
+       X-Project-Id: {project-id} (optional)
 GET    /projects/{projectId}                  # Get project details
+       Authorization: Bearer {token}
 POST   /projects                              # Create project
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, description, type, owner
+       Validation: name (3-100 chars), description (max 500 chars), type (platform|application|service), owner (valid user)
 PUT    /projects/{projectId}                  # Update project
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /projects/{projectId}                  # Delete project
+       Authorization: Bearer {token}
 PATCH  /projects/{projectId}/status           # Update project status
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: status
+       Validation: status (active|inactive|completed|cancelled|on_hold)
 
 # Phase Management
 GET    /projects/{projectId}/phases           # List project phases
@@ -536,12 +577,27 @@ DELETE /notifications/subscribe/{subId}       # Unsubscribe
 
 ```
 # Tasks
-GET    /tasks                                 # List all tasks
+GET    /tasks?page={page}&limit={limit}&status={status}&priority={priority}&assignee={assignee}&project={projectId}  # List all tasks
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
 GET    /tasks/{taskId}                        # Get task details
+       Authorization: Bearer {token}
 POST   /tasks                                 # Create task
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: title, description, projectId, priority
+       Validation: title (3-200 chars), description (max 1000 chars), projectId (valid UUID), priority (low|medium|high|critical)
 PUT    /tasks/{taskId}                        # Update task
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /tasks/{taskId}                        # Delete task
+       Authorization: Bearer {token}
 PATCH  /tasks/{taskId}/status                 # Update task status
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: status
+       Validation: status (todo|in_progress|review|testing|done|cancelled)
 
 # Task Assignment
 POST   /tasks/{taskId}/assign                 # Assign task
@@ -573,12 +629,27 @@ DELETE /comments/{commentId}                  # Delete comment
 
 ```
 # Members
-GET    /members                               # List all members
+GET    /members?page={page}&limit={limit}&role={role}&status={status}&team={teamId}  # List all members
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
 GET    /members/{memberId}                    # Get member details
+       Authorization: Bearer {token}
 POST   /members                               # Add member
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, email, role
+       Validation: name (2-100 chars), email (valid email format), role (admin|project_manager|developer|qa_engineer|stakeholder|analyst|viewer)
 PUT    /members/{memberId}                    # Update member
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /members/{memberId}                    # Remove member
+       Authorization: Bearer {token}
 PATCH  /members/{memberId}/status             # Update status
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: status
+       Validation: status (active|inactive|suspended)
 
 # Member Roles
 GET    /members/{memberId}/roles              # Get member roles
@@ -644,11 +715,22 @@ GET    /approvals/metrics                     # Get approval metrics
 
 ```
 # Documents
-GET    /documents                             # List documents
+GET    /documents?page={page}&limit={limit}&type={type}&phase={phase}&project={projectId}&author={author}  # List documents
+       Authorization: Bearer {token}
+       X-API-Key: {api-key}
 GET    /documents/{documentId}                # Get document
+       Authorization: Bearer {token}
 POST   /documents                             # Upload document
+       Authorization: Bearer {token}
+       Content-Type: multipart/form-data
+       Required: name, type, phase, projectId, file
+       Validation: name (3-200 chars), type (requirements|design|technical|user_guide), phase (requirements|design|development|testing|deployment|maintenance), projectId (valid UUID), file (max 50MB)
 PUT    /documents/{documentId}                # Update document
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation (exclude file)
 DELETE /documents/{documentId}                # Delete document
+       Authorization: Bearer {token}
 
 # Document Versions
 GET    /documents/{documentId}/versions       # List versions
@@ -1393,10 +1475,19 @@ POST   /integrations/{integrationId}/sync     # Sync integration
       "phase": "development",
       "reason": "Pending approvals",
       "blockers": ["design_approval"],
-      "timestamp": "2024-01-20T10:30:00Z"
+      "timestamp": "2024-01-20T10:30:00Z",
+      "retryable": false,
+      "suggestedAction": "Complete pending approvals before phase transition",
+      "category": "business_logic_error"
     },
     "requestId": "req-abc123",
+    "traceId": "trace-def456",
     "documentation": "https://docs.platform.com/errors#SDLC_001"
+  },
+  "metadata": {
+    "timestamp": "2024-01-20T10:30:00Z",
+    "version": "v1",
+    "service": "data-platform-api"
   }
 }
 ```
@@ -1488,9 +1579,19 @@ SYS_005: Security violation
      "data": [...],
      "pagination": {
        "page": 1,
-       "pageSize": 20,
+       "limit": 20,
+       "offset": 0,
        "totalCount": 100,
-       "hasNext": true
+       "totalPages": 5,
+       "hasNext": true,
+       "hasPrevious": false
+     },
+     "links": {
+       "self": "/projects?page=1&limit=20",
+       "next": "/projects?page=2&limit=20",
+       "prev": null,
+       "first": "/projects?page=1&limit=20",
+       "last": "/projects?page=5&limit=20"
      }
    }
    ```

@@ -1,18 +1,43 @@
 # Assets Platform REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Service Management](#service-management)
-8. [Budget & Financial Management](#budget--financial-management)
-9. [Federated Learning Operations](#federated-learning-operations)
-10. [Testing & Workbench](#testing--workbench)
-11. [Monitoring & Analytics](#monitoring--analytics)
-12. [Error Handling](#error-handling)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Service Management](#service-management)
+9. [Budget & Financial Management](#budget--financial-management)
+10. [Federated Learning Operations](#federated-learning-operations)
+11. [Testing & Workbench](#testing--workbench)
+12. [Monitoring & Analytics](#monitoring--analytics)
+13. [Error Handling](#error-handling)
 
 ## Overview
 

@@ -1,16 +1,41 @@
 # Agentic System REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Pipeline & Deployment](#pipeline--deployment)
-8. [Testing & Validation](#testing--validation)
-9. [Monitoring & Observability](#monitoring--observability)
-10. [Error Handling](#error-handling)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Pipeline & Deployment](#pipeline--deployment)
+9. [Testing & Validation](#testing--validation)
+10. [Monitoring & Observability](#monitoring--observability)
+11. [Error Handling](#error-handling)
 
 ## Overview
 
@@ -202,22 +227,42 @@ https://api.agentic.example.com/v1
 
 ```
 # Agent Templates
-GET    /templates                           # List all agent templates
+GET    /templates?page={page}&limit={limit}&sort={field}&order={asc|desc}  # List all agent templates
+       Authorization: Bearer {token}
+       X-Agent-Key: {agent-key} (optional for agent-to-agent communication)
 GET    /templates/{templateId}              # Get template details
+       Authorization: Bearer {token}
 POST   /templates                           # Create new template
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, category, description, configuration
+       Validation: name (3-100 chars), category (valid enum), configuration (valid schema)
 PUT    /templates/{templateId}              # Update template
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /templates/{templateId}              # Delete template
+       Authorization: Bearer {token}
 POST   /templates/{templateId}/clone        # Clone template
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name (for cloned template)
 
 # Template Categories
-GET    /templates/categories                # List all categories
-GET    /templates/categories/{category}    # Get templates by category
+GET    /templates/categories?page={page}&limit={limit}  # List all categories
+       Authorization: Bearer {token}
+GET    /templates/categories/{category}?page={page}&limit={limit}  # Get templates by category
+       Authorization: Bearer {token}
 
 # Template Search & Filter
-GET    /templates/search?q={query}          # Search templates
-GET    /templates/filter                    # Advanced filtering
-GET    /templates/popular                   # Get popular templates
-GET    /templates/recommended              # Get recommended templates
+GET    /templates/search?q={query}&page={page}&limit={limit}  # Search templates
+       Authorization: Bearer {token}
+GET    /templates/filter?page={page}&limit={limit}      # Advanced filtering
+       Authorization: Bearer {token}
+GET    /templates/popular?page={page}&limit={limit}     # Get popular templates
+       Authorization: Bearer {token}
+GET    /templates/recommended?page={page}&limit={limit}  # Get recommended templates
+       Authorization: Bearer {token}
 
 # Template Tags
 GET    /templates/{templateId}/tags        # Get template tags
@@ -233,12 +278,27 @@ GET    /templates/{templateId}/instances   # List instances from template
 
 ```
 # Agent Instances
-GET    /agents                             # List all agent instances
+GET    /agents?page={page}&limit={limit}&status={status}&environment={env}  # List all agent instances
+       Authorization: Bearer {token}
+       X-Agent-Key: {agent-key} (for agent-to-agent communication)
 GET    /agents/{agentId}                   # Get agent details
+       Authorization: Bearer {token}
 POST   /agents                             # Create agent from template
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: templateId, name, environment
+       Validation: templateId (valid UUID), name (3-100 chars), environment (dev|staging|prod)
 PUT    /agents/{agentId}                   # Update agent
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /agents/{agentId}                   # Delete agent
+       Authorization: Bearer {token}
 PATCH  /agents/{agentId}/status            # Update agent status
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: status
+       Validation: status (active|inactive|maintenance|error)
 
 # Agent Execution
 POST   /agents/{agentId}/execute           # Execute agent
@@ -267,11 +327,21 @@ POST   /agents/providers/{provider}/test   # Test provider connection
 
 ```
 # System Prompts
-GET    /prompts                            # List all system prompts
+GET    /prompts?page={page}&limit={limit}&category={category}  # List all system prompts
+       Authorization: Bearer {token}
 GET    /prompts/{promptId}                 # Get prompt details
+       Authorization: Bearer {token}
 POST   /prompts                            # Create new prompt
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, content, type
+       Validation: name (3-100 chars), content (10-4000 chars), type (system|user|assistant)
 PUT    /prompts/{promptId}                 # Update prompt
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /prompts/{promptId}                 # Delete prompt
+       Authorization: Bearer {token}
 
 # Prompt Versions
 GET    /prompts/{promptId}/versions        # List prompt versions
@@ -1270,11 +1340,18 @@ stages:
       "agentId": "agent_789",
       "provider": "openai",
       "timeout": 30000,
-      "timestamp": "2024-01-20T15:30:00Z"
+      "timestamp": "2024-01-20T15:30:00Z",
+      "retryable": true,
+      "suggestedAction": "Retry request with longer timeout or check provider status"
     },
     "requestId": "req_abc123xyz",
     "traceId": "trace_def456",
     "documentation": "https://api.agentic.example.com/docs/errors#AGENT_EXECUTION_FAILED"
+  },
+  "metadata": {
+    "timestamp": "2024-01-20T15:30:00Z",
+    "version": "v1",
+    "service": "agentic-api"
   }
 }
 ```
@@ -1392,11 +1469,21 @@ PROVIDER_005: Model not available
      "data": [...],
      "pagination": {
        "page": 1,
-       "pageSize": 20,
+       "limit": 20,
+       "offset": 0,
        "totalPages": 10,
        "totalCount": 200,
        "hasNext": true,
-       "hasPrevious": false
+       "hasPrevious": false,
+       "nextPage": 2,
+       "previousPage": null
+     },
+     "links": {
+       "self": "/templates?page=1&limit=20",
+       "next": "/templates?page=2&limit=20",
+       "prev": null,
+       "first": "/templates?page=1&limit=20",
+       "last": "/templates?page=10&limit=20"
      }
    }
    ```

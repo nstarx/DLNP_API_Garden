@@ -1,15 +1,40 @@
 # Admin System REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added validation specifications<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams with Mermaid.js<br>- Added descriptive relationship matrices<br>- Integrated diagram rendering | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation<br>- Core endpoints defined<br>- Basic RBAC implementation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Error Handling](#error-handling)
-8. [Rate Limiting & Quotas](#rate-limiting--quotas)
-9. [Audit & Logging](#audit--logging)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Error Handling](#error-handling)
+9. [Rate Limiting & Quotas](#rate-limiting--quotas)
+10. [Audit & Logging](#audit--logging)
 
 ## Overview
 
@@ -167,15 +192,19 @@ https://api.admin.example.com/v1
 
 ### User Management
 
+#### Authentication Required
+All endpoints require: `Authorization: Bearer {token}`  
+Admin role required for: POST, PUT, PATCH, DELETE operations
+
 #### Users Resource
 
 ```
-GET    /users                          # List all users with pagination
+GET    /users?page=1&pageSize=20&sort=createdAt&order=desc  # List all users with pagination
 GET    /users/{userId}                 # Get specific user details
-POST   /users                          # Create new user
-PUT    /users/{userId}                 # Update user completely
-PATCH  /users/{userId}                 # Partial update user
-DELETE /users/{userId}                 # Delete user (soft delete)
+POST   /users                          # Create new user [Admin Required]
+PUT    /users/{userId}                 # Update user completely [Admin Required]
+PATCH  /users/{userId}                 # Partial update user [Admin/Self]
+DELETE /users/{userId}                 # Delete user (soft delete) [Admin Required]
 
 # Sub-resources
 GET    /users/{userId}/roles           # Get user's roles
@@ -183,8 +212,8 @@ POST   /users/{userId}/roles           # Assign roles to user
 DELETE /users/{userId}/roles/{roleId}  # Remove role from user
 
 GET    /users/{userId}/permissions     # Get effective permissions
-GET    /users/{userId}/projects        # Get user's projects
-GET    /users/{userId}/activities      # Get user's activity log
+GET    /users/{userId}/projects?page=1&pageSize=10  # Get user's projects with pagination
+GET    /users/{userId}/activities?page=1&pageSize=20  # Get user's activity log with pagination
 
 # Bulk operations
 POST   /users/bulk                     # Create multiple users
@@ -199,12 +228,16 @@ POST   /users/export                   # Export users data
 
 ### Role Management
 
+#### Authentication Required
+All endpoints require: `Authorization: Bearer {token}`  
+Admin role required for: POST, PUT, DELETE operations
+
 ```
-GET    /roles                          # List all roles
+GET    /roles?page=1&pageSize=20       # List all roles with pagination
 GET    /roles/{roleId}                 # Get role details
-POST   /roles                          # Create custom role
-PUT    /roles/{roleId}                 # Update role
-DELETE /roles/{roleId}                 # Delete role
+POST   /roles                          # Create custom role [Admin Required]
+PUT    /roles/{roleId}                 # Update role [Admin Required]
+DELETE /roles/{roleId}                 # Delete role [Admin Required]
 
 # Permissions management
 GET    /roles/{roleId}/permissions     # Get role permissions
@@ -239,15 +272,19 @@ POST   /permissions/groups             # Create permission group
 
 ### Project Management
 
+#### Authentication Required
+All endpoints require: `Authorization: Bearer {token}`  
+Project owner or Admin role required for modifications
+
 ```
-GET    /projects                       # List all projects
+GET    /projects?page=1&pageSize=20&filter=status:active  # List all projects with pagination
 GET    /projects/{projectId}          # Get project details
 POST   /projects                       # Create project
 PUT    /projects/{projectId}          # Update project
 DELETE /projects/{projectId}          # Delete project
 
 # Project members
-GET    /projects/{projectId}/members   # Get project members
+GET    /projects/{projectId}/members?page=1&pageSize=50  # Get project members with pagination
 POST   /projects/{projectId}/members   # Add members
 DELETE /projects/{projectId}/members/{userId}  # Remove member
 
@@ -264,7 +301,7 @@ POST   /projects/{projectId}/budget/request  # Request budget increase
 POST   /projects/{projectId}/budget/approve  # Approve budget request
 
 # Project environments
-GET    /projects/{projectId}/environments     # List environments
+GET    /projects/{projectId}/environments?page=1&pageSize=10  # List environments with pagination
 POST   /projects/{projectId}/environments     # Create environment
 PUT    /projects/{projectId}/environments/{env}  # Update environment
 ```
@@ -282,7 +319,7 @@ GET    /menus/assignments/{roleId}    # Get role menu assignments
 PUT    /menus/assignments/{roleId}    # Update role menu items
 
 # Menu items
-GET    /menus/items                   # List all available menu items
+GET    /menus/items?page=1&pageSize=100  # List all available menu items with pagination
 POST   /menus/items                   # Create custom menu item
 PUT    /menus/items/{itemId}         # Update menu item
 DELETE /menus/items/{itemId}         # Delete menu item
@@ -318,10 +355,10 @@ GET    /metrics/resources             # Get resource metrics
 GET    /metrics/performance           # Get performance metrics
 
 # Audit Trail
-GET    /audit                         # Get audit logs
-GET    /audit/user/{userId}          # Get user audit trail
-GET    /audit/resource/{resourceId}  # Get resource audit trail
-POST   /audit/search                  # Search audit logs
+GET    /audit?page=1&pageSize=100&from=2024-01-01&to=2024-12-31  # Get audit logs with pagination
+GET    /audit/user/{userId}?page=1&pageSize=50  # Get user audit trail with pagination
+GET    /audit/resource/{resourceId}?page=1&pageSize=50  # Get resource audit trail with pagination
+POST   /audit/search                  # Search audit logs with pagination in request body
 ```
 
 ### License Management

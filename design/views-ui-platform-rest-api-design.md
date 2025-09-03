@@ -1,11 +1,36 @@
 # Views & UI Platform REST API Design
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [System Architecture](#system-architecture)
-3. [Authentication & Authorization](#authentication--authorization)
-4. [Core API Endpoints](#core-api-endpoints)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [System Architecture](#system-architecture)
+4. [Authentication & Authorization](#authentication--authorization)
+5. [Core API Endpoints](#core-api-endpoints)
    - [View Management APIs](#view-management-apis)
    - [Dashboard APIs](#dashboard-apis)
    - [Component Library APIs](#component-library-apis)
@@ -14,12 +39,12 @@
    - [Widget Management APIs](#widget-management-apis)
    - [Template Management APIs](#template-management-apis)
    - [Personalization APIs](#personalization-apis)
-5. [Entity Relationships](#entity-relationships)
-6. [Data Models](#data-models)
-7. [API Specifications](#api-specifications)
-8. [WebSocket Events](#websocket-events)
-9. [Error Handling](#error-handling)
-10. [Security Considerations](#security-considerations)
+6. [Entity Relationships](#entity-relationships)
+7. [Data Models](#data-models)
+8. [API Specifications](#api-specifications)
+9. [WebSocket Events](#websocket-events)
+10. [Error Handling](#error-handling)
+11. [Security Considerations](#security-considerations)
 
 ## Overview
 

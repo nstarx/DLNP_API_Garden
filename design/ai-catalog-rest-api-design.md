@@ -1,18 +1,43 @@
 # AI Catalog REST API Design Documentation
 
+## Document Change Log
+
+### Version History
+
+| Version | Date | Author | Changes | Breaking Changes |
+|---------|------|---------|---------|------------------|
+| 1.3.0 | 2025-01-03 | System | - Added pagination to all list endpoints<br>- Enhanced authentication specifications<br>- Standardized error response format<br>- Added document changelog section | No |
+| 1.2.0 | 2025-08-28 | adrian | - Updated entity relationship diagrams<br>- Added descriptive matrices<br>- Enhanced documentation | No |
+| 1.1.0 | 2025-08-27 | adrian | - Added initial API endpoints<br>- Defined core resources | No |
+| 1.0.0 | 2025-08-27 | adrian | - Initial API design documentation | N/A |
+
+### Upcoming Changes (Next Release)
+
+- [ ] Add WebSocket support for real-time updates
+- [ ] Implement GraphQL endpoint
+- [ ] Add batch operations support
+- [ ] Enhanced filtering capabilities
+
+### Deprecation Notices
+
+- None at this time
+
+---
+
 ## Table of Contents
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Entity Model](#entity-model)
-4. [Authentication & Authorization](#authentication--authorization)
-5. [API Endpoints](#api-endpoints)
-6. [Data Models](#data-models)
-7. [Catalog Management](#catalog-management)
-8. [Provenance & Lineage](#provenance--lineage)
-9. [Marketplace Integration](#marketplace-integration)
-10. [Governance & Compliance](#governance--compliance)
-11. [Error Handling](#error-handling)
-12. [Implementation Guidelines](#implementation-guidelines)
+1. [Document Change Log](#document-change-log)
+2. [Overview](#overview)
+3. [Architecture](#architecture)
+4. [Entity Model](#entity-model)
+5. [Authentication & Authorization](#authentication--authorization)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Catalog Management](#catalog-management)
+9. [Provenance & Lineage](#provenance--lineage)
+10. [Marketplace Integration](#marketplace-integration)
+11. [Governance & Compliance](#governance--compliance)
+12. [Error Handling](#error-handling)
+13. [Implementation Guidelines](#implementation-guidelines)
 
 ## Overview
 
@@ -332,12 +357,26 @@ https://api.ai-catalog.example.com/v1
 
 ```
 # Model Registry
-GET    /catalog/models                         # List all models
+GET    /catalog/models?page={page}&limit={limit}&sort={field}&order={asc|desc}&framework={framework}&status={status}  # List all models
+       Authorization: Bearer {token}
+       X-Catalog-Key: {catalog-api-key}
 GET    /catalog/models/{modelId}              # Get model details
+       Authorization: Bearer {token}
 POST   /catalog/models                        # Register new model
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, type, framework, version
+       Validation: name (3-100 chars), type (enum), framework (supported list), version (semver)
 PUT    /catalog/models/{modelId}              # Update model
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /catalog/models/{modelId}              # Delete model
+       Authorization: Bearer {token}
 PATCH  /catalog/models/{modelId}/archive      # Archive model
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: archived (boolean)
 
 # Model Versions
 GET    /catalog/models/{modelId}/versions     # List versions
@@ -376,12 +415,26 @@ GET    /catalog/models/trending               # Get trending models
 
 ```
 # Dataset Registry
-GET    /catalog/datasets                      # List all datasets
+GET    /catalog/datasets?page={page}&limit={limit}&type={type}&format={format}&size_min={size}&size_max={size}  # List all datasets
+       Authorization: Bearer {token}
+       X-Catalog-Key: {catalog-api-key}
 GET    /catalog/datasets/{datasetId}         # Get dataset details
+       Authorization: Bearer {token}
 POST   /catalog/datasets                      # Register dataset
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, type, format, schema
+       Validation: name (3-100 chars), type (Text|Image|Audio|Video|Tabular), format (supported formats), schema (valid JSON schema)
 PUT    /catalog/datasets/{datasetId}         # Update dataset
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /catalog/datasets/{datasetId}         # Delete dataset
+       Authorization: Bearer {token}
 PATCH  /catalog/datasets/{datasetId}/archive # Archive dataset
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: archived (boolean)
 
 # Dataset Versions
 GET    /catalog/datasets/{datasetId}/versions # List versions
@@ -423,12 +476,26 @@ GET    /catalog/datasets/formats              # List formats
 
 ```
 # Experiment Management
-GET    /catalog/experiments                   # List experiments
+GET    /catalog/experiments?page={page}&limit={limit}&status={status}&model_id={modelId}&dataset_id={datasetId}  # List experiments
+       Authorization: Bearer {token}
+       X-Catalog-Key: {catalog-api-key}
 GET    /catalog/experiments/{experimentId}    # Get experiment details
+       Authorization: Bearer {token}
 POST   /catalog/experiments                   # Create experiment
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, modelId, datasetId, objective
+       Validation: name (3-100 chars), modelId (valid UUID), datasetId (valid UUID), objective (enum)
 PUT    /catalog/experiments/{experimentId}    # Update experiment
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /catalog/experiments/{experimentId}    # Delete experiment
+       Authorization: Bearer {token}
 POST   /catalog/experiments/{experimentId}/archive # Archive experiment
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: archived (boolean)
 
 # Experiment Runs
 POST   /catalog/experiments/{experimentId}/runs # Start run
@@ -463,12 +530,26 @@ GET    /catalog/experiments/by-dataset/{datasetId} # Get by dataset
 
 ```
 # Pipeline Management
-GET    /catalog/pipelines                     # List pipelines
+GET    /catalog/pipelines?page={page}&limit={limit}&type={type}&status={status}  # List pipelines
+       Authorization: Bearer {token}
+       X-Catalog-Key: {catalog-api-key}
 GET    /catalog/pipelines/{pipelineId}       # Get pipeline details
+       Authorization: Bearer {token}
 POST   /catalog/pipelines                     # Create pipeline
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: name, type, stages
+       Validation: name (3-100 chars), type (training|preprocessing|etl|inference), stages (non-empty array)
 PUT    /catalog/pipelines/{pipelineId}       # Update pipeline
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Validation: partial update schema validation
 DELETE /catalog/pipelines/{pipelineId}       # Delete pipeline
+       Authorization: Bearer {token}
 POST   /catalog/pipelines/{pipelineId}/archive # Archive pipeline
+       Authorization: Bearer {token}
+       Content-Type: application/json
+       Required: archived (boolean)
 
 # Pipeline Configuration
 GET    /catalog/pipelines/{pipelineId}/config # Get configuration
@@ -1599,10 +1680,18 @@ Every action is logged with:
     "details": {
       "modelId": "model_999",
       "timestamp": "2024-01-20T15:30:00Z",
-      "suggestion": "Check model ID or use search API"
+      "suggestion": "Check model ID or use search API",
+      "retryable": false,
+      "category": "client_error"
     },
     "requestId": "req_abc123xyz",
+    "traceId": "trace_def456",
     "documentation": "https://api.ai-catalog.example.com/docs/errors#CATALOG_001"
+  },
+  "metadata": {
+    "timestamp": "2024-01-20T15:30:00Z",
+    "version": "v1",
+    "service": "ai-catalog-api"
   }
 }
 ```
@@ -1686,16 +1775,26 @@ PROV_005: Version conflict
    ```json
    {
      "data": {...},
-     "metadata": {
+     "pagination": {
        "page": 1,
-       "pageSize": 20,
+       "limit": 20,
+       "offset": 0,
        "totalCount": 100,
-       "totalPages": 5
+       "totalPages": 5,
+       "hasNext": true,
+       "hasPrevious": false
      },
      "links": {
-       "self": "...",
-       "next": "...",
-       "prev": "..."
+       "self": "/catalog/models?page=1&limit=20",
+       "next": "/catalog/models?page=2&limit=20",
+       "prev": null,
+       "first": "/catalog/models?page=1&limit=20",
+       "last": "/catalog/models?page=5&limit=20"
+     },
+     "metadata": {
+       "timestamp": "2024-01-20T15:30:00Z",
+       "version": "v1",
+       "requestId": "req_abc123xyz"
      }
    }
    ```
